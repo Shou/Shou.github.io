@@ -1,0 +1,1 @@
+/home/hatate/Prog/Javascript/Coup-Z/Coup-Z.user.js
