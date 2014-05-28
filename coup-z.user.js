@@ -347,7 +347,7 @@ function flatcss(o) {
     }
 
     for (var k in o)
-        if (k.indexOf(bnd) !=== -1)
+        if (k.indexOf(bnd) !== -1)
             tmp += k.replace(/{}/g, '') + ": " + o[k].replace(/{}/g, '') + "; "
     return tmp
 }
