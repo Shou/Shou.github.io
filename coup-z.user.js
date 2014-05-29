@@ -317,7 +317,6 @@ function style(e, post) {
         log("style: " + e)
 
         try {
-            sig.style.display = "table-cell"
             sig.style.maxHeight = "200px"
 
         } catch(e) {
@@ -1326,11 +1325,11 @@ function main() {
 
                 try {
                     JSON.parse(sig.textContent.trim())
+                    sig.style.display = "none"
 
                 } catch(e) {
                     log("No styles!")
 
-                    sig.style.display = "table-cell"
                     sig.style.maxHeight = "200px"
 
                 }
