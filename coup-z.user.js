@@ -312,7 +312,7 @@ function style(e, post) {
         log("styles: " + styles)
         log("style: " + e)
 
-        var sig = pe.parentNode.nextElementSibling.nextElementSibling
+        var sig = pe.nextElementSibling.nextElementSibling
 
         sig.querySelector(".c_sig").style.display = "table-cell !important"
     }
