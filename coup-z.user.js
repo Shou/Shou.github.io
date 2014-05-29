@@ -309,6 +309,7 @@ function style(e, post) {
         }
 
     } catch(e) {
+        log("nick: " + json.Nick)
         log("styles: " + styles)
         log("style: " + e)
 
