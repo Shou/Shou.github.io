@@ -1321,7 +1321,7 @@ function main() {
             try {
                 var pe = posts[i]
                 var lastr = pe.parentNode.nextElementSibling.nextElementSibling
-                var sig = querySelector(".c_sig")
+                var sig = lastr.querySelector(".c_sig")
 
                 try {
                     JSON.parse(sig.textContent.trim())
