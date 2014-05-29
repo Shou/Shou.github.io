@@ -1324,8 +1324,16 @@ function main() {
                 var lastr = pe.parentNode.nextElementSibling.nextElementSibling
                 var sig = querySelector(".c_sig")
 
-                sig.style.display = "table-cell"
-                sig.style.maxHeight = "200px"
+                try {
+                    JSON.parse(sig.textContent.trim())
+
+                } catch(e) {
+                    log("No styles!")
+
+                    sig.style.display = "table-cell"
+                    sig.style.maxHeight = "200px"
+
+                }
 
             } catch (e) {
                 log("No signature!")
