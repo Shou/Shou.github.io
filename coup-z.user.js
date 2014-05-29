@@ -312,9 +312,14 @@ function style(e, post) {
         log("styles: " + styles)
         log("style: " + e)
 
-        var sig = pe.nextElementSibling.nextElementSibling
+        var sig = pe.parentNode.nextElementSibling.nextElementSibling
 
-        sig.querySelector(".c_sig").style.display = "table-cell !important"
+        try {
+            sig.querySelector(".c_sig").style.display = "table-cell !important"
+
+        } catch(e) {
+            log("No signature!")
+        }
     }
 }
 
