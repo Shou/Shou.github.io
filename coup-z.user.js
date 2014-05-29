@@ -309,6 +309,10 @@ function style(e, post) {
     } catch(e) {
         log("styles: " + styles)
         log("style: " + e)
+
+        var sig = pe.parentNode.nextElementSibling.nextElementSibling
+
+        sig.querySelector(".c_sig").style.display = "table-cell !important"
     }
 }
 
@@ -338,17 +342,19 @@ function css(e, sel, dec) {
 // flatcss :: Obj -> String
 function flatcss(o) {
     var tmp = ""
-    var bnd
-    try {
-        bnd = JSON.parse(localStorage["coup-z-banned"])
 
-    } catch(e) {
-        bnd = []
-    }
+// FIXME
+//    var bnd
+//    try {
+//        bnd = JSON.parse(localStorage["coup-z-banned"])
+//
+//    } catch(e) {
+//        bnd = []
+//    }
 
     for (var k in o)
-        if (k.indexOf(bnd) !== -1)
-            tmp += k.replace(/{}/g, '') + ": " + o[k].replace(/{}/g, '') + "; "
+        tmp += k.replace(/{}/g, '') + ": " + o[k].replace(/{}/g, '') + "; "
+
     return tmp
 }
 
