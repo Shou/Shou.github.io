@@ -1312,9 +1312,25 @@ function main() {
 
     } else if (isThread() && off) {
         var sty = document.createElement("style")
-        sty.textContent =
-            "tr[id^=\"post-\"] + tr + tr > td.c_sig { display: none !important }"
+        //sty.textContent =
+            //"tr[id^=\"post-\"] + tr + tr > td.c_sig { display: none !important }"
         document.body.appendChild(sty)
+
+        var posts = getPosts()
+
+        for (var i = 0; i < posts.length; i++) {
+            try {
+                var pe = posts[i].elem
+                var lastr = pe.parentNode.nextElementSibling.nextElementSibling
+                var sig = querySelector(".c_sig")
+
+                sig.style.display = "table-cell"
+                sig.style.maxHeight = "200px"
+
+            } catch (e) {
+                log("No signature!")
+            }
+        }
 
     } else if (isSig()) {
         log("Signature")
