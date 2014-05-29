@@ -68,8 +68,8 @@ var props = { "background": /./
             , "box-shadow": /./
             , "color": /./
             , "content": /./
-            , "counter-reset"
-            , "counter-increment"
+            , "counter-reset": /./
+            , "counter-increment": /./
             , "cursor": /./
             , "font-family": /./
             , "font-size": /./
