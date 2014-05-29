@@ -2,7 +2,7 @@
 // ==UserScript==
 // @name            Coup-Z
 // @description     We gay now
-// @version         0.1.3
+// @version         0.1.3.1
 // @include         http*://*.zetaboards.com/*
 // @author          Shou
 // @copyright       2013, Shou
