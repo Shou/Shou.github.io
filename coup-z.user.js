@@ -239,6 +239,8 @@ function style(e, post) {
     var styles = post.sig
     var butts = post.butts
 
+    var sig = pe.parentNode.nextElementSibling.nextElementSibling
+
     var json
     try {
         json = JSON.parse(styles)
@@ -308,14 +310,14 @@ function style(e, post) {
             css(e, '#' + id + " + tr + tr + tr a", json.Button)
         }
 
+        sig.querySelector(".c_sig").style.display = "none"
+
     } catch(e) {
         log("styles: " + styles)
         log("style: " + e)
 
-        var sig = pe.parentNode.nextElementSibling.nextElementSibling
-
         try {
-            sig.querySelector(".c_sig").style.display = "table-cell !important"
+            sig.querySelector(".c_sig").style.display = "table-cell"
 
         } catch(e) {
             log("No signature!")
@@ -371,7 +373,7 @@ function elemStyle() {
     var bdy = document.body
     var sty = document.createElement("style")
     bdy.insertBefore(sty, bdy.children[bdy.children.length - 1])
-    sty.textContent = ".c_sig:not([id='c_post']) { display: none; } "
+    //sty.textContent = ".c_sig:not([id='c_post']) { display: none; } "
 
     return sty
 }
