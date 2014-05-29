@@ -239,7 +239,7 @@ function style(e, post) {
     var styles = post.sig
     var butts = post.butts
 
-    var sig = pe.parentNode.nextElementSibling.nextElementSibling
+    var sig = pe.parentNode.nextElementSibling.nextElementSibling.querySelector(".c_sig")
 
     var json
     try {
@@ -310,14 +310,15 @@ function style(e, post) {
             css(e, '#' + id + " + tr + tr + tr a", json.Button)
         }
 
-        sig.querySelector(".c_sig").style.display = "none"
+        sig.style.display = "none"
 
     } catch(e) {
         log("styles: " + styles)
         log("style: " + e)
 
         try {
-            sig.querySelector(".c_sig").style.display = "table-cell"
+            sig.style.display = "table-cell"
+            sig.style.maxHeight = "200px"
 
         } catch(e) {
             log("No signature!")
