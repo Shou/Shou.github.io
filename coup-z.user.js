@@ -1319,7 +1319,7 @@ function main() {
 
         for (var i = 0; i < posts.length; i++) {
             try {
-                var pe = posts[i].elem
+                var pe = posts[i]
                 var lastr = pe.parentNode.nextElementSibling.nextElementSibling
                 var sig = querySelector(".c_sig")
 
