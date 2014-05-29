@@ -1319,6 +1319,7 @@ function main() {
 
         for (var i = 0; i < posts.length; i++) {
             try {
+                log(posts[i])
                 var pe = posts[i]
                 var lastr = pe.parentNode.nextElementSibling.nextElementSibling
                 var sig = lastr.querySelector(".c_sig")
