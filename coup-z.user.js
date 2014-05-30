@@ -1199,14 +1199,6 @@ function octave(){
     for (var i = 0; i < xs.length; i++) {
         (function (ii){
             high(xs[ii])
-
-            var obs = new MutationObserver(function(ms){
-                    if (ms.length > 0) high(xs[ii])
-            })
-
-            var ops = { subtree: true, childList: true, attributes: false }
-
-            obs.observe(xs[ii], ops)
         })(i)
     }
 }
