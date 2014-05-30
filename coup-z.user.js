@@ -224,6 +224,9 @@ function flash(e, c) {
     }, 1000)
 }
 
+// slice :: [a] -> Int -> Int -> [a]
+var slice = Array.prototype.slice
+
 // }}}
 
 // {{{ Styling
@@ -376,6 +379,31 @@ function elemStyle() {
     //sty.textContent = ".c_sig:not([id='c_post']) { display: none; } "
 
     return sty
+}
+
+// hideSigs :: [Elem] -> IO ()
+function hideSigs(posts) {
+    for (var i = 0; i < posts.length; i++) {
+        try {
+            var pe = posts[i].elem
+            var lastr = pe.parentNode.nextElementSibling.nextElementSibling
+            var sig = lastr.querySelector(".c_sig")
+
+            try {
+                JSON.parse(sig.textContent.trim())
+                sig.style.display = "none"
+
+            } catch(e) {
+                log("No styles!")
+
+                sig.style.maxHeight = "200px"
+
+            }
+
+        } catch (e) {
+            log("No signature? " + e.toString())
+        }
+    }
 }
 
 // }}}
@@ -1301,6 +1329,7 @@ function main() {
         log("Thread or single")
 
         var posts = getPosts()
+        var postlen = posts.length
         var e = elemStyle()
 
         for (var i = 0; i < posts.length; i++) {
@@ -1309,6 +1338,22 @@ function main() {
 
         log(posts)
 
+        var stylo = new MutationObserver(function(ms){
+                if (ms.length > 0) {
+                    posts = getPosts()
+
+                    for (var i = postlen; i < posts.length; i++) {
+                        style(e, posts[i])
+                    }
+
+                    postlen = posts.length
+                }
+        })
+
+        var ops = { subtree: true, childList: true, attributes: false }
+
+        stylo.observe(document.querySelector("#topic_viewer"), ops)
+
     } else if (isThread() && off) {
         var sty = document.createElement("style")
         //sty.textContent =
@@ -1316,28 +1361,23 @@ function main() {
         document.body.appendChild(sty)
 
         var posts = getPosts()
+        var postlen = posts.length
 
-        for (var i = 0; i < posts.length; i++) {
-            try {
-                var pe = posts[i].elem
-                var lastr = pe.parentNode.nextElementSibling.nextElementSibling
-                var sig = lastr.querySelector(".c_sig")
+        hideSigs(posts)
 
-                try {
-                    JSON.parse(sig.textContent.trim())
-                    sig.style.display = "none"
+        var sigo = new MutationObserver(function(ms){
+                if (ms.length > 0) {
+                    posts = getPosts()
 
-                } catch(e) {
-                    log("No styles!")
+                    hideSigs(slice.call(posts, postlen, posts.length))
 
-                    sig.style.maxHeight = "200px"
-
+                    postlen = posts.length
                 }
+        })
 
-            } catch (e) {
-                log("No signature? " + e.toString())
-            }
-        }
+        var ops = { subtree: true, childList: true, attributes: false }
+
+        sigo.observe(document.querySelector("#topic_viewer"), ops)
 
     } else if (isSig()) {
         log("Signature")
