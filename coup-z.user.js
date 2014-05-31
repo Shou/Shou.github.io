@@ -1217,6 +1217,7 @@ function smartPinned() {
     var pins = document.querySelectorAll(".pin .c_cat-replies a")[0].textContent
 
     for (var i = 0; i < pins.length; i++) {
+        log(pins[i])
         var id = pins[i].href.split('=')[1]
         var n = parseInt(pins[i].textContent)
         var json
