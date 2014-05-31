@@ -1234,6 +1234,8 @@ function hidePinned(pin) {
 
 // smartPinned :: IO ()
 function smartPinned() {
+    log("Smart pinned!")
+
     var pins = document.querySelectorAll(".pin .c_cat-replies a")
     var ph = document.querySelector("#pinned_head")
 
