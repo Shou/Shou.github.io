@@ -1218,7 +1218,7 @@ function smartPinned() {
 
     for (var i = 0; i < pins.length; i++) {
         log(pins[i])
-        var id = pins[i].href.split('=')[1]
+        var id = "" //pins[i].href.split('=')[1]
         var n = parseInt(pins[i].textContent)
         var json
 
