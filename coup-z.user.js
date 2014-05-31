@@ -1239,6 +1239,8 @@ function smartPinned() {
             this.style.display = "none"
             json[id] = n
         })
+
+        localStorage["SmartPinned"] = JSON.stringify(json)
     }
 }
 
