@@ -1236,18 +1236,17 @@ function hidePinned(pin) {
 function smartPinned() {
     var pins = document.querySelectorAll(".pin .c_cat-replies a")
     var ph = document.querySelector("#pinned_head")
-    var pb = false
 
     ph.style.cursor = "pointer"
     ph.addEventListener("click", function(e) {
-        if (pb) {
+        if (! localStorage["SmartPinnedDisabled"]) {
             for (var i = 0; i < pins.length; i++) hidePinned(pins[i])
-            pb = false
+            delete localStorage["SmartPinnedDisabled"]
 
         } else {
             for (var i = 0; i < pins.length; i++)
                 pins[i].parentNode.parentNode.style.display = ""
-            pb = true
+            localStorage["SmartPinnedDisabled"] = 1
         }
     })
 
@@ -1257,7 +1256,8 @@ function smartPinned() {
         pins[i].parentNode.parentNode.style.cursor = "pointer"
         pins[i].parentNode.parentNode.addEventListener("click", function(e) {
             e.stopPropagation()
-            this.style.display = "none"
+            if (! localStorage["SmartPinnedEnabled"])
+                this.style.display = "none"
 
             var pin = this.querySelector(".c_cat-replies a")
             var id = pin.href.split('=')[1]
