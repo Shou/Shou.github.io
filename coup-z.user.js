@@ -1228,6 +1228,8 @@ function hidePinned(pin) {
     if (id in json) if (json[id] >= n)
         pin.parentNode.parentNode.style.display = "none"
     else json[id] = n
+
+    localStorage["SmartPinned"] = JSON.stringify(json)
 }
 
 // smartPinned :: IO ()
@@ -1256,10 +1258,18 @@ function smartPinned() {
         pins[i].parentNode.parentNode.addEventListener("click", function(e) {
             e.stopPropagation()
             this.style.display = "none"
-            json[id] = n
-        })
 
-        localStorage["SmartPinned"] = JSON.stringify(json)
+            try {
+                json = JSON.parse(localStorage["SmartPinned"])
+
+            } catch(e) {
+                json = {}
+            }
+
+            json[id] = n
+
+            localStorage["SmartPinned"] = JSON.stringify(json)
+        })
     }
 }
 
