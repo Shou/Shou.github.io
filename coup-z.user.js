@@ -1256,6 +1256,8 @@ function smartPinned() {
             if (ms.length > 0) {
                 log("Topic view changed!")
 
+                var pins = document.querySelectorAll(".pin .c_cat-replies a")
+
                 if (! localStorage["SmartPinnedDisabled"]) {
                     log("Hiding read pinned threads...")
                     for (var i = 0; i < pins.length; i++) hidePinned(pins[i])
