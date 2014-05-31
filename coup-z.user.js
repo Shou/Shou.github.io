@@ -1256,7 +1256,7 @@ function smartPinned() {
         pins[i].parentNode.parentNode.style.cursor = "pointer"
         pins[i].parentNode.parentNode.addEventListener("click", function(e) {
             e.stopPropagation()
-            if (! localStorage["SmartPinnedEnabled"])
+            if (! localStorage["SmartPinnedDisabled"])
                 this.style.display = "none"
 
             var pin = this.querySelector(".c_cat-replies a")
