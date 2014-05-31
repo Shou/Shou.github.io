@@ -1251,9 +1251,11 @@ function smartPinned() {
     })
 
     var pino = new MutationObserver(function(ms){
-            if (ms.length > 0)
-                if (! localStorage["SmartPinnedDisabled"])
-                    hidePinned(pins[i])
+            if (ms.length > 0) {
+                log("Topic view changed!")
+
+                if (! localStorage["SmartPinnedDisabled"]) hidePinned(pins[i])
+            }
     })
 
     var ops = { subtree: true, childList: true, attributes: false }
