@@ -1262,7 +1262,7 @@ function smartPinned() {
 
     var ops = { subtree: true, childList: true, attributes: false }
 
-    pino.observe(document.querySelector(".posts"), ops)
+    pino.observe(document.querySelector("#main"), ops)
 
     for (var i = 0; i < pins.length; i++) {
         if (! localStorage["SmartPinnedDisabled"]) hidePinned(pins[i])
