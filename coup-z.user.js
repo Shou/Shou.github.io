@@ -1240,12 +1240,10 @@ function smartPinned() {
     ph.style.cursor = "pointer"
     ph.addEventListener("click", function(e) {
         if (localStorage["SmartPinnedDisabled"]) {
-            log("Enabling pin hiding")
             for (var i = 0; i < pins.length; i++) hidePinned(pins[i])
             delete localStorage["SmartPinnedDisabled"]
 
         } else {
-            log("Disabling pin hiding")
             for (var i = 0; i < pins.length; i++)
                 pins[i].parentNode.parentNode.style.display = ""
             localStorage["SmartPinnedDisabled"] = 1
