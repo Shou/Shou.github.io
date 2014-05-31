@@ -1239,7 +1239,7 @@ function smartPinned() {
 
     ph.style.cursor = "pointer"
     ph.addEventListener("click", function(e) {
-        if (! localStorage["SmartPinnedDisabled"]) {
+        if (localStorage["SmartPinnedDisabled"]) {
             for (var i = 0; i < pins.length; i++) hidePinned(pins[i])
             delete localStorage["SmartPinnedDisabled"]
 
