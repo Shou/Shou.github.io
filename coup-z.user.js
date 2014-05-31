@@ -1256,7 +1256,8 @@ function smartPinned() {
             if (ms.length > 0) {
                 log("Topic view changed!")
 
-                if (! localStorage["SmartPinnedDisabled"]) hidePinned(pins[i])
+                if (! localStorage["SmartPinnedDisabled"])
+                    for (var i = 0; i < pins.length; i++) hidePinned(pins[i])
             }
     })
 
