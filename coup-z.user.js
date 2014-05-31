@@ -1214,12 +1214,12 @@ function octave(){
 
 // smartPinned :: IO ()
 function smartPinned() {
-    var pins = document.querySelectorAll(".pin .c_cat-replies a")[0].textContent
+    var pins = document.querySelectorAll(".pin .c_cat-replies a")
 
     for (var i = 0; i < pins.length; i++) {
         log(pins[i])
-        var id = "" //pins[i].href.split('=')[1]
-        var n = 0 //parseInt(pins[i].textContent)
+        var id = pins[i].href.split('=')[1]
+        var n = parseInt(pins[i].textContent)
         var json
 
         try {
