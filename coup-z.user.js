@@ -1250,6 +1250,16 @@ function smartPinned() {
         }
     })
 
+    var pino = new MutationObserver(function(ms){
+            if (ms.length > 0)
+                if (! localStorage["SmartPinnedDisabled"])
+                    hidePinned(pins[i])
+    })
+
+    var ops = { subtree: true, childList: true, attributes: false }
+
+    pino.observe(document.querySelector(".posts"), ops)
+
     for (var i = 0; i < pins.length; i++) {
         if (! localStorage["SmartPinnedDisabled"]) hidePinned(pins[i])
 
