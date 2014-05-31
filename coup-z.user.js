@@ -1251,7 +1251,7 @@ function smartPinned() {
     })
 
     for (var i = 0; i < pins.length; i++) {
-        hidePinned(pins[i])
+        if (! localStorage["SmartPinnedDisabled"]) hidePinned(pins[i])
 
         pins[i].parentNode.parentNode.style.cursor = "pointer"
         pins[i].parentNode.parentNode.addEventListener("click", function(e) {
