@@ -1212,26 +1212,45 @@ function octave(){
 
 // {{{ Smart pinned
 
+// hidePinned :: Elem -> IO ()
+function hidePinned(pin) {
+    var id = pin.href.split('=')[1]
+    var n = parseInt(pin.textContent)
+    var json
+
+    try {
+        json = JSON.parse(localStorage["SmartPinned"])
+
+    } catch(e) {
+        json = {}
+    }
+
+    if (id in json) if (json[id] >= n)
+        pin.parentNode.parentNode.style.display = "none"
+    else json[id] = n
+}
+
 // smartPinned :: IO ()
 function smartPinned() {
     var pins = document.querySelectorAll(".pin .c_cat-replies a")
+    var ph = document.querySelector("#pinned_head")
+    var pb = false
+
+    ph.style.cursor = "pointer"
+    ph.addEventListener("click", function(e) {
+        if (pb) {
+            for (var i = 0; i < pins.length; i++) hidePinned(pins[i])
+            pb = false
+
+        } else {
+            for (var i = 0; i < pins.length; i++)
+                pins[i].parentNode.parentNode.style.display = ""
+            pb = true
+        }
+    })
 
     for (var i = 0; i < pins.length; i++) {
-        log(pins[i])
-        var id = pins[i].href.split('=')[1]
-        var n = parseInt(pins[i].textContent)
-        var json
-
-        try {
-            json = JSON.parse(localStorage["SmartPinned"])
-
-        } catch(e) {
-            json = {}
-        }
-
-        if (id in json) if (json[id] >= n)
-            pins[i].parentNode.parentNode.style.display = "none"
-        else json[id] = n
+        hidePinned(pins[i])
 
         pins[i].parentNode.parentNode.style.cursor = "pointer"
         pins[i].parentNode.parentNode.addEventListener("click", function(e) {
