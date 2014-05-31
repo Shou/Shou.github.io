@@ -1258,7 +1258,10 @@ function smartPinned() {
         pins[i].parentNode.parentNode.addEventListener("click", function(e) {
             e.stopPropagation()
             this.style.display = "none"
-            var n = parseInt(this.querySelector(".c_cat-replies a").textContent)
+
+            var pin = this.querySelector(".c_cat-replies a")
+            var id = pin.href.split('=')[1]
+            var n = parseInt(pin.textContent)
 
             try {
                 json = JSON.parse(localStorage["SmartPinned"])
