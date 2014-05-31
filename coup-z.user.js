@@ -174,6 +174,11 @@ function isThread() {
     return window.location.href.match(/zetaboards\.com\/\S+\/topic\/[0-9]+/i)
 }
 
+// isForum :: IO Bool
+function isForum() {
+    return window.location.href.match(/zetaboards\.com\/\S+\/forum\/[0-9]+/i)
+}
+
 // isSig :: IO Bool
 function isSig() {
     return window.location.href.match(/zetaboards\.com\/\S+\/home\/\?c=32/i)
@@ -1205,6 +1210,39 @@ function octave(){
 
 // }}}
 
+// {{{ Smart pinned
+
+// smartPinned :: IO ()
+function smartPinned() {
+    var pins = document.querySelectorAll(".pin .c_cat-replies a")[0].textContent
+
+    for (var i = 0; i < pins.length; i++) {
+        var id = pins[i].href.split('=')[1]
+        var n = parseInt(pins[i].textContent)
+        var json
+
+        try {
+            json = JSON.parse(localStorage["SmartPinned"])
+
+        } catch(e) {
+            json = {}
+        }
+
+        if (id in json) if (json[id] >= n)
+            pins[i].parentNode.parentNode.style.display = "none"
+        else json[id] = n
+
+        pins[i].parentNode.parentNode.style.cursor = "pointer"
+        pins[i].parentNode.parentNode.addEventListener("click", function(e) {
+            e.stopPropagation()
+            this.style.display = "none"
+            json[id] = n
+        })
+    }
+}
+
+// }}}
+
 // {{{ Welcome
 
 // sigInit :: IO ()
@@ -1375,6 +1413,9 @@ function main() {
         log("Signature")
         sigInit()
         choice()
+
+    } else if (isForum()) {
+        smartPinned()
     }
 }
 
