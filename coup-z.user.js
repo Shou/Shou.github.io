@@ -1243,9 +1243,13 @@ function smartPinned() {
 
     var pins = document.querySelectorAll(".pin .c_cat-replies a")
     var ph = document.querySelector("#pinned_head")
+    var btn = document.createElement("input")
+    btn.type = "button"
+    btn.textContent = ph.textContent
+    ph.textContent = ""
+    ph.addChild(btn)
 
-    ph.style.cursor = "pointer"
-    ph.addEventListener("click", function(e) {
+    btn.addEventListener("click", function(e) {
         if (localStorage["SmartPinnedDisabled"]) {
             for (var i = 0; i < pins.length; i++) hidePinned(pins[i])
             delete localStorage["SmartPinnedDisabled"]
