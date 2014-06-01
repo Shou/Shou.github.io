@@ -1225,12 +1225,14 @@ function hidePinned(pin) {
         json = {}
     }
 
-    if (id in json) if (json[id] >= n) {
-        pin.parentNode.parentNode.style.display = "none"
-        log("id " + id + " > n")
-        log(json[id] + " > " + n)
-    }
-    else json[id] = n
+    if (id in json) {
+        if (json[id] >= n) {
+            pin.parentNode.parentNode.style.display = "none"
+            log("id " + id + " > n")
+            log(json[id] + " > " + n)
+        }
+
+    } else json[id] = n
 
     localStorage["SmartPinned"] = JSON.stringify(json)
 }
