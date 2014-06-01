@@ -1215,7 +1215,7 @@ function octave(){
 // hidePinned :: Elem -> IO ()
 function hidePinned(pin) {
     var id = pin.href.split('=')[1]
-    var n = parseInt(pin.textContent)
+    var n = parseInt(pin.textContent.replace(/,/g, ""))
     var json
 
     try {
