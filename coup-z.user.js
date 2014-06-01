@@ -1254,12 +1254,10 @@ function smartPinned() {
 
     var pino = new MutationObserver(function(ms){
             if (ms.length > 0) {
-                log("Topic view changed!")
 
                 var pins = document.querySelectorAll(".pin .c_cat-replies a")
 
                 if (! localStorage["SmartPinnedDisabled"]) {
-                    log("Hiding read pinned threads...")
                     for (var i = 0; i < pins.length; i++) hidePinned(pins[i])
                 }
             }
@@ -1280,7 +1278,7 @@ function smartPinned() {
 
             var pin = this.querySelector(".c_cat-replies a")
             var id = pin.href.split('=')[1]
-            var n = parseInt(pin.textContent)
+            var n = parseInt(pin.textContent.replace(/,/g, ""))
 
             try {
                 json = JSON.parse(localStorage["SmartPinned"])
