@@ -1227,7 +1227,7 @@ function hidePinned(pin) {
 
     if (id in json) if (json[id] >= n) {
         pin.parentNode.parentNode.style.display = "none"
-        log("id > n")
+        log("id " + id + " > n")
         log(json[id] + " > " + n)
     }
     else json[id] = n
