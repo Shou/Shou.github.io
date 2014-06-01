@@ -1247,7 +1247,7 @@ function smartPinned() {
     btn.type = "button"
     btn.textContent = ph.textContent
     ph.textContent = ""
-    ph.addChild(btn)
+    ph.appendChild(btn)
 
     btn.addEventListener("click", function(e) {
         if (localStorage["SmartPinnedDisabled"]) {
