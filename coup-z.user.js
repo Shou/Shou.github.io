@@ -1245,7 +1245,7 @@ function smartPinned() {
     var ph = document.querySelector("#pinned_head")
     var btn = document.createElement("input")
     btn.type = "button"
-    btn.textContent = ph.textContent
+    btn.value = ph.textContent
     ph.textContent = ""
     ph.appendChild(btn)
 
