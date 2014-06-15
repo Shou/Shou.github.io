@@ -1214,8 +1214,8 @@ function octave(){
 
 // {{{ Smart pinned
 
-// hidePinned :: Elem -> IO ()
-function hidePinned(pin) {
+// hidePinned :: Elem -> Bool -> IO ()
+function hidePinned(pin, fade) {
     var id = pin.href.split('=')[1]
     var n = parseInt(pin.textContent.replace(/,/g, ""))
     var json
@@ -1229,16 +1229,20 @@ function hidePinned(pin) {
 
     if (id in json) {
         if (json[id] >= n) {
-            var opacity = 1.0
-            var loop = setInterval(function() {
-                opacity -= 0.1
-                pin.parentNode.parentNode.style.opacity = opacity
+            if (fade) {
+                var opacity = 1.0
+                var loop = setInterval(function() {
+                    opacity -= 0.1
+                    pin.parentNode.parentNode.style.opacity = opacity
 
-                if (opacity === 0) {
-                    pin.parentNode.parentNode.style.display = "none"
-                    stopInterval(loop)
-                }
-            }, 1000 / 30)
+                    if (opacity <= 0) {
+                        pin.parentNode.parentNode.style.display = "none"
+                        stopInterval(loop)
+                    }
+                }, 1000 / 30)
+
+            } else pin.parentNode.parentNode.style.display = "none"
+
             log("id " + id + " > n")
             log(json[id] + " > " + n)
         }
@@ -1262,7 +1266,7 @@ function smartPinned() {
 
     btn.addEventListener("click", function(e) {
         if (localStorage["SmartPinnedDisabled"]) {
-            for (var i = 0; i < pins.length; i++) hidePinned(pins[i])
+            for (var i = 0; i < pins.length; i++) hidePinned(pins[i], true)
             delete localStorage["SmartPinnedDisabled"]
 
         } else {
