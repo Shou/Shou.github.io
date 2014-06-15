@@ -1214,6 +1214,20 @@ function octave(){
 
 // {{{ Smart pinned
 
+// fadeElem :: Elem -> IO ()
+function fadeElem(e) {
+    var opacity = 1.0
+    var loop = setInterval(function() {
+        opacity -= 0.1
+        e.style.opacity = opacity
+
+        if (opacity <= 0) {
+            e.style.display = "none"
+            stopInterval(loop)
+        }
+    }, 1000 / 30)
+}
+
 // hidePinned :: Elem -> Bool -> IO ()
 function hidePinned(pin, fade) {
     var id = pin.href.split('=')[1]
@@ -1229,19 +1243,9 @@ function hidePinned(pin, fade) {
 
     if (id in json) {
         if (json[id] >= n) {
-            if (fade) {
-                var opacity = 1.0
-                var loop = setInterval(function() {
-                    opacity -= 0.1
-                    pin.parentNode.parentNode.style.opacity = opacity
+            if (fade) fadeElem(pin.parentNode.parentNode)
 
-                    if (opacity <= 0) {
-                        pin.parentNode.parentNode.style.display = "none"
-                        stopInterval(loop)
-                    }
-                }, 1000 / 30)
-
-            } else pin.parentNode.parentNode.style.display = "none"
+            else pin.parentNode.parentNode.style.display = "none"
 
             log("id " + id + " > n")
             log(json[id] + " > " + n)
@@ -1297,8 +1301,9 @@ function smartPinned() {
         pins[i].parentNode.parentNode.style.cursor = "pointer"
         pins[i].parentNode.parentNode.addEventListener("click", function(e) {
             e.stopPropagation()
+
             if (! localStorage["SmartPinnedDisabled"])
-                this.style.display = "none"
+                fadeElem(this)
 
             var pin = this.querySelector(".c_cat-replies a")
             var id = pin.href.split('=')[1]
