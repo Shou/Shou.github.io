@@ -23,6 +23,8 @@
 //      - Also replace content instead if no image found.
 //      - Buttons should only be replaced when the background color or image
 //        is modified.
+// - QuoteHeader color doesn't change
+//      - select dt or w/e element below somehow!
 
 // TODO
 // - Make it work in single posts.
@@ -107,7 +109,7 @@ var embeds =
         , e: '<audio src="$1" controls width="320" height="32"></audio>' }
     , "video":
         { u: "(https?:\\/\\/\\S+?\\.(ogv|webm|mp4))"
-        , e: '<video src="$1" controls muted autoplay loop style="max-width: 640px"></audio>' }
+        , e: '<video src="$1" controls muted autoplay loop style="max-width:640px;width:640px"></audio>' }
     }
 
 // }}}
@@ -1227,7 +1229,16 @@ function hidePinned(pin) {
 
     if (id in json) {
         if (json[id] >= n) {
-            pin.parentNode.parentNode.style.display = "none"
+            var opacity = 1.0
+            var loop = setInterval(function() {
+                opacity -= 0.1
+                pin.parentNode.parentNode.style.opacity = opacity
+
+                if (opacity === 0) {
+                    pin.parentNode.parentNode.style.display = "none"
+                    stopInterval(loop)
+                }
+            }, 1000 / 30)
             log("id " + id + " > n")
             log(json[id] + " > " + n)
         }
