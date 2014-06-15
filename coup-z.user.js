@@ -1223,6 +1223,7 @@ function fadeElem(e) {
 
         if (opacity <= 0) {
             e.style.display = "none"
+            e.style.opacity = 1
             stopInterval(loop)
         }
     }, 1000 / 30)
