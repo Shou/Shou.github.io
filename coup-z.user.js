@@ -1222,8 +1222,7 @@ function fadeElem(e, b, s, t, d) {
         e.style.opacity = n
         n += s
 
-        if (n == t) {
-            log("terminus")
+        if (b > t ? n <= t : n >= t) {
             e.style.display = d
             clearInterval(loop)
         }
@@ -1277,7 +1276,7 @@ function smartPinned() {
 
         } else {
             for (var i = 0; i < pins.length; i++)
-                fadeElem(pins[i].parentNode.parentNode, 1, -1 / 20, 0, "")
+                fadeElem(pins[i].parentNode.parentNode, 0, 1 / 20, 1, "")
             localStorage["SmartPinnedDisabled"] = 1
         }
     })
