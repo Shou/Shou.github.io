@@ -1221,7 +1221,7 @@ function fadeElem(e, b, s, t, d) {
         e.style.opacity = n
         n += s
 
-        if (Math.round(n) == Math.round(t)) {
+        if (n == t) {
             e.style.display = d
             clearInterval(loop)
         }
