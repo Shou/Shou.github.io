@@ -1218,10 +1218,12 @@ function octave(){
 function fadeElem(e, b, s, t, d) {
     var n = b
     var loop = setInterval(function() {
+        log("e o = " + n)
         e.style.opacity = n
         n += s
 
         if (n == t) {
+            log("terminus")
             e.style.display = d
             clearInterval(loop)
         }
