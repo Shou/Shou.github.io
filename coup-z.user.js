@@ -1214,8 +1214,8 @@ function octave(){
 
 // {{{ Smart pinned
 
-// toggleSqueeze :: Elem -> Int -> Int -> Int -> ()
-function toggleSqueeze(e, b, s, t) {
+// toggleSqueeze :: Elem -> Int -> Int -> Int -> String -> ()
+function toggleSqueeze(e, b, s, t, d) {
     var h = e.clientHeight / b
     var n = b
     var loop = setInterval(function() {
@@ -1223,7 +1223,7 @@ function toggleSqueeze(e, b, s, t) {
         n = n + s
 
         if (Math.round(n) == Math.round(t)) {
-            e.style.display = "none"
+            e.style.display = d
             delete e.style.height
             clearInterval(loop)
         }
@@ -1245,7 +1245,7 @@ function hidePinned(pin, fade) {
 
     if (id in json) {
         if (json[id] >= n) {
-            if (fade) toggleSqueeze(pin.parentNode.parentNode, 20, -1, 0)
+            if (fade) toggleSqueeze(pin.parentNode.parentNode, 20, -1, 0, "none")
 
             else pin.parentNode.parentNode.style.display = "none"
 
@@ -1277,7 +1277,7 @@ function smartPinned() {
 
         } else {
             for (var i = 0; i < pins.length; i++)
-                toggleSqueeze(pins[i].parentNode.parentNode, 1, 1, 20)
+                toggleSqueeze(pins[i].parentNode.parentNode, 1, 1, 20, "")
             localStorage["SmartPinnedDisabled"] = 1
         }
     })
@@ -1305,7 +1305,7 @@ function smartPinned() {
             e.stopPropagation()
 
             if (! localStorage["SmartPinnedDisabled"])
-                toggleSqueeze(this, 20, -1, 0)
+                toggleSqueeze(this, 20, -1, 0, "none")
 
             var pin = this.querySelector(".c_cat-replies a")
             var id = pin.href.split('=')[1]
