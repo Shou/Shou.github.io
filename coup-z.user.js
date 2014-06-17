@@ -1245,7 +1245,7 @@ function hidePinned(pin, fade) {
 
     if (id in json) {
         if (json[id] >= n) {
-            if (fade) toggleSqueeze(pin.parentNode.parentNode, 20, -1, 0, "none")
+            if (fade) $(pin.parentNode.parentNode).slideUp()
 
             else pin.parentNode.parentNode.style.display = "none"
 
@@ -1277,7 +1277,7 @@ function smartPinned() {
 
         } else {
             for (var i = 0; i < pins.length; i++)
-                toggleSqueeze(pins[i].parentNode.parentNode, 1, 1, 20, "")
+                $(pins[i].parentNode.parentNode).slideDown()
             localStorage["SmartPinnedDisabled"] = 1
         }
     })
@@ -1305,7 +1305,7 @@ function smartPinned() {
             e.stopPropagation()
 
             if (! localStorage["SmartPinnedDisabled"])
-                toggleSqueeze(this, 20, -1, 0, "none")
+                $(this).slideUp()
 
             var pin = this.querySelector(".c_cat-replies a")
             var id = pin.href.split('=')[1]
