@@ -1214,17 +1214,15 @@ function octave(){
 
 // {{{ Smart pinned
 
-// toggleSqueeze :: Elem -> Int -> Int -> Int -> String -> ()
-function toggleSqueeze(e, b, s, t, d) {
-    var h = e.clientHeight / b
+// fadeElem :: Elem -> Int -> Int -> Int -> String -> ()
+function fadeElem(e, b, s, t, d) {
     var n = b
     var loop = setInterval(function() {
-        e.style.height = h * n
-        n = n + s
+        e.style.opacity = n
+        n += s
 
         if (Math.round(n) == Math.round(t)) {
             e.style.display = d
-            delete e.style.height
             clearInterval(loop)
         }
     }, 1000 / 60)
@@ -1245,7 +1243,7 @@ function hidePinned(pin, fade) {
 
     if (id in json) {
         if (json[id] >= n) {
-            if (fade) $(pin.parentNode.parentNode).slideUp()
+            if (fade) fadeElem(pin.parentNode.parentNode, 1, -1 / 20, 0, "none")
 
             else pin.parentNode.parentNode.style.display = "none"
 
@@ -1277,7 +1275,7 @@ function smartPinned() {
 
         } else {
             for (var i = 0; i < pins.length; i++)
-                $(pins[i].parentNode.parentNode).slideDown()
+                fadeElem(pins[i].parentNode.parentNode, 1, -1 / 20, 0, "")
             localStorage["SmartPinnedDisabled"] = 1
         }
     })
@@ -1305,7 +1303,7 @@ function smartPinned() {
             e.stopPropagation()
 
             if (! localStorage["SmartPinnedDisabled"])
-                $(this).slideUp()
+                fadeElem(this, 1, -1 / 20, 0, "none")
 
             var pin = this.querySelector(".c_cat-replies a")
             var id = pin.href.split('=')[1]
