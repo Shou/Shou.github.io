@@ -1275,8 +1275,10 @@ function smartPinned() {
             delete localStorage["SmartPinnedDisabled"]
 
         } else {
-            for (var i = 0; i < pins.length; i++)
+            for (var i = 0; i < pins.length; i++) {
+                pins[i].parentNode.parentNode.display = ""
                 fadeElem(pins[i].parentNode.parentNode, 0, 1 / 20, 1, "")
+            }
             localStorage["SmartPinnedDisabled"] = 1
         }
     })
