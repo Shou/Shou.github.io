@@ -1215,18 +1215,19 @@ function octave(){
 // {{{ Smart pinned
 
 // fadeElem :: Elem -> IO ()
-function fadeElem(e) {
-    var opacity = 1.0
+function toggleSqueeze(e, b) {
+    var h = e.clientHeight / 20
+    var n = 20
     var loop = setInterval(function() {
-        opacity -= 0.1
-        e.style.opacity = opacity
+        e.style.height = h * n
+        n--
 
-        if (opacity <= 0) {
+        if (n <= 0) {
             e.style.display = "none"
-            e.style.opacity = 1
+            delete e.style.height
             clearInterval(loop)
         }
-    }, 1000 / 30)
+    }, 1000 / 60)
 }
 
 // hidePinned :: Elem -> Bool -> IO ()
