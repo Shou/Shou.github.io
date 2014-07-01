@@ -1200,6 +1200,7 @@ function high(e){
     for (var j = 0; j < as.length; j++)
         log("Links #" + j + " / " + as.length)
         try {
+            log(ass)
             var ass = as[j]
             var rd = replacer(ass.href)
 
@@ -1215,14 +1216,12 @@ function octave(){
     log("High octave sexual moaning")
     var xs = document.getElementsByClassName("c_post")
 
-    try {
     // Each post
     for (var i = 0; i < xs.length; i++) {
         (function (ii) {
             high(xs[ii])
         })(i)
     }
-    } catch(e) { throw e }
 }
 
 // }}}
