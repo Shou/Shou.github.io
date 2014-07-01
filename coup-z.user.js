@@ -1206,7 +1206,7 @@ function high(e){
             log(ass)
             var rd = replacer(ass.href)
 
-            //if (rd !== ass.href) ass.outerHTML = rd
+            if (rd !== ass.href) ass.outerHTML = rd
 
         } catch(e) {
             log(e.toString())
