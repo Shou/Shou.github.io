@@ -1276,7 +1276,6 @@ function smartPinned() {
 
         } else {
             for (var i = 0; i < pins.length; i++) {
-                pins[i].parentNode.parentNode.display = ""
                 fadeElem(pins[i].parentNode.parentNode, 0, 1 / 20, 1, "")
             }
             localStorage["SmartPinnedDisabled"] = 1
@@ -1455,6 +1454,7 @@ function main() {
 
         var stylo = new MutationObserver(function(ms){
                 if (ms.length > 0) {
+                    verb(ms.toString())
                     posts = getPosts()
 
                     for (var i = postlen; i < posts.length; i++) {
@@ -1471,6 +1471,7 @@ function main() {
 
     } else if (isThread() && off) {
         var sty = document.createElement("style")
+        // Hide signatures
         //sty.textContent =
             //"tr[id^=\"post-\"] + tr + tr > td.c_sig { display: none !important }"
         document.body.appendChild(sty)
