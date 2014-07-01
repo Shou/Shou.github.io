@@ -1201,10 +1201,9 @@ function high(e){
         log("Links #" + j + " / " + as.length)
         try {
             log(as)
-            var ass = as[j]
-            var rd = replacer(ass.href)
+            var rd = replacer(as[j].href)
 
-            if (rd !== ass.href) ass.outerHTML = rd
+            if (rd !== as[j].href) as[j].outerHTML = rd
 
         } catch(e) {
             log(e.toString())
