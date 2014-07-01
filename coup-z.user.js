@@ -1218,9 +1218,7 @@ function octave(){
     try {
     // Each post
     for (var i = 0; i < xs.length; i++) {
-        log("Posts #" + i + " / " + xs.length)
-
-        (function (ii){
+        (function (ii) {
             high(xs[ii])
         })(i)
     }
