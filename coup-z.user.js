@@ -1449,7 +1449,7 @@ function back(){
 function main() {
     var off = localStorage["coup-z-disabled"] ? true : false
 
-    //if (isThread()) octave()
+    if (isThread()) octave()
 
     if ((isThread() || isSingle()) && ! off) {
         log("Thread or single")
