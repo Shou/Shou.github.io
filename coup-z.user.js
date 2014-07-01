@@ -1182,7 +1182,6 @@ function selectUpdate() {
 // replacer :: String -> String
 function replacer(x){
     for (var k in embeds) {
-        log("Embeds: " + k)
         var m = x.match(RegExp(embeds[k].u, 'g'))
 
         if (m) log(m.toString())
