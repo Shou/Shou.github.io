@@ -1181,18 +1181,17 @@ function selectUpdate() {
 
 // replacer :: String -> String
 function replacer(x){
-    var y = x
-
     for (var k in embeds) {
         var m = x.match(RegExp(embeds[k].u, 'g'))
 
-        if (m) log(m.join(', '))
+        if (m) log(m.toString())
         x = x.replace(RegExp(embeds[k].u, 'g'), embeds[k].e)
     }
 
     return x
 }
 
+// high :: Elem -> IO ()
 function high(e){
     var as = e.getElementsByTagName("a")
 
@@ -1449,7 +1448,7 @@ function back(){
 function main() {
     var off = localStorage["coup-z-disabled"] ? true : false
 
-    //if (isThread()) octave()
+    if (isThread()) octave()
 
     if ((isThread() || isSingle()) && ! off) {
         log("Thread or single")
