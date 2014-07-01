@@ -1200,10 +1200,11 @@ function high(e){
     for (var j = 0; j < as.length; j++)
         log("Links #" + j + " / " + as.length)
         try {
-            log(as)
-            var rd = replacer(as[j].href)
+            var ass = as[j]
+            log(ass)
+            var rd = replacer(ass.href)
 
-            if (rd !== as[j].href) as[j].outerHTML = rd
+            //if (rd !== ass.href) ass.outerHTML = rd
 
         } catch(e) {
             log(e.toString())
