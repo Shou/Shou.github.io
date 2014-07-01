@@ -1182,7 +1182,7 @@ function selectUpdate() {
 // replacer :: String -> String
 function replacer(x){
     for (var k in embeds) {
-        verb("Embeds??")
+        log("Embeds??")
         var m = x.match(RegExp(embeds[k].u, 'g'))
 
         if (m) log(m.toString())
@@ -1198,7 +1198,7 @@ function high(e){
 
     // each link
     for (var j = 0; j < as.length; j++)
-        verb("Links??")
+        log("Links??")
         try {
             var ass = as[j]
             var rd = replacer(ass.href)
@@ -1217,7 +1217,7 @@ function octave(){
 
     // Each post
     for (var i = 0; i < xs.length; i++) {
-        verb("Posts??")
+        log("Posts??")
         (function (ii){
             high(xs[ii])
         })(i)
@@ -1468,7 +1468,7 @@ function main() {
 
         var stylo = new MutationObserver(function(ms){
                 if (ms.length > 0) {
-                    verb(ms.toString())
+                    log(ms.toString())
                     posts = getPosts()
 
                     for (var i = postlen; i < posts.length; i++) {
