@@ -1198,7 +1198,6 @@ function high(e){
 
     // each link
     for (var j = 0; j < as.length; j++)
-        log("Links #" + j + " / " + as.length)
         try {
             var ass = as[j]
             var rd = replacer(ass.href)
