@@ -1182,6 +1182,7 @@ function selectUpdate() {
 // replacer :: String -> String
 function replacer(x){
     for (var k in embeds) {
+        log("Embeds: " + k)
         var m = x.match(RegExp(embeds[k].u, 'g'))
 
         if (m) log(m.toString())
@@ -1197,6 +1198,7 @@ function high(e){
 
     // each link
     for (var j = 0; j < as.length; j++)
+        log("Links #" + j + " / " + as.length)
         try {
             var ass = as[j]
             var rd = replacer(ass.href)
@@ -1217,11 +1219,12 @@ function octave(){
     // Each post
     for (var i = 0; i < xs.length; i++) {
         log("Posts #" + i + " / " + xs.length)
+
         (function (ii){
             high(xs[ii])
         })(i)
     }
-    } catch(e) { log(e.toString()) }
+    } catch(e) { throw e }
 }
 
 // }}}
