@@ -1195,6 +1195,7 @@ function replacer(x){
 // high :: Elem -> IO ()
 function high(e){
     var as = e.getElementsByTagName("a")
+    log(as)
 
     // each link
     for (var j = 0; j < as.length; j++)
