@@ -1449,7 +1449,7 @@ function back(){
 function main() {
     var off = localStorage["coup-z-disabled"] ? true : false
 
-    if (isThread()) octave()
+    //if (isThread()) octave()
 
     if ((isThread() || isSingle()) && ! off) {
         log("Thread or single")
@@ -1479,7 +1479,7 @@ function main() {
 
         var ops = { subtree: true, childList: true, attributes: false }
 
-        stylo.observe(document.querySelector("#topic_viewer"), ops)
+        //stylo.observe(document.querySelector("#topic_viewer"), ops)
 
     } else if (isThread() && off) {
         var sty = document.createElement("style")
