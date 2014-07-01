@@ -1196,6 +1196,7 @@ function replacer(x){
 function high(e){
     var as = e.getElementsByTagName("a")
     log(as)
+    log(as.length)
 
     // each link
     for (var j = 0; j < as.length; j++)
