@@ -1215,6 +1215,7 @@ function octave(){
     log("High octave sexual moaning")
     var xs = document.getElementsByClassName("c_post")
 
+    try {
     // Each post
     for (var i = 0; i < xs.length; i++) {
         log("Posts #" + i + " / " + xs.length)
@@ -1222,6 +1223,7 @@ function octave(){
             high(xs[ii])
         })(i)
     }
+    } catch(e) { log(e.toString()) }
 }
 
 // }}}
