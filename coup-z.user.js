@@ -95,21 +95,33 @@ var props = { "background": /./
             , "visibility": /^((visible|hidden|collapse|inherit),?\s?)+$/
             }
 
+// TODO account for video and audio ?GET=attributes
 var embeds =
     { "vimeo":
         { u: "https?:\\/\\/vimeo\\.com\\/(\\S+)"
         , e: '<iframe src="//player.vimeo.com/video/$1" width="640" height="380" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>'
+        , s: "//player.vimeo.com/video/$1"
         }
     , "soundcloud":
         { u: "(https?:\\/\\/soundcloud\\.com\\/\\S+)"
         , e: '<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=$1"></iframe>'
+        , s: "https://w.soundcloud.com/player/?url=$1"
         }
     , "audio":
         { u: "(https?:\\/\\/\\S+?\\.(mp3|ogg))"
-        , e: '<audio src="$1" controls width="320" height="32"></audio>' }
+        , e: '<audio src="$1" controls width="320" height="32"></audio>'
+        , s: "$1"
+        }
     , "video":
         { u: "(https?:\\/\\/\\S+?\\.(ogv|webm|mp4))"
-        , e: '<video src="$1" controls muted autoplay loop style="max-width:640px;width:640px"></audio>' }
+        , e: '<video src="$1" controls muted autoplay loop style="max-width: 640px"></audio>'
+        , s: "$1"
+        }
+    , "vine":
+        { u: "https?:\\/\\/vine.co\\/v\\/([a-zA-Z0-9]+)"
+        , e: '<iframe class="vine-embed" src="https://vine.co/v/$1/embed/simple" width="480" height="480" frameborder="0"></iframe><script async src="//platform.vine.co/static/scripts/embed.js" charset="utf-8"></script>'
+        , s: "https://vine.co/v/$1/embed/simple"
+        }
     }
 
 // }}}
