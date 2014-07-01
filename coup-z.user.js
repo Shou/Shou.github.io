@@ -1199,7 +1199,7 @@ function high(e){
     log(as.length)
 
     // each link
-    for (var j = 0; j < as.length; j++)
+    for (var j = 0; j < as.length; j++) {
         log("Links #" + j + " / " + as.length)
         try {
             var ass = as[j]
@@ -1211,6 +1211,7 @@ function high(e){
         } catch(e) {
             log(e.toString())
         }
+    }
 }
 
 // octave :: IO ()
