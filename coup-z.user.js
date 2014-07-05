@@ -1485,12 +1485,12 @@ function welcome(){
                                       , margin: "30px auto"
                                       }
                              }, [
-        "span", { textContent: "Disable Coup-Z" }, [],
+        "span", { textContent: " Disable Coup-Z " }, [],
         "input", { type: "checkbox"
                  , onclick: toggle("coup-z-disabled")
                  , checked: localStorage["coup-z-disabled"]
                  }, [],
-        "span", { textContent: "Disable WebM autoplay" }, [],
+        "span", { textContent: " Disable WebM autoplay " }, [],
         "input", { type: "checkbox"
                  , onclick: toggle("coup-z-webm")
                  , checked: localStorage["coup-z-webm"]
