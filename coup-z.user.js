@@ -1260,7 +1260,6 @@ function high(e){
                             this.muted = true
                             if (! localStorage["coup-z-webm"])
                                 this.autoplay = true
-                                this.controls = false
 
                             else this.controls = true
 
