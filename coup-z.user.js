@@ -1249,10 +1249,10 @@ function high(e){
 
             if (ene) {
                 log("ene.tagName: " + ene.tagName)
-                log("ene.hasAudio: " + (ene.mozHasAudio || ene.webkitAudioDecodedByteCount))
+                log("ene.hasAudio: " + ene.mozHasAudio)
 
                 if ( ene.tagName === "VIDEO"
-                && ( ene.mozHasAudio || ene.webkitAudioDecodedByteCount)) {
+                && ene.mozHasAudio ) {
 
                     ene.autoplay = false
                     ene.loop = false
