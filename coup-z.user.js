@@ -1481,7 +1481,10 @@ function welcome(){
                , onclick: gui
                }, []
     ])
-    var n = speedcore("div", { style: { width: 420px, margin: "30px auto" }}, [
+    var n = speedcore("div", { style: { width: "420px"
+                                      , margin: "30px auto"
+                                      }
+                             }, [
         "span", { textContent: "Disable Coup-Z" }, [],
         "input", { type: "checkbox"
                  , onclick: toggle("coup-z-disabled")
