@@ -1261,6 +1261,9 @@ function high(e){
                             this.muted = true
                             this.controls = false
 
+                            this.style.cursor = "pointer"
+                            this.title = "Toggle play"
+
                             this.addEventListener("click", function(e) {
                                 if (this.paused) this.play()
                                 else this.pause()
