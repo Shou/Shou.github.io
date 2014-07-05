@@ -1251,11 +1251,17 @@ function high(e){
                 log("ene.tagName: " + ene.tagName)
                 log("ene.hasAudio: " + ene.mozHasAudio)
 
-                if ( ene.tagName === "VIDEO"
-                && ene.mozHasAudio ) {
+                if (ene.tagName === "VIDEO") {
+                    ene.addEventListener("loadeddata", function(e) {
+                        var hasAudio = this.mozHasAudio === undefined
+                                     ? this.webkitAudioDecodedByteCount > 0
+                                     : this.mozHasAudio
 
-                    ene.autoplay = false
-                    ene.loop = false
+                        if (hasAudio) {
+                            this.autoplay = false
+                            this.loop = false
+                        }
+                    })
                 }
 
                 ass.parentNode.replaceChild(ene, ass)
