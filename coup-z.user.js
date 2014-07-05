@@ -142,9 +142,6 @@ var embeds =
         , e: function(url) {
                 return speedcore("video", { src: url
                                           , controls: true
-                                          , muted: true
-                                          , autoplay: true
-                                          , loop: true
                                           , style: "max-width: 640px"
                                           }, [])
              }
@@ -1257,9 +1254,10 @@ function high(e){
                                      ? this.webkitAudioDecodedByteCount > 0
                                      : this.mozHasAudio
 
-                        if (hasAudio) {
-                            this.autoplay = false
-                            this.loop = false
+                        if (! hasAudio) {
+                            this.autoplay = true
+                            this.loop = true
+                            this.muted = true
                         }
                     })
                 }
