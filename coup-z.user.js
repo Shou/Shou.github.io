@@ -1256,16 +1256,20 @@ function high(e){
                                      : this.mozHasAudio
 
                         if (! hasAudio) {
-                            if (! localStorage["coup-z-webm"])
-                                this.autoplay = true
                             this.loop = true
                             this.muted = true
-                            this.controls = false
+                            if (! localStorage["coup-z-webm"])
+                                this.autoplay = true
+                                this.controls = false
+
+                            else this.controls = true
 
                             this.style.cursor = "pointer"
                             this.title = "Toggle play"
 
                             this.addEventListener("click", function(e) {
+                                this.controls = false
+
                                 if (this.paused) this.play()
                                 else this.pause()
                             })
