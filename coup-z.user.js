@@ -1260,6 +1260,10 @@ function high(e){
                             this.autoplay = true
                             this.loop = true
                             this.muted = true
+                            this.controls = false
+
+                            this.addEventListener("click", function(e) {
+                            })
                         }
                     })
                 }
