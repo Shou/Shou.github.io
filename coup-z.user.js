@@ -33,7 +33,7 @@
 //      - Only a certain height or amount of text???
 // - Ignore list
 //      - Specific selectors and declarations?
-// - Pause webms with audio and add a play button overlay
+// - Add option for autoplay for WebMs
 
 // {{{ Variables
 
@@ -1233,7 +1233,6 @@ function replacer(x){
     return e
 }
 
-// TODO XXX Work in progress
 // high :: Elem -> IO ()
 function high(e){
     var as = e.getElementsByTagName("a")
@@ -1263,6 +1262,8 @@ function high(e){
                             this.controls = false
 
                             this.addEventListener("click", function(e) {
+                                if (this.paused) this.play()
+                                else this.pause()
                             })
                         }
                     })
