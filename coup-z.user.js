@@ -1270,7 +1270,6 @@ function high(e){
                                 if (this.controls) {
                                     log("Controls")
                                     this.controls = false
-                                    this.play()
 
                                 } else {
                                     log("No controls")
