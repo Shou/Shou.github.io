@@ -1267,10 +1267,14 @@ function high(e){
                             this.title = "Toggle play"
 
                             this.addEventListener("click", function(e) {
-                                this.controls = false
+                                if (this.controls) {
+                                    this.controls = false
+                                    this.play()
 
-                                if (this.paused) this.play()
-                                else this.pause()
+                                } else {
+                                    if (this.paused) this.play()
+                                    else this.pause()
+                                }
                             })
                         }
                     })
