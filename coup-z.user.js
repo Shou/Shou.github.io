@@ -1268,10 +1268,12 @@ function high(e){
 
                             this.addEventListener("click", function(e) {
                                 if (this.controls) {
+                                    log("Controls")
                                     this.controls = false
                                     this.play()
 
                                 } else {
+                                    log("No controls")
                                     if (this.paused) this.play()
                                     else this.pause()
                                 }
