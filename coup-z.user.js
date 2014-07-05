@@ -142,7 +142,7 @@ var embeds =
         , e: function(url) {
                 return speedcore("video", { src: url
                                           , controls: true
-                                          , style: "max-width: 640px"
+                                          , style: { maxWwidth: "640px" }
                                           }, [])
              }
         , s: "$1"
@@ -155,7 +155,7 @@ var embeds =
                                            , width: 480
                                            , height: 480
                                            , frameborder: 0
-                                           , style: "max-width: 640px"
+                                           , style: { maxWidth: "640px" }
                                            }, [])
              }
         , s: "https://vine.co/v/$1/embed/simple"
@@ -1256,7 +1256,8 @@ function high(e){
                                      : this.mozHasAudio
 
                         if (! hasAudio) {
-                            this.autoplay = true
+                            if (! localStorage["coup-z-webm"])
+                                this.autoplay = true
                             this.loop = true
                             this.muted = true
                             this.controls = false
@@ -1480,11 +1481,16 @@ function welcome(){
                , onclick: gui
                }, []
     ])
-    var n = speedcore("div", {}, [
+    var n = speedcore("div", { style: { width: 420px, margin: "30px auto" }}, [
         "span", { textContent: "Disable Coup-Z" }, [],
         "input", { type: "checkbox"
-                 , onclick: toggle
+                 , onclick: toggle("coup-z-disabled")
                  , checked: localStorage["coup-z-disabled"]
+                 }, [],
+        "span", { textContent: "Disable WebM autoplay" }, [],
+        "input", { type: "checkbox"
+                 , onclick: toggle("coup-z-webm")
+                 , checked: localStorage["coup-z-webm"]
                  }, []
     ])
     var e = document.getElementById("coup-z-wrap")
@@ -1494,10 +1500,12 @@ function welcome(){
     e.appendChild(n)
 }
 
-// toggle :: Event -> IO ()
-function toggle(_){
-    if (this.checked) localStorage["coup-z-disabled"] = "true"
-    else delete localStorage["coup-z-disabled"]
+// toggle :: String -> (Event -> IO ())
+function toggle(s){
+    return function(_) {
+        if (this.checked) localStorage[s] = "true"
+        else delete localStorage[s]
+    }
 }
 
 // | The back-to-welcome button.
