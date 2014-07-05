@@ -25,6 +25,7 @@
 //        is modified.
 // - QuoteHeader color doesn't change
 //      - select dt or w/e element below somehow!
+// - Set src="" and pause() <video> before removal, otherwise audio can be heard
 
 // TODO
 // - Make it work in single posts.
@@ -32,6 +33,7 @@
 //      - Only a certain height or amount of text???
 // - Ignore list
 //      - Specific selectors and declarations?
+// - Pause webms with audio and add a play button overlay
 
 // {{{ Variables
 
@@ -1195,19 +1197,24 @@ function replacer(x){
 // high :: Elem -> IO ()
 function high(e){
     var as = e.getElementsByTagName("a")
-    log(as)
-    log(as.length)
 
     // each link
     for (var j = 0; j < as.length; j++) {
         log("Links #" + j + " / " + as.length)
         try {
             var ass = as[j]
-            log(ass)
             var rd = replacer(ass.href)
-            log(rd)
 
-            if (rd !== ass.href) ass.outerHTML = rd
+            if (rd !== ass.href) {
+                ass.outerHTML = rd
+
+                if ( ass.tagName === "VIDEO"
+                && ( ass.mozHasAudio || ass.webkitAudioDecodedByteCount)) {
+
+                    ass.autoplay = false
+                    ass.loop = false
+                }
+            }
 
         } catch(e) {
             log(e.toString())
