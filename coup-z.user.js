@@ -284,6 +284,14 @@ function flash(e, c) {
 // slice :: [a] -> Int -> Int -> [a]
 var slice = Array.prototype.slice
 
+function keys(o) {
+    var ks = []
+
+    for (var k in o) ks.push(k)
+
+    return ks
+}
+
 // }}}
 
 // {{{ Styling
@@ -657,7 +665,7 @@ function stylePreview(e) {
     var posts = getPosts()
 
     for (var i = 0; i < posts.length; i++) {
-        posts[i].sig = JSON.stringify(load())
+        posts[i].sig = JSON.stringify(initLoad())
         style(e, posts[i])
     }
 
@@ -1013,7 +1021,7 @@ function changeSrc(e) {
 
     if (x !== "" && x !== null) {
         this.src = x
-        this.style = "max-width:170px; max-height:170px; cursor:pointer;"
+        this.style = "max-width: 170px; max-height: 170px; cursor: pointer;"
         localStorage["coup-z-avatar"] = x
     }
 }
@@ -1058,7 +1066,7 @@ function changeText(e) {
 
 // editSignature :: (Obj -> Obj) -> IO Obj
 function editSignature(f) {
-    var e = document.getElementById("c_post").getElementsByTagName("textarea")[0]
+    var e = document.querySelector("#c_post textarea")
     var json = e.textContent.substr(8)
     json = json.substr(0, json.length - 9)
 
@@ -1075,6 +1083,22 @@ function editSignature(f) {
 // load :: IO Obj
 function load() {
     return editSignature(id)
+}
+
+// initLoad :: IO ()
+function initLoad() {
+    var e = document.querySelector("#c_post textarea")
+    var json = e.textContent.substr(8)
+    json = json.substr(0, json.length - 9)
+
+    var obj
+    try { obj = JSON.parse(json) }
+    catch (e) { obj = {} }
+
+    if (keys(o).length > 0)
+        e.textContent = "[nocode]" + JSON.stringify(tmp) + "[/nocode]"
+
+    return obj
 }
 
 // | Save the current object in the siganture textarea.
