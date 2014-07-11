@@ -665,7 +665,7 @@ function stylePreview(e) {
     var posts = getPosts()
 
     for (var i = 0; i < posts.length; i++) {
-        posts[i].sig = JSON.stringify(initLoad())
+        posts[i].sig = JSON.stringify(load())
         style(e, posts[i])
     }
 
@@ -1095,7 +1095,7 @@ function initLoad() {
     try { obj = JSON.parse(json) }
     catch (e) { obj = {} }
 
-    if (keys(o).length > 0)
+    if (keys(obj).length > 0)
         e.textContent = "[nocode]" + JSON.stringify(tmp) + "[/nocode]"
 
     return obj
