@@ -1282,7 +1282,7 @@ function high(e){
                         if (! hasAudio) {
                             this.loop = true
                             this.muted = true
-                            if (! localStorage["coup-z-webm"])
+                            if (localStorage["coup-z-webm"])
                                 this.autoplay = true
 
                             else this.controls = true
@@ -1581,7 +1581,6 @@ function main() {
 
         var stylo = new MutationObserver(function(ms){
                 if (ms.length > 0) {
-                    log(ms.toString())
                     posts = getPosts()
 
                     for (var i = postlen; i < posts.length; i++) {
