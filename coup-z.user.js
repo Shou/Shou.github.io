@@ -104,9 +104,9 @@ var embeds =
         { u: "https?:\\/\\/vimeo\\.com\\/(\\S+)"
         , e: function(url) {
                 return speedcore("iframe", { src: url
-                                           , width: 640
-                                           , height: 380
-                                           , frameborder: 0
+                                           , width: "640"
+                                           , height: "380"
+                                           , frameborder: "0"
                                            , webkitallowfullscreen: true
                                            , mozallowfullscreen: true
                                            , allowfullscreen: true
@@ -119,7 +119,7 @@ var embeds =
         , e: function(url) {
                 return speedcore("iframe", { src: url
                                            , width: "100%"
-                                           , height: 166
+                                           , height: "166"
                                            , scrolling: "no"
                                            , frameborder: "no"
                                            }, [])
@@ -131,8 +131,8 @@ var embeds =
         , e: function(url) {
                 return speedcore("audio", { src: url
                                           , controls: true
-                                          , width: 320
-                                          , height: 32
+                                          , width: "320"
+                                          , height: "32"
                                           }, [])
              }
         , s: "$1"
@@ -142,7 +142,7 @@ var embeds =
         , e: function(url) {
                 return speedcore("video", { src: url
                                           , controls: true
-                                          , style: { maxWwidth: "640px" }
+                                          , style: { maxWidth: "640px" }
                                           }, [])
              }
         , s: "$1"
@@ -155,7 +155,6 @@ var embeds =
                                            , width: 480
                                            , height: 480
                                            , frameborder: 0
-                                           , style: { maxWidth: "640px" }
                                            }, [])
              }
         , s: "https://vine.co/v/$1/embed/simple"
