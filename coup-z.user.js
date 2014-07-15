@@ -106,7 +106,7 @@ var embeds =
                 return speedcore("iframe", { src: url
                                            , width: "640"
                                            , height: "380"
-                                           , frameborder: "0"
+                                           , frameborder: "no"
                                            , webkitallowfullscreen: true
                                            , mozallowfullscreen: true
                                            , allowfullscreen: true
