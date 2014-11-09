@@ -2,16 +2,16 @@
 
 <head>
 
-<title>Mnemonic</title>
+<title>Log in &#x25AA; Mnemonic</title>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 
-<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="/style.css">
 
 </head>
 
-<body id="front">
+<body id="auth">
 
 <header>
 
@@ -24,19 +24,19 @@
 
 <main>
 
-<form name="auth" method="post" action="/signup/">
+<div>
 
-<h1>Sign up
-<span>or log in</span>
-</h1>
+<form name="auth" method="post" action="/login/">
+
+<h1>Sign in</h1>
 <input type="text" name="user" placeholder="Username">
 <input type="password" name="pass" placeholder="Password">
-<div>
-    <input type="submit" value="Sign up">
-    <input type="button" value="Log in">
-</div>
+<input type="submit" value="Log in">
 
 </form>
+
+
+</div>
 
 </main>
 

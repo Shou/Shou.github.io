@@ -1,0 +1,433 @@
+
+/*
+
+Author: Benedict Aas (M00466699)
+
+*/
+
+/* Beautiful typography is important! */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:600,800,300);
+@import url(http://fonts.googleapis.com/css?family=Quando);
+@import url(http://fonts.googleapis.com/css?family=Gentium+Basic:400);
+
+/* {{{ Animations */
+
+@keyframes loadingbg {
+    0%
+    { background-color: #092B68
+    ; border-color: #051F50
+    }
+
+    60%
+    { background-color: #2A5095
+    ; border-color: #14397D
+    }
+
+    100%
+    { background-color: #092B68
+    ; border-color: #051F50
+    }
+}
+
+@keyframes errorshake {
+    15%
+    { background-color: #9C0800
+    ; border-color: #780600
+    ; transform: translateX(-25px)
+    }
+
+    30%
+    { background-color: #9C0800
+    ; border-color: #780600
+    ; transform: translateX(15px)
+    }
+
+    45%
+    { background-color: #9C0800
+    ; border-color: #780600
+    ; transform: translateX(-5px)
+    }
+
+    60%
+    { background-color: #9C0800
+    ; border-color: #780600
+    }
+}
+
+@keyframes successbg {
+    0%
+    { background-color: #23AE34
+    ; border-color: #0A921B
+    }
+
+    25%
+    { background-color: #23AE34
+    ; border-color: #0A921B
+    }
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0px rgba(255,255,255,0.5), 0 0 0 1px #b2dfdb, 0 0 0 4px rgba(255,255,255,0.5), 0 0 0 7px #b2dfdb }
+    100% { box-shadow: 0 0 0 3px rgba(255,255,255,0.5), 0 0 0 6px #b2dfdb, 0 0 0 9px rgba(255,255,255,0.5), 0 0 0 12px transparent }
+}
+
+@keyframes intropulse {
+    0% { box-shadow: 0 0 0 0px #f7f7f7, 0 0 0 1px #b2dfdb }
+    100% { box-shadow: 0 0 0 3px #f7f7f7, 0 0 0 6px #b2dfdb }
+}
+
+/* }}} */
+
+/* {{{ Media rules */
+
+/* Bigger fonts for compact screens */
+@media (max-height: 1100px) {
+    html, body
+    { font-size: 12pt
+    }
+}
+
+@media (min-height: 1100px) {
+    html, body
+    { font-size: 16pt
+    }
+}
+
+/* Background image accommodated to the screen */
+@media (orientation: portrait), (max-width: 1100px) {
+    body
+    { background-size: auto 100%
+    }
+
+    main, main > div
+    { width: 100%
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1100px) {
+    body
+    { background-size: 100% auto
+    }
+}
+
+/* }}} */
+
+
+*
+{ box-sizing: border-box
+}
+
+body
+{ font-family: "Open Sans", sans-serif
+; background-color: #9ccc65
+; background-position: center center
+; padding: 0
+; margin: 0
+; border: 0
+; display: flex
+; flex-direction: column
+; min-height: 100vh
+; justify-content: space-between
+}
+
+body#front
+{ background-image: url(meadow.jpg)
+}
+
+header
+{ display: flex
+; align-items: flex-end
+; justify-content: space-between
+; color: #424242
+; background-color: #f5f5f5
+; padding: 0.5em 0.5em 0 0.5em
+; border-bottom: 0.3em solid #EEE
+}
+
+header span
+{ font-family: "Quando", serif
+; letter-spacing: 0.2em
+}
+
+h1, header span, form h1
+{ font-size: 2em
+}
+
+form, form input, label
+{ font-size: 1em
+}
+
+h1
+{ padding: 0.5em 0
+}
+
+h3
+{ margin: 1em auto 0.5em auto
+; text-transform: uppercase
+; margin: 1em 0 0 0
+}
+
+h3 > span
+{ font-family: "Gentium Basic", serif
+}
+
+h1 > span
+{ display: block
+; letter-spacing: 0
+; font-size: 0.5em
+}
+
+main
+{ display: flex
+; flex-direction: column
+; justify-content: center
+; align-items: center
+; color: #f7f7f7
+; margin: 0 auto
+}
+
+main > div
+{ background-color: #f7f7f7
+; color: #212121
+; display: flex
+; flex-direction: column
+; align-items: center
+; padding: 1em
+; border-radius: 1px
+}
+
+footer
+{ font-family: "Open Sans", sans-serif
+; font-weight: 300
+; font-size: 0.8em
+; padding: 0.5em
+; color: #f7f7f7
+; text-align: right
+}
+
+footer span
+{ font-weight: 600
+}
+
+a
+{ color: #03a9f4
+; text-decoration: none
+}
+
+input[type="file"]
+{ display: none
+}
+
+label
+{ font-family: "Open Sans", sans-serif
+; font-weight: 800
+; color: #f7f7f7
+; padding: 0.6em
+; margin: 1vw 1vw -0.25em 0
+; background-color: #03a9f4
+; cursor: pointer
+}
+
+label:hover
+{ background-color: #00796b
+; border-color: #673E1F
+; transition: 1s background-color, 1s border-color
+; animation: intropulse 1s linear, pulse 2s linear 1s infinite
+}
+
+form
+{ display: flex
+; flex-direction: column
+}
+
+form[name="auth"]
+{ width: 15em }
+
+form input
+{ margin: 0.25em
+; padding: 0.25em 0.5em
+; border: 1px solid #D0D0D0
+}
+
+form input[type="submit"], form input[type="button"]
+{ flex: 1 auto
+}
+
+form + article
+{ width: 20em
+}
+
+input[type="text"], input[type="password"]
+{ background-color: #F5F5F5
+}
+
+input[type="submit"], input[type="button"]
+{ font-family: "Open Sans", sans-serif
+; font-weight: 600
+; cursor: pointer
+}
+
+article
+{ background-color: #f7f7f7
+; color: #212121
+; font-family: "Gentium Basic", serif
+}
+
+article h3
+{ font-family: "Open Sans", sans-serif
+}
+
+article p
+{ text-align: left
+}
+
+p
+{ margin-top: 0
+}
+
+input[type="button"]
+{ background-color: #EEE
+}
+
+input[type="button"]:hover
+{ background-color: #F5F5F5
+}
+
+form input[type="submit"]
+{ background-color: #03a9f4
+; color: white
+; border-color: #00acc1
+}
+
+form input[type="submit"]:hover, form input[type="submit"]:focus
+{ background-color: #29b6f6
+}
+
+form div
+{ display: flex
+; align-items: center
+}
+
+form h1
+{ font-family: "Open Sans", sans-serif
+; font-weight: 300
+; letter-spacing: 0.5vw
+; text-align: center
+; margin: 1vh 0 0 0
+}
+
+form
+{ font-family: "Open Sans", sans-serif
+; font-weight: 300
+; text-align: center
+; margin: 0 0 1vh 0
+}
+
+.loading-background
+{ animation: loadingbg 1.5s infinite
+}
+
+.error-shake
+{ animation: errorshake 1s
+}
+
+.success-background
+{ animation: successbg 1s
+}
+
+.warning-color
+{ color: #9C4A00
+}
+
+.error-color
+{ color: #9C0800
+}
+
+#control
+{ width: 100%
+}
+
+#control > div
+{ font-size: 1em
+; display: inline-block
+; cursor: pointer
+; background-color: #0277bd
+; color: #f7f7f7
+; font-weight: 600
+; padding: 1vh 1vw
+}
+
+#files
+{ display: table
+; width: 80vw
+; margin: 1vh 0
+; border: 1px solid #888
+; overflow: hidden
+; text-overflow: ellipsis
+}
+
+#files > div
+{ display: table-row
+; padding: 1vh 1vw
+}
+
+#files > div:nth-child(odd)
+{ background-color: #e1f5fe
+}
+
+#files > div:hover, #files > div:focus
+{ background-color: #b3e5fc
+}
+
+#files > div > *
+{ display: table-cell
+; vertical-align: middle
+}
+
+img.thumb
+{ max-width: 5vw
+; max-height: 5vh
+}
+
+header > nav
+{ font-size: 1em
+; font-family: "Open Sans", sans-serif
+; font-weight: 900
+; background-color: #424242
+; color: #f7f7f7
+; padding: 0.6em
+; margin: 1vw 1vw -0.25em 0
+; cursor: pointer
+}
+
+header > nav > div
+{ display: none
+; position: absolute
+; background-color: #424242
+; padding: 0.6em
+; margin: 0.6em 0 0 -0.6em
+}
+
+header > nav:hover > div
+{ display: flex
+; flex-direction: column
+}
+
+header > nav > div:hover
+{ background-color: #616161
+}
+
+nav
+{ font-weight: 300
+}
+
+#progress
+{ background-image: linear-gradient(90deg, #00bcd4 10%, #f7f7f7 11%)
+; color: #e65100
+; text-shadow: 1px 1px 1px #80deea
+; font-weight: bold
+; padding: 0.5vh 1vw
+; margin: 2vh 0 -1em
+; border: 1px solid #80deea
+}
+
