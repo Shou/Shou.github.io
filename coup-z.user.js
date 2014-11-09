@@ -104,9 +104,9 @@ var embeds =
         { u: "https?:\\/\\/vimeo\\.com\\/(\\S+)"
         , e: function(url) {
                 return speedcore("iframe", { src: url
+                                           , frameborder: "no"
                                            , width: "640"
                                            , height: "380"
-                                           , frameborder: "0"
                                            , webkitallowfullscreen: true
                                            , mozallowfullscreen: true
                                            , allowfullscreen: true
@@ -152,9 +152,9 @@ var embeds =
         , e: function(url) {
                 return speedcore("iframe", { src: url
                                            , className: "vine-embed"
-                                           , width: 480
-                                           , height: 480
-                                           , frameborder: 0
+                                           , width: "480"
+                                           , height: "480"
+                                           , frameborder: "no"
                                            }, [])
              }
         , s: "https://vine.co/v/$1/embed/simple"
