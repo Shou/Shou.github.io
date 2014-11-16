@@ -2,20 +2,20 @@
 
 <head>
 
-<title>Mnemonic</title>
+<title>Sign up &#x25AA; Mnemonic</title>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 
-<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="/style.css">
 
 </head>
 
-<body id="front">
+<body id="auth">
 
 <header>
 
-<span>Mnemonic</span>
+<a href="/">Mnemonic</a>
 
 <label for="upload">Upload</label>
 <input type="file" name="files[]" id="upload" multiple>
@@ -24,19 +24,38 @@
 
 <main>
 
+<div>
+
 <form name="auth" method="post" action="/signup/">
 
-<h1>Sign up
-<span>or log in</span>
-</h1>
-<input type="text" name="user" placeholder="Username">
-<input type="password" name="pass" placeholder="Password">
-<div>
-    <input type="submit" value="Sign up">
-    <input type="button" value="Log in">
-</div>
+<h1>Sign up</h1>
+<input type="text" name="user" placeholder="Username" required>
+<input type="password" name="pass" placeholder="Password" required>
+<input type="submit" value="Sign up">
 
 </form>
+
+<article>
+
+<h3>Anonymous <span>&</span> Convenient</h3>
+<p>
+Logging in to use the service isn't required, but registering will give
+access to more features.
+</p>
+
+<h3>Beautiful <span>&</span> Organic</h3>
+<p>
+More web design buzzwords. Just sign up already!!!!!
+</p>
+
+<h3>Harnessing space</h3>
+<p>
+please click the button
+</p>
+
+</article>
+
+</div>
 
 </main>
 

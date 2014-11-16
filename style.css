@@ -138,18 +138,18 @@ header
 { display: flex
 ; align-items: flex-end
 ; justify-content: space-between
-; color: #424242
 ; background-color: #f5f5f5
 ; padding: 0.5em 0.5em 0 0.5em
 ; border-bottom: 0.3em solid #EEE
 }
 
-header span
+header > a
 { font-family: "Quando", serif
 ; letter-spacing: 0.2em
+; color: #424242
 }
 
-h1, header span, form h1
+h1, header > a, form h1
 { font-size: 2em
 }
 
