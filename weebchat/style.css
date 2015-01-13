@@ -1,0 +1,76 @@
+
+*
+{ box-sizing: border-box }
+
+body
+{ padding: 0
+; margin: 0
+; border: 0
+; font: normal 14px/1.5 "Inconsolata", monospace
+; background: #EEEEEE
+; display: flex
+; flex-direction: column
+; justify-content: space-between
+; min-height: 100vh
+}
+
+header
+{ font: bold 48px "Open Sans", sans-serif
+; text-transform: uppercase
+; color: #FCFCFC
+; background: #2196f3
+; text-shadow: 1px 1px 0 #1e88e5
+; padding: 16px
+; border-bottom: 2px solid #42a5f5
+}
+
+main
+{ display: flex
+; overflow-y: auto
+}
+
+footer
+{
+}
+
+footer > input
+{ width: 100%
+; padding: 8px
+}
+
+input
+{ background-color: #FFF
+; color: #2D2D2D
+; border: none
+; font: normal 14px/1.5 "Inconsolata"
+}
+
+.char
+{ padding: 10px
+}
+
+.char p
+{ background: #FFF
+; color: #2D2D2D
+; border-radius: 8px
+; padding: 8px
+; margin-bottom: 24px
+; box-shadow: 1px 1px 0 0 #AAA
+}
+
+.char p:last-of-type:after
+{ content: " "
+; display: block
+; transform: rotate(45deg)
+; background: #FFF
+; width: 16px
+; height: 16px
+; margin-bottom: -16px
+; margin-left: 16px
+; border-right: 1px solid #AAA
+}
+
+.char img
+{ max-width: 200px
+; max-height: 200px
+}
