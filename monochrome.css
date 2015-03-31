@@ -88,6 +88,7 @@ tr.pin
 { display: none
 }
 
+table.posts > tbody > tr:first-child:hover ~ tr.pin,
 table.posts > tbody > tr:first-child:focus ~ tr.pin
 { display: table-row
 }
@@ -120,6 +121,10 @@ td.c_post, #topic_review td.c_desc + td
 { max-width: 750px
 }
 
+.c_post img, #topic_review img, .c_post video, .c_post object, .c_post audio,
+.c_post iframe
+{ max-width: 700px }
+
 }
 
 /* Smaller than the wrap's max-size */
@@ -132,6 +137,10 @@ td.c_post, #topic_review td.c_desc + td
 td.c_post, #topic_review td.c_desc + td
 { max-width: 50vw
 }
+
+.c_post img, #topic_review img, .c_post video, .c_post object, .c_post audio,
+.c_post iframe
+{ max-width: 50vw }
 
 }
 
@@ -1219,8 +1228,8 @@ dl#fast-reply dt
 ; background-color: rgba(240, 240, 240, 0.7)
 ; font-size: 1.1em
 ; font-weight: 700
-; margin: 0
-; padding: 0.5em 1em
+; margin: 0 0 -0.1em 0
+; padding: 0.5em
 ; text-transform: uppercase
 }
  
