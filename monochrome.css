@@ -72,6 +72,26 @@ html, body, #top_info small a:after, #top_info > strong > a
 { font-size: 2em
 }
 
+th#pinned_head
+{ text-transform: uppercase
+}
+
+th#pinned_head::before
+{ content: ""
+; display: inline-block
+; width: 1em
+; height: 1em
+; border-right: 0.1em solid #4D4D4D
+; border-bottom: 0.1em solid #4D4D4D
+; margin: 0 1em
+; transform: rotate(55deg) skewY(-20deg)
+; transition: 0.5s all cubic-bezier(.55,0,0.1,1)
+}
+
+tr.pin
+{ display: none
+}
+
 }
 
 /* Small screens */
@@ -1614,35 +1634,6 @@ padding:5px;
 text-align:center;
 }
 
-th#pinned_head
-{ text-transform: uppercase
-}
-
-th#pinned_head::before
-{ content: ""
-; display: inline-block
-; width: 1em
-; height: 1em
-; border-right: 0.1em solid #4D4D4D
-; border-bottom: 0.1em solid #4D4D4D
-; margin: 0 1em
-; transform: rotate(55deg) skewY(-20deg)
-; transition: 0.5s all cubic-bezier(.55,0,0.1,1)
-}
-
-/* TODO */
-tr.pin
-{ display: none
-}
-
-table.posts > thead > tr:first-child:hover ~ tr.pin
-{ display: table-row
-}
- 
-.row1,.row2 {
-line-height:1.4;
-}
- 
 td.c_desc img,td.c_desc input {
 float:left;
 vertical-align:middle;
