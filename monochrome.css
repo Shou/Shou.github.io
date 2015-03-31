@@ -9,7 +9,6 @@
      - Still.
  - Padding on some buttons not in place.
  - Inconsistent button sizing: padding, margin, border, font-size
- - Topic view checkboxes taking up too much space.
  - Thread footer navigation.
      - UPPERCASE
      - padding: 0 0.5em
@@ -20,6 +19,11 @@
          - Separate checkboxes from threads.
              - Note that they are not seen by normal members.
  - No more odd rows!?!?!
+ - Fast reply outer border needs to GO. Also generally be modernised. Phones.
+    - Make it take up the whole width, minus margin.
+ - Hide pinned threads.
+ - Post button spacing broken.
+ - More spacing between posts.
 
 */
 
@@ -115,24 +119,16 @@ td.c_post, #topic_review td.c_desc + td
 
 /* {{{ Animations */
 
-@keyframes active-text {
-    0% { color: #F88 }
-    33% { color: #8F8 }
-    66% { color: #88F }
-    100% { color: #F88 }
-}
-
-@keyframes link-text {
-    0% { color: #C44 }
-    33% { color: #4C4 }
-    66% { color: #44C }
-    100% { color: #C44 }
-}
-
 @keyframes break {
     33% { transform: scaleX(1.2) }
     66% { transform: scaleY(1.2) }
     100% { }
+}
+
+@keyframes circle {
+    0% { background-image: radial-gradient(circle, 0.1em, #2196F3 0.09em, transparent }
+    66% { background-image: radial-gradient(circle, 1em, #2196F3 0.9em, transparent }
+    100% { background-image: radial-gradient(circle, 2em, transparent 1.9em, transparent }
 }
 
 /* End of animations }}} */
@@ -152,7 +148,8 @@ html, body
 
 /* {{{ Fonts */
 
-td.c_post, #error_box .generic small:before, html, body, thead th small
+td.c_post, #error_box .generic small:before, html, body, thead th small,
+textarea
 { font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif
 }
 
@@ -272,7 +269,7 @@ h2, h3
 thead th
 { text-align: center
 ; border-bottom: 3px double #E0E0E0
-/* ↓ Android Chrome is literally retarded: the unwanted scaling of fonts */
+/* ↓ Android Chrome is Literally Retarded: The Unwanted Scaling of Fonts */
 ; max-height: 99999px
 }
 
@@ -302,9 +299,10 @@ input, select, button, a.btn_fake, td.c_foot a
 textarea
 { background: #F0F0F0
 ; border-top: 0.1em solid #CCC
-; border-right: 0 solid transparent
+; border-right: 0.1em solid #CCC
 ; border-bottom: 0.1em solid #CCC
-; border-left: 0 solid transparent
+; border-left: 0.1em solid #CCC
+; border-radius: 0.1em 0.1em
 ; padding: 0.5em
 ; color: #4D4D4D
 ; font-size: 1em
@@ -350,7 +348,9 @@ input[type="checkbox"]::after
 
 input[type="checkbox"]:checked::after
 { content: "▣"
+; animation: 0.5s circle cubic-bezier(.55,0,0.1,1)
 }
+
 .submit_error
 { background: #000000
 ; border: 1px solid #333333
@@ -423,7 +423,7 @@ dl.info
 }
 
 #error_box .generic small:before
-{ content: " The zionists are invading as you are seated in front of your computer idly staring at your screen while leaning on your left arm and this self-referential page lights up. The postmodern is still being perpetuated despite its irrelevance. Vitriol paints you as amicable. Feminism is victor, emasculate the rest: a toast to the imminent matriarchy. I hope you aren't feeling indifferent today. \A\A The precinct of creativity. Extol fledgling works. Stomp the cigarette and stoop the visceral. Defeat lethologica. Become turbid. You are a mere transient fart in a violent storm. Become immaterially rich. Allow penetration of your mental rind. Are ascetic acolytes truly just brittle? Your acquaintances are scintillating. They prevaricate until they shrivel. Lie down in a meadow at dusk and grasp the verdure as the stars line the void. "
+{ content: " The zionists are invading as you are seated in front of your computer idly staring at your screen while leaning on your left arm and this self-referential page lights up. The postmodern is still being perpetuated despite its irrelevance. Vitriol paints you as amicable. Feminism is victor, emasculate the rest: a toast to the imminent matriarchy. I hope you aren't feeling indifferent today. \A\A The precinct of creativity. Extol fledgling works. Stomp the cigarette and stoop the visceral. Defeat lethologica. Become turbid. You are a mere transient fart in a violent storm. Become immaterially rich. Allow penetration of your mental rind. Are ascetic acolytes truly brittle? Your acquaintances are scintillating. They prevaricate until they shrivel. Lie down in a meadow at dusk and grasp the verdure as the stars line the void. "
 ; display: block
 ; font-weight: normal
 ; white-space: pre-wrap
@@ -1193,12 +1193,7 @@ div.c_view-list
 ; display: inline-block
 ; line-height: 1.8
 }
- 
-dl#fast-reply
-{ border: 3px solid #2D2D2D
-; width: 640px
-}
- 
+
 dl#fast-reply dt
 { color: #2D2D2D
 ; background-color: rgba(240, 240, 240, 0.7)
@@ -1206,6 +1201,7 @@ dl#fast-reply dt
 ; font-weight: 700
 ; margin: 0
 ; padding: 0.5em 1em
+; text-transform: uppercase
 }
  
 dl#fast-reply dd
@@ -1616,6 +1612,31 @@ padding:0 2px;
 tr.postbtn td {
 padding:5px;
 text-align:center;
+}
+
+th#pinned_head
+{ text-transform: uppercase
+}
+
+th#pinned_head::before
+{ content: ""
+; display: inline-block
+; width: 1em
+; height: 1em
+; border-right: 0.1em solid #4D4D4D
+; border-bottom: 0.1em solid #4D4D4D
+; margin: 0 1em
+; transform: rotate(55deg) skewY(-20deg)
+; transition: 0.5s all cubic-bezier(.55,0,0.1,1)
+}
+
+/* TODO */
+tr.pin
+{ display: none
+}
+
+table.posts > thead > tr:first-child:hover ~ tr.pin
+{ display: table-row
 }
  
 .row1,.row2 {
