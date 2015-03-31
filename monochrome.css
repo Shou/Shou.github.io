@@ -315,12 +315,13 @@ h2.special
 
 input, select, button, a.btn_fake, td.c_foot a
 { background: #F0F0F0
-; border-bottom: 2px solid #2D2D2D
+; border-bottom: 0.2em solid #2D2D2D
 ; border-top: 0 solid
 ; border-left: 0 solid
 ; border-right: 0 solid
 ; color: #2D2D2D
-; padding: 3px 5px 1px 5px
+; padding: 0.3em 0.5em 0.1em 0.5em
+; margin: 0 0.5em
 ; vertical-align: middle
 ; transition: 0.5s all ease
 }
@@ -371,7 +372,7 @@ input[type="checkbox"]::after
 ; height: 1em
 ; display: inline-block
 ; color: #424242
-; margin: 0 -0.5em
+; margin: 0 -1.3em
 ; text-align: center
 }
 
@@ -2286,8 +2287,9 @@ padding:0;
 }
 
 .bunk-button
-{ border-bottom: 2px solid #2d2d2d
-; padding: 3px 5px 1px
+{ border-bottom: 0.2em solid #2d2d2d
+; padding: 0.3em 0.5em 0.1em
+; margin: 0 0.3em
 ; background-color: #f0f0f0
 ; transition: 0.5s all cubic-bezier(.55,0,0.1,1)
 }
