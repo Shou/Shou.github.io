@@ -126,9 +126,9 @@ td.c_post, #topic_review td.c_desc + td
 }
 
 @keyframes circle {
-    0% { background-image: radial-gradient(circle, 0.1em, #2196F3 0.09em, transparent }
-    66% { background-image: radial-gradient(circle, 1em, #2196F3 0.9em, transparent }
-    100% { background-image: radial-gradient(circle, 2em, transparent 1.9em, transparent }
+    0% { background-image: radial-gradient(circle, 0.1em, #2196F3 0.09em, transparent) }
+    66% { background-image: radial-gradient(circle, 1em, #2196F3 0.9em, transparent) }
+    100% { background-image: radial-gradient(circle, 2em, transparent 1.9em, transparent) }
 }
 
 /* End of animations }}} */
