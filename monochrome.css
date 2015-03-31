@@ -72,10 +72,6 @@ html, body, #top_info small a:after, #top_info > strong > a
 { font-size: 2em
 }
 
-th#pinned_head
-{ text-transform: uppercase
-}
-
 th#pinned_head::before
 { content: ""
 ; display: inline-block
@@ -90,6 +86,10 @@ th#pinned_head::before
 
 tr.pin
 { display: none
+}
+
+table.posts > tbody > tr:first-child:focus ~ tr.pin
+{ display: table-row
 }
 
 }
@@ -1632,6 +1632,10 @@ padding:0 2px;
 tr.postbtn td {
 padding:5px;
 text-align:center;
+}
+
+th#pinned_head
+{ text-transform: uppercase
 }
 
 td.c_desc img,td.c_desc input {
