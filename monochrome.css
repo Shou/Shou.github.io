@@ -2330,20 +2330,14 @@ padding:0;
 
 .offline, .hot-new
 { border-color: #B71C1C
-; border-width: 0.2em
-; border-style: solid
 }
 
 .online, .plain-new
 { border-color: #8BC34A
-; border-width: 0.2em
-; border-style: solid
 }
 
 .poll-new
 { border-color: #03A9F4
-; border-width: 0.2em
-; border-style: solid
 }
 
 .bunk-big-butt
