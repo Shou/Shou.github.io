@@ -130,9 +130,9 @@ td.c_post, #topic_review td.c_desc + td
 /* Smaller than the wrap's max-size */
 @media (max-width: 1038px)
 {
- 
+
 #wrap
-{ margin: 0 1em 44px !important }
+{ margin: 0 0 44px !important }
 
 td.c_post, #topic_review td.c_desc + td
 { max-width: 50vw
@@ -141,6 +141,8 @@ td.c_post, #topic_review td.c_desc + td
 .c_post img, #topic_review img, .c_post video, .c_post object, .c_post audio,
 .c_post iframe
 { max-width: 50vw }
+
+/* TODO fix input/textarea widths in preferences */
 
 }
 
@@ -182,9 +184,10 @@ textarea
 { font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif
 }
 
-#logo, td.c_post big, #top, #subhuman, h2, h3, .category h2, .topic h2, #portal h2,
-#portal_foot h2, thead th, #copyright, blockquote dl, .notice, .error, .spoiler_toggle,
-th.c_cat-title, th.c_cat-starter, th.c_cat-replies, th.c_cat-views, th.c_cat-lastpost
+#logo, td.c_post big, #top, #subhuman, h2, h3, .category h2, .topic h2,
+#portal h2, #portal_foot h2, thead th, #copyright, blockquote dl, .notice,
+.error, .spoiler_toggle, th.c_cat-title, th.c_cat-starter, th.c_cat-replies,
+th.c_cat-views, th.c_cat-lastpost
 { font-family: "Quicksand", sans-serif
 }
 
@@ -192,7 +195,8 @@ code
 { font-family: "Droid Sans Mono", monospace
 }
 
-th.c_cat-title, th.c_cat-starter, th.c_cat-replies, th.c_cat-views, th.c_cat-lastpost
+th.c_cat-title, th.c_cat-starter, th.c_cat-replies, th.c_cat-views,
+th.c_cat-lastpost
 { font-weight: 400
 }
 
@@ -362,23 +366,8 @@ input[type="text"]:focus, input[type="password"]:focus, input:not([type]):focus
 { border-left: 2px solid #D0D0D0
 }
 
-input[type="checkbox"]
-{ width: 0
-}
-
-input[type="checkbox"]::after
-{ content: "■"
-; width: 1em
-; height: 1em
-; display: inline-block
-; color: #424242
-; margin: 0 -1.3em
-; text-align: center
-}
-
-input[type="checkbox"]:checked::after
-{ content: "▣"
-; animation: 0.5s circle cubic-bezier(.55,0,0.1,1)
+input[type="checkbox"]:checked
+{ animation: 0.5s circle cubic-bezier(.55,0,0.1,1)
 }
 
 .submit_error
@@ -747,6 +736,7 @@ padding:10px 25px;
 ; text-align: center
 ; padding: 0.5em 0
 ; margin: 0 0.5em
+; text-transform: uppercase
 }
 
 .meta_menu img
