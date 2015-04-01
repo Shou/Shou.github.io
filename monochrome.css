@@ -22,8 +22,9 @@
  - Fast reply outer border needs to GO. Also generally be modernised. Phones.
     - Make it take up the whole width, minus margin.
  - Hide pinned threads.
+    - Impossible?
  - Post button spacing broken.
- - More spacing between posts.
+ - Inbox and PM system looks atrocious.
 
 */
 
@@ -239,6 +240,15 @@ input, textarea, select
 ::selection, option:checked
 { background-color: #37474F
 ; color: #ECEFF1
+}
+
+[data-desc]:hover::after
+{ content: attr(data-desc)
+; position: absolute
+; background-color: #424242
+; color: #F0F0F0
+; padding: 1em
+; margin: 1em
 }
 
 .topic dl.user_info
@@ -1243,11 +1253,7 @@ dl#fast-reply dd
 }
 
 #c_post-close
-{ display: none
-}
-
-#c_post:hover > #c_post-close, #c_post:focus
-{ display: inline
+{ display: block
 ; float: none !important
 ; position: absolute !important
 ; top: inherit !important
@@ -2317,7 +2323,25 @@ padding:0;
 { color: #f0f0f0
 ; background-color: #2d2d2d
 }
- 
+
+.offline, .hot.new
+{ border-color: #B71C1C
+; border-width: 0.2em
+; border-style: solid
+}
+
+.online, .plain.new
+{ border-color: #8BC34A
+; border-width: 0.2em
+; border-style: solid
+}
+
+.poll.new
+{ border-color: #03A9F4
+; border-width: 0.2em
+; border-style: solid
+}
+
 .bunk-big-butt
 { border-bottom: 3px solid #2d2d2d
 ; font-size: 1.6em
