@@ -10,9 +10,32 @@
 
 <style>
 
+@media (orientation: landscape) and (min-height: 600px) {
+
+body
+{ font-size: 40px
+}
+
+}
+
+@media (orientation: landscape) and (min-height: 900px) {
+
+body
+{ font-size: 60px
+}
+
+}
+
+@media (orientation: portrait) {
+
+body
+{ background-color: pink !important
+}
+
+}
+
 *
 { box-sizing: border-box
-; white-space: pre-wrap
 }
 
 body
@@ -23,7 +46,6 @@ body
 ; display: flex
 ; flex-direction: column
 ; justify-content: space-between
-; font-size: 4vw
 }
 
 body > *
@@ -35,7 +57,6 @@ body > *
 header
 { font-family: "Open Sans"
 ; color: #424242
-; line-height: 0.8
 ; text-align: center
 ; vertical-align: middle
 ; font-size: 4em
@@ -49,14 +70,14 @@ main
 { background-color: #FFA000
 ; color: #424242
 ; font-family: "Vollkorn"
-; font-size: 0.30em
+; font-size: 0.50em
 }
 
-main > p
+main > span
 { max-width: 50vw
 }
 
-main > p::first-letter
+main > span::first-letter
 { font-size: 4em
 }
 
@@ -64,13 +85,14 @@ main::before
 { content: "ABOUT ME"
 ; font-family: "Open Sans"
 ; font-size: 3.3em
+; display: block
 }
 
 footer
 { display: flex
 ; justify-content: space-around
 ; align-items: center
-; flex-wrap: wrap
+; flex-wrap: wrap-reverse
 ; background-color: #424242
 ; font-family: "Quicksand"
 }
@@ -93,11 +115,7 @@ SHOU
 
 <main>
 
-<p>
-
-A real human bean.
-
-</p>
+<span>A real human bean.</span>
 
 </main>
 
