@@ -10,7 +10,15 @@
 
 <style>
 
-@media (orientation: landscape) and (min-height: 600px) {
+@media (orientation: landscape) {
+
+body
+{ font-size: 30px
+}
+
+}
+
+@media (orientation: landscape) and (min-height: 600px) and (min-width: 1200px) {
 
 body
 { font-size: 40px
@@ -18,7 +26,7 @@ body
 
 }
 
-@media (orientation: landscape) and (min-height: 900px) {
+@media (orientation: landscape) and (min-height: 900px) and (min-width: 1800px) {
 
 body
 { font-size: 60px
@@ -26,10 +34,18 @@ body
 
 }
 
-@media (orientation: portrait) {
+@media (orientation: portrait) and (min-width: 600px) {
 
 body
-{ background-color: pink !important
+{ font-size: 40px
+}
+
+}
+
+@media (orientation: portrait) and (min-width: 900px) {
+
+body
+{ font-size: 60px
 }
 
 }
@@ -83,9 +99,16 @@ main > span::first-letter
 
 main::before
 { content: "ABOUT ME"
+; padding: 0 0.5em
+; background-color: #424242
+; color: #FFA000
 ; font-family: "Open Sans"
 ; font-size: 3.3em
-; display: block
+; display: inline-block
+}
+
+main > span
+{ display: block
 }
 
 footer
@@ -95,6 +118,15 @@ footer
 ; flex-wrap: wrap-reverse
 ; background-color: #424242
 ; font-family: "Quicksand"
+}
+
+footer > span
+{ transition: 300ms text-shadow ease-in
+}
+
+footer > span:hover
+{ text-shadow: 0 0 0.5em #8E24AA
+; transition: 300ms text-shadow ease-in
 }
 
 a
@@ -133,12 +165,12 @@ SHOU
 
 <span>
 <i class="fa fa-lastfm-square"></i>
-<a href="//last.fm/user/icedtidus">Last.fm</a>
+<a href="//last.fm/user/icedtidus">Last</a>
 </span>
 
 <span>
 <i class="fa fa-stack-exchange"></i>
-<a href="//stackexchange.com/user/1869722/shou">Stackx</a>
+<a href="//stackexchange.com/user/1869722/shou">Stack</a>
 </span>
 
 <span>
@@ -148,7 +180,7 @@ SHOU
 
 <span>
 <i class="fa fa-soundcloud"></i>
-<a href="//soundcloud.com/shou-108">Soundc</a>
+<a href="//soundcloud.com/shou-108">Sound</a>
 </span>
 
 </footer>
