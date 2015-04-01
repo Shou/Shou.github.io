@@ -182,7 +182,7 @@ html, body
 /* {{{ Fonts */
 
 .c_post, #error_box .generic small:before, html, body, thead th small,
-textarea, h3
+textarea, h3, #profile_menu
 { font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif
 }
 
@@ -219,7 +219,7 @@ ul.cat-pages, .meta_box
 }
 
 td, textarea, #profile_menuwrap, button, .btn_fake, input[type="button"],
-.btn_text, #top
+.btn_text, #top, #profile_menu
 { font-size: 1em
 }
 
@@ -1062,7 +1062,7 @@ margin-bottom:1px;
 }
 
 #profile_menu
-{ font-size: 1em
+{ text-shadow: none
 }
 
 #profile_menu a
@@ -1075,6 +1075,7 @@ border-top:0;
 
 #profile_menu > li > ul
 { max-height: 0
+; position: absolute
 ; transition: 0.3s max-height cubic-bezier(.55,0,0.1,1)
 }
 
