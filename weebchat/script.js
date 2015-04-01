@@ -174,7 +174,7 @@ function analyze(text) {
                      ) / text.length
     mood.negativity = swearingLength * 10 * (1 >> positiveLength) / text.length
     mood.curiosity = questionLength * 5 / text.length
-    mood.melancholy = ( lowercaseLength * (1 >> uppercaseLength) + sadLength
+    mood.melancholy = ( lowercaseLength * 0.5 * (1 >> uppercaseLength) + sadLength
                       ) / text.length
     mood.lethargy = lowercaseLength * 0.5 * (1 >> uppercaseLength) / text.length
     mood.worry = worryLength * 5 / text.length
@@ -216,22 +216,26 @@ function Done(i, r) {
 
 // TODO remember it should be lazy, i.e. not run until `parse' is called.
 // | Generic parser to be used for the chat protocol
-// Parser :: String -> Parser
+// Parser :: Parser
 function Parser(input) {
     this.input = input
+    this.pos = 0
+    this.more = true
 }
 
 // parse :: String -> Result a
-Parser.prototype.parse = function(parser, input) {
-    var p = new Parser(input)
+Parser.prototype.parse = function(input) {
+    return this.result
 }
 
 // | Feed the parser a case-insensitive string.
 // asciiCI :: Parser String
 Parser.prototype.asciiCI = function(str) {
-    if (this.text.substr(0, str.length).toLowercase() === str.toLowercase()) {
-        this.text = this.text.slice(str.length)
-        return this.text.substr(0, str.length)
+    return function(result) {
+        if (this.text.substr(0, str.length).toLowercase() === str.toLowercase()) {
+            this.text = this.text.slice(str.length)
+            return this.text.substr(0, str.length)
+        }
     }
 }
 

@@ -1,50 +1,139 @@
-<!DOCTYPE html>
 
 <head>
 
-<title>Mnemonic</title>
-
 <meta charset="UTF-8">
-<meta name="viewport" content="initial-scale=1, maximum-scale=1">
 
-<link rel="stylesheet" type="text/css" href="style.css">
+<title>Shou</title>
+
+<link href='http://fonts.googleapis.com/css?family=Quicksand:300|Open+Sans:800' rel='stylesheet' type='text/css'>
+<link href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+
+<style>
+
+*
+{ box-sizing: border-box
+; white-space: pre-wrap
+}
+
+body
+{ margin: 0
+; padding: 0
+; background-color: #D32F2F
+; color: #F0F0F0
+; display: flex
+; flex-direction: column
+; justify-content: space-between
+; font-size: 4vw
+}
+
+body > *
+{ padding: 1em
+; height: 100vh
+; width: 100vw
+}
+
+header
+{ font-family: "Open Sans"
+; color: #424242
+; line-height: 0.8
+; text-align: center
+; vertical-align: middle
+; font-size: 4em
+; text-shadow: 0.03em 0.03em 0 #F0F0F0, 0.06em 0.06em 0 #424242
+; display: flex
+; align-items: center
+; justify-content: center
+}
+
+main
+{ background-color: #FFA000
+; color: #424242
+; font-family: "Vollkorn"
+; font-size: 0.30em
+}
+
+main > p
+{ max-width: 50vw
+}
+
+main > p::first-letter
+{ font-size: 4em
+}
+
+main::before
+{ content: "ABOUT ME"
+; font-family: "Open Sans"
+; font-size: 3.3em
+}
+
+footer
+{ display: flex
+; justify-content: space-around
+; align-items: center
+; flex-wrap: wrap
+; background-color: #424242
+; font-family: "Quicksand"
+}
+
+a
+{ font: 2em
+; text-decoration: none
+; color: inherit
+}
+
+</style>
 
 </head>
 
-<body id="front">
+<body>
 
 <header>
-
-<a href="/">Mnemonic</a>
-
-<label for="upload">Upload</label>
-<input type="file" name="files[]" id="upload" multiple>
-
+SHOU
 </header>
 
 <main>
 
-<form name="auth" method="post" action="/signup/">
+<p>
 
-<h1>Sign up
-<span>or log in</span>
-</h1>
-<input type="text" name="user" placeholder="Username">
-<input type="password" name="pass" placeholder="Password">
-<div>
-    <input type="submit" value="Sign up">
-    <input type="button" value="Log in">
-</div>
+A real human bean.
 
-</form>
+</p>
 
 </main>
 
-<footer>Design by <span>Benedict Aas</span></footer>
+<footer>
 
-<script type="text/javascript" src="/script.js"></script>
+<span>
+<i class="fa fa-github-square"></i>
+<a href="//github.com/Shou">Github</a>
+</span>
+
+<span>
+<i class="fa fa-steam-square"></i>
+<a href="//steamcommunity.com/id/shoue">Steam</a>
+</span>
+
+<span>
+<i class="fa fa-lastfm-square"></i>
+<a href="//last.fm/user/icedtidus">Last.fm</a>
+</span>
+
+<span>
+<i class="fa fa-stack-exchange"></i>
+<a href="//stackexchange.com/user/1869722/shou">Stackx</a>
+</span>
+
+<span>
+<i class="fa fa-reddit-square"></i>
+<a href="//reddit.com/u/Shoue">Reddit</a>
+</span>
+
+<span>
+<i class="fa fa-soundcloud"></i>
+<a href="//soundcloud.com/shou-108">Soundc</a>
+</span>
+
+</footer>
 
 </body>
-
-</html>
 

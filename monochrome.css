@@ -197,8 +197,41 @@ code
 }
 
 th.c_cat-title, th.c_cat-starter, th.c_cat-replies, th.c_cat-views,
-th.c_cat-lastpost
+th.c_cat-lastpost, thead > tr > th small
 { font-weight: 400
+}
+
+thead > tr > th small
+{ font-size: 0.4em
+}
+
+#top_info, #top_info > small > a
+{ font-size: 0
+}
+
+ul.cat-topicpages, .c_head, .c_foot, .c_sort
+{ font-size: 0.8em
+}
+
+ul.cat-pages, .meta_box
+{ font-size: 0.9em
+}
+
+td, textarea, #profile_menuwrap, button, .btn_fake, input[type="button"],
+.btn_text, #top
+{ font-size: 1em
+}
+
+h2, h3
+{ font-size: 1.1em
+}
+
+#logo
+{ font-size: 1.5em
+}
+
+h1, #top_bar::before
+{ font-size: 2em
 }
 
 /* }}} */
@@ -256,7 +289,6 @@ input, textarea, select
 
 #logo
 { text-align: left
-; font-size: 1.5em
 ; color: rgba(50, 50, 50, 0.6)
 ; text-shadow: 0.06em 0.06em 0.09em rgba(255, 255, 255, 0.1)
 ; letter-spacing: 0.1em
@@ -291,19 +323,10 @@ th
 td
 { color: #3D3D3D
 ; padding: 0.5em
-; font-size: 1em
 }
 
 h2, th a, th a:hover
 { color: #4D4D4D
-}
-
-h1
-{ font-size: 2em
-}
-
-h2, h3
-{ font-size: 1.1em
 }
 
 .category h2, .topic h2, #portal h2, #portal_foot h2, thead th
@@ -316,17 +339,15 @@ h2, h3
 { color: #3D3D3D
 }
 
-thead th
+thead > tr > th
 { text-align: center
 ; border-bottom: 3px double #E0E0E0
 /* ↓ Android Chrome is Literally Retarded: The Unwanted Scaling of Fonts */
 ; max-height: 99999px
 }
 
-thead th small
-{ font-size: 0.40em
-; font-weight: 400
-; display: block
+thead > tr > th small
+{ display: block
 ; text-shadow: none
 ; margin-top: 1em
 }
@@ -356,7 +377,6 @@ textarea
 ; border-radius: 0.1em 0.1em
 ; padding: 0.5em
 ; color: #4D4D4D
-; font-size: 1em
 ; width: 100%
 ; transition: 0.5s all ease
 ; box-sizing: border-box
@@ -393,8 +413,7 @@ input[type="checkbox"]:checked
 }
 
 button, a.btn_fake, input[type="button"]
-{ font-size: 1em
-; overflow: visible
+{ overflow: visible
 ; width: auto
 }
 
@@ -404,11 +423,10 @@ input[type="button"]:hover, td.c_foot a:hover
 ; background-color: #2D2D2D
 }
 
-.btn_text {
-background:none;
-border:0;
-cursor:pointer;
-font-size:100%;
+.btn_text
+{ background: none
+; border: 0
+; cursor: pointer
 }
 
 .notice, .error
@@ -495,7 +513,6 @@ font-size:100%;
 { content: "\2261"
 ; position: absolute
 ; padding: 0 0.25em
-; font-size: 2em
 ; top: 0
 ; right: 0
 }
@@ -509,8 +526,7 @@ font-size:100%;
 }
 
 #top
-{ font-size: 1em
-; font-weight: bold
+{ font-weight: bold
 ; display: flex
 ; align-items: flex-start
 ; flex-wrap: nowrap
@@ -540,7 +556,6 @@ font-size:100%;
 
 #top_info
 { color: #f0f0f0
-; font-size: 0
 ; display: flex
 ; align-items: center
 ; align-self: baseline
@@ -549,10 +564,6 @@ font-size:100%;
 #top_info > strong > a
 { margin: 1em 0
 ; display: inline-block
-}
-
-#top_info > small > a
-{ font-size: 0
 }
 
 #top_info a[href$="/login/"]:after, #top_info a[href$="/register/"]:after
@@ -715,12 +726,11 @@ font-size:100%;
 ; transform: rotate(45deg)
 }
 
-.meta_box {
-background:url() repeat-x top #000;
-border:1px solid #333;
-font-size:85%;
-line-height:150%;
-padding:10px 25px;
+.meta_box
+{ background: url() repeat-x top #000
+; border: 1px solid #333
+; line-height: 150%
+; padding: 10px 25px
 }
  
 .meta_menu
@@ -761,7 +771,6 @@ ul li.cat-pageshead
  
 ul.cat-pages
 { float: left
-; font-size: 0.9em
 ; margin: 16px
 ; padding: 8px 4px
 }
@@ -790,10 +799,9 @@ ul.cat-pages
 ; vertical-align: baseline
 }
  
-ul.cat-topicpages {
-float:right;
-font-size:80%;
-padding:1px 0;
+ul.cat-topicpages
+{ float: right
+; padding: 1px 0
 }
  
 tr.generic td, .generic {
@@ -803,9 +811,8 @@ padding:20px;
 text-align:center;
 }
  
-td.c_head,td.c_foot,td.c_sort
-{ font-size: 0.8em
-; line-height: 1.8
+.c_head, .c_foot, .c_sort
+{ line-height: 1.8
 ; padding: 0 1em
 }
 
@@ -2075,15 +2082,16 @@ button.btn_default,.c_post-attachment dt, #c_tos dt {
 font-weight:700;
 }
 
-td.c_topicfoot
+.c_topicfoot
 { text-transform: uppercase
+; font-size: 1.5em
 }
 
 .meta_box h3, #meta_welcome strong
 { font-size: 120%
 }
 
-.row2 td,blockquote div {
+.row2 td, blockquote div {
 background:rgba(0,0,0,0.01);
 }
  
