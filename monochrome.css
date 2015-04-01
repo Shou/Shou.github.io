@@ -1008,6 +1008,12 @@ td.c_user div:first-child
 ; overflow: hidden
 ; max-width: 150px !important
 ; max-height: 150px !important
+; transition: 0.3s border-radius cubic-bezier(.55,0,0.1,1)
+}
+
+td.c_user div:first-child:hover
+{ border-radius: 1%
+; transition: 0.3s border-radius cubic-bezier(.55,0,0.1,1)
 }
 
 td.c_user div:first-child img
@@ -1273,6 +1279,8 @@ dl#fast-reply dd
  
 #emot_end
 { display: block
+; background-color: #424242
+; color: #F0F0F0
 ; padding: 1em 0
 ; font-weight: 700
 ; text-transform: uppercase
@@ -1281,7 +1289,6 @@ dl#fast-reply dd
 
 #emot_end:hover, #emot_end:focus
 { background-color: #2196F3
-; color: #2D2D2D
 }
  
 #pm_folders {
