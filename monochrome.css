@@ -1241,8 +1241,11 @@ dl#fast-reply dd
 }
 
 #c_post:hover > #c_post-close, #c_post:focus
-{ float: none
-; position: absolute
+{ display: inline
+; float: none !important
+; position: absolute !important
+; top: inherit !important
+; right: inherit !important
 ; background-color: crimson
 ; color: white
 ; font-size: 1.5em
