@@ -73,7 +73,7 @@ html, body, #top_info small a:after, #top_info > strong > a
 { font-size: 2em
 }
 
-th#pinned_head::before
+#pinned_head::before
 { content: ""
 ; display: inline-block
 ; width: 1em
@@ -470,7 +470,8 @@ dl.info
 ; margin-bottom: 10pt
 }
 
-#nav,ul.cat-pages,ul.cat-topicpages,table.calendar ul,div.meta_menu ul,#pm_folderlist,#profile_menuwrap ul
+#nav,ul.cat-pages,ul.cat-topicpages,table.calendar ul,div.meta_menu ul,
+#pm_folderlist, #profile_menuwrap ul
 { list-style: none
 ; padding: 0
 }
@@ -480,11 +481,12 @@ dl.info
 ; padding: 0
 }
  
-#profile_menuwrap ul,ul.cat-topicpages,blockquote dl,#fast-reply dd
+#profile_menuwrap ul,ul.cat-topicpages,blockquote dl, #fast-reply dd
 { margin:0
 }
  
-#nav li,ul.cat-pages li,ul.cat-topicpages li,table.calendar li,#pm_folderlist li,#profile_menuwrap li,#ucp_gallery li
+#nav li,ul.cat-pages li,ul.cat-topicpages li,table.calendar li,
+#pm_folderlist li, #profile_menuwrap li, #ucp_gallery li
 { display: inline }
 
 #realtop
@@ -969,7 +971,7 @@ border-color:#333;
 ; font-size: 0.85em
 }
 
-td#stats_events a,td#stats_events span {
+#stats_events a, #stats_events span {
 background:url() no-repeat 2px;
 padding:4px 0 4px 20px;
 }
@@ -1237,7 +1239,7 @@ div.c_view-list
 ; line-height: 1.8
 }
 
-dl#fast-reply dt
+#fast-reply dt
 { color: #2D2D2D
 ; background-color: rgba(240, 240, 240, 0.7)
 ; font-size: 1.1em
@@ -1246,7 +1248,7 @@ dl#fast-reply dt
 ; text-transform: uppercase
 }
  
-dl#fast-reply dd
+#fast-reply dd
 { background: rgba(240, 240, 240, 0.7)
 ; padding-bottom: 1em
 ; text-align: center
@@ -1360,7 +1362,7 @@ display:block;
 padding:3px;
 }
  
-.calendar td#cal_current {
+.calendar #cal_current {
 background:#000;
 border:2px solid #333;
 }
@@ -1666,7 +1668,7 @@ padding:5px;
 text-align:center;
 }
 
-th#pinned_head
+#pinned_head
 { text-transform: uppercase
 }
 
@@ -1848,25 +1850,25 @@ margin:0;
 padding:5px;
 }
  
-dl#fast-reply
+#fast-reply
 { clear: both
 ; margin: auto
 ; width: 80%
 }
  
-dl#fast-reply dd p {
+#fast-reply dd p {
 margin:-3px;
 padding:0 5% 10px;
 text-align:left;
 }
  
-dl#fast-reply dd textarea
+#fast-reply dd textarea
 { height: 6em
 ; margin-bottom: 1em
 ; background-color: transparent
 }
  
-dl#fast-reply dd textarea:focus, dl#fast-reply dd textarea:hover
+#fast-reply dd textarea:focus, #fast-reply dd textarea:hover
 { background-color: #F0F0F0
 }
  
@@ -1907,7 +1909,7 @@ margin:10px 0 0 1px;
 ; text-align: center
 }
  
-div#emot_list {
+#emot_list {
 padding:0;
 }
  
@@ -1938,11 +1940,11 @@ width:1px;
 padding:2em;
 }
  
-#ucp_profile,#pm_messages {
+#ucp_profile, #pm_messages {
 float:right;
 }
  
-#ucp_settings img,#ucp_profile img {
+#ucp_settings img, #ucp_profile img {
 margin:18px 20px;
 }
  
@@ -1983,7 +1985,7 @@ padding:4px;
 cursor:default;
 }
  
-.calendar td#cal_current div {
+.calendar #cal_current div {
 padding-top:3px;
 }
  
@@ -1995,7 +1997,7 @@ margin-bottom:10px;
 margin-top:10px;
 }
  
-#portal_l,#portal_r {
+#portal_l, #portal_r {
 font-size:88.3%;
 margin:0;
 padding:0;
@@ -2034,7 +2036,7 @@ padding:1px;
 clear:none;
 }
  
-#portal h2,#portal_foot h2 {
+#portal h2, #portal_foot h2 {
 clear:none;
 margin:0;
 padding:3px 5px;
@@ -2077,7 +2079,7 @@ input,select,td,th
 { font-size: 1em
 }
  
-button.btn_default,.c_post-attachment dt,#c_tos dt {
+button.btn_default,.c_post-attachment dt, #c_tos dt {
 font-weight:700;
 }
 
@@ -2093,15 +2095,16 @@ td.c_topicfoot
 background:rgba(0,0,0,0.01);
 }
  
-a.member,.calendar td a,.calendar a:hover,#faq dd a,#faq dd a:hover {
+a.member,.calendar td a,.calendar a:hover, #faq dd a, #faq dd a:hover {
 color: #4D4D4D
 }
  
-img,.meta_box button img,td.c_cat-mark input,.c_post-attachment img,.warn img,#ucp_gallery a img {
+img,.meta_box button img,td.c_cat-mark input,.c_post-attachment img,.warn img,
+#ucp_gallery a img {
 vertical-align:middle;
 }
  
-h1,h2,h3,#nav,#boardmeta,#main {
+h1, h2, h3, #nav, #boardmeta, #main {
 clear:both;
 margin:0;
 }
@@ -2114,7 +2117,7 @@ clear:both;
 line-height:2;
 }
  
-.c_cat-starter,.c_cat-replies,.c_cat-views,td.c_poll-total,td.c_poll-vote,td.c_topicfoot,.warn,.ucp th,#c_notes,.calendar th {
+.c_cat-starter,.c_cat-replies,.c_cat-views,td.c_poll-total,td.c_poll-vote,td.c_topicfoot,.warn,.ucp th, #c_notes,.calendar th {
 text-align:center;
 }
 
@@ -2122,24 +2125,25 @@ text-align:center;
 { display: none
 }
  
-blockquote dl dd,#foot #foot_links {
+blockquote dl dd, #foot #foot_links {
 text-align:right;
 }
  
-#c_post,#ucp_gallery {
+#c_post, #ucp_gallery {
 text-align:center;
 vertical-align:top;
 }
  
-#files_upload input,.pm .row1 a,.pm .row2 a,#ucp_gallery button img,#findposts td a {
+#files_upload input,.pm .row1 a,.pm .row2 a, #ucp_gallery button img,
+#findposts td a {
 display:block;
 }
  
-#ucp_settings,#pm_settings {
+#ucp_settings, #pm_settings {
 float:left;
 }
  
-#c_tos dd,#username_response {
+#c_tos dd, #username_response {
 margin-left:10px;
 }
  
@@ -2191,13 +2195,13 @@ display:inline;
 margin:20px 200px 10px 10px;
 }
  
-#blog_categories,#blog_readers,#blog_about,div.blog_options {
+#blog_categories, #blog_readers, #blog_about,div.blog_options {
 background:#000;
 margin:15px 0;
 padding:5px 7px;
 }
  
-#blog_sidebar h3,#blog_sidebar dt {
+#blog_sidebar h3, #blog_sidebar dt {
 color:#AAAAAA;
 font-weight:700;
 }
@@ -2296,7 +2300,7 @@ padding:5px 7px;
 background:#000;
 }
  
-#shoutbox dl,#shoutbox dt,#shoutbox dd {
+#shoutbox dl, #shoutbox dt, #shoutbox dd {
 margin:0;
 padding:0;
 }
@@ -2324,19 +2328,19 @@ padding:0;
 ; background-color: #2d2d2d
 }
 
-.offline, .hot.new
+.offline, .hot-new
 { border-color: #B71C1C
 ; border-width: 0.2em
 ; border-style: solid
 }
 
-.online, .plain.new
+.online, .plain-new
 { border-color: #8BC34A
 ; border-width: 0.2em
 ; border-style: solid
 }
 
-.poll.new
+.poll-new
 { border-color: #03A9F4
 ; border-width: 0.2em
 ; border-style: solid
