@@ -1078,8 +1078,9 @@ border-top:0;
 ; transition: 0.3s max-height cubic-bezier(.55,0,0.1,1)
 }
 
-#profile_menu > li > a:hover + ul, #profile_menu > li > a:focus + ul
-{ max-height: inherit
+#profile_menu > li > a:hover + ul, #profile_menu > li > a:focus + ul,
+#profile_menu > li > ul:hover, #profile_menu > li > ul:focus
+{ max-height: 100%
 ; transition: 0.3s max-height cubic-bezier(.55,0,0.1,1)
 }
 
