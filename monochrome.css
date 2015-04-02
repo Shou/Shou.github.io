@@ -232,7 +232,7 @@ h1, #top_bar::before
 
 /* {{{ Links */
 
-a, #logo a:hover
+a, #logo > a:hover
 { color: #2D2D2D
 ; text-decoration: none
 }
@@ -269,11 +269,12 @@ input, textarea, select
 
 #logo
 { text-align: left
-; color: rgba(50, 50, 50, 0.6)
-; text-shadow: 0.06em 0.06em 0.09em rgba(255, 255, 255, 0.1)
+; color: #F0F0F0
+; background-color: #2196F3
 ; letter-spacing: 0.1em
 ; float: left
-; margin: 0.5em 1em
+; padding: 0.5em 1em
+; margin: 0 1em 0 0
 }
 
 hr
@@ -1513,7 +1514,7 @@ padding:1px 10px;
 }
 
 #copyright:after
-{ content: " \201Cfor free\201D "
+{ content: " \201C" "for free" "\201D "
 ; float: right
 ; display: block
 ; font-style: italic
