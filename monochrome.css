@@ -74,27 +74,6 @@ html, body, #top_info small a:after, #top_info > strong > a
 { font-size: 2em
 }
 
-#pinned_head::before
-{ content: ""
-; display: inline-block
-; width: 1em
-; height: 1em
-; border-right: 0.1em solid #4D4D4D
-; border-bottom: 0.1em solid #4D4D4D
-; margin: 0 1em
-; transform: rotate(55deg) skewY(-20deg)
-; transition: 0.5s all cubic-bezier(.55,0,0.1,1)
-}
-
-tr.pin
-{ display: none
-}
-
-table.posts > tbody > tr:first-child:hover ~ tr.pin,
-table.posts > tbody > tr:first-child:focus ~ tr.pin
-{ display: table-row
-}
-
 }
 
 /* Small screens */
@@ -219,7 +198,7 @@ ul.cat-pages, .meta_box
 }
 
 td, textarea, #profile_menuwrap, button, .btn_fake, input[type="button"],
-.btn_text, #top, #profile_menu
+.btn_text, #top
 { font-size: 1em
 }
 
@@ -419,7 +398,7 @@ button, a.btn_fake, input[type="button"]
 }
 
 button:hover, a.btn_fake:hover, select:hover, option:hover,
-input[type="button"]:hover, td.c_foot a:hover
+input[type="button"]:hover, .c_foot a:hover
 { color: #F0F0F0
 ; background-color: #2D2D2D
 }
@@ -946,7 +925,11 @@ font-size:80%;
 font-style:italic;
 }
 
-td.c_foot > span
+.c_foot
+{ border-top: 0.3em double #E0E0E0
+}
+
+.c_foot > span
 { display: flex
 ; justify-content: flex-start
 ; flex-wrap: wrap
@@ -954,7 +937,7 @@ td.c_foot > span
 ; float: none
 }
 
-td.c_foot > span > *
+.c_foot > span > *
 { margin: 0.5em 1em
 }
  
@@ -1185,8 +1168,8 @@ td.c_postinfo, td.c_postinfo a
 ; font-weight: 300
 ; vertical-align: middle
 }
- 
-td.c_footicons
+
+.c_footicons
 { margin-bottom: 4px
 ; padding-bottom: 6px
 }
@@ -1228,7 +1211,7 @@ tr.c_postfoot > td
 { padding: 1em
 }
 
-td.c_footicons
+.c_footicons
 { width: 100%
 }
 
@@ -1678,6 +1661,23 @@ tr.postbtn td {
 padding:5px;
 text-align:center;
 }
+
+#announcement_list::before
+{ content: "ANNOUNCEMENTS"
+; transition: 0.5s all cubic-bezier(.55,0,0.1,1)
+}
+
+#announcement_list > tbody
+{ display: none
+}
+
+#announcement_list:hover > tbody, #announcement_list:focus > tbody,
+#announcement_list > tbody:hover, #announcement_list > tbody:focus
+{ display: table-row-group
+}
+
+#announcement_head
+{ display: none }
 
 #pinned_head
 { text-transform: uppercase
