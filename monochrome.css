@@ -35,13 +35,8 @@
 
 /* {{{ External fonts */
 
-@import url(http://fonts.googleapis.com/css?family=Quicksand:400,700|Open+Sans:400italic,600italic,700italic,800italic,400,600,700,800|Droid+Sans+Mono);
-
-@font-face {
-    font-name: "fawesome"
-    src: url("/fontawesome-webfont.woff")
-    unicode-range: U+F234, U+F08B
-}
+@import url(https://fonts.googleapis.com/css?family=Quicksand:400,700|Open+Sans:400italic,600italic,700italic,800italic,400,600,700,800|Droid+Sans+Mono);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css)
 
 /* }}} */
 
