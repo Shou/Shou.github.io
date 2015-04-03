@@ -30,6 +30,8 @@
     - Message Tracking
     - Report Panel
  - Consolidate colours
+ - Mobile media height shouldn't affect
+    - NO MORE ZOOMING OUT ON TEXT TYPING
 
 */
 
@@ -613,31 +615,56 @@ input[type="button"]:hover, .c_foot a:hover
 ; display: inline-block
 }
 
-#top_info a[href$="/login/"]:after, #top_info a[href$="/register/"]:after
+#top_info a[href$="/login/"]::before, #top_info a[href$="/register/"]::before
 { text-transform: uppercase
 ; padding: 1.1em 1em 0
 ; display: inline-block
 }
 
-#top_info a[href$="/login/"]:after
+#top_info a[href$="/login/"]::before
 { content: "Log in"
 }
 
-#top_info a[href$="/register/"]:after
+#top_info a[href$="/register/"]::before
 { content: "Sign up"
 }
 
-#top_info a[href$="/logout/"]:after
-{ content: ""
-/* {{{ Base 64 image: log out */
-; background-image: url(data:image/png;base64,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)
-/* }}} */
-; cursor: pointer
-; background-size: 1em 1em
+#top_info a[href$="/logout/"]::before,
+#top_info a[href$="/multi_login/"]::before
+{ cursor: pointer
 ; height: 1em
 ; width: 1em
 ; display: inline-block
 ; margin: 0 0.4em
+; font-family: "FontAwesome"
+; font-weight: 300
+}
+
+#top_info a[href$="/logout/"]:hover::after,
+#top_info a[href$="/logout/"]:focus::after,
+#top_info a[href$="/multi_login/"]:hover::after,
+#top_info a[href$="/multi_login/"]:focus::after
+{ position: absolute
+; background-color: #4D4D4D
+; color: #F0F0F0
+}
+
+#top_info a[href$="/logout/"]:hover::after,
+#top_info a[href$="/logout/"]:focus::after
+{ content: "Log out"
+}
+
+#top_info a[href$="/multi_login/"]:hover::after,
+#top_info a[href$="/multi_login/"]:focus::after
+{ content: "Multi-login"
+}
+
+#top_info a[href$="/logout/"]::before
+{ content: "\f08b"
+}
+
+#top_info a[href$="/multi_login/"]::before
+{ content: "\f0c0"
 }
 
 .drop_menu li
@@ -1883,9 +1910,9 @@ td.c_post dl.c_post-attachment a
 ; display: none
 }
 
-.c_sig, .c_nosig {
-height:1%;
-vertical-align:top;
+.c_sig, .c_nosig
+{ vertical-align: top
+; background-color: #E0E0E0
 }
 
 .c_nosig {
@@ -2401,7 +2428,7 @@ padding:0;
 .bunk-big-butt
 { border-bottom: 3px solid #2D2D2D
 ; font-size: 1.6em
-; padding: 0.1em 1em 0.5em
+; padding: 0.1em 0.5em
 ; margin: 0 1em
 ; color: #2D2D2D
 ; transition: 0.3s all cubic-bezier(.55,0,0.1,1)
