@@ -1159,71 +1159,71 @@ width:15%;
 ; padding-right: 0.5em
 }
 
-.c_poll-bar:nth-last-of-type(1)
+.poll > tbody > tr:nth-last-of-type(2) > .c_poll-bar
 { background-color: #C62828
 }
 
-.c_poll-bar:nth-last-of-type(2)
+.poll > tbody > tr:nth-last-of-type(3) > .c_poll-bar
 { background-color: #AD1457
 }
 
-.c_poll-bar:nth-last-of-type(3)
+.poll > tbody > tr:nth-last-of-type(4) > .c_poll-bar
 { background-color: #6A1B9A
 }
 
-.c_poll-bar:nth-last-of-type(4)
+.poll > tbody > tr:nth-last-of-type(5) > .c_poll-bar
 { background-color: #4527A0
 }
 
-.c_poll-bar:nth-last-of-type(5)
+.poll > tbody > tr:nth-last-of-type(6) > .c_poll-bar
 { background-color: #283593
 }
 
-.c_poll-bar:nth-last-of-type(6)
+.poll > tbody > tr:nth-last-of-type(7) > .c_poll-bar
 { background-color: #1565C0
 }
 
-.c_poll-bar:nth-last-of-type(7)
+.poll > tbody > tr:nth-last-of-type(8) > .c_poll-bar
 { background-color: #0277BD
 }
 
-.c_poll-bar:nth-last-of-type(8)
+.poll > tbody > tr:nth-last-of-type(9) > .c_poll-bar
 { background-color: #00838F
 }
 
-.c_poll-bar:nth-last-of-type(9)
+.poll > tbody > tr:nth-last-of-type(10) > .c_poll-bar
 { background-color: #00695C
 }
 
-.c_poll-bar:nth-last-of-type(10)
+.poll > tbody > tr:nth-last-of-type(11) > .c_poll-bar
 { background-color: #2E7D32
 }
 
-.c_poll-bar:nth-last-of-type(11)
+.poll > tbody > tr:nth-last-of-type(12) > .c_poll-bar
 { background-color: #558B2F
 }
 
-.c_poll-bar:nth-last-of-type(12)
+.poll > tbody > tr:nth-last-of-type(13) > .c_poll-bar
 { background-color: #9E9D24
 }
 
-.c_poll-bar:nth-last-of-type(13)
+.poll > tbody > tr:nth-last-of-type(14) > .c_poll-bar
 { background-color: #F9A825
 }
 
-.c_poll-bar:nth-last-of-type(14)
+.poll > tbody > tr:nth-last-of-type(15) > .c_poll-bar
 { background-color: #FF8F00
 }
 
-.c_poll-bar:nth-last-of-type(15)
+.poll > tbody > tr:nth-last-of-type(16) > .c_poll-bar
 { background-color: #EF6C00
 }
 
-.c_poll-bar:nth-last-of-type(16)
+.poll > tbody > tr:nth-last-of-type(17) > .c_poll-bar
 { background-color: #D84315
 }
 
-.c_poll-bar:nth-last-of-type(n+16)
+.poll > tbody > tr:nth-last-of-type(n+17) > .c_poll-bar
 { background-color: #424242
 }
  
