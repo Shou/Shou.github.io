@@ -32,6 +32,7 @@
  - Consolidate colours
  - Mobile media height shouldn't affect
     - NO MORE ZOOMING OUT ON TEXT TYPING
+ - Make most icons CSS-only
 
 */
 
@@ -1586,6 +1587,10 @@ padding:1px 10px;
 ; text-transform: lowercase
 }
 
+#foot_datetime > a::before
+{ content: "\25D4"
+}
+
 #copyright
 { color: #4D4D4D
 ; background-color: #202020
@@ -1890,11 +1895,15 @@ margin-left:10px;
 ; transition: 0.5s background-color cubic-bezier(.55,0,0.1,1), 0.5s border cubic-bezier(.55,0,0.1,1)
 }
  
-.c_post-attachment dd
+.c_post-attachment > dd
 { margin-left: 1em
 }
 
-td.c_post dl.c_post-attachment a
+.c_post-attachment > dd > a::before
+{ content: "\F15B"
+}
+
+.c_post-attachment > dd > a
 { color: #f0f0f0
 }
 
@@ -2184,7 +2193,7 @@ a.member, .calendar td a, .calendar a:hover, #faq dd a, #faq dd a:hover
 { color: #4D4D4D
 }
 
-img,.meta_box button img,td.c_cat-mark input,.c_post-attachment img,.warn img,
+img,.meta_box button img,td.c_cat-mark input, .c_post-attachment img,.warn img,
 #ucp_gallery a img {
 vertical-align:middle;
 }
