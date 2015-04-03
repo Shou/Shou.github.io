@@ -1733,6 +1733,8 @@ left:auto;
 #main > table > thead,
 #main > table > tbody > tr
 { background-color: #F0F0F0
+; padding-top: 1em
+; padding-bottom: 1em
 }
 
 #main > table
