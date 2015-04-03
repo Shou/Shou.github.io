@@ -554,6 +554,7 @@ input[type="button"]:hover, .c_foot a:hover
 { min-height: 100vh
 ; margin-top: 0
 ; display: flex
+; visibility: hidden
 ; flex-direction: column
 ; position: fixed
 ; top: 0
@@ -562,7 +563,6 @@ input[type="button"]:hover, .c_foot a:hover
 ; background-color: #455A64
 ; border-left: 0.1em solid #37474F
 ; transition: 0.5s right cubic-bezier(.55,0,0.1,1)
-/* ; visibility: hidden */
 }
 
 #top_menu:hover, #top_menu:focus
