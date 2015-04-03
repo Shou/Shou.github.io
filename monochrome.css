@@ -145,6 +145,19 @@ td.c_post, #topic_review td.c_desc + td
 
 /* End of animations }}} */
 
+*
+{ box-sizing: border-box
+}
+
+html, body
+{ background-color: #101010
+; background-image: url("http://a.pomf.se/A6g8P4.png")
+; background-repeat: repeat
+; color: #424242
+; margin: 0 auto
+; padding: 0
+}
+
 /* {{{ FLEX MY MUSCLES */
 
 #edit_sig > tbody, #edit_sig > tbody > tr, #c_post, .c_sig blockquote
@@ -164,19 +177,6 @@ td.c_post, #topic_review td.c_desc + td
 }
 
 /* }}} */
-
-*
-{ box-sizing: border-box
-}
-
-html, body
-{ background-color: #101010
-; background-image: url("http://a.pomf.se/A6g8P4.png")
-; background-repeat: repeat
-; color: #424242
-; margin: 0 auto
-; padding: 0
-}
 
 /* {{{ Fonts */
 
@@ -1199,7 +1199,7 @@ td.c_postinfo, td.c_postinfo a
 }
 
 .c_sig
-{ font-size: 0.8em
+{ font-size: 1em
 }
 
 .c_sig blockquote, .c_sig blockquote > dl
@@ -1217,6 +1217,12 @@ td.c_postinfo, td.c_postinfo a
 ; padding: 0
 }
 
+.c_sig blockquote > dl > dd
+{ margin: 0
+; padding: 0
+; color: #3D3D3D
+}
+
 .c_sig blockquote > dl > dd::before
 { content: ", "
 }
@@ -1230,7 +1236,8 @@ td.c_postinfo, td.c_postinfo a
 }
 
 .c_sig blockquote > dl > dt::before
-{ content: "\2014 "
+{ content: "\2014\A0"
+; padding: 0 0 0 1em
 }
 
 #edit_sig > tbody
@@ -1889,12 +1896,12 @@ border-top-style:hidden!important;
 blockquote dl dt,blockquote dl dd {
 padding:2px 4px;
 }
- 
-blockquote div,blockquote code {
-margin:0;
-padding:5px;
+
+blockquote > div, blockquote > code
+{ margin: 0
+; padding: 0.5em
 }
- 
+
 #fast-reply
 { clear: both
 ; margin: auto
@@ -2141,14 +2148,14 @@ font-weight:700;
 { font-size: 120%
 }
 
-.row2 td, blockquote div {
-background:rgba(0,0,0,0.01);
+.row2 td
+{ background: rgba(0,0,0,0.01)
 }
- 
-a.member,.calendar td a,.calendar a:hover, #faq dd a, #faq dd a:hover {
-color: #4D4D4D
+
+a.member, .calendar td a, .calendar a:hover, #faq dd a, #faq dd a:hover
+{ color: #4D4D4D
 }
- 
+
 img,.meta_box button img,td.c_cat-mark input,.c_post-attachment img,.warn img,
 #ucp_gallery a img {
 vertical-align:middle;
