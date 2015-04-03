@@ -1741,10 +1741,6 @@ vertical-align: bottom
 left:auto;
 }
 
-#main
-{ padding: 32px 0 0 0
-}
-
 #main > *
 { background-color: #F0F0F0
 }
@@ -1754,7 +1750,7 @@ left:auto;
 }
 
 #main > table > thead,
-#main > table > tbody > tr
+#main > table > tbody > tr:nth-of-type(1+n+5)
 { background-color: #F0F0F0
 ; margin-bottom: 1em
 ; border-bottom: 0.2em solid #D0D0D0
@@ -2269,7 +2265,7 @@ img,.meta_box button img,td.c_cat-mark input, .c_post-attachment img,.warn img,
 vertical-align:middle;
 }
  
-h1, h2, h3, #nav, #boardmeta, #main {
+h1, h2, h3, #nav, #boardmeta {
 clear:both;
 margin:0;
 }
