@@ -1750,7 +1750,7 @@ left:auto;
 }
 
 #main > table > thead,
-#main > table > tbody > tr:nth-of-type(1+n+5)
+#main > table > tbody > tr:nth-of-type(1+5n)
 { background-color: #F0F0F0
 ; margin-bottom: 1em
 ; border-bottom: 0.2em solid #D0D0D0
