@@ -390,7 +390,7 @@ h2, th a, th a:hover
 
 thead > tr > th
 { text-align: center
-; border-bottom: 3px double #E0E0E0
+; border-bottom: 0.5em solid #E0E0E0
 /* ↓ Android Chrome is Literally Retarded: The Unwanted Scaling of Fonts */
 ; max-height: 99999px
 }
@@ -1005,7 +1005,7 @@ font-style:italic;
 }
 
 .c_foot
-{ border-top: 0.3em double #E0E0E0
+{ border-top: 0.5em solid #E0E0E0
 }
 
 .c_foot > span
@@ -1154,18 +1154,10 @@ text-align:center;
 width:15%;
 }
  
-td.c_poll-bar div
+.c_poll-bar div
 { height: 2em
 ; padding-right: 0.5em
 ; background-color: #C62828
-}
- 
-td.c_poll-bar span {
-background:url(http://z3.ifrm.com/9/183/0/f6016/poll2.png) no-repeat;
-display:block;
-float:left;
-height:12px;
-width:3px;
 }
  
 .editby, .queued
@@ -1299,7 +1291,7 @@ td.c_username, .c_postinfo
 }
 
 tr.c_postfoot
-{ border-bottom: 0.3em double #E0E0E0
+{ border-bottom: 0.5em solid #E0E0E0
 }
 
 tr.c_postfoot > td
