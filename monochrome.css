@@ -3,15 +3,9 @@
  - Put descriptions and other meta-texts UNDER elements, horizontally taking up
    space instead.
      - idk where???
- - Mod options spacing broken.
-     - Still.
  - Padding on some buttons not in place.
  - Inconsistent button sizing: padding, margin, border, font-size
- - index page text spacing is AWFUL.
- - Hide thread icons, use hidden elements to change the row state and do something interesting.
-     - Color the row appropriately.
-         - Separate checkboxes from threads.
-             - Note that they are not seen by normal members.
+ - Index page text spacing is AWFUL.
  - Fast reply outer border needs to GO. Also generally be modernised. Phones.
     - Make it take up the whole width, minus margin.
  - Hide pinned threads.
@@ -32,7 +26,11 @@
  - Consolidate colours
  - Mobile media height shouldn't affect
     - NO MORE ZOOMING OUT ON TEXT TYPING
+    - (orientation: portrait) and (min-WIDTH)
  - Make most icons CSS-only
+ - Mod options spacing broken.
+     - Still.
+ - How to display PM or RCP updates
 
 */
 
@@ -46,7 +44,7 @@
 /* {{{ Media rules */
 
 /* Mobile devices, super high res screens */
-@media (min-height: 1201px)
+@media (orientation: portrait) and (min-width: 900px)
 {
 
 html, body, #top_info small a:after, #top_info > strong > a
@@ -60,17 +58,8 @@ html, body, #top_info small a:after, #top_info > strong > a
 }
 
 /* Vertical screens */
-@media (min-height: 1201px) and (max-width: 1200px)
+@media (min-height: 1000px) and (max-width: 1000px)
 {
-
-.drop_menu a
-{ width: 7em !important
-; padding: 3px 0 !important
-}
-
-.drop_menu ul
-{ width: 7em !important
-}
 
 .c_cat-starter
 { display: none
@@ -83,16 +72,13 @@ html, body, #top_info small a:after, #top_info > strong > a
 }
 
 /* Small screens */
-@media (max-height: 1200px)
+@media (orientation: landscape) and (max-width: 1700px)
 {
 
 html, body, #top_info small a:after, #top_info > strong > a
 { font-size: 10pt
 }
 
-.drop_menu > li a img
-{ height: 20pt
-}
 
 .topic h2, #portal h2, #portal_foot h2, thead th
 { font-size: 2.5em
@@ -128,8 +114,6 @@ html, body, #top_info small a:after, #top_info > strong > a
 .c_post img, #topic_review img, .c_post video, .c_post object, .c_post audio,
 .c_post iframe
 { max-width: 50vw }
-
-/* TODO fix input/textarea widths in preferences */
 
 }
 
@@ -313,8 +297,9 @@ a:hover, .c_post:hover a, .c_post:focus a
 }
 
 .c_post a::after
-{ content: "\F08E"
-; margin-top: -0.5em
+{ content: "\A0\F08E"
+; vertical-align: super
+; font-size: 0.7em
 }
 
 /* }}} */
@@ -913,7 +898,6 @@ background:#000;
 }
 
 .bday {
-background:url(http://z3.ifrm.com/static/1/s_minibday.png) no-repeat;
 color:#AAAAAA;
 font-size:90%;
 font-weight:700;
@@ -1170,11 +1154,10 @@ text-align:center;
 width:15%;
 }
  
-td.c_poll-bar div {
-background:url(http://z3.ifrm.com/9/183/0/f6014/poll.png) no-repeat right;
-float:left;
-height:12px;
-padding-right:3px;
+td.c_poll-bar div
+{ height: 2em
+; padding-right: 0.5em
+; background-color: #C62828
 }
  
 td.c_poll-bar span {
@@ -1909,10 +1892,11 @@ margin-left:10px;
 }
 
 .c_post-attachment > dd > a::before
-{ content: "\F15B"
+{ content: "\F15B\A0"
 }
 
-.c_post-attachment > dd > a
+.c_post-attachment > dd > a, .c_post-attachment > dd > a:hover,
+.c_post-attachment > dd > a:focus
 { color: #f0f0f0
 }
 
