@@ -145,6 +145,26 @@ td.c_post, #topic_review td.c_desc + td
 
 /* End of animations }}} */
 
+/* {{{ FLEX MY MUSCLES */
+
+#edit_sig > tbody, #edit_sig > tbody > tr, #c_post, .c_sig blockquote
+{ display: flex
+}
+
+#c_post
+{ flex-direction: column
+}
+
+.c_sig blockquote
+{ flex-direction: column-reverse
+}
+
+#edit_sig 
+{
+}
+
+/* }}} */
+
 *
 { box-sizing: border-box
 }
@@ -232,7 +252,7 @@ h1, #top_bar::before
 
 /* {{{ Links */
 
-a, #logo > a:hover
+a
 { color: #2D2D2D
 ; text-decoration: none
 }
@@ -269,12 +289,15 @@ input, textarea, select
 
 #logo
 { text-align: left
-; color: #F0F0F0
 ; background-color: #2196F3
 ; letter-spacing: 0.1em
 ; float: left
 ; padding: 0.5em 1em
 ; margin: 0 1em 0 0
+}
+
+#logo > a
+{ color: #F0F0F0
 }
 
 hr
@@ -658,7 +681,7 @@ input[type="button"]:hover, .c_foot a:hover
 }
 
 #submenu > a
-{ padding: 1em 1em 0.5em
+{ padding: 1.5em 1em 1.5em
 }
 
 #wrap
@@ -794,13 +817,9 @@ text-align:center;
  
 .c_head, .c_foot, .c_sort
 { line-height: 1.8
-; padding: 0 1em
+; padding: 1em
 }
 
-td.c_sort .left, td.c_sort .right
-{
-}
- 
 td.c_desc
 { font-weight: 700
 ; text-align: right
@@ -836,36 +855,40 @@ width:20px;
 { margin: 0 1em
 }
 
-table.forums, table.forums tbody
+.forums, .forums tbody
 { display: block
 }
 
-table.forums td
+.forums td
 { display: inline-block
 }
 
-table.forums tbody > tr
+.forums tbody > tr
 { display: flex
 }
 
-tr.forum
+.forum
 { justify-content: space-between
 }
 
-table.forums tbody tr > td
+.forums tbody tr > td
 { max-height: 99999px
 }
 
-table.forums th
+.forums th
 { font-weight: 400
 }
 
-table.forums th a, table.forums th a strong
+.forums th a, .forums th a strong
 { font-weight: 600
 }
 
-table.forums td.c_mark
+.forums .c_mark
 { display: none
+}
+
+.forums > tbody > tr > .c_foot
+{ border: none
 }
 
 .c_forum
@@ -1174,34 +1197,44 @@ td.c_postinfo, td.c_postinfo a
 { margin-bottom: 4px
 ; padding-bottom: 6px
 }
- 
-td.c_sig {
-color:#AAAAAA;
-font-size:80%;
-}
- 
-td.c_sig blockquote {
-background:none transparent;
-border:0;
-border-left:3px solid #333;
-padding-left:5px;
-}
- 
-td.c_sig blockquote dl {
-background:none transparent;
-border:0;
-color:#AAAAAA;
+
+.c_sig
+{ font-size: 0.8em
 }
 
-td.c_sig blockquote dl dt,td.c_sig blockquote dl dd {
-color:#AAAAAA;
-padding:0;
+.c_sig blockquote, .c_sig blockquote > dl
+{ border: 0
 }
 
-td.c_sig blockquote div {
-background:transparent;
-margin-left:5px;
-padding:0;
+.c_sig blockquote > dl
+{ background: none
+; padding: 0
+}
+
+.c_sig blockquote > dl > dt
+{ color: #3D3D3D
+; float: none
+; padding: 0
+}
+
+.c_sig blockquote > dl > dd::before
+{ content: ", "
+}
+
+.c_sig blockquote > div::before
+{ content: "\275D"
+}
+
+.c_sig blockquote > div::after
+{ content: "\275E"
+}
+
+.c_sig blockquote > dl > dt::before
+{ content: "\2014 "
+}
+
+#edit_sig > tbody
+{ margin: 1em
 }
 
 tr.c_postfoot
@@ -1734,7 +1767,7 @@ td.c_cat-lastpost > *
 ; max-height: 999999px
 }
 
-.c_sig,.c_nosig {
+.c_sig, .c_nosig {
 width:100%;
 }
  
@@ -1837,22 +1870,22 @@ td.c_post dl.c_post-attachment a
 ; font-size: 1.5em
 ; color: #f0f0f0
 }
- 
+
 .post_sep
 { font-size: 1px
 ; height: 0px
 ; display: none
 }
- 
-td.c_sig,td.c_nosig {
+
+.c_sig, .c_nosig {
 height:1%;
 vertical-align:top;
 }
- 
-td.c_nosig {
+
+.c_nosig {
 border-top-style:hidden!important;
 }
- 
+
 blockquote dl dt,blockquote dl dd {
 padding:2px 4px;
 }
