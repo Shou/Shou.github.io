@@ -538,6 +538,8 @@ input[type="button"]:hover, .c_foot a:hover
 #top_bar:hover + #top > #top_menu, #top_bar:focus + #top > #top_menu
 { right: 0
 ; visibility: visible
+; transition: 0.5s right cubic-bezier(.55,0,0.1,1),
+              0.5s visibility 0.5s cubic-bezier(.55,0,0.1,1)
 }
 
 #top
@@ -562,11 +564,14 @@ input[type="button"]:hover, .c_foot a:hover
 ; z-index: 2
 ; background-color: #455A64
 ; border-left: 0.1em solid #37474F
-; transition: 0.5s right cubic-bezier(.55,0,0.1,1)
+; transition: 0.5s right cubic-bezier(.55,0,0.1,1),
+              0.5s visibility 0.5s cubic-bezier(.55,0,0.1,1)
 }
 
 #top_menu:hover, #top_menu:focus
-{ transition: 0.5s max-height cubic-bezier(.55,0,0.1,1)
+{ transition: 0.5s right cubic-bezier(.55,0,0.1,1),
+              0.5s visibility 0.5s cubic-bezier(.55,0,0.1,1)
+; visibility: visible
 ; right: 0
 }
 
