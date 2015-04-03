@@ -1743,7 +1743,8 @@ left:auto;
 
 #main > *:last-child,
 #main > table > thead,
-#main > table > tbody > tr:nth-of-type(1+5n)
+#topic_viewer > tbody > tr:nth-of-type(1+5n),
+.row1, .row2
 { margin-bottom: 1em
 ; border-bottom: 0.2em solid #D0D0D0
 }
@@ -2242,10 +2243,6 @@ font-weight:700;
 
 .meta_box h3, #meta_welcome strong
 { font-size: 120%
-}
-
-.row2 td
-{ background: rgba(0,0,0,0.01)
 }
 
 a.member, .calendar td a, .calendar a:hover, #faq dd a, #faq dd a:hover
