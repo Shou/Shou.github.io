@@ -1534,42 +1534,37 @@ padding:1px 10px;
 }
  
 #foot_wrap
-{ margin: 20px 0 0 0
+{ margin: 2em 0 0 0
 ; background-color: #E0E0E0
-; border-top: 1px solid #D0D0D0
+; border-top: 0.1em solid #D0D0D0
+}
+
+#foot tr
+{ padding: 0 1em
 }
 
 #foot td
 { color: #8D8D8D
 ; font-weight: 300
-; font-size: 1.1em
+; font-size: 1.2em
 ; padding: 1em 0.5em
 }
 
-#foot td
-{ display: block
-; float: left
-}
-
-#foot td:last-child
-{ float: right
-}
- 
 #foot a, #foot a:hover, #foot label
 { color: #4D4D4D
 }
- 
-#foot_datetime
+
+#foot_datetime > a
 { white-space: nowrap
 ; font-size: 1.5em
 }
- 
+
 #copyright
 { color: #4D4D4D
 ; background-color: #202020
 ; font-size: 1.3em
 ; margin: 0 auto
-; padding: 0.5em 1em
+; padding: 1em
 ; text-align: left
 ; border-top: 0.05em solid #202020
 ; font-weight: 600
