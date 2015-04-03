@@ -104,7 +104,7 @@ html, body, #top_info small a:after, #top_info > strong > a
 @media (min-width: 1039px)
 {
 
-td.c_post, #topic_review td.c_desc + td
+.c_post, #topic_review td.c_desc + td
 { max-width: 750px
 }
 
@@ -121,7 +121,7 @@ td.c_post, #topic_review td.c_desc + td
 #wrap
 { margin: 0 0 44px !important }
 
-td.c_post, #topic_review td.c_desc + td
+.c_post, #topic_review td.c_desc + td
 { max-width: 50vw
 }
 
@@ -304,7 +304,7 @@ a
 ; text-decoration: none
 }
 
-a:hover, td.c_post:hover a, td.c_post:focus a
+a:hover, .c_post:hover a, .c_post:focus a
 { color: #03a9f4
 }
 
@@ -1237,15 +1237,15 @@ code
 ; background-color: #3d3d3d
 }
 
-td.c_username, td.c_postinfo
+td.c_username, .c_postinfo
 { padding: 1.5em 0.5em 1em
 }
 
-td.c_postinfo
+.c_postinfo
 { font-size: 0.8em
 }
  
-td.c_postinfo, td.c_postinfo a
+.c_postinfo, .c_postinfo a
 { color: #4D4D4D
 ; font-weight: 300
 ; vertical-align: middle
@@ -1864,13 +1864,13 @@ html td.c_poll-bar span {
 margin-top:3px;
 }
  
-td.c_post, #topic_review td.c_desc + td
+.c_post, #topic_review td.c_desc + td
 { line-height: 1.7
 ; vertical-align: top
 ; word-wrap: break-word
 }
  
-td.c_post ul {
+.c_post ul {
 list-style-type:square;
 margin-left:10px;
 }
