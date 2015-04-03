@@ -304,6 +304,12 @@ a:hover, .c_post:hover a, .c_post:focus a
 
 /* }}} */
 
+/* {{{ Background colors */
+
+
+
+/* }}} */
+
 /* {{{ Odd/even */
 
 /* Jesus Christ ↓ */
@@ -359,7 +365,6 @@ border-spacing:0;
 clear:both;
 empty-cells:show;
 width:100%;
-border-color: #000000;
 }
 
 th
@@ -741,7 +746,7 @@ input[type="button"]:hover, .c_foot a:hover
 }
 
 #wrap
-{ background: #f0f0f0
+{ background: #E0E0E0
 ; margin: 0 auto 44px
 ; max-width: 1024px
 ; box-shadow: 0 0 0 8px #e0e0e0, 0 0 0 12px #d0d0d0, 0 0 0 16px #c0c0c0
@@ -1721,28 +1726,44 @@ padding:3px 0;
 select
 { vertical-align: middle
 }
- 
-button.btn_img {
+
+.btn_img {
 border:0;
 cursor:pointer;
 padding:0;
 }
- 
+
 .drop_menu a img {
 vertical-align: bottom
 }
 
-.drop_menu li.hover ul {
+.drop_menu .hover ul {
 left:auto;
 }
- 
+
 #main
 { padding: 32px 0 0 0
+}
+
+#main > *
+{ background-color: #F0F0F0
+}
+
+#main > table
+{ background-color: #E0E0E0
+}
+
+#main > table > thead,
+#main > table > tbody > tr
+{ background-color: #F0F0F0
+; margin-bottom: 1em
+; border-bottom: 0.2em solid #D0D0D0
 }
 
 #main > table:first-child
 { height: auto !important
 ; margin: 0 !important
+; background-color: #F0F0F0
 }
 
 #main > table iframe, form.exclusivebutton + table td > div
@@ -1750,36 +1771,37 @@ left:auto;
 ; max-width: 90vw
 ; overflow: hidden
 }
- 
+
 #nav li img {
 vertical-align:top;
 }
- 
+
 .meta_box,.meta_menu {
 margin:10px 0;
 }
- 
+
 .meta_box li {
 display:list-item;
 list-style-position:inside;
 list-style-type:square;
 margin-left:10px;
 }
- 
+
 .cat-pages a,.cat-pagesjump i,.cat-topicpages a
 { cursor: pointer
 ; padding: 4px 8px
 }
- 
+
 .cat-topicpages a {
 padding:0 2px;
 }
- 
+
 .cat-buttons, .topic-buttons
-{ margin: 15px
+{ padding: 2em
 ; text-align: right
+; background-color: #F0F0F0
 }
- 
+
 tr.postbtn td {
 padding:5px;
 text-align:center;
@@ -1856,8 +1878,8 @@ td.c_cat-lastpost > *
 ; max-height: 999999px
 }
 
-.c_sig, .c_nosig {
-width:100%;
+.c_sig, .c_nosig
+{ width: 100%
 }
  
 .avatar {
@@ -1971,13 +1993,10 @@ margin-left:10px;
 ; display: none
 }
 
-.c_sig, .c_nosig
+.c_sig
 { vertical-align: top
 ; background-color: #E0E0E0
-}
-
-.c_nosig {
-border-top-style:hidden!important;
+; border-top: 0.1em solid #D0D0D0
 }
 
 blockquote dl dt,blockquote dl dd {
