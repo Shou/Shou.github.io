@@ -160,11 +160,12 @@ html, body
 
 /* {{{ FLEX MY MUSCLES */
 
-#edit_sig > tbody, #edit_sig > tbody > tr, #c_post, .c_sig blockquote
+#edit_sig > tbody, #edit_sig > tbody > tr, #c_post, .c_sig blockquote,
+.c_sig blockquote > dl
 { display: flex
 }
 
-#c_post
+#c_post, #edit_sig > tbody
 { flex-direction: column
 }
 
@@ -172,9 +173,7 @@ html, body
 { flex-direction: column-reverse
 }
 
-#edit_sig 
-{
-}
+
 
 /* }}} */
 
@@ -1202,6 +1201,10 @@ td.c_postinfo, td.c_postinfo a
 { font-size: 1em
 }
 
+.c_sig blockquote
+{ margin: 0 0 0 1em
+}
+
 .c_sig blockquote, .c_sig blockquote > dl
 { border: 0
 }
@@ -1292,7 +1295,6 @@ td.c_view
 #c_post-close
 { display: block
 ; float: none !important
-; position: absolute !important
 ; top: inherit !important
 ; right: inherit !important
 ; background-color: crimson
@@ -1935,11 +1937,10 @@ padding:4px 0 0;
 text-align:right;
 }
  
-#btn_preview {
-float:left;
-margin:10px 0 0 1px;
+#btn_preview
+{ margin: 1em 0
 }
- 
+
 #c_emot
 { vertical-align: top
 ; width: 180px
