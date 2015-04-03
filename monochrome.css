@@ -243,6 +243,10 @@ code
 { font-family: "Droid Sans Mono", monospace
 }
 
+.c_post-attachment > dd > a::before, .c_post a::after
+{ font-family: "FontAwesome"
+}
+
 th.c_cat-title, th.c_cat-starter, th.c_cat-replies, th.c_cat-views,
 th.c_cat-lastpost, thead > tr > th small
 { font-weight: 400
@@ -306,6 +310,11 @@ a
 
 a:hover, .c_post:hover a, .c_post:focus a
 { color: #03a9f4
+}
+
+.c_post a::after
+{ content: "\F08E"
+; margin-top: -0.5em
 }
 
 /* }}} */
@@ -1647,11 +1656,11 @@ outline:2px solid #333;
 ; margin: 0 auto
 ; overflow: hidden
 }
- 
+
 a img {
 border:0;
 }
- 
+
 form {
 display:inline;
 margin:0;
