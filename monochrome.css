@@ -1,3 +1,7 @@
+
+/* Copyright (c) 2015, Benedict Aas
+*/
+
 /* TODO
 
  - Put descriptions and other meta-texts UNDER elements, horizontally taking up
@@ -44,6 +48,8 @@
         - etc
  - big > big > big > et al added to @media for phones
  - Use dppx instead in @media conditionals
+ - Custom checkboxes using parent elements
+    - td:first-of-type
 
 */
 
@@ -134,10 +140,9 @@ html, body, #top_info small a:after, #top_info > strong > a
 
 /* {{{ Animations */
 
-@keyframes break {
-    33% { transform: scaleX(1.2) }
-    66% { transform: scaleY(1.2) }
-    100% { }
+@keyframes glow {
+    50% { color: #B71C1C }
+    100% { color: inherit }
 }
 
 @keyframes circle {
@@ -192,7 +197,7 @@ html, body
 { justify-content: center
 }
 
-#c_notes > form, #top_info, .c_foot > span
+#c_notes > form, #top_info, .c_foot > span, #acplogin
 { align-items: center
 }
 
@@ -389,6 +394,10 @@ tr
 
 thead > tr
 { justify-content: center
+}
+
+tr > *
+{ min-width: 0
 }
 
 th
@@ -1709,15 +1718,19 @@ input.username_no {
 outline:2px solid #333;
 }
 
-#acplogin h1
+#acplogin
+{ background-color: #E0E0E0
+; height: 100vh
+}
+
+#acplogin > h1
 { font-size: 0
 ; margin: 3vh
 }
 
-#acplogin form
+#acplogin > form
 { background-color: #F0F0F0
 ; border: 1px solid #D0D0D0
-; margin: 0 auto
 ; overflow: hidden
 }
 
@@ -1865,7 +1878,7 @@ width:30%;
 
 .c_cat-mark, .c_cat-icon, .c_cat-replies
 { text-align: center
-; width: 10%
+; width: 5%
 }
 
 .c_cat-title
@@ -2573,6 +2586,10 @@ img[src=""]
 { content: "\f080"
 }
 
+.locked::after
+{ content: "\f023"
+}
+
 .folder
 { font-size: 1.5em
 }
@@ -2580,4 +2597,7 @@ img[src=""]
 .fa
 { font-family: "FontAwesome"
 }
+
+.glow
+{ animation: 1s glow infinity
 
