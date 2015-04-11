@@ -2494,16 +2494,24 @@ padding:0;
 ; background-color: #2d2d2d
 }
 
-.offline, .hot-new
+.offline
 { border-color: #B71C1C
 }
 
-.online, .plain-new
+.hot-new
+{ color: #B71C1C
+}
+
+.online
 { border-color: #8BC34A
 }
 
+.plain-new
+{ color: #8BC34A
+}
+
 .poll-new
-{ border-color: #03A9F4
+{ color: #03A9F4
 }
 
 .bunk-big-butt
@@ -2551,15 +2559,19 @@ img[src=""]
 { display: none
 }
 
-.plain::after
+.plain::after, .plain-new::after
 { content: "\f0fe"
 }
 
-.hot::after
+.hot::after, .hot-new::after
 { content: "\f06d"
 }
 
-.poll::after
+.poll::after, .poll-new::after
 { content: "\f080"
+}
+
+.fa
+{ font-family: "FontAwesome"
 }
 
