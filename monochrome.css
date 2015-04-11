@@ -103,7 +103,7 @@ html, body, #top_info small a:after, #top_info > strong > a
 @media (min-width: 1039px)
 {
 
-.c_post, #topic_review td.c_desc + td
+.c_post, #topic_review .c_desc + td
 { max-width: 750px
 }
 
@@ -120,7 +120,7 @@ html, body, #top_info small a:after, #top_info > strong > a
 #wrap
 { margin: 0 0 44px !important }
 
-.c_post, #topic_review td.c_desc + td
+.c_post, #topic_review .c_desc + td
 { max-width: 50vw
 }
 
@@ -1857,16 +1857,16 @@ width:30%;
 { line-height: 1.2
 }
 
-td.c_cat-mark, td.c_cat-icon, td.c_cat-replies
+.c_cat-mark, .c_cat-icon, .c_cat-replies
 { text-align: center
-; width: 1%
+; width: 10%
 }
 
-td.c_cat-title
+.c_cat-title
 { width: 25%
 }
 
-td.c_cat-starter
+.c_cat-starter
 { width: 15%
 }
 
@@ -1874,7 +1874,7 @@ td.c_cat-starter
 { width: 25%
 }
 
-td.c_cat-lastpost > *
+.c_cat-lastpost > *
 { font-size: 1em }
 
 .c_post
