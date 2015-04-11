@@ -50,6 +50,7 @@
  - Use dppx instead in @media conditionals
  - Custom checkboxes using parent elements
     - td:first-of-type
+ - Deal with `nonexistent' elements.
 
 */
 
@@ -140,10 +141,8 @@ html, body, #top_info small a:after, #top_info > strong > a
 
 /* {{{ Animations */
 
-@keyframes glow {
-    50% { color: #B71C1C }
-    100% { color: inherit }
-}
+@-webkit-keyframes glow { from { color: #B71C1C } to { color: inherit } }
+@keyframes glow { from { color: #B71C1C } to { color: inherit } }
 
 @keyframes circle {
     0% { background-image: radial-gradient(circle, 0.1em, #2196F3 0.09em, transparent) }
@@ -172,7 +171,7 @@ html, body
 .c_sig blockquote > dl, #c_notes > form, #foot > tbody > tr, #acplogin,
 #acplogin table, #acplogin thead, #acplogin tbody, #acplogin tr, #acplogin th,
 #acplogin tr td:last-child, #acplogin #loginform, #realtop, #top, #top_menu,
-#top_info, .drop_menu > li, #submenu, .c_foot > span
+#top_info, .drop_menu > li, #submenu, .c_foot > span, #boardmeta
 { display: flex
 }
 
@@ -1765,22 +1764,22 @@ vertical-align: bottom
 left:auto;
 }
 
-#main > *,
-#main > table > thead,
-#main > table > tbody > tr
+nonexistent#main > *,
+nonexistent#main > table > thead,
+nonexistent#main > table > tbody > tr
 { background-color: #F0F0F0
 ; padding-top: 1em
 ; padding-bottom: 1em
 }
 
-#main > table
+nonexistent#main > table
 { background-color: #E0E0E0
 }
 
-#main > *:last-child,
-#main > table > thead,
-#topic_viewer > tbody > tr:nth-of-type(1+5n),
-.row1, .row2
+nonexistent#main > *:last-child,
+nonexistent#main > table > thead,
+nonexistent#topic_viewer > tbody > tr:nth-of-type(1+5n),
+nonexistent.row1, nonexistent.row2
 { margin-bottom: 1em
 ; border-bottom: 0.2em solid #D0D0D0
 }
@@ -1878,7 +1877,8 @@ width:30%;
 
 .c_cat-mark, .c_cat-icon, .c_cat-replies
 { text-align: center
-; width: 5%
+; min-width: 3em
+; max-width: 3em
 }
 
 .c_cat-title
@@ -1892,9 +1892,6 @@ width:30%;
 .c_cat-lastpost
 { width: 20%
 }
-
-.c_cat-lastpost > *
-{ font-size: 1em }
 
 .c_post
 { padding: 0.5em
