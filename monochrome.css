@@ -141,8 +141,14 @@ html, body, #top_info small a:after, #top_info > strong > a
 
 /* {{{ Animations */
 
-@-webkit-keyframes glow { from { color: #B71C1C } to { color: inherit } }
-@keyframes glow { from { color: #B71C1C } to { color: inherit } }
+@-webkit-keyframes glow {
+    from { color: #B71C1C; text-shadow: 0 0 0.5em #B71C1C }
+    to { color: inherit; text-shadow: none }
+}
+@keyframes glow {
+    from { color: #B71C1C; text-shadow: 0 0 0.5em #B71C1C }
+    to { color: inherit; text-shadow: none }
+}
 
 @keyframes circle {
     0% { background-image: radial-gradient(circle, 0.1em, #2196F3 0.09em, transparent) }
@@ -2596,5 +2602,7 @@ img[src=""]
 }
 
 .glow
-{ animation: 1s glow infinity
+{ animation: glow 1s ease-in infinite alternate
+; -webkit-animation: glow 1s ease-in infinite alternate
+}
 
