@@ -2,14 +2,15 @@
 
  - Put descriptions and other meta-texts UNDER elements, horizontally taking up
    space instead.
-     - idk where???
- - Padding on some buttons not in place.
+     - Text boxes in various preferences, notably.
  - Inconsistent button sizing: padding, margin, border, font-size
  - Index page text spacing is AWFUL.
  - Fast reply outer border needs to GO. Also generally be modernised. Phones.
     - Make it take up the whole width, minus margin.
  - Hide pinned threads.
     - Impossible?
+        - Use nth-of-type selector to keep ALL pins toggled?
+            - does that work
  - Post button spacing broken.
  - Fix pages
     - Avatar settings
@@ -23,14 +24,26 @@
     - Address Book
     - Message Tracking
     - Report Panel
- - Consolidate colours
+ - Consolidate colour declarations
  - Mobile media height shouldn't affect
     - NO MORE ZOOMING OUT ON TEXT TYPING
     - (orientation: portrait) and (min-WIDTH)
+        - This is broken now.
  - Make most icons CSS-only
  - Mod options spacing broken.
      - Still.
  - How to display PM or RCP updates
+ - Emulate tables with flex
+    - Seriously, tables suck.
+    - Take two.
+    - Use margin/padding/border to control positioning.
+        - Especially text.
+    - Fixed widths on columns to control positioning.
+        - 1em on checkboxes
+        - 2em on icons
+        - etc
+ - big > big > big > et al added to @media for phones
+ - Use dppx instead in @media conditionals
 
 */
 
@@ -318,6 +331,10 @@ blockquote blockquote blockquote blockquote blockquote blockquote,
 blockquote blockquote blockquote blockquote blockquote blockquote blockquote blockquote,
 blockquote blockquote blockquote blockquote blockquote blockquote blockquote blockquote blockquote blockquote
 { background-color: #E0E0E0
+}
+
+big > big > big > big > big > big > big > big > big > big > big > big > big > big > big
+{ font-size: 154.6pt
 }
 
 /* }}} */
@@ -1749,10 +1766,6 @@ left:auto;
 ; border-bottom: 0.2em solid #D0D0D0
 }
 
-#topic_viewer
-{ border-spacing: 1em
-}
-
 #main > table:first-child
 { height: auto !important
 ; margin: 0 !important
@@ -2537,3 +2550,16 @@ padding:0;
 img[src=""]
 { display: none
 }
+
+.plain::after
+{ content: "\f0fe"
+}
+
+.hot::after
+{ content: "\f06d"
+}
+
+.poll::after
+{ content: "\f080"
+}
+
