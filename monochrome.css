@@ -71,7 +71,7 @@ html, body, #top_info small a:after, #top_info > strong > a
 }
 
 /* Vertical screens */
-@media (min-height: 1000px) and (max-width: 1000px)
+@media (min-height: 600px) and (max-width: 1000px)
 {
 
 .c_cat-starter
