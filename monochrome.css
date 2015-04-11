@@ -74,7 +74,7 @@ html, body, #top_info small a:after, #top_info > strong > a
 @media (min-height: 600px) and (max-width: 1000px)
 {
 
-.c_cat-starter
+.c_cat-starter, .c_cat-views
 { display: none
 }
 
@@ -2285,10 +2285,6 @@ line-height:2;
  
 .c_cat-starter,.c_cat-replies,.c_cat-views,td.c_poll-total,td.c_poll-vote,td.c_topicfoot,.warn,.ucp th, #c_notes,.calendar th {
 text-align:center;
-}
-
-.c_cat-views
-{ display: none
 }
  
 blockquote dl dd, #foot #foot_links {
