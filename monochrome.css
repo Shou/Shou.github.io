@@ -2571,6 +2571,10 @@ img[src=""]
 { content: "\f080"
 }
 
+.folder
+{ font-size: 1.5em
+}
+
 .fa
 { font-family: "FontAwesome"
 }
