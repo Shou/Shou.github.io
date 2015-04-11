@@ -387,6 +387,10 @@ tr
 ; flex-wrap: wrap
 }
 
+thead > tr
+{ justify-content: center
+}
+
 th
 { background-color: #F0F0F0
 ; color: #4D4D4D
@@ -415,7 +419,6 @@ h2, th a, th a:hover
 
 thead > tr > th
 { text-align: center
-; border-bottom: 0.5em solid #E0E0E0
 /* ↓ Android Chrome is Literally Retarded: The Unwanted Scaling of Fonts */
 ; max-height: 99999px
 }
@@ -1866,7 +1869,7 @@ width:30%;
 }
 
 .c_cat-title
-{ width: 25%
+{ width: 35%
 }
 
 .c_cat-starter
@@ -1874,7 +1877,7 @@ width:30%;
 }
 
 .c_cat-lastpost
-{ width: 25%
+{ width: 20%
 }
 
 .c_cat-lastpost > *
