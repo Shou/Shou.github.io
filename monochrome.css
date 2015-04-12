@@ -142,11 +142,11 @@ html, body, #top_info small a:after, #top_info > strong > a
 /* {{{ Animations */
 
 @-webkit-keyframes glow {
-    from { color: #B71C1C; text-shadow: 0 0 0.5em #B71C1C }
+    from { color: crimson; text-shadow: 0 0 0.5em crimson }
     to { color: inherit; text-shadow: none }
 }
 @keyframes glow {
-    from { color: #B71C1C; text-shadow: 0 0 0.5em #B71C1C }
+    from { color: crimson; text-shadow: 0 0 0.5em crimson }
     to { color: inherit; text-shadow: none }
 }
 
@@ -228,6 +228,10 @@ html, body
 
 #top
 { flex: 1
+}
+
+.c_cat-title
+{ flex: 2
 }
 
 /* }}} */
@@ -335,7 +339,7 @@ a:hover, .c_post:hover a, .c_post:focus a
 
 /* {{{ Odd/even */
 
-/* Jesus Christ ↓ */
+/* Jesus Christ */
 blockquote blockquote, blockquote blockquote blockquote blockquote,
 blockquote blockquote blockquote blockquote blockquote blockquote,
 blockquote blockquote blockquote blockquote blockquote blockquote blockquote blockquote,
@@ -356,9 +360,11 @@ big > big > big > big > big > big > big > big > big > big > big > big > big > bi
 
 [data-desc]:hover::after
 { content: attr(data-desc)
+; display: block
 ; position: absolute
 ; background-color: #03A9F4
 ; color: #F0F0F0
+; border: 0.1em solid 
 ; padding: 1em
 ; margin: -1em 1em
 }
@@ -393,7 +399,6 @@ table, thead, tbody
 
 tr
 { display: flex
-; justify-content: space-between
 ; flex-wrap: wrap
 }
 
@@ -1888,7 +1893,7 @@ width:30%;
 }
 
 .c_cat-title
-{ width: 35%
+{ max-width: 40%
 }
 
 .c_cat-starter
