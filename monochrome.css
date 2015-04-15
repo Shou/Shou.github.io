@@ -369,9 +369,9 @@ big > big > big > big > big > big > big > big > big > big > big > big > big > bi
 ; position: absolute
 ; background-color: #03A9F4
 ; color: #F0F0F0
-; border: 0.1em solid 
-; padding: 1em
-; margin: -1em 1em
+; border: 0.1rem solid #ededed
+; padding: 1rem
+; margin: -1rem 1rem
 }
 
 .topic dl.user_info
@@ -418,7 +418,7 @@ tr > *
 th
 { background-color: #F0F0F0
 ; color: #4D4D4D
-; padding: 1em 2em
+; padding: 1em 1em
 ; text-align: left
 }
 
@@ -575,7 +575,7 @@ input[type="button"]:hover, .c_foot a:hover
 }
 
 #error_box .generic small:before
-{ content: " The zionists are invading as you are seated in front of your computer idly staring at your screen while leaning on your left arm and this self-referential page lights up. The postmodern is still being perpetuated despite its irrelevance. Vitriol paints you as amicable. Feminism is victor, emasculate the rest: a toast to the imminent matriarchy. I hope you aren't feeling indifferent today. \A\A The precinct of creativity. Extol fledgling works. Stomp the cigarette and stoop the visceral. Defeat lethologica. Become turbid. You are a mere transient fart in a violent storm. Become immaterially rich. Allow penetration of your mental rind. Are ascetic acolytes truly brittle? Your acquaintances are scintillating. They prevaricate until they shrivel. Lie down in a meadow at dusk and grasp the verdure as the stars line the void. "
+{ content: " Zionists are invading as you are seated in front of your computer idly staring at your screen while leaning on your left arm and this self-referential page lights up. Postmodernism is still perpetuated despite its irrelevance. Vitriol paints you amicably. Feminism is victor, emasculate the rest: a toast to the imminent matriarchy. I hope you aren't feeling indifferent today. \A\A The precinct of creativity. Extol fledgling works. Stomp the cigarette and stoop the visceral. Defeat lethologica. Become turbid. You are a mere transient fart in a violent storm. Become immaterially rich. Allow penetration of your mental rind. Are ascetic acolytes truly brittle? Your acquaintances are scintillating. They prevaricate until they shrivel. Lie down in a meadow at dusk and grasp the verdure as the stars line the void. "
 ; display: block
 ; font-weight: normal
 ; white-space: pre-wrap
@@ -664,7 +664,7 @@ input[type="button"]:hover, .c_foot a:hover
 
 #top_info a[href$="/login/"]::before, #top_info a[href$="/register/"]::before
 { text-transform: uppercase
-; padding: 1.1em 1em 0
+; padding: 1.1rem 1rem 0
 ; display: inline-block
 }
 
@@ -679,10 +679,10 @@ input[type="button"]:hover, .c_foot a:hover
 #top_info a[href$="/logout/"]::before,
 #top_info a[href$="/multi_login/"]::before
 { cursor: pointer
-; height: 1em
-; width: 1em
+; height: 1rem
+; width: 1rem
 ; display: inline-block
-; margin: 0 0.4em
+; margin: 0 0.4rem
 ; font-family: "FontAwesome"
 ; font-weight: 300
 }
