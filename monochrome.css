@@ -54,6 +54,7 @@
     - td:first-of-type
  - Deal with `nonexistent' elements.
  - Use `rem' instead of em
+ - Make background dark blue/royal blue.
 
 */
 
@@ -422,6 +423,11 @@ tr > *
 { min-width: 0
 }
 
+thead
+{ margin-bottom: 2em
+; border-bottom: 0.2em solid #D0D0D0
+}
+
 th
 { background-color: #F0F0F0
 ; color: #4D4D4D
@@ -435,7 +441,7 @@ th[colspan]
 
 td
 { color: #3D3D3D
-; padding: 0.5em
+; padding: 0 0.5em
 }
 
 h2, th a, th a:hover
@@ -1822,6 +1828,10 @@ nonexistent.row1, nonexistent.row2
 ; overflow: hidden
 }
 
+#main > table:first-child td
+{ padding: 0
+}
+
 #nav li img {
 vertical-align:top;
 }
@@ -1875,7 +1885,17 @@ text-align:center;
 { display: none }
 
 #pinned_head
-{ text-transform: uppercase
+{ display: none
+}
+
+.pin + tr:not([class])
+{ display: none
+}
+
+#inlinetopic > .posts > tbody > tr
+{ background-color: #F0F0F0
+; margin-bottom: 1em
+; border-bottom: 0.2em solid #D0D0D0
 }
 
 td.c_desc img,td.c_desc input {
@@ -1883,7 +1903,7 @@ float:left;
 vertical-align:middle;
 }
 
-span.collapse,span.uncollapse
+.collapse, .uncollapse
 { display: none
 }
  
@@ -1910,6 +1930,15 @@ width:30%;
 
 .c_cat-title
 { max-width: 40%
+; font-size: 0
+}
+
+.c_cat-title > a
+{ font-size: 1.5rem
+}
+
+.c_cat-title > span, .c_cat-title > div, .c_cat-title > ul
+{ font-size: 1rem
 }
 
 .c_cat-starter
@@ -2564,7 +2593,7 @@ padding:0;
 
 .bunk-big-butt:hover
 { color: #F0F0F0
-; background-color: #2D2D2D
+; background-color: #4D4D4D
 }
 
 .usertitle img
