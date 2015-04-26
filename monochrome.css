@@ -47,7 +47,9 @@
         - 2em on icons
         - etc
  - big > big > big > et al added to @media for phones
+    - Why?
  - Use dppx instead in @media conditionals
+    - Is dppx truly better?
  - Custom checkboxes using parent elements
     - td:first-of-type
  - Deal with `nonexistent' elements.
@@ -363,7 +365,11 @@ big > big > big > big > big > big > big > big > big > big > big > big > big > bi
 ; color: #ECEFF1
 }
 
-[data-desc]:hover::after
+[data-desc]:hover::after,
+#top_info a[href$="/multi_login/"]:hover::after
+#top_info a[href$="/multi_login/"]:focus::after
+#top_info a[href$="/logout/"]:hover::after
+#top_info a[href$="/logout/"]:focus::after
 { content: attr(data-desc)
 ; display: block
 ; position: absolute
@@ -421,6 +427,10 @@ th
 ; color: #4D4D4D
 ; padding: 1em 1em
 ; text-align: left
+}
+
+th[colspan]
+{ width: 100%
 }
 
 td
@@ -2544,11 +2554,11 @@ padding:0;
 }
 
 .bunk-big-butt
-{ border-bottom: 3px solid #2D2D2D
+{ border-bottom: 3px solid #4D4D4D
 ; font-size: 1.6em
 ; padding: 0.1em 0.5em
 ; margin: 0 1em
-; color: #2D2D2D
+; color: #4D4D4D
 ; transition: 0.3s all cubic-bezier(.55,0,0.1,1)
 }
 
