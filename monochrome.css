@@ -1896,6 +1896,7 @@ text-align:center;
 { background-color: #F0F0F0
 ; margin-bottom: 1em
 ; border-bottom: 0.2em solid #D0D0D0
+; padding: 1em 0
 }
 
 td.c_desc img,td.c_desc input {
@@ -1934,7 +1935,7 @@ width:30%;
 }
 
 .c_cat-title > a
-{ font-size: 1.5rem
+{ font-size: 1.2rem
 }
 
 .c_cat-title > span, .c_cat-title > div, .c_cat-title > ul
