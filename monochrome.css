@@ -262,6 +262,10 @@ code
 { font-family: "FontAwesome"
 }
 
+.c_cat-views
+{ font-family: "FontAwesome", "Open Sans"
+}
+
 th.c_cat-title, th.c_cat-starter, th.c_cat-replies, th.c_cat-views,
 th.c_cat-lastpost, thead > tr > th small
 { font-weight: 400
@@ -302,6 +306,10 @@ h2, h3
 
 h1, #top_bar::before
 { font-size: 2em
+}
+
+.c_cat-views
+{ white-space: pre
 }
 
 /* }}} */
@@ -475,11 +483,11 @@ h2.special
 
 input, select, button, a.btn_fake, td.c_foot a
 { background: #F0F0F0
-; border-bottom: 0.2em solid #2D2D2D
+; border-bottom: 0.2em solid #3D3D3D
 ; border-top: 0 solid
 ; border-left: 0 solid
 ; border-right: 0 solid
-; color: #2D2D2D
+; color: #3D3D3D
 ; padding: 0.3em 0.5em 0.1em 0.5em
 ; margin: 0 0.5em
 ; vertical-align: middle
@@ -513,7 +521,7 @@ input:focus, input.focus
 }
 
 input[type="text"], input[type="password"], input:not([type])
-{ border-left: 2px solid #2D2D2D
+{ border-left: 2px solid #3D3D3D
 ; border-top: 1px solid #D0D0D0
 ; border-bottom: 1px solid #D0D0D0
 ; border-right: 1px solid #D0D0D0
@@ -542,7 +550,7 @@ button, a.btn_fake, input[type="button"]
 button:hover, a.btn_fake:hover, select:hover, option:hover,
 input[type="button"]:hover, .c_foot a:hover
 { color: #F0F0F0
-; background-color: #2D2D2D
+; background-color: #3D3D3D
 }
 
 .btn_text
@@ -1071,10 +1079,6 @@ background:#000;
 color:#AAAAAA;
 font-size:80%;
 font-style:italic;
-}
-
-.c_foot
-{ border-top: 0.5em solid #E0E0E0
 }
 
 .c_foot > span
@@ -1884,7 +1888,7 @@ text-align:center;
 #announcement_head
 { display: none }
 
-#pinned_head
+#inlinetopic > .posts > tbody > tr:first-child:not([class])
 { display: none
 }
 
@@ -1926,9 +1930,10 @@ width:30%;
 .c_cat-mark
 { display: flex
 ; align-items: center
-; min-width: 4em
-; max-width: 4em
-; padding: 0 1em
+}
+
+td.c_cat-mark + td.c_cat-mark
+{ min-width: 4em
 }
 
 .c_cat-mark, .c_cat-icon, .c_cat-replies
