@@ -309,7 +309,7 @@ h1, #top_bar::before
 }
 
 .c_cat-views
-{ white-space: pre
+{ white-space: pre-line
 }
 
 /* }}} */
@@ -1108,6 +1108,11 @@ background:url() no-repeat 2px;
 padding:4px 0 4px 20px;
 }
 
+#topic_viewer > tbody > tr
+{
+; background-color: #F0F0F0
+}
+
 #topic_viewer th:first-child > span
 { display: block
 ; padding: 0.5em
@@ -1903,7 +1908,7 @@ text-align:center;
 ; padding: 1em 0
 }
 
-td.c_desc img,td.c_desc input {
+.c_desc img, .c_desc input {
 float:left;
 vertical-align:middle;
 }
@@ -1973,6 +1978,7 @@ td.c_cat-mark + td.c_cat-mark
 { padding: 0.5em
 /* ↓ Android Chrome is Literally Retarded: The Unwanted Scaling of Fonts */
 ; max-height: 999999px
+; width: 100%
 }
 
 .c_sig, .c_nosig
