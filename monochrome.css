@@ -1936,6 +1936,12 @@ width:30%;
 
 .c_cat-title > a
 { font-size: 1.2rem
+; display: flex
+; flex-direction: column
+}
+
+.c_cat-title > ul
+{ align-self: flex-end
 }
 
 .c_cat-title > span, .c_cat-title > div, .c_cat-title > ul
@@ -2626,6 +2632,10 @@ padding:0;
 
 img[src=""]
 { display: none
+}
+
+.pin .plain::after, .pin .plain-new::after
+{ content: "\f08d"
 }
 
 .plain::after, .plain-new::after
