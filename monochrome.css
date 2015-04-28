@@ -1923,6 +1923,14 @@ width:30%;
 { line-height: 1.2
 }
 
+.c_cat-mark
+{ display: flex
+; align-items: center
+; min-width: 4em
+; max-width: 4em
+; padding: 0 1em
+}
+
 .c_cat-mark, .c_cat-icon, .c_cat-replies
 { text-align: center
 ; min-width: 3em
@@ -2655,7 +2663,7 @@ img[src=""]
 }
 
 .folder
-{ font-size: 1.5em
+{ font-size: 2em
 }
 
 .fa
