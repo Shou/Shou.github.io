@@ -420,7 +420,6 @@ table, thead, tbody
 
 tr
 { display: flex
-; flex-wrap: wrap
 }
 
 thead > tr
@@ -951,6 +950,9 @@ text-align:center;
 .c_head, .c_foot, .c_sort
 { line-height: 1.8
 ; padding: 1em
+; display: flex
+; justify-content: space-between
+; flex-wrap: wrap
 }
 
 .c_desc
@@ -1123,13 +1125,14 @@ padding:4px 0 4px 20px;
 { display: table-cell
 }
 
-td.c_username
+.c_username
 { padding: 2px 0
 ; text-align: center
-; width: 175px
+; min-width: 192px
+; max-width: 192px
 }
 
-td.c_username a
+.c_username a
 { font-size: 1.1em
 ; font-weight: 400
 }
@@ -1141,7 +1144,7 @@ td.c_username a
 ; vertical-align: top
 }
 
-td.c_user
+.c_user
 { font-size: 0.8em
 ; min-width: 192px
 ; max-width: 192px
@@ -1150,7 +1153,7 @@ td.c_user
 ; text-overflow: ellipsis
 }
 
-td.c_user div:first-child
+.c_user > div:first-child
 { border-radius: 50%
 ; border: 5px solid #F0F0F0
 ; box-shadow: 0 0 0 5px #4D4D4D
@@ -1311,10 +1314,8 @@ width:15%;
 ; font-weight: 300
 ; text-align: right
 ; margin-top: 1em
-; margin-left: -182px
 ; margin-right: 1em
 ; padding: 0.7em 1em
-; background-color: #E0E0E0
 }
 
 .editby strong
@@ -1366,7 +1367,7 @@ code
 ; background-color: #3d3d3d
 }
 
-td.c_username, .c_postinfo
+.c_username, .c_postinfo
 { padding: 1.5em 1em 1em
 }
 
@@ -1377,7 +1378,7 @@ td.c_username, .c_postinfo
 .c_postinfo, .c_postinfo a
 { color: #4D4D4D
 ; font-weight: 300
-; vertical-align: middle
+; display: flex
 }
 
 .c_footicons
@@ -1437,8 +1438,7 @@ td.c_username, .c_postinfo
 
 .c_postfoot
 { margin-bottom: 2em
-; border-bottom: 0.1em solid #D0D0D0
-; flex-wrap: nowrap
+; border-bottom: 0.2em solid #D0D0D0
 }
 
 .c_postfoot > td
@@ -1750,7 +1750,7 @@ color:#AAAAAA;
 font-size:120%;
 }
  
-td.username_ok {
+.username_ok {
 background:#000;
 }
  
