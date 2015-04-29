@@ -1435,12 +1435,19 @@ td.c_username, .c_postinfo
 { margin: 1em
 }
 
-tr.c_postfoot
-{ border-bottom: 0.5em solid #E0E0E0
+.c_postfoot
+{ margin-bottom: 2em
+; border-bottom: 0.1em solid #D0D0D0
+; flex-wrap: nowrap
 }
 
-tr.c_postfoot > td
+.c_postfoot > td
 { padding: 1em
+}
+
+.c_postfoot > td:first-of-type
+{ max-width: 192px
+; min-width: 192px
 }
 
 .c_footicons
@@ -2079,9 +2086,10 @@ margin-left:10px;
 { content: "\F15B\A0"
 }
 
-.c_post-attachment > dd > a, .c_post-attachment > dd > a:hover,
-.c_post-attachment > dd > a:focus
-{ color: #f0f0f0
+.c_post > .c_post-attachment > dd > a,
+.c_post > .c_post-attachment > dd > a:hover,
+.c_post > .c_post-attachment > dd > a:focus
+{ color: #F0F0F0
 }
 
 .c_post-attachment dt
@@ -2098,8 +2106,11 @@ margin-left:10px;
 
 .c_sig
 { vertical-align: top
-; background-color: #E0E0E0
+; margin-left: 192px
+
+; background-color: #EAEAEA
 ; border-top: 0.1em solid #D0D0D0
+; border-left: 0.1em solid #E0E0E0
 }
 
 blockquote dl dt,blockquote dl dd {
