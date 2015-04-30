@@ -47,12 +47,9 @@
         - 2em on icons
         - etc
  - big > big > big > et al added to @media for phones
-    - Why?
+    - Isn't this global? Why do I need to do this?
  - Use dppx instead in @media conditionals
     - Is dppx truly better?
- - Custom checkboxes using parent elements
-    - td:first-of-type
- - Deal with `nonexistent' elements.
  - Use `rem' instead of em
  - Make background dark blue/royal blue.
  - pmtoast
@@ -98,7 +95,8 @@ html, body
 }
 
 /* Small screens */
-@media (orientation: landscape) and (max-width: 1700px)
+@media ((orientation: landscape) and (max-width: 1700px)
+     or (orientation: portrait) and (max-height: 1200px))
 {
 
 html, body
@@ -183,7 +181,7 @@ html, body
 .c_sig blockquote > dl, #c_notes > form, #foot > tbody > tr, #acplogin,
 #acplogin table, #acplogin thead, #acplogin tbody, #acplogin tr, #acplogin th,
 #acplogin tr td:last-child, #acplogin #loginform, #realtop, #top, #top_menu,
-#top_info, .drop_menu > li, #submenu, .c_foot > span, #boardmeta
+#top_info, .drop_menu > li, #submenu, .c_foot > span, #boardmeta, .cat-title
 { display: flex
 }
 
@@ -224,7 +222,7 @@ html, body
 { align-self: baseline
 }
 
-#realtop, #submenu, .c_foot > span
+#realtop, #submenu, .c_foot > span, .cat-title
 { flex-wrap: wrap
 }
 
@@ -1818,26 +1816,6 @@ vertical-align: bottom
 left:auto;
 }
 
-nonexistent#main > *,
-nonexistent#main > table > thead,
-nonexistent#main > table > tbody > tr
-{ background-color: #F0F0F0
-; padding-top: 1em
-; padding-bottom: 1em
-}
-
-nonexistent#main > table
-{ background-color: #E0E0E0
-}
-
-nonexistent#main > *:last-child,
-nonexistent#main > table > thead,
-nonexistent#topic_viewer > tbody > tr:nth-of-type(1+5n),
-nonexistent.row1, nonexistent.row2
-{ margin-bottom: 1em
-; border-bottom: 0.2em solid #D0D0D0
-}
-
 #main > table:first-child
 { height: auto !important
 ; margin: 0 !important
@@ -2664,9 +2642,8 @@ padding:0;
 { display: none }
 
 .replied-marker
-{ vertical-align: super
-; font-size: 0.5em
-; order: 3
+{ order: 3
+; width: 100%
 }
 
 #subslider
