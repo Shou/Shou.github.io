@@ -375,18 +375,21 @@ big > big > big > big > big > big > big > big > big > big > big > big > big > bi
 }
 
 [data-desc]:hover::after,
+{ content: attr(data-desc)
+}
+
+[data-desc]:hover::after,
 #top_info a[href$="/multi_login/"]:hover::after
 #top_info a[href$="/multi_login/"]:focus::after
 #top_info a[href$="/logout/"]:hover::after
 #top_info a[href$="/logout/"]:focus::after
-{ content: attr(data-desc)
-; display: block
+{ display: block
 ; position: absolute
 ; background-color: #03A9F4
 ; color: #F0F0F0
 ; border: 0.1rem solid #ededed
-; padding: 1rem
-; margin: -1rem 1rem
+; padding: 0.5rem 1rem
+; margin: -2rem 2rem
 ; font-size: 1rem
 }
 
@@ -1978,7 +1981,7 @@ td.c_cat-mark + td.c_cat-mark
 
 .c_cat-title, .c_cat-starter, .c_cat-lastpost
 { overflow: hidden
-; text-overflow: hidden
+; text-overflow: ellipsis
 ; white-space: nowrap
 }
 
