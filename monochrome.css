@@ -68,7 +68,7 @@
 @media (orientation: portrait)
 {
 
-* { color: Crimson !important }
+* { color: crimson !important }
 
 }
 
@@ -80,8 +80,7 @@
 }
 
 /* Mobile devices, super high res screens */
-@media ((orientation: portrait) and (min-width: 900px)
-     or (orientation: landscape) and (min-height: 1201px))
+@media (orientation: portrait)
 {
 
 html, body
