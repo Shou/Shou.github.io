@@ -60,14 +60,11 @@
 /* {{{ External fonts */
 
 @import url(https://fonts.googleapis.com/css?family=Quicksand:400,700|Open+Sans:400italic,600italic,700italic,800italic,400,600,700,800|Droid+Sans+Mono);
-@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css)
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css);
 
 /* }}} */
 
 /* {{{ Media rules */
-
-@media test
-{}
 
 /* Mobile devices, super high res screens */
 @media only screen and (min-resolution: 2dppx)
@@ -79,8 +76,6 @@ html, body
 /* XXX REM is this even needed anymore? */
 .drop_menu > li a img
 { height: 40pt }
-
-* { color: DeepSkyBlue !important }
 
 }
 
@@ -106,8 +101,6 @@ html, body
 
 .topic h2, #portal h2, #portal_foot h2, thead th
 { font-size: 2.5em }
-
-* { color: Crimson !important }
 
 }
 
