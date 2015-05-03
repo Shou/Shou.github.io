@@ -67,7 +67,7 @@
 /* {{{ Media rules */
 
 /* Mobile devices, super high res screens */
-@media (min-device-height: 1201px)
+@media (min-resolution: 2dppx)
 {
 
 html, body
