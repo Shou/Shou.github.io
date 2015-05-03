@@ -71,13 +71,13 @@
 {
 
 html, body
-{ font-size: 24pt
-}
+{ font-size: 24pt }
 
 /* XXX REM is this even needed anymore? */
 .drop_menu > li a img
-{ height: 40pt
-}
+{ height: 40pt }
+
+* { color: DeepSkyBlue !important }
 
 }
 
@@ -86,12 +86,10 @@ html, body
 {
 
 .c_cat-starter, .c_cat-views
-{ display: none
-}
+{ display: none }
 
 .topic h2, #portal h2, #portal_foot h2, thead th
-{ font-size: 2em
-}
+{ font-size: 2em }
 
 }
 
@@ -101,13 +99,13 @@ html, body
 {
 
 html, body
-{ font-size: 10pt
-}
+{ font-size: 10pt }
 
 
 .topic h2, #portal h2, #portal_foot h2, thead th
-{ font-size: 2.5em
-}
+{ font-size: 2.5em }
+
+* { color: Crimson !important }
 
 }
 
@@ -116,8 +114,7 @@ html, body
 {
 
 .c_post, #topic_review .c_desc + td
-{ max-width: 750px
-}
+{ max-width: 750px }
 
 .c_post img, #topic_review img, .c_post video, .c_post object, .c_post audio,
 .c_post iframe
@@ -133,8 +130,7 @@ html, body
 { margin: 0 0 44px !important }
 
 .c_post, #topic_review .c_desc + td
-{ max-width: 50vw
-}
+{ max-width: 50vw }
 
 .c_post img, #topic_review img, .c_post video, .c_post object, .c_post audio,
 .c_post iframe
