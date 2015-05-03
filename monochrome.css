@@ -65,6 +65,20 @@
 
 /* {{{ Media rules */
 
+@media (orientation: portrait)
+{
+
+* { color: Crimson !important }
+
+}
+
+@media (orientation: landscape)
+{
+
+* { color: DeepSkyBlue !important }
+
+}
+
 /* Mobile devices, super high res screens */
 @media ((orientation: portrait) and (min-width: 900px)
      or (orientation: landscape) and (min-height: 1201px))
