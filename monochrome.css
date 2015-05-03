@@ -68,14 +68,14 @@
 @media (orientation: portrait)
 {
 
-* { color: crimson !important }
+* { color: #BADA55 !important }
 
 }
 
 @media (orientation: landscape)
 {
 
-* { color: DeepSkyBlue !important }
+* { color: Crimson !important }
 
 }
 
@@ -90,6 +90,8 @@ html, body
 .drop_menu > li a img
 { height: 40pt
 }
+
+* { color: DeepSkyBlue !important }
 
 }
 
