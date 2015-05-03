@@ -66,6 +66,9 @@
 
 /* {{{ Media rules */
 
+@media test
+{}
+
 /* Mobile devices, super high res screens */
 @media only screen and (min-resolution: 2dppx)
 {
@@ -85,7 +88,7 @@ html, body
 @media (max-device-height: 1200px) and (max-width: 1000px)
 {
 
-.c_cat-starter, .c_cat-views
+.c_cat-starter
 { display: none }
 
 .topic h2, #portal h2, #portal_foot h2, thead th
