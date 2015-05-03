@@ -53,6 +53,7 @@
  - Use `rem' instead of em
  - Make background dark blue/royal blue.
  - pmtoast
+ - Evauluate possibly obsolete declerations, search /XXX REM
 
 */
 
@@ -65,38 +66,23 @@
 
 /* {{{ Media rules */
 
-@media (orientation: portrait)
-{
-
-* { color: #BADA55 !important }
-
-}
-
-@media (orientation: landscape)
-{
-
-* { color: Crimson !important }
-
-}
-
 /* Mobile devices, super high res screens */
-@media (orientation: portrait)
+@media (min-device-height: 1201px)
 {
 
 html, body
 { font-size: 24pt
 }
 
+/* XXX REM is this even needed anymore? */
 .drop_menu > li a img
 { height: 40pt
 }
 
-* { color: DeepSkyBlue !important }
-
 }
 
 /* Vertical screens */
-@media (min-height: 600px) and (max-width: 1000px)
+@media (max-device-height: 1200px) and (max-width: 1000px)
 {
 
 .c_cat-starter, .c_cat-views
