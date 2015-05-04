@@ -195,7 +195,7 @@ html, body
 { justify-content: flex-start
 }
 
-#foot > tbody > tr, #realtop, #top, .c_postinfo, .c_footicons
+#foot > tbody > tr, #realtop, #top, .c_postinfo, .c_footicons, .c_cat-title
 { justify-content: space-between
 }
 
@@ -211,7 +211,8 @@ html, body
 { align-items: flex-start
 }
 
-#edit_sig > tbody > tr:last-child, #c_post > button
+#edit_sig > tbody > tr:last-child, #c_post > button, .c_cat-replies,
+.c_cat-views, .c_cat-starter
 { align-self: center
 }
 
@@ -1929,7 +1930,7 @@ vertical-align:middle;
 { content: "\f106"
 }
 
-.collapse > a, .uncollapse > a
+.uncollapse > a
 { display: inline-block
 ; position: absolute
 ; width: 3em
@@ -1987,10 +1988,6 @@ td.c_cat-mark + td.c_cat-mark
 
 .c_cat-starter
 { width: 15%
-}
-
-.c_cat-lastpost
-{ width: 20%
 }
 
 .c_cat-title, .c_cat-starter, .c_cat-lastpost
