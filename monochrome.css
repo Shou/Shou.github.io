@@ -2015,12 +2015,12 @@ td.c_cat-mark + td.c_cat-mark
 }
 
 .c_cat-title
-{ max-width: 40%
+{ max-width: 50%
 ; font-size: 0
 }
 
 .c_cat-title > a
-{ width: 70%
+{ width: 90%
 ; order: -1
 ; font-size: 1.2rem
 }
