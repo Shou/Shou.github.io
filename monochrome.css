@@ -173,7 +173,7 @@ html, body
 .c_sig blockquote > dl, #c_notes > form, #foot > tbody > tr, #acplogin,
 #acplogin table, #acplogin thead, #acplogin tbody, #acplogin tr, #acplogin th,
 #acplogin tr td:last-child, #acplogin #loginform, #realtop, #top, #top_menu,
-#top_info, .drop_menu > li, #submenu, .c_foot > span, #boardmeta, .cat-title
+#top_info, .drop_menu > li, #submenu, .c_foot > span, #boardmeta, .c_cat-title
 { display: flex
 }
 
@@ -214,7 +214,7 @@ html, body
 { align-self: baseline
 }
 
-#realtop, #submenu, .c_foot > span, .cat-title
+#realtop, #submenu, .c_foot > span, .c_cat-title
 { flex-wrap: wrap
 }
 
