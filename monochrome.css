@@ -463,7 +463,7 @@ h2, th a, th a:hover
 }
 
 .category h2
-{ padding: 0.5em 1em
+{ padding: 0 1em 0 0
 ; background-color: #3D3D3D
 ; font-weight: 300
 }
@@ -1788,11 +1788,11 @@ a img {
 border:0;
 }
 
-.category h2,.topic h2,#portal h2
+.topic h2,#portal h2
 { padding: 0.1em 0.5em
 ; text-align: left
 }
- 
+
 h3 {
 padding:3px 0;
 }
@@ -1917,7 +1917,8 @@ vertical-align:middle;
 
 .collapse::before, .uncollapse::before
 { cursor: pointer
-; padding: 0 0.5em
+; padding: 0.5em 1em
+; display: inline-block
 }
 
 .collapse::before
@@ -1926,6 +1927,14 @@ vertical-align:middle;
 
 .uncollapse::before
 { content: "\f106"
+}
+
+.collapse > a, .uncollapse > a
+{ display: inline-block
+; position: absolute
+; width: 3em
+; height: 2em
+; margin-left: -3em
 }
 
 .c_mark img {
