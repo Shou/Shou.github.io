@@ -212,7 +212,7 @@ html, body
 }
 
 #edit_sig > tbody > tr:last-child, #c_post > button, .c_cat-replies,
-.c_cat-views, .c_cat-starter, .c_cat-title, .c_cat-lastpost
+.c_cat-views, .c_cat-starter, .c_cat-title, .c_cat-lastpost, .replied-marker
 { align-self: center
 }
 
@@ -909,13 +909,12 @@ input[type="button"]:hover, .c_foot a:hover
 ul li.cat-pageshead
 { display: none
 }
- 
-ul.cat-pages
-{ float: left
-; margin: 16px
-; padding: 8px 4px
+
+.cat-pages
+{ margin: 1em
+; padding: 1em 0.5em
 }
- 
+
 .cat-pages a, .cat-pagesjump i, .cat-topicpages a
 { background-color: #F0F0F0
 ; border-bottom: 3px solid #D0D0D0
@@ -1243,6 +1242,13 @@ width:15%;
 .c_poll-bar > div
 { height: 2em
 ; padding-right: 0.5em
+}
+
+.poll > tbody
+{ background-color: #F0F0F0
+; border-bottom: 0.2em solid #F0F0F0
+; margin-bottom: 2em
+; padding: 2em 1em
 }
 
 .poll > tbody > tr:nth-last-of-type(2) > .c_poll-bar > div
@@ -1826,6 +1832,9 @@ left:auto;
 ; margin: 0 !important
 }
 
+form[id^="poll"] + .exclusivebutton > #topic_viewer > thead
+{ display: none }
+
 .exclusivebutton + table > tbody > tr:first-child > td,
 #main > table:first-child td
 { display: flex
@@ -1979,8 +1988,9 @@ td.c_cat-mark + td.c_cat-mark
 }
 
 .c_cat-title > a
-{ font-size: 1.2rem
+{ width: 70%
 ; order: -1
+; font-size: 1.2rem
 }
 
 .c_cat-title > ul
@@ -2677,8 +2687,6 @@ padding:0;
 
 .replied-marker::before
 { content: "\f00c"
-; padding: 1em 0 0 0
-; display: inline-block
 }
 
 #subslider
@@ -2716,7 +2724,7 @@ img[src=""]
 { content: "\f06d"
 }
 
-.poll::before, .poll-new::before
+span.poll::before, .poll-new::before
 { content: "\f080"
 }
 
