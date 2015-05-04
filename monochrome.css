@@ -2664,23 +2664,23 @@ img[src=""]
 { display: none
 }
 
-.pin .plain::after, .pin .plain-new::after
+.pin .plain::before, .pin .plain-new::before
 { content: "\f08d"
 }
 
-.plain::after, .plain-new::after
+.plain::before, .plain-new::before
 { content: "\f0fe"
 }
 
-.hot::after, .hot-new::after
+.hot::before, .hot-new::before
 { content: "\f06d"
 }
 
-.poll::after, .poll-new::after
+.poll::before, .poll-new::before
 { content: "\f080"
 }
 
-.locked::after
+.locked::before
 { content: "\f023"
 }
 
