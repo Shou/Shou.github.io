@@ -257,7 +257,7 @@ code
 }
 
 .c_post-attachment > dd > a::before, .c_post a::after, .collapse::before,
-.uncollapse::before
+.uncollapse::before, .replied-marker::before
 { font-family: "FontAwesome"
 }
 
@@ -1100,9 +1100,10 @@ border-color:#333;
 }
  
 .description
-{ color: #8D8D8D
+{ width: 80%
+; order: 2
 ; font-size: 0.85em
-; order: 4
+; color: #8D8D8D
 }
 
 #stats_events a, #stats_events span {
@@ -2668,7 +2669,10 @@ padding:0;
 
 .replied-marker
 { order: 3
-; width: 100%
+}
+
+.replied-marker::before
+{ content: "\f00c"
 }
 
 #subslider
