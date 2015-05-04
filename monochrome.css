@@ -494,6 +494,7 @@ textarea
 ; border-bottom: 0.1em solid #CCC
 ; border-left: 0.1em solid #CCC
 ; border-radius: 0.1em 0.1em
+; margin: 0 0.5em
 ; padding: 0.5em
 ; color: #4D4D4D
 ; width: 100%
@@ -2000,7 +2001,14 @@ td.c_cat-mark + td.c_cat-mark
 { min-width: 4em
 }
 
-.c_cat-mark, .c_cat-icon, .c_cat-replies
+.c_cat-mark
+{ text-align: center
+; min-width: 4em
+; max-width: 4em
+; padding: 0 1em
+}
+
+.c_cat-icon, .c_cat-replies
 { text-align: center
 ; min-width: 3em
 ; max-width: 3em
