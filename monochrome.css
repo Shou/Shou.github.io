@@ -199,7 +199,7 @@ html, body
 { justify-content: space-between
 }
 
-#acplogin tr, #acplogin th, #submenu
+#acplogin tr, #acplogin th, #submenu, .generic
 { justify-content: center
 }
 
@@ -257,7 +257,7 @@ code
 }
 
 .c_post-attachment > dd > a::before, .c_post a::after, .collapse::before,
-.uncollapse::before, .replied-marker::before
+.uncollapse::before, .replied-marker::before, #error_box .generic small::after
 { font-family: "FontAwesome"
 }
 
@@ -599,11 +599,32 @@ input[type="button"]:hover, .c_foot a:hover
 { color: #f0f0f0
 }
 
-#error_box thead th
+#error_box > thead th
 { border: none
+; width: 100%
 }
 
-#error_box .generic small:before
+#error_box > tbody
+{ background-color: #F0F0F0
+; border-bottom: 0.2em solid #D0D0D0
+}
+
+#error_box > tbody::after
+{ content: "\f02a"
+; display: block
+; font-size: 20em
+; font-weight: 300
+; text-align: center
+}
+
+.generic > td, .generic
+{ font-size: 1.2em
+; font-weight: 700
+; padding: 0 2em 2em 2em
+; text-align: center
+}
+
+#error_box .generic small::before
 { content: " Zionists are invading as you are seated in front of your computer idly staring at your screen while leaning on your left arm and this self-referential page lights up. Postmodernism is still perpetuated despite its irrelevance. Vitriol paints you amicably. Feminism is victor, emasculate the rest: a toast to the imminent matriarchy. I hope you aren't feeling indifferent today. \A\A The precinct of creativity. Extol fledgling works. Stomp the cigarette and stoop the visceral. Defeat lethologica. Become turbid. You are a mere transient fart in a violent storm. Become immaterially rich. Allow penetration of your mental rind. Are ascetic acolytes truly brittle? Your acquaintances are scintillating. They prevaricate until they shrivel. Lie down in a meadow at dusk and grasp the verdure as the stars line the void. "
 ; display: block
 ; font-weight: normal
@@ -615,17 +636,16 @@ input[type="button"]:hover, .c_foot a:hover
 ; margin-bottom: 10pt
 }
 
-#nav, ul.cat-pages, .cat-topicpages, .calendar ul, .meta_menu ul,
-#pm_folderlist, #profile_menuwrap ul
+.cat-pages
+{ list-style: none
+}
+
+#nav, .cat-topicpages, .calendar ul, .meta_menu ul,
+#pm_folderlist, #profile_menuwrap ul, #top ul
 { list-style: none
 ; padding: 0
 }
 
-#top ul
-{ list-style: none
-; padding: 0
-}
- 
 #profile_menuwrap ul, .cat-topicpages,blockquote dl, #fast-reply dd
 { margin:0
 }
@@ -937,13 +957,6 @@ ul li.cat-pageshead
 { color: #d0d0d0
 ; padding: 3px 5px
 ; vertical-align: baseline
-}
-
-tr.generic td, .generic {
-font-size:120%;
-font-weight:700;
-padding:20px;
-text-align:center;
 }
  
 .c_head, .c_foot, .c_sort
@@ -2092,7 +2105,10 @@ margin-left:10px;
 .c_post iframe
 { max-width: 700px
 }
- 
+
+.c_post iframe
+{ border: none }
+
 .c_post-attachment
 { font-size: 0.9em
 ; margin-top: 1em
