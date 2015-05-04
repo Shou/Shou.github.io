@@ -212,7 +212,7 @@ html, body
 }
 
 #edit_sig > tbody > tr:last-child, #c_post > button, .c_cat-replies,
-.c_cat-views, .c_cat-starter
+.c_cat-views, .c_cat-starter, .c_cat-title, .c_cat-lastpost
 { align-self: center
 }
 
@@ -1104,6 +1104,10 @@ border-color:#333;
 ; order: 2
 ; font-size: 0.85em
 ; color: #8D8D8D
+}
+
+.description:empty
+{ display: none
 }
 
 #stats_events a, #stats_events span {
@@ -2673,6 +2677,8 @@ padding:0;
 
 .replied-marker::before
 { content: "\f00c"
+; padding: 1em 0 0 0
+; display: inline-block
 }
 
 #subslider
