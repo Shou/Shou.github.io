@@ -174,7 +174,7 @@ html, body
 #acplogin table, #acplogin thead, #acplogin tbody, #acplogin tr, #acplogin th,
 #acplogin tr td:last-child, #acplogin #loginform, #realtop, #top, #top_menu,
 #top_info, .drop_menu > li, #submenu, .c_foot > span, #boardmeta, .c_cat-title,
-.c_postinfo, .c_footicons, #fast-reply > dd
+.c_postinfo, .c_footicons, #fast-reply > dd, #c_postbtn
 { display: flex
 }
 
@@ -199,7 +199,7 @@ html, body
 { justify-content: space-between
 }
 
-#acplogin tr, #acplogin th, #submenu, .generic, #fast-reply > dd
+#acplogin tr, #acplogin th, #submenu, .generic, #fast-reply > dd, #c_postbtn
 { justify-content: center
 }
 
@@ -1534,6 +1534,7 @@ td.c_view
 ; background-color: crimson
 ; color: white
 ; font-size: 1.5em
+; text-align: center
 ; padding: 0.5em
 ; width: 750px
 }
@@ -1551,6 +1552,10 @@ td.c_view
 ; cursor: pointer
 ; font-size: 2em
 ; padding: 20px 5px 0
+}
+
+#emot_wrap
+{ background-color: #F0F0F0
 }
 
 #emot_wrap h3
@@ -1918,7 +1923,7 @@ padding:0 2px;
 ; background-color: #F0F0F0
 }
 
-tr.postbtn td {
+.postbtn td {
 padding:5px;
 text-align:center;
 }
@@ -2192,7 +2197,7 @@ text-align:left;
 }
 
 #c_post-text
-{ height: 16em
+{ height: 18em
 ; width: 750px
 ; display: block
 }
@@ -2472,6 +2477,14 @@ text-align:right;
 #ucp_gallery {
 text-align:center;
 vertical-align:top;
+}
+
+.posting > tbody > tr:nth-of-type(n + 3)
+{ background-color: #F0F0F0 }
+
+#c_postbtn
+{ padding: 1em
+; border-bottom: 0.2em solid #D0D0D0
 }
 
 #c_post
