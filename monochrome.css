@@ -558,6 +558,7 @@ input[type="button"]:hover, .c_foot a:hover
 ; margin: 24px auto
 ; width: 66%
 ; overflow: hidden
+; display: flex
 }
 
 .notice
@@ -580,8 +581,7 @@ input[type="button"]:hover, .c_foot a:hover
 }
  
 .notice dt, .notice dd, .error dt
-{ float: left
-; margin: 0
+{ margin: 0
 ; padding: 0.5em
 }
 
@@ -1952,7 +1952,7 @@ td.c_cat-mark + td.c_cat-mark
 
 .c_cat-title > a
 { font-size: 1.2rem
-; order: 1
+; order: -1
 }
 
 .c_cat-title > ul
@@ -2695,5 +2695,9 @@ img[src=""]
 .glow
 { animation: glow 1s ease-in infinite alternate
 ; -webkit-animation: glow 1s ease-in infinite alternate
+}
+
+.right, .left
+{ float: none
 }
 
