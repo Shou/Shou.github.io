@@ -465,9 +465,10 @@ h2, th a, th a:hover
 .category h2
 { padding: 0.5em 1em
 ; background-color: #3D3D3D
+; font-weight: 300
 }
 
-.category h2 > a, .category h2 > span
+.category h2 > a, .category h2
 { color: #F0F0F0
 }
 
@@ -482,9 +483,6 @@ thead > tr > th small
 ; text-shadow: none
 ; margin-top: 1em
 }
-
-h2.special
-{ border-color: #333333 }
 
 input, select, button, a.btn_fake, td.c_foot a
 { background: #F0F0F0
@@ -989,6 +987,10 @@ width:20px;
 
 .category
 { margin: 2em 0
+}
+
+.forums[style*="display: none"]
+{ display: none !important
 }
 
 .forums
@@ -1911,6 +1913,11 @@ text-align:center;
 .c_desc img, .c_desc input {
 float:left;
 vertical-align:middle;
+}
+
+.collapse::before, .uncollapse::before
+{ cursor: pointer
+; padding: 0 0.5em
 }
 
 .collapse::before
