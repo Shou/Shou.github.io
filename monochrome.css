@@ -2037,7 +2037,7 @@ td.c_cat-mark + td.c_cat-mark
 { width: 15%
 }
 
-.c_cat-title, .c_cat-starter, .c_cat-lastpost
+.c_cat-title > a, .c_cat-title > .description .c_cat-starter, .c_cat-lastpost
 { overflow: hidden
 ; text-overflow: ellipsis
 ; white-space: nowrap
