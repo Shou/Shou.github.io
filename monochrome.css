@@ -1521,7 +1521,7 @@ td.c_view
 }
 
 #fast-reply > dd > textarea
-{ height: 6em
+{ height: 10em
 ; margin-bottom: 1em
 ; background-color: #F0F0F0
 }
@@ -1535,13 +1535,15 @@ td.c_view
 ; color: white
 ; font-size: 1.5em
 ; padding: 0.5em
+; width: 750px
 }
 
 #c_post-preview
-{ padding: 5px
-; margin: 0 auto 1em
+{ padding: 1em 0.5em
+; margin: 0 0 1em 0
+; width: 750px
 ; text-align: left
-; width: 100%
+; background-color: #F0F0F0
 }
  
 #c_post-resize span
@@ -1828,8 +1830,8 @@ a img {
 border:0;
 }
 
-.topic h2,#portal h2
-{ padding: 0.1em 0.5em
+.topic h2, #portal h2
+{ padding: 1em 0.5em
 ; text-align: left
 }
 
@@ -2190,7 +2192,10 @@ text-align:left;
 }
 
 #c_post-text
-{ height: 16em }
+{ height: 16em
+; width: 750px
+; display: block
+}
 
 #c_post-resize {
 float:right;
@@ -2206,7 +2211,11 @@ text-align:right;
 #c_emot
 { vertical-align: top
 ; width: 180px
+; position: absolute
 }
+
+#c_bbcode
+{ margin-left: 180px }
 
 #c_bbcode > *
 { margin: 0 1em 1em 0
@@ -2460,11 +2469,15 @@ blockquote dl dd, #foot #foot_links {
 text-align:right;
 }
  
-#c_post, #ucp_gallery {
+#ucp_gallery {
 text-align:center;
 vertical-align:top;
 }
- 
+
+#c_post
+{ margin-left: 180px
+}
+
 #files_upload input,.pm .row1 a,.pm .row2 a, #ucp_gallery button img,
 #findposts td a {
 display:block;
