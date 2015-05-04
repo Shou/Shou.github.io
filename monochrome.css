@@ -178,6 +178,10 @@ html, body
 { display: flex
 }
 
+.forums
+{ display: flex !important
+}
+
 #c_post, #edit_sig > tbody, #c_notes > form, #acplogin, #acplogin table,
 #acplogin thead, #acplogin tbody, #top_menu, .drop_menu > li
 { flex-direction: column
@@ -251,7 +255,8 @@ code
 { font-family: "Droid Sans Mono", monospace
 }
 
-.c_post-attachment > dd > a::before, .c_post a::after
+.c_post-attachment > dd > a::before, .c_post a::after, .collapse::before,
+.uncollapse::before
 { font-family: "FontAwesome"
 }
 
@@ -324,7 +329,7 @@ h1, #top_bar::before
 /* {{{ Links */
 
 a
-{ color: #2D2D2D
+{ color: #3D3D3D
 ; text-decoration: none
 }
 
@@ -451,14 +456,19 @@ h2, th a, th a:hover
 { color: #4D4D4D
 }
 
-.category h2, .topic h2, #portal h2, #portal_foot h2, thead th
+.topic h2, #portal h2, #portal_foot h2, thead th
 { font-weight: normal
 ; text-shadow: -0.04em 0.04em 0 #D0D0D0
 ; color: #3D3D3D
 }
 
-.category h2 a
-{ color: #3D3D3D
+.category h2
+{ padding: 0.5em 1em
+; background-color: #3D3D3D
+}
+
+.category h2 > a, .category h2 > span
+{ color: #F0F0F0
 }
 
 thead > tr > th
@@ -978,19 +988,13 @@ width:20px;
 }
 
 .category
-{ margin: 0 1em
+{ margin: 2em 0
 }
 
-.forums, .forums tbody
-{ display: block
-}
-
-.forums td
-{ display: inline-block
-}
-
-.forums tbody > tr
-{ display: flex
+.forums
+{ padding: 1em
+; background-color: #F0F0F0
+; border-bottom: 0.2em solid #D0D0D0
 }
 
 .forum
@@ -1018,7 +1022,7 @@ width:20px;
 }
 
 .c_forum
-{ flex: 2
+{ width: 50%
 }
 
 .c_forum, .c_info
@@ -1026,7 +1030,7 @@ width:20px;
 }
 
 .c_forum strong a,.c_last strong a
-{ color: #2D2D2D
+{ color: #3D3D3D
 }
 
 .c_forum strong a
@@ -1711,8 +1715,7 @@ padding:1px 10px;
 }
 
 #foot_datetime > a
-{ white-space: nowrap
-; font-size: 1.5em
+{ font-size: 1.5em
 ; text-transform: lowercase
 }
 
@@ -1910,10 +1913,14 @@ float:left;
 vertical-align:middle;
 }
 
-.collapse, .uncollapse
-{ display: none
+.collapse::before
+{ content: "\f107"
 }
- 
+
+.uncollapse::before
+{ content: "\f106"
+}
+
 .c_mark img {
 display:block;
 margin:auto;
@@ -2345,7 +2352,7 @@ margin:5px 0;
 
 #acplogin > #loginform tbody
 { background-color: #F0F0F0
-; border: 0.2em solid #D0D0D0
+; border-bottom: 0.2em solid #D0D0D0
 ; padding: 2em
 }
 
