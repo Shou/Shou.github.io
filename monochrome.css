@@ -7,14 +7,8 @@
  - Put descriptions and other meta-texts UNDER elements, horizontally taking up
    space instead.
      - Text boxes in various preferences, notably.
- - Inconsistent button sizing: padding, margin, border, font-size
- - Index page text spacing is AWFUL.
  - Fast reply outer border needs to GO. Also generally be modernised. Phones.
     - Make it take up the whole width, minus margin.
- - Hide pinned threads.
-    - Impossible?
-        - Use nth-of-type selector to keep ALL pins toggled?
-            - does that work
  - Post button spacing broken.
  - Fix pages
     - Avatar settings
@@ -29,23 +23,9 @@
     - Message Tracking
     - Report Panel
  - Consolidate colour declarations
- - Mobile media height shouldn't affect
-    - NO MORE ZOOMING OUT ON TEXT TYPING
-    - (orientation: portrait) and (min-WIDTH)
-        - This is broken now.
- - Make most icons CSS-only
  - Mod options spacing broken.
      - Still.
  - How to display PM or RCP updates
- - Emulate tables with flex
-    - Seriously, tables suck.
-    - Take two.
-    - Use margin/padding/border to control positioning.
-        - Especially text.
-    - Fixed widths on columns to control positioning.
-        - 1em on checkboxes
-        - 2em on icons
-        - etc
  - big > big > big > et al added to @media for phones
     - Isn't this global? Why do I need to do this?
  - Use dppx instead in @media conditionals
@@ -174,7 +154,7 @@ html, body
 #acplogin table, #acplogin thead, #acplogin tbody, #acplogin tr, #acplogin th,
 #acplogin tr td:last-child, #acplogin #loginform, #realtop, #top, #top_menu,
 #top_info, .drop_menu > li, #submenu, .c_foot > span, #boardmeta, .c_cat-title,
-.c_postinfo, .c_footicons, #fast-reply > dd, #c_postbtn
+.c_postinfo, .c_footicons, #fast-reply > dd, #c_postbtn, [align="center"]
 { display: flex
 }
 
@@ -199,11 +179,13 @@ html, body
 { justify-content: space-between
 }
 
-#acplogin tr, #acplogin th, #submenu, .generic, #fast-reply > dd, #c_postbtn
+#acplogin tr, #acplogin th, #submenu, .generic, #fast-reply > dd, #c_postbtn,
+[align="center"]
 { justify-content: center
 }
 
-#c_notes > form, #top_info, .c_foot > span, #acplogin, .c_postinfo
+#c_notes > form, #top_info, .c_foot > span, #acplogin, .c_postinfo,
+#edit_profile > tbody > tr
 { align-items: center
 }
 
@@ -391,6 +373,9 @@ big > big > big > big > big > big > big > big > big > big > big > big > big > bi
 ; margin: -2rem 2rem
 ; font-size: 1rem
 }
+
+[align="center"]
+{ width: 100% }
 
 .topic dl.user_info
 { display: none }
@@ -903,11 +888,12 @@ input[type="button"]:hover, .c_foot a:hover
 { display: block
 ; margin: 0.5em 1em
 ; padding: 0.5em
-; background-color: #e0e0e0
-; border-top: 0.1em solid #d0d0d0
-; border-bottom: 0.1em solid #eee
+; background-color: #3d3d3d
+; border-top: 0.1em solid #2d2d2d
+; border-bottom: 0.1em solid #4d4d4d
 ; border-radius: 0.5em
 ; text-align: center
+; color: #F0F0F0
 }
  
 .meta_menu h3
@@ -925,7 +911,10 @@ input[type="button"]:hover, .c_foot a:hover
 .meta_menu img
 { display: none
 }
- 
+
+#edit_profile > tbody > tr
+{ padding: 0.5em }
+
 ul li.cat-pageshead
 { display: none
 }
