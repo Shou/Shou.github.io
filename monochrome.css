@@ -841,9 +841,13 @@ input[type="button"]:hover, .c_foot a:hover
 { text-align: center
 }
 
-#nav li a
+#nav > li > a
 { margin: 1em 1vw 0
 ; display: inline-block
+; white-space: nowrap
+; overflow: hidden
+; text-overflow: ellipsis
+; max-width: 20%
 }
 
 #nav li:first-child
