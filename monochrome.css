@@ -462,6 +462,7 @@ thead > tr > th
 { text-align: center
 /* ↓ Android Chrome is Literally Retarded: The Unwanted Scaling of Fonts */
 ; max-height: 99999px
+; word-wrap: break-word
 }
 
 thead > tr > th small
