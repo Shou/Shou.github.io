@@ -173,7 +173,8 @@ html, body
 .c_sig blockquote > dl, #c_notes > form, #foot > tbody > tr, #acplogin,
 #acplogin table, #acplogin thead, #acplogin tbody, #acplogin tr, #acplogin th,
 #acplogin tr td:last-child, #acplogin #loginform, #realtop, #top, #top_menu,
-#top_info, .drop_menu > li, #submenu, .c_foot > span, #boardmeta, .c_cat-title
+#top_info, .drop_menu > li, #submenu, .c_foot > span, #boardmeta, .c_cat-title,
+.c_postinfo, .c_footicons
 { display: flex
 }
 
@@ -190,7 +191,7 @@ html, body
 { justify-content: flex-start
 }
 
-#foot > tbody > tr, #realtop, #top
+#foot > tbody > tr, #realtop, #top, .c_postinfo, .c_footicons
 { justify-content: space-between
 }
 
@@ -198,7 +199,7 @@ html, body
 { justify-content: center
 }
 
-#c_notes > form, #top_info, .c_foot > span, #acplogin
+#c_notes > form, #top_info, .c_foot > span, #acplogin, .c_postinfo
 { align-items: center
 }
 
@@ -1321,9 +1322,8 @@ border-color:#333;
 }
  
 blockquote
-{ border: 0.1em solid #ddd
+{ border: 0.1em solid #D0D0D0
 ; margin: 1em auto
-/* test ; width: 98% */
 }
  
 blockquote dl
@@ -1342,6 +1342,8 @@ blockquote dl dt
 code
 { display: block
 ; white-space: pre-wrap
+; width: inherit !important
+; background-color: #E0E0E0
 }
  
 .spoiler
@@ -1370,7 +1372,6 @@ code
 .c_postinfo, .c_postinfo a
 { color: #4D4D4D
 ; font-weight: 300
-; display: flex
 }
 
 .c_footicons
@@ -1775,9 +1776,7 @@ outline:2px solid #333;
 }
 
 #acplogin > form
-{ background-color: #F0F0F0
-; border: 1px solid #D0D0D0
-; overflow: hidden
+{ overflow: hidden
 }
 
 a img {
@@ -2139,11 +2138,10 @@ text-align:left;
 #fast-reply dd textarea:focus, #fast-reply dd textarea:hover
 { background-color: #F0F0F0
 }
- 
-#c_post-text {
-height:223px;
-}
- 
+
+#c_post-text
+{ height: 16em }
+
 #c_post-resize {
 float:right;
 margin-top:-1px;
@@ -2189,9 +2187,10 @@ display:inline;
 padding:4px 10px;
 }
  
-#emot_list img {
-cursor:pointer;
-vertical-align:baseline;
+#emot_list > li > img
+{ cursor: pointer
+; max-width: 48px
+; margin: 0.5em 0.3em
 }
  
 .pm {
@@ -2336,13 +2335,24 @@ display:block;
 margin:5px 0;
 }
  
-#acplogin #loginform
-{ padding: 1em
-; max-width: 1024px
+#acplogin > #loginform
+{ max-width: 1024px
 }
 
-#acplogin #loginform .c_mark
+#acplogin > #loginform .c_mark
 { display: none
+}
+
+#acplogin > #loginform tbody
+{ background-color: #F0F0F0
+; border: 0.2em solid #D0D0D0
+; padding: 2em
+}
+
+#acplogin > #loginform tbody > tr
+{ margin: 0.5em 0
+; display: flex
+; align-items: center
 }
  
 input,select,td,th
