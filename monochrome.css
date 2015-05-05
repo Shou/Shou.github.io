@@ -1133,10 +1133,6 @@ padding:4px 0 4px 20px;
 ; font-weight: 300
 }
 
-#topic_viewer > tbody > tr:last-child > td
-{ display: table-cell
-}
-
 .c_username
 { padding: 2px 0
 ; text-align: center
@@ -1185,16 +1181,16 @@ td.c_user div:first-child img
 }
  
 td.c_user dl
-{ margin: 10px 0
-; padding: 5px 7px
-; width: 160px
-}
+{ padding: 1em }
 
 td.c_user .usertitle
 { margin: 1em 0
 ; overflow-x: hidden
 ; text-align: center
 }
+
+.warning
+{ color: crimson }
 
 dl.user_profile {
 overflow:hidden;
