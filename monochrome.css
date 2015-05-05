@@ -149,9 +149,9 @@ html, body
 
 /* {{{ FLEX MY MUSCLES */
 
-#edit_sig > tbody, #edit_sig > tbody > tr, #c_post, .c_sig blockquote,
-.c_sig blockquote > dl, #c_notes > form, #foot > tbody > tr, #acplogin,
-#acplogin table, #acplogin thead, #acplogin tbody, #acplogin tr, #acplogin th,
+#edit_sig > tbody, #edit_sig > tbody > tr, #c_post, .c_sig blockquote, dl,
+#c_notes > form, #foot > tbody > tr, #acplogin, #acplogin table,
+#acplogin thead, #acplogin tbody, #acplogin tr, #acplogin th,
 #acplogin tr td:last-child, #acplogin #loginform, #realtop, #top, #top_menu,
 #top_info, .drop_menu > li, #submenu, .c_foot > span, #boardmeta, .c_cat-title,
 .c_postinfo, .c_footicons, #fast-reply > dd, #c_postbtn, [align="center"]
@@ -230,7 +230,8 @@ textarea, h3, #profile_menu
 #logo, .c_post big, #top, #subhuman, h2, .category h2, .topic h2, #portal h2,
 #portal_foot h2, thead th, #copyright, blockquote dl, .notice, .error,
 .spoiler_toggle, th.c_cat-title, th.c_cat-starter, th.c_cat-replies,
-th.c_cat-views, th.c_cat-lastpost, .meta_menu a, .editby, .queued
+th.c_cat-views, th.c_cat-lastpost, .meta_menu a, .editby, .queued,
+.c_username > a
 { font-family: "Quicksand", sans-serif
 }
 
@@ -1140,9 +1141,9 @@ padding:4px 0 4px 20px;
 ; max-width: 192px
 }
 
-.c_username a
-{ font-size: 1.1em
-; font-weight: 400
+.c_username > a
+{ font-size: 1.33em
+; font-weight: bold
 }
 
 .c_user
@@ -2089,33 +2090,36 @@ float:none;
 height:1px;
 padding:0;
 }
- 
+
 td.c_poll-choice {
 line-height:1.5;
 padding-left:45%;
 }
- 
+
 td.c_poll-answer {
 text-align:right;
 width:42.5%;
 }
- 
+
 td.c_poll-bar {
 text-align:left;
 vertical-align:middle;
 width:42.5%;
 }
- 
+
 html td.c_poll-bar span {
 margin-top:3px;
 }
- 
-.c_post, #topic_review td.c_desc + td
+
+.c_post, #topic_review > tbody > tr > .c_desc + td
 { line-height: 1.7
 ; vertical-align: top
 ; word-wrap: break-word
 }
- 
+
+#topic_review > tbody > tr
+{ margin: 1em 0 }
+
 .c_post ul {
 list-style-type:square;
 margin-left:10px;
