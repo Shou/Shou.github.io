@@ -175,7 +175,8 @@ html, body
 { justify-content: flex-start
 }
 
-#foot > tbody > tr, #realtop, #top, .c_postinfo, .c_footicons, .c_cat-title
+#foot > tbody > tr, #realtop, #top, .c_postinfo, .c_footicons, .c_cat-title,
+blockquote > dl
 { justify-content: space-between
 }
 
@@ -338,10 +339,10 @@ a:hover, .c_post:hover a, .c_post:focus a
 /* {{{ Odd/even */
 
 /* Jesus Christ */
-blockquote blockquote, blockquote blockquote blockquote blockquote,
-blockquote blockquote blockquote blockquote blockquote blockquote,
-blockquote blockquote blockquote blockquote blockquote blockquote blockquote blockquote,
-blockquote blockquote blockquote blockquote blockquote blockquote blockquote blockquote blockquote blockquote
+blockquote, blockquote blockquote blockquote,
+blockquote blockquote blockquote blockquote blockquote,
+blockquote blockquote blockquote blockquote blockquote blockquote blockquote,
+blockquote blockquote blockquote blockquote blockquote blockquote blockquote blockquote blockquote
 { background-color: #E0E0E0
 }
 
