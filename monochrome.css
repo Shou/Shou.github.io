@@ -1360,6 +1360,17 @@ blockquote dl dt
 { color: #f0f0f0
 ; font-weight: 700
 }
+
+.c_post > blockquote > div > blockquote > div
+{ display: none
+; max-height: 0
+}
+
+.c_post > blockquote > div > blockquote:hover
+.c_post > blockquote > div > blockquote:focus
+{ display: block
+; max-height: auto
+}
  
 code
 { display: block
