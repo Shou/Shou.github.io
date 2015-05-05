@@ -1356,7 +1356,6 @@ blockquote dl
  
 blockquote dl dt
 { color: #f0f0f0
-; float: left
 ; font-weight: 700
 }
  
@@ -2195,7 +2194,7 @@ padding:0 5% 10px;
 text-align:left;
 }
 
-#c_post-text
+#c_post-text, #txt_quote
 { height: 18em
 ; width: 750px
 ; display: block
