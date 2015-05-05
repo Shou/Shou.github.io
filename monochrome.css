@@ -1367,7 +1367,7 @@ blockquote dl dt
 }
 
 .c_post > blockquote > div > blockquote:hover > div
-.c_post > blockquote > div > blockquote:focus > div
+.c_post > blockquote > div > blockquote:focus > div,
 { display: block
 ; max-height: auto
 }
