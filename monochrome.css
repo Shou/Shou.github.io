@@ -1338,19 +1338,19 @@ width:15%;
 { font-weight: 300
 ; text-decoration: underlined
 }
- 
+
 .queued {
 background-color:#000;
 border-color:#333;
 }
- 
+
 blockquote
 { border: 0.1em solid #D0D0D0
 ; margin: 1em auto
 ; background-color: #E0E0E0
 ; overflow: hidden
 }
- 
+
 blockquote dl
 { color: #f0f0f0
 ; background-color: #3d3d3d
@@ -2296,11 +2296,11 @@ width:1px;
 #conversation .c_post {
 padding:2em;
 }
- 
+
 #ucp_profile, #pm_messages {
 float:right;
 }
- 
+
 #ucp_settings img, #ucp_profile img {
 margin:18px 20px;
 }
@@ -2314,13 +2314,22 @@ margin:15px 5px;
 cursor:pointer;
 text-align:center;
 }
- 
-.ucp button.btn_text {
-padding:5px 0;
-text-align:center;
-width:100%;
+
+.ucp > tbody > tr
+{ margin: 1em 0
 }
- 
+
+#avatar_gallery_sys > tbody, #avatar_editor > tbody
+{ background-color: #F0F0F0
+; border-bottom: 0.2em solid #D0D0D0
+; margin: 1em 0
+}
+
+#avatar_gallery_sys > tbody > tr
+{ display: flex
+; justify-content: space-between
+}
+
 .calendar td {
 height:125px;
 padding:0;
