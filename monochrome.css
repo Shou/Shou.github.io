@@ -1582,15 +1582,36 @@ td.c_view
 #emot_end:hover, #emot_end:focus
 { background-color: #2196F3
 }
- 
-#pm_folders {
-border-left:1px solid #333;
-border-right:1px solid #333;
-padding-top:30px;
-vertical-align:top;
-width:150px;
+
+#pm_inbox > tbody > tr[class]
+{ background-color: #F0F0F0
+; padding: 1em
+; margin: 1em 0
+; border-bottom: 0.2em solid #D0D0D0
 }
- 
+
+#pm_inbox > tbody > tr[class] > td
+{ white-space: nowrap
+; overflow: hidden
+; text-overflow: ellipsis
+}
+
+#pm_inbox > tbody > tr[class] > td:nth-child(1)
+{ min-width: 40%; max-width: 40% }
+
+#pm_inbox > tbody > tr[class] > td:nth-child(2)
+{ min-width: 25%; max-width: 25% }
+
+#pm_inbox > tbody > tr[class] > td:nth-child(3),
+#pm_inbox > tbody > tr[class] > td:nth-child(5)
+{ min-width: 5%; max-width: 5% }
+
+#pm_inbox > tbody > tr[class] > td:nth-child(4)
+{ min-width: 25%; max-width: 25% }
+
+#pm_folders
+{ width: 100% }
+
 #pm_folderlist {
 position: relative;
 margin-left:0;
@@ -1807,21 +1828,21 @@ padding:1px 10px;
 color:#AAAAAA;
 font-size:120%;
 }
- 
-.username_ok {
-background:#000;
+
+.username_ok
+{ background-color: lime
 }
- 
-input.username_ok {
-outline:2px solid #333;
+
+.username_ok > input
+{
 }
- 
-td.username_no {
-background:#000;
+
+.username_no
+{ background-color: crimson
 }
- 
-input.username_no {
-outline:2px solid #333;
+
+.username_no > input
+{
 }
 
 #acplogin
@@ -2287,12 +2308,10 @@ margin-bottom:1em;
 #pm_datesent {
 width:200px;
 }
- 
-#pm_select {
-text-align:center;
-width:1px;
-}
- 
+
+#pm_select
+{ text-align: center }
+
 #conversation .c_post {
 padding:2em;
 }
@@ -2315,14 +2334,14 @@ cursor:pointer;
 text-align:center;
 }
 
-.ucp > tbody > tr
-{ margin: 1em 0
-}
-
-#avatar_gallery_sys > tbody, #avatar_editor > tbody
+.ucp > tbody
 { background-color: #F0F0F0
 ; border-bottom: 0.2em solid #D0D0D0
-; margin: 1em 0
+; margin: 0 0 2em 0
+}
+
+.ucp > tbody > tr
+{ margin: 1em 0
 }
 
 #avatar_gallery_sys > tbody > tr
