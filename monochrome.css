@@ -920,9 +920,6 @@ input[type="button"]:hover, .c_foot a:hover
 { display: none
 }
 
-#edit_profile > tbody > tr
-{ padding: 0.5em }
-
 ul li.cat-pageshead
 { display: none
 }
@@ -1586,7 +1583,7 @@ td.c_view
 #pm_inbox > tbody > tr[class]
 { background-color: #F0F0F0
 ; padding: 1em
-; margin: 1em 0
+; margin: 0.5em 0
 ; border-bottom: 0.2em solid #D0D0D0
 }
 
@@ -1608,6 +1605,13 @@ td.c_view
 
 #pm_inbox > tbody > tr[class] > td:nth-child(4)
 { min-width: 25%; max-width: 25% }
+
+#quick_pm_compose > tbody > tr:first-child
+{ display: flex
+; flex-direction: column
+}
+
+#quick_pm_compose > tbody > tr:nth-child(2)
 
 #pm_folders
 { width: 100% }
@@ -2340,9 +2344,15 @@ text-align:center;
 ; margin: 0 0 2em 0
 }
 
-.ucp > tbody > tr
-{ margin: 1em 0
-}
+.ucp > tbody > tr,
+#board_settings > tbody > tr,
+#email_settings > tbody > tr,
+#photo_settings > tbody > tr,
+#password_change > tbody > tr,
+#email_change > tbody > tr,
+#name_change_req > tbody > tr,
+#edit_profile > tbody > tr
+{ margin: 0.5em 0 }
 
 #avatar_gallery_sys > tbody > tr
 { display: flex
