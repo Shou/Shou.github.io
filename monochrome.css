@@ -1348,6 +1348,7 @@ blockquote
 { border: 0.1em solid #D0D0D0
 ; margin: 1em auto
 ; background-color: #E0E0E0
+; overflow: hidden
 }
  
 blockquote dl
@@ -1371,6 +1372,7 @@ blockquote dl dt
 .c_post > blockquote > div > blockquote:focus > div
 { display: block
 ; max-height: 100%
+; transition-delay: 0.1s
 }
  
 code
@@ -2039,6 +2041,12 @@ td.c_cat-mark + td.c_cat-mark
 ; order: -1
 ; font-size: 1.2rem
 }
+
+.c_cat-title > a:first-child
+{ width: 90% }
+
+.c_cat-title > ul + a
+{ width: 70% }
 
 .c_cat-title > ul
 { order: 2
