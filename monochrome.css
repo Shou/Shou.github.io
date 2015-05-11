@@ -573,12 +573,12 @@ input[type="button"]:hover, .c_foot a:hover
             , 0 0 0 12px #860800, 0 0 0 14px #950900, 0 0 0 16px #A40A00
             , 0 0 0 20px #E42A25, 0 0 0 22px #F55652, 0 0 0 24px #FFBFBD
 }
- 
+
 .notice dt, .error dt
 { color: #f0f0f0
 ; font-weight: 700
 }
- 
+
 .notice dt, .notice dd, .error dt
 { margin: 0
 ; padding: 0.5em
@@ -638,7 +638,7 @@ input[type="button"]:hover, .c_foot a:hover
 #profile_menuwrap ul, .cat-topicpages,blockquote dl, #fast-reply dd
 { margin:0
 }
- 
+
 #nav li,ul.cat-pages li, .cat-topicpages li,.calendar li,
 #pm_folderlist li, #profile_menuwrap li, #ucp_gallery li
 { display: inline }
@@ -772,7 +772,7 @@ input[type="button"]:hover, .c_foot a:hover
 .drop_menu > li a img
 { display: none
 }
- 
+
 .drop_menu a
 { display: block
 ; padding: 1em
@@ -785,11 +785,11 @@ input[type="button"]:hover, .c_foot a:hover
 { background-color: #546E7A
 ; border-bottom: 0.1em solid #607D8B
 }
- 
+
 .drop_menu ul
 { overflow: hidden
 }
- 
+
 .drop_menu ul, .drop_menu ul li
 { margin: 0
 ; padding: 0
@@ -818,7 +818,7 @@ input[type="button"]:hover, .c_foot a:hover
 #submenu_bar
 { display: none
 }
- 
+
 #submenu
 { margin: 0 auto
 ; max-height: 0
@@ -886,7 +886,7 @@ input[type="button"]:hover, .c_foot a:hover
 ; line-height: 150%
 ; padding: 10px 25px
 }
- 
+
 .meta_menu
 { padding: 0
 ; width: 50%
@@ -903,7 +903,7 @@ input[type="button"]:hover, .c_foot a:hover
 ; text-align: center
 ; color: #F0F0F0
 }
- 
+
 .meta_menu h3
 { background-color: #424242
 ; border: 0.1em solid #666
@@ -934,25 +934,25 @@ ul li.cat-pageshead
 ; border-bottom: 3px solid #D0D0D0
 ; color: #4D4D4D
 }
- 
+
 .cat-pages a:hover, .cat-topicpages a:hover
 { border-bottom: 3px solid #424242
 ; color: #2D2D2D
 }
- 
+
 .cat-pages span
 { color: #2D2D2D
 ; cursor: default
 ; padding: 4px 8px
 ; border-bottom: 3px solid #2D2D2D
 }
- 
+
 .cat-pages input
 { color: #d0d0d0
 ; padding: 3px 5px
 ; vertical-align: baseline
 }
- 
+
 .c_head, .c_foot, .c_sort
 { line-height: 1.8
 ; width: 100%
@@ -968,7 +968,7 @@ ul li.cat-pageshead
 ; vertical-align: middle
 ; width: 200px
 }
- 
+
 .c_desc small {
 display:block;
 font-weight:400;
@@ -1061,7 +1061,7 @@ width:20px;
 ; display: flex
 ; flex-direction: column
 }
- 
+
 .c_last-title
 { line-height: 1.5
 ; font-weight: 400
@@ -1080,7 +1080,7 @@ font-size:80%;
 padding:5px;
 text-align:center;
 }
- 
+
 td.c_subforum {
 background:#000;
 color:#AAAAAA;
@@ -1095,16 +1095,16 @@ font-style:italic;
 .c_foot > span > *
 { margin: 0.5em 1em
 }
- 
+
 .cat_head td {
 border-color:#333;
 padding:0;
 }
- 
+
 #stats .cat_head td {
 border-color:#333;
 }
- 
+
 .description
 { width: 80%
 ; order: 2
@@ -1178,7 +1178,7 @@ td.c_user div:first-child:hover
 td.c_user div:first-child img
 { margin: -15px 0 0 -15px
 }
- 
+
 td.c_user dl
 { padding: 1em }
 
@@ -1234,13 +1234,13 @@ td.c_poll-choice label {
 font-weight:700;
 padding-left:1em;
 }
- 
+
 td.c_poll-votes {
 font-size:120%;
 text-align:center;
 width:15%;
 }
- 
+
 .c_poll-bar > div
 { height: 2em
 ; padding-right: 0.5em
@@ -1320,7 +1320,7 @@ width:15%;
 .poll > tbody > tr:nth-last-of-type(n+17) > .c_poll-bar > div
 { background-color: #424242
 }
- 
+
 .editby, .queued
 { color: #4D4D4D
 ; font-size: 0.8em
@@ -1354,7 +1354,7 @@ blockquote dl
 ; border-bottom: 0.1em solid #666
 ; padding: 0.3em 0.5em
 }
- 
+
 blockquote dl dt
 { color: #f0f0f0
 ; font-weight: 700
@@ -1371,20 +1371,20 @@ blockquote dl dt
 ; max-height: 100%
 ; transition-delay: 0.1s
 }
- 
+
 code
 { display: block
 ; white-space: pre-wrap
 ; width: inherit !important
 ; background-color: #E0E0E0
 }
- 
+
 .spoiler
 { border:1px solid #ccc
 ; border-top:0
 ; padding:5px 7px
 }
- 
+
 .spoiler_toggle
 { border: 0.1em solid #666
 ; color: #f0f0f0
@@ -1402,7 +1402,7 @@ code
 { font-size: 0.8em
 ; width: 100%
 }
- 
+
 .c_postinfo, .c_postinfo a
 { color: #4D4D4D
 ; font-weight: 300
@@ -1517,7 +1517,7 @@ td.c_view
 ; font-size: 1.1em
 ; font-weight: 700
 }
- 
+
 #fast-reply > dd
 { background: rgba(240, 240, 240, 0.7)
 ; padding-bottom: 1em
@@ -1550,7 +1550,7 @@ td.c_view
 ; text-align: left
 ; background-color: #F0F0F0
 }
- 
+
 #c_post-resize span
 { color: #4D4D4D
 ; cursor: pointer
@@ -1565,7 +1565,7 @@ td.c_view
 #emot_wrap h3
 { text-align: center
 }
- 
+
 #emot_end
 { display: block
 ; background-color: #424242
@@ -1621,14 +1621,14 @@ position: relative;
 margin-left:0;
 margin-top:0
 }
- 
+
 #pm_folderlist li {
 background:url(http://z3.ifrm.com/static/1/pmfolder.png) no-repeat 5px;
 display:list-item;
 margin-bottom:4px;
 padding-left:28px;
 }
- 
+
 #pm_forwarded {
 border:1px dotted #333;
 color:#AAAAAA;
@@ -1637,7 +1637,7 @@ font-style:italic;
 margin-top:1em;
 padding:3px 5px;
 }
- 
+
 #ucp_gallery a {
 font-weight:700;
 }
@@ -1645,17 +1645,17 @@ font-weight:700;
 .calendar > tbody > tr > th
 { padding: 1em 0
 }
- 
+
 .calendar .cal_inactive
 { background: #E0E0E0
 }
- 
+
 .calendar > tbody > tr > td > div
 { font-weight: bold
 ; padding: 0.5em
 ; font-size: 2em
 }
- 
+
 .calendar > tbody > tr > td > div > a
 { background: url(http://z3.ifrm.com/static/1/s_minibday.png) no-repeat 0.5em
 ; float: right
@@ -1663,7 +1663,7 @@ font-weight:700;
 ; font-weight: 400
 ; padding: 0 0 0.5em 2.5em
 }
- 
+
 .calendar li a, .calendar li span {
 border-color:transparent;
 border-style:solid;
@@ -1671,22 +1671,22 @@ border-width:1px;
 display:block;
 padding:3px;
 }
- 
+
 #cal_current
 { background-color: #2196F3
 ; color: #F0F0F0
 }
- 
+
 .portal_content {
 font-size:88.3%;
 margin:0;
 padding:5px 7px;
 }
- 
+
 #portal h2 {
 font-size:88.3%;
 }
- 
+
 #portal h4 {
 border-left:1px solid #333;
 border-right:1px solid #333;
@@ -1695,7 +1695,7 @@ font-weight:400;
 margin:0;
 padding:5px 7px;
 }
- 
+
 #faq dt a
 { font-size: 120%
 ; font-weight: 700
@@ -1750,18 +1750,18 @@ display:block;
 padding:10px 10px 10px 55px;
 text-decoration:none;
 }
- 
+
 #pmlink big {
 color:#AAAAAA;
 display:block;
 font-weight:700;
 padding-bottom:5px;
 }
- 
+
 #pmlink strong {
 color:#AAAAAA;
 }
- 
+
 #pmclose {
 border-top:1px solid #000;
 color:#AAAAAA;
@@ -1769,7 +1769,7 @@ display:block;
 font-size:80%;
 padding:1px 10px;
 }
- 
+
 #pmclose:hover
 { color: #AAAAAA
 }
@@ -1816,7 +1816,7 @@ padding:1px 10px;
 ; max-width: 1112px
 ; box-sizing: border-box
 }
- 
+
 #copyright a
 { color: #842
 }
@@ -2023,7 +2023,7 @@ vertical-align:middle;
 display:block;
 margin:auto;
 }
- 
+
 .c_last {
 line-height:1.4;
 min-width:300px;
@@ -2099,37 +2099,36 @@ td.c_cat-mark + td.c_cat-mark
 }
 
 .c_sig, .c_nosig
-{ width: 100%
-}
- 
+{ width: 100% }
+
 .avatar {
 display:block;
 margin:auto;
 text-align:center;
 }
- 
+
 .av_wrap {
 overflow:hidden;
 text-align:center;
 margin:auto;
 }
- 
+
 .pip
 { margin: 3px 0
 ; white-space: nowrap
 ; display: none
 }
- 
+
 dl.user_info dt,dl.user_info dd {
 padding:.1em;
 }
- 
+
 dl.user_info dt {
 float:left;
 margin:0;
 min-width:4em;
 }
- 
+
 dl.user_info dd.spacer,dl.user_profile dd.spacer {
 clear:both;
 float:none;
@@ -2193,7 +2192,7 @@ margin-left:10px;
 ; border: 0.1em solid #42A5F5
 ; transition: 0.5s background-color cubic-bezier(.55,0,0.1,1), 0.5s border cubic-bezier(.55,0,0.1,1)
 }
- 
+
 .c_post-attachment > dd
 { margin-left: 1em
 }
@@ -2223,15 +2222,16 @@ margin-left:10px;
 .c_sig
 { vertical-align: top
 ; margin-left: 192px
+; margin-top: 2em
 
 ; background-color: #EAEAEA
 ; border-top: 0.1em solid #D0D0D0
 ; border-left: 0.1em solid #E0E0E0
 }
 
-blockquote dl dt,blockquote dl dd {
-padding:2px 4px;
-}
+blockquote dl dt,
+blockquote dl dd
+{ padding:2px 4px }
 
 blockquote > div, blockquote > code
 { margin: 0
@@ -2256,7 +2256,7 @@ margin-top:-1px;
 padding:4px 0 0;
 text-align:right;
 }
- 
+
 #btn_preview
 { margin: 1em 0
 }
@@ -2289,26 +2289,26 @@ text-align:right;
 ; padding: 0.5em 0
 ; text-align: center
 }
- 
+
 #emot_list {
 padding:0;
 }
- 
+
 #emot_list li {
 display:inline;
 padding:4px 10px;
 }
- 
+
 #emot_list > li > img
 { cursor: pointer
 ; max-width: 48px
 ; margin: 0.5em 0.3em
 }
- 
+
 .pm {
 margin-bottom:1em;
 }
- 
+
 #pm_datesent {
 width:200px;
 }
@@ -2327,12 +2327,12 @@ float:right;
 #ucp_settings img, #ucp_profile img {
 margin:18px 20px;
 }
- 
+
 #ucp_gallery li {
 float:left;
 margin:15px 5px;
 }
- 
+
 #ucp_gallery button {
 cursor:pointer;
 text-align:center;
@@ -2365,53 +2365,53 @@ padding:0;
 vertical-align:top;
 width:14.3%;
 }
- 
+
 .calendar li {
 display:list-item;
 font-size:80%;
 margin:0;
 }
- 
+
 .calendar li.placeholder {
 padding:4px;
 }
- 
+
 .calendar li span {
 cursor:default;
 }
- 
+
 .calendar #cal_current div {
 padding-top:3px;
 }
- 
+
 #portal_head {
 margin-bottom:10px;
 }
- 
+
 #portal_foot {
 margin-top:10px;
 }
- 
+
 #portal_l, #portal_r {
 font-size:88.3%;
 margin:0;
 padding:0;
 }
- 
+
 #portal_l {
 float:left;
 width:200px;
 }
- 
+
 #portal_r {
 float:right;
 width:150px;
 }
- 
+
 #portal_news {
 margin:0 160px 0 210px;
 }
- 
+
 #portal_clear {
 background:transparent;
 border:none;
@@ -2421,45 +2421,45 @@ height:1px;
 margin:0;
 padding:0;
 }
- 
+
 .portal_box {
 margin-bottom:5px;
 padding:1px;
 }
- 
+
 .portal_box table {
 clear:none;
 }
- 
+
 #portal h2, #portal_foot h2 {
 clear:none;
 margin:0;
 padding:3px 5px;
 }
- 
+
 #faq {
 margin:20px 0;
 }
- 
+
 #faq dl {
 padding:1em;
 }
- 
+
 #faq dt {
 margin-bottom:5px;
 }
- 
+
 #faq dd {
 display:list-item;
 margin:0 0 3px 15px;
 padding-left:3px;
 }
- 
+
 .search_results div {
 display:block;
 margin:5px 0;
 }
- 
+
 #acplogin > #loginform
 { max-width: 1024px
 }
@@ -2479,11 +2479,11 @@ margin:5px 0;
 ; display: flex
 ; align-items: center
 }
- 
+
 input,select,td,th
 { font-size: 1em
 }
- 
+
 button.btn_default,.c_post-attachment dt, #c_tos dt {
 font-weight:700;
 }
@@ -2513,28 +2513,28 @@ img,.meta_box button img,td.c_cat-mark input, .c_post-attachment img,.warn img,
 #ucp_gallery a img {
 vertical-align:middle;
 }
- 
+
 h1, h2, h3, #nav, #boardmeta {
 clear:both;
 margin:0;
 }
- 
+
 #meta_welcome,.search_results {
 clear:both;
 }
- 
+
 #stats_events {
 line-height:2;
 }
- 
+
 .c_cat-starter,.c_cat-replies,.c_cat-views,td.c_poll-total,td.c_poll-vote,td.c_topicfoot,.warn,.ucp th, #c_notes,.calendar th {
 text-align:center;
 }
- 
+
 blockquote dl dd, #foot #foot_links {
 text-align:right;
 }
- 
+
 #ucp_gallery {
 text-align:center;
 vertical-align:top;
@@ -2556,37 +2556,37 @@ vertical-align:top;
 #findposts td a {
 display:block;
 }
- 
+
 #ucp_settings, #pm_settings {
 float:left;
 }
- 
+
 #c_tos dd, #username_response {
 margin-left:10px;
 }
- 
+
 #vlx {
 z-index:1;
 }
- 
+
 #blog {
 background:#000;
 border:1px solid #333;
 color:#AAAAAA;
 margin:10px 0;
 }
- 
+
 #blog blockquote {
 background:none;
 border:none;
 font-size:85%;
 padding:0 10px;
 }
- 
+
 #blog h1 {
 float:right;
 }
- 
+
 #blog h2 {
 background:none;
 clear:none;
@@ -2598,32 +2598,32 @@ padding:0;
 clear:both;
 margin-bottom:20px;
 }
- 
+
 #blog_head {
 background:#000;
 border:8px solid #333;
 padding:10px 14px;
 }
- 
+
 #blog_head img.avatar {
 display:inline;
 }
- 
+
 #blog_main {
 margin:20px 200px 10px 10px;
 }
- 
+
 #blog_categories, #blog_readers, #blog_about, .blog_options {
 background:#000;
 margin:15px 0;
 padding:5px 7px;
 }
- 
+
 #blog_sidebar h3, #blog_sidebar dt {
 color:#AAAAAA;
 font-weight:700;
 }
- 
+
 #blog_sub {
 background:#000;
 clear:both;
@@ -2631,11 +2631,11 @@ position:relative;
 padding:5px 7px;
 text-align:right;
 }
- 
+
 #blog_sub span {
 padding-top:4px;
 }
- 
+
 #blog_sidebar {
 background:#000;
 float:right;
@@ -2644,20 +2644,20 @@ margin:20px 10px 0 0;
 padding:0 10px;
 width:160px;
 }
- 
+
 #blog_sidebar dd {
 margin-left:10px;
 }
- 
+
 #blog_user {
 font-size:175%;
 }
- 
+
 .blog_options {
 font-size:90%;
 text-align:right;
 }
- 
+
 .blog_date {
 background:#000;
 border:1px solid #333;
@@ -2669,7 +2669,7 @@ text-align:center;
 text-transform:uppercase;
 width:40px;
 }
- 
+
 .blog_date span {
 background:#000;
 border-top:1px solid #333;
@@ -2679,55 +2679,55 @@ font-size:130%;
 font-weight:700;
 padding:2px 4px;
 }
- 
+
 .blog_entry {
 background:#000;
 margin:10px 0;
 padding:5px 7px;
 }
- 
+
 #blog_comments li {
 padding:5px 7px;
 }
- 
+
 #blog_comments li.odd {
 background:#000;
 }
- 
+
 #shoutwrap {
 background:#000;
 border:1px solid #333;
 font-size:88.3%;
 }
- 
+
 #shoutwrap td {
 padding:0;
 }
- 
+
 #shoutbox {
 list-style-type:none;
 margin:0;
 padding:0;
 }
- 
+
 #shoutbox li {
 padding:5px 7px;
 }
- 
+
 #shoutbox li.odd {
 background:#000;
 }
- 
+
 #shoutbox dl, #shoutbox dt, #shoutbox dd {
 margin:0;
 padding:0;
 }
- 
+
 #shoutbox dt
 { color: #f0f0f0
 ; font-size: 80%
 }
- 
+
 #shoutopts, #shoutpost
 { clear: both
 ; text-align: center
@@ -2740,7 +2740,7 @@ padding:0;
 ; background-color: #f0f0f0
 ; transition: 0.3s all cubic-bezier(.55,0,0.1,1)
 }
- 
+
 .bunk-button:hover
 { color: #f0f0f0
 ; background-color: #2d2d2d
