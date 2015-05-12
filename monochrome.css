@@ -1637,6 +1637,12 @@ margin-top:1em;
 padding:3px 5px;
 }
 
+#member_list_full > tbody > tr > td:first-child
+{ padding-left: 1em }
+
+#member_list_full > tbody > tr > td:last-child
+{ padding-right: 1em }
+
 #member_list_full > tbody > tr > th:nth-child(1),
 #member_list_full > tbody > tr > th:nth-child(3),
 #member_list_full > tbody > tr[class] > td:nth-child(1),
