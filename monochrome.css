@@ -60,11 +60,14 @@ html, body
 }
 
 /* Vertical screens */
-@media (max-device-height: 1200px) and (max-width: 1000px)
+@media (min-device-height: 1200px) and (max-width: 1200px)
 {
 
-.c_cat-starter
-{ display: none }
+.c_cat-title
+{ min-width: calc(100% - 8em) }
+
+.t_lastpostdate
+{ width: initial }
 
 .topic h2, #portal h2, #portal_foot h2, thead th
 { font-size: 2em }
@@ -155,7 +158,7 @@ html, body
 #acplogin tr td:last-child, #acplogin #loginform, #realtop, #top, #top_menu,
 #top_info, .drop_menu > li, #submenu, .c_foot > span, #boardmeta, .c_cat-title,
 .c_postinfo, .c_footicons, #fast-reply > dd, #c_postbtn, [align="center"],
-.warn
+.warn, .c_cat-lastpost
 { display: flex }
 
 .forums
@@ -198,7 +201,8 @@ blockquote > dl
 #top_info
 { align-self: baseline }
 
-#realtop, #submenu, .c_foot > span, .c_cat-title, #fast-reply > dd, .warn
+#realtop, #submenu, .c_foot > span, .c_cat-title, #fast-reply > dd, .warn,
+.c_cat-lastpost
 { flex-wrap: wrap }
 
 #top
@@ -2161,6 +2165,16 @@ td.c_cat-mark + td.c_cat-mark
 ; text-overflow: ellipsis
 ; white-space: nowrap
 }
+
+.c_cat-lastpost
+{
+}
+
+.t_lastpostdate
+{ padding-right: 1em }
+
+.t_lastpostdate + a
+{ padding-left: 0.5em }
 
 .c_post
 { padding: 0.5em
