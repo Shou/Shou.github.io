@@ -64,7 +64,7 @@ html, body
 {
 
 .c_cat-title
-{ min-width: calc(100% - 8em) }
+{ min-width: calc(100% - 8rem) }
 
 .t_lastpostdate
 { width: initial }
@@ -108,7 +108,7 @@ html, body
 { margin: 0 0 44px !important }
 
 .c_cat-title
-{ min-width: calc(100% - 8em) }
+{ min-width: calc(100% - 8rem) }
 
 .t_lastpostdate
 { width: initial }
@@ -118,7 +118,7 @@ html, body
 
 .c_post img, #topic_review img, .c_post video, .c_post object, .c_post audio,
 .c_post iframe
-{ max-width: calc(100% - 1em) }
+{ max-width: calc(100% - 1rem) }
 
 }
 
@@ -208,7 +208,7 @@ blockquote > dl
 { align-self: baseline }
 
 #realtop, #submenu, .c_foot > span, .c_cat-title, #fast-reply > dd, .warn,
-.c_cat-lastpost
+.c_cat-lastpost, #inlinetopic > .posts > tbody > tr
 { flex-wrap: wrap }
 
 #top
