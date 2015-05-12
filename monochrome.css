@@ -1122,8 +1122,7 @@ border-color:#333;
 }
 
 .description
-{ width: 80%
-; order: 2
+{ order: 2
 ; font-size: 0.85em
 ; color: #8D8D8D
 }
@@ -2121,7 +2120,8 @@ width:30%;
 }
 
 td.c_cat-mark + td.c_cat-mark
-{ min-width: 4em
+{ min-width: 3em
+; padding-left: 0
 }
 
 .c_cat-mark
@@ -2138,21 +2138,28 @@ td.c_cat-mark + td.c_cat-mark
 }
 
 .c_cat-title
-{ max-width: 50%
-; font-size: 0
+{ font-size: 0 }
+
+.c_cat-mark + .c_cat-mark + .c_cat-title
+{ max-width: calc(40% - 7rem)
+; min-width: calc(40% - 7rem)
+}
+
+.c_cat-mark:first-child + .c_cat-title
+{ max-width: calc(40% - 3rem)
+; min-width: calc(40% - 3rem)
 }
 
 .c_cat-title > a
-{ width: 90%
-; order: -1
+{ order: -1
 ; font-size: 1.2rem
 }
 
-.c_cat-title > a:first-child
-{ width: 90% }
+.c_cat-title > a:first-child, .replied-marker + .description
+{ width: calc(100% - 3em) }
 
 .c_cat-title > ul + a
-{ width: 70% }
+{ width: calc(100% - 8em) }
 
 .c_cat-title > ul
 { order: 2
@@ -2166,7 +2173,7 @@ td.c_cat-mark + td.c_cat-mark
 { width: 15%
 }
 
-.c_cat-title > a, .c_cat-title > .description .c_cat-starter, .c_cat-lastpost
+.c_cat-title > a, .c_cat-title > .description, .c_cat-starter, .c_cat-lastpost
 { overflow: hidden
 ; text-overflow: ellipsis
 ; white-space: nowrap
