@@ -1183,10 +1183,8 @@ td.c_user div:first-child img
 { font-size: 2rem
 ; text-align: center
 ; width: 100%
+; margin: 0
 }
-
-.topic .user_info > dd:first-of-type::before
-{ content: "\2211\a0" }
 
 .topic .user_info > dd:nth-of-type(n + 2),
 .topic .user_info > dt
