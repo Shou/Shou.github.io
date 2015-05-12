@@ -1444,16 +1444,15 @@ code
 }
 
 .c_sig
-{ font-size: 1em
-}
+{ font-size: 1em }
 
 .c_sig blockquote
 { margin: 0 0 0 1em
+; background-color: initial
 }
 
 .c_sig blockquote, .c_sig blockquote > dl
-{ border: 0
-}
+{ border: 0 }
 
 .c_sig blockquote > dl
 { background: none
@@ -1470,10 +1469,16 @@ code
 { margin: 0
 ; padding: 0
 ; color: #3D3D3D
+; text-align: left
 }
 
 .c_sig blockquote > dl > dd::before
 { content: ", "
+}
+
+.c_sig blockquote > div::before, .c_sig blockquote > div::after
+{ font-size: 2em
+; vertical-align: middle
 }
 
 .c_sig blockquote > div::before
