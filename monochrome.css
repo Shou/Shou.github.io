@@ -232,7 +232,7 @@ textarea, h3, #profile_menu
 #portal_foot h2, thead th, #copyright, blockquote dl, .notice, .error,
 .spoiler_toggle, th.c_cat-title, th.c_cat-starter, th.c_cat-replies,
 th.c_cat-views, th.c_cat-lastpost, .meta_menu a, .editby, .queued,
-.c_username > a, .c_user > .usertitle
+.c_username > a, .c_user > .usertitle, .topic .user_info > dd:first-of-type
 { font-family: "Quicksand", sans-serif
 }
 
@@ -380,9 +380,6 @@ big > big > big > big > big > big > big > big > big > big > big > big > big > bi
 
 [align="center"]
 { width: 100% }
-
-.topic dl.user_info
-{ display: none }
 
 #logo
 { text-align: left
@@ -1148,13 +1145,6 @@ padding:4px 0 4px 20px;
 
 .c_user
 { font-size: 0.8em
-; min-width: 180px
-; max-width: 180px
-; vertical-align: top
-}
-
-.c_user
-{ font-size: 0.8em
 ; min-width: 192px
 ; max-width: 192px
 ; vertical-align: top
@@ -1181,8 +1171,23 @@ td.c_user div:first-child img
 { margin: -15px 0 0 -15px
 }
 
-td.c_user dl
-{ padding: 1em }
+.user_info
+{ flex-direction: column
+; 
+}
+
+.topic .user_info
+{ font-size: 0 }
+
+.topic .user_info > dd:first-of-type
+{ font-size: 2rem }
+
+.topic .user_info > dd:first-of-type::before
+{ content: "\2211\a0" }
+
+.topic .user_info > dd:nth-of-type(n + 2),
+.topic .user_info > dt
+{ display: none }
 
 .c_user > .usertitle
 { margin: 1em 0
