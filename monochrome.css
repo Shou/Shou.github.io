@@ -1577,17 +1577,16 @@ td.c_view
 }
 
 #emot_end:hover, #emot_end:focus
-{ background-color: #2196F3
-}
+{ background-color: #2196F3 }
 
-#pm_inbox > tbody > tr[class]
+.row1, .row2
 { background-color: #F0F0F0
-; padding: 1em
-; margin: 0.5em 0
+; padding: 1em 0
+; margin-bottom: 1em
 ; border-bottom: 0.2em solid #D0D0D0
 }
 
-#pm_inbox > tbody > tr[class] > td
+.row1 > td, .row2 > td
 { white-space: nowrap
 ; overflow: hidden
 ; text-overflow: ellipsis
