@@ -1180,7 +1180,10 @@ td.c_user div:first-child img
 { font-size: 0 }
 
 .topic .user_info > dd:first-of-type
-{ font-size: 2rem }
+{ font-size: 2rem
+; text-align: center
+; width: 100%
+}
 
 .topic .user_info > dd:first-of-type::before
 { content: "\2211\a0" }
