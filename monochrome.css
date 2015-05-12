@@ -154,9 +154,9 @@ html, body
 #acplogin thead, #acplogin tbody, #acplogin tr, #acplogin th,
 #acplogin tr td:last-child, #acplogin #loginform, #realtop, #top, #top_menu,
 #top_info, .drop_menu > li, #submenu, .c_foot > span, #boardmeta, .c_cat-title,
-.c_postinfo, .c_footicons, #fast-reply > dd, #c_postbtn, [align="center"]
-{ display: flex
-}
+.c_postinfo, .c_footicons, #fast-reply > dd, #c_postbtn, [align="center"],
+.warn
+{ display: flex }
 
 .forums
 { display: flex !important
@@ -181,31 +181,25 @@ blockquote > dl
 }
 
 #acplogin tr, #acplogin th, #submenu, .generic, #fast-reply > dd, #c_postbtn,
-[align="center"]
-{ justify-content: center
-}
+[align="center"], #fast-reply, .warn
+{ justify-content: center }
 
 #c_notes > form, #top_info, .c_foot > span, #acplogin, .c_postinfo,
 #edit_profile > tbody > tr
-{ align-items: center
-}
+{ align-items: center }
 
 #realtop, #top
-{ align-items: flex-start
-}
+{ align-items: flex-start }
 
 #edit_sig > tbody > tr:last-child, #c_post > button, .c_cat-replies,
 .c_cat-views, .c_cat-starter, .c_cat-title, .c_cat-lastpost, .replied-marker
-{ align-self: center
-}
+{ align-self: center }
 
 #top_info
-{ align-self: baseline
-}
+{ align-self: baseline }
 
-#realtop, #submenu, .c_foot > span, .c_cat-title
-{ flex-wrap: wrap
-}
+#realtop, #submenu, .c_foot > span, .c_cat-title, #fast-reply > dd, .warn
+{ flex-wrap: wrap }
 
 #top
 { flex-wrap: nowrap
@@ -218,6 +212,15 @@ blockquote > dl
 .c_cat-title
 { flex: 2
 }
+
+.warning
+{ order: 1 }
+
+.warn > a:last-of-type
+{ order: 2 }
+
+.warn > a
+{ order: 3 }
 
 /* }}} */
 
@@ -256,7 +259,7 @@ th.c_cat-lastpost, thead > tr > th small
 .c_user > .usertitle
 { font-weight: 600 }
 
-#top_info > strong > a, #top_info > small > a::before
+#top_info > strong > a, #top_info > small > a::before, .warn > a
 { font-size: 1rem
 }
 
@@ -1204,8 +1207,19 @@ td.c_user div:first-child img
 ; font-size: 1.2em
 }
 
+.warn
+{ width: 100% }
+
+.warn > a
+{ padding: 0.5em }
+
+.warn > a:last-of-type
+{ width: 100% }
+
 .warning
-{ color: crimson }
+{ color: crimson
+; padding: 0.2em
+}
 
 dl.user_profile {
 overflow:hidden;
@@ -1519,6 +1533,7 @@ td.c_view
 
 #fast-reply
 { background-color: #F0F0F0
+; padding: 2em 0
 }
 
 #fast-reply > dt
@@ -1535,15 +1550,21 @@ td.c_view
 }
 
 #fast-reply > dd
-{ background: rgba(240, 240, 240, 0.7)
-; padding-bottom: 1em
-; text-align: center
+{ width: 50em
+; max-width: 95vw
 }
 
 #fast-reply > dd > textarea
 { height: 10em
 ; margin-bottom: 1em
 ; background-color: #F0F0F0
+; width: 50em
+; max-width: 95vw
+}
+
+#fast-reply > dd > button
+{ width: 24em
+; max-width: 45vw
 }
 
 #c_post-close
@@ -2136,6 +2157,7 @@ td.c_cat-mark + td.c_cat-mark
 /* ↓ Android Chrome is Literally Retarded: The Unwanted Scaling of Fonts */
 ; max-height: 999999px
 ; width: 100%
+; overflow: hidden
 }
 
 .c_sig, .c_nosig
@@ -2397,6 +2419,16 @@ text-align:center;
 #avatar_gallery_sys > tbody > tr
 { display: flex
 ; justify-content: space-between
+}
+
+#c_notes
+{ width: 100% }
+
+#notepad textarea
+{ width: 50em
+; max-width: 90vw
+; height: 20em
+; margin-bottom: 2em
 }
 
 .calendar td {
