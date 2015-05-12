@@ -64,10 +64,10 @@ html, body
 {
 
 .c_cat-title
-{ min-width: calc(100% - 8rem) }
+{ min-width: calc(100% - 8rem) !important }
 
 .t_lastpostdate
-{ width: initial }
+{ width: initial !important }
 
 .topic h2, #portal h2, #portal_foot h2, thead th
 { font-size: 2em }
@@ -108,10 +108,10 @@ html, body
 { margin: 0 0 44px !important }
 
 .c_cat-title
-{ min-width: calc(100% - 8rem) }
+{ min-width: calc(100% - 8rem) !important }
 
 .t_lastpostdate
-{ width: initial }
+{ width: initial !important }
 
 .c_post, #topic_review .c_desc + td
 { max-width: 100% }
