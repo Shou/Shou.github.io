@@ -107,6 +107,12 @@ html, body
 #wrap
 { margin: 0 0 44px !important }
 
+.c_cat-title
+{ min-width: calc(100% - 8em) }
+
+.t_lastpostdate
+{ width: initial }
+
 .c_post, #topic_review .c_desc + td
 { max-width: 100% }
 
@@ -2171,7 +2177,9 @@ td.c_cat-mark + td.c_cat-mark
 }
 
 .t_lastpostdate
-{ padding-right: 1em }
+{ padding-right: 1em
+; width: 100%
+}
 
 .t_lastpostdate + a
 { padding-left: 0.5em }
