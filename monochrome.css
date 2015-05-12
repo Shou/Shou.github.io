@@ -1391,13 +1391,14 @@ blockquote dl dt
 }
 
 .c_post > blockquote > div > blockquote > div
-{ display: none
-; max-height: 0
+{ max-height: 0
+; padding: 0 0.5em
+; transition-delay: 0.1s
 }
 
 .c_post > blockquote > div > blockquote:hover > div,
 .c_post > blockquote > div > blockquote:focus > div
-{ display: block
+{ padding: 0.5em
 ; max-height: 100%
 ; transition-delay: 0.1s
 }
