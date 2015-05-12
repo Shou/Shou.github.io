@@ -232,7 +232,7 @@ textarea, h3, #profile_menu
 #portal_foot h2, thead th, #copyright, blockquote dl, .notice, .error,
 .spoiler_toggle, th.c_cat-title, th.c_cat-starter, th.c_cat-replies,
 th.c_cat-views, th.c_cat-lastpost, .meta_menu a, .editby, .queued,
-.c_username > a
+.c_username > a, .c_user > .usertitle
 { font-family: "Quicksand", sans-serif
 }
 
@@ -251,8 +251,10 @@ code
 
 th.c_cat-title, th.c_cat-starter, th.c_cat-replies, th.c_cat-views,
 th.c_cat-lastpost, thead > tr > th small
-{ font-weight: 400
-}
+{ font-weight: 400 }
+
+.c_user > .usertitle
+{ font-weight: 600 }
 
 #top_info > strong > a, #top_info > small > a::before
 { font-size: 1rem
@@ -1163,7 +1165,7 @@ padding:4px 0 4px 20px;
 .c_user > div:first-child, .c_user > a > div:first-child
 { border-radius: 50%
 ; border: 5px solid #F0F0F0
-; box-shadow: 0 0 0 5px #4D4D4D
+; box-shadow: 0 0 0 5px #3D3D3D
 ; overflow: hidden
 ; max-width: 150px !important
 ; max-height: 150px !important
@@ -1182,10 +1184,18 @@ td.c_user div:first-child img
 td.c_user dl
 { padding: 1em }
 
-td.c_user .usertitle
+.c_user > .usertitle
 { margin: 1em 0
-; overflow-x: hidden
+; padding: 0.5em
+; overflow: hidden
+
+; background-color: #3D3D3D
+
+; color: #F0F0F0
+; text-overflow: ellipsis
 ; text-align: center
+; white-space: nowrap
+; font-size: 1.2em
 }
 
 .warning
@@ -1667,6 +1677,7 @@ font-weight:700;
 
 .calendar > tbody > tr > th
 { padding: 1em 0
+; width: 14.3%
 }
 
 .calendar .cal_inactive
