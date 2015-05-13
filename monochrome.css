@@ -233,7 +233,7 @@ body,
 h3,
 textarea,
 thead th small,
-#profile_menu
+#profile_menu,
 #error_box .generic small:before,
 .c_post,
 { font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif
@@ -258,7 +258,7 @@ blockquote dl,
 .queued,
 .c_username > a,
 .c_user > .usertitle,
-.topic .user_info > dd:first-of-type
+.topic .user_info > dd:first-of-type,
 th.c_cat-title,
 th.c_cat-starter,
 th.c_cat-replies,
@@ -274,13 +274,13 @@ code
 .collapse::before,
 .uncollapse::before,
 .replied-marker::before,
-#error_box > tbody::before
+#error_box > tbody::before,
 { font-family: "FontAwesome" }
 
 .c_cat-views,
 .c_cat-replies > a::before,
 .c_cat-views::before,
-.c_cat-starter::before
+.c_cat-starter::before,
 { font-family: "FontAwesome", "Open Sans" }
 
 th.c_cat-title, th.c_cat-starter, th.c_cat-replies, th.c_cat-views,
@@ -291,37 +291,27 @@ th.c_cat-lastpost, thead > tr > th small
 { font-weight: 600 }
 
 #top_info > strong > a, #top_info > small > a::before, .warn > a
-{ font-size: 1rem
-}
+{ font-size: 1rem }
 
 #top_info, #top_info > small > a
-{ font-size: 0
-}
+{ font-size: 0 }
 
 thead > tr > th small
-{ font-size: 0.4em
-}
+{ font-size: 0.4em }
 
-ul.cat-topicpages, .c_head, .c_foot, .c_sort
-{ font-size: 0.8em
-}
-
-ul.cat-pages, .meta_box
-{ font-size: 0.9em
-}
+ul.cat-topicpages, .c_head, .c_foot, .c_sort, .meta_box
+{ font-size: 0.8em }
 
 td, textarea, #profile_menuwrap, button, .btn_fake, input[type="button"],
 .btn_text, #top
-{ font-size: 1em
-}
+{ font-size: 1em }
 
 h2, h3
-{ font-size: 1.1em
-}
+{ font-size: 1.1em }
 
-#logo
-{ font-size: 1.5em
-}
+#logo,
+.cat-pages
+{ font-size: 1.5em }
 
 h1, #top_bar::before
 { font-size: 2em
@@ -967,20 +957,21 @@ ul li.cat-pageshead
 
 .cat-pages a, .cat-pagesjump i, .cat-topicpages a
 { background-color: #F0F0F0
-; border-bottom: 3px solid #D0D0D0
+; border-bottom: 0.3em solid #D0D0D0
 ; color: #4D4D4D
 }
 
-.cat-pages a:hover, .cat-topicpages a:hover
-{ border-bottom: 3px solid #424242
+.cat-pages a:hover,
+.cat-topicpages a:hover
+{ border-color: #424242
 ; color: #2D2D2D
 }
 
 .cat-pages span
 { color: #2D2D2D
 ; cursor: default
-; padding: 4px 8px
-; border-bottom: 3px solid #2D2D2D
+; padding: 1em
+; border-bottom: 0.3em solid #2D2D2D
 }
 
 .cat-pages input
@@ -2039,9 +2030,11 @@ list-style-type:square;
 margin-left:10px;
 }
 
-.cat-pages a,.cat-pagesjump i,.cat-topicpages a
+.cat-pages a,
+.cat-pagesjump i,
+.cat-topicpages a
 { cursor: pointer
-; padding: 4px 8px
+; padding: 1em
 }
 
 .cat-topicpages a {
