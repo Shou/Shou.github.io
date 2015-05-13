@@ -263,11 +263,6 @@ blockquote dl,
 .c_username > a,
 .c_user > .usertitle,
 .topic .user_info > dd:first-of-type,
-th.c_cat-title,
-th.c_cat-starter,
-th.c_cat-replies,
-th.c_cat-views,
-th.c_cat-lastpost
 { font-family: "Quicksand", sans-serif }
 
 code
@@ -284,20 +279,26 @@ code
 .c_cat-views,
 .c_cat-replies > a::before,
 .c_cat-views::before,
-.c_cat-starter::before
+.c_cat-starter::before,
+.t_lastpostdate + a::before
 { font-family: "FontAwesome", "Open Sans" }
 
-th.c_cat-title, th.c_cat-starter, th.c_cat-replies, th.c_cat-views,
-th.c_cat-lastpost, thead > tr > th small
+thead > tr > th small
 { font-weight: 400 }
 
 .c_user > .usertitle
 { font-weight: 600 }
 
-#top_info > strong > a, #top_info > small > a::before, .warn > a
+#top_info > strong > a,
+#top_info > small > a::before,
+.t_lastpostdate,
+.t_lastpostdate + a,
+.warn > a
 { font-size: 1rem }
 
-#top_info, #top_info > small > a
+#top_info,
+#top_info > small > a,
+.c_cat-lastpost
 { font-size: 0 }
 
 thead > tr > th small
@@ -307,7 +308,7 @@ ul.cat-topicpages, .c_head, .c_foot, .c_sort, .meta_box
 { font-size: 0.8em }
 
 td, textarea, #profile_menuwrap, button, .btn_fake, input[type="button"],
-.btn_text, #top
+.btn_text, #top, 
 { font-size: 1em }
 
 h2, h3
@@ -2165,7 +2166,7 @@ td.c_cat-mark + td.c_cat-mark
 { font-size: 0 }
 
 .c_cat-title ~ td
-{ margin-top: 1em }
+{ margin-top: 1rem }
 
 .c_cat-mark + .c_cat-mark + .c_cat-title
 { max-width: calc(100% - 8rem)
@@ -2240,14 +2241,19 @@ td.c_cat-mark + td.c_cat-mark
 }
 
 .c_cat-lastpost
-{ min-width: calc(50% - 7em); max-width: calc(50% - 7em) }
+{ min-width: calc(50% - 7rem); max-width: calc(50% - 7rem)
+}
 
 .t_lastpostdate
 { padding: 0 1em
+; min-width: 12em
 }
 
 .t_lastpostdate + a
 { padding-left: 0.5em }
+
+.t_lastpostdate + a::before
+{ content: "\f14b\a0" }
 
 .c_post
 { padding: 0.5em
