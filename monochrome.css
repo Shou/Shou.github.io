@@ -885,7 +885,7 @@ input[type="button"]:hover, .c_foot a:hover
 ; white-space: nowrap
 ; overflow: hidden
 ; text-overflow: ellipsis
-; max-width: 20%
+; max-width: 50%
 }
 
 #nav li:first-child
