@@ -155,7 +155,9 @@ html, body
 #top_info, .drop_menu > li, #submenu, .c_foot > span, #boardmeta, .c_cat-title,
 .c_postinfo, .c_footicons, #fast-reply > dd, #c_postbtn, [align="center"],
 .warn,
-.c_cat-lastpost
+.c_cat-lastpost,
+.c_user > div:first-child,
+.c_user > a > div:first-child,
 { display: flex }
 
 .forums
@@ -185,7 +187,9 @@ blockquote > dl
 { justify-content: center }
 
 #c_notes > form, #top_info, .c_foot > span, #acplogin, .c_postinfo,
-#edit_profile > tbody > tr
+#edit_profile > tbody > tr,
+.c_user > div:first-child,
+.c_user > a > div:first-child,
 { align-items: center }
 
 #realtop, #top
@@ -1188,7 +1192,9 @@ padding:4px 0 4px 20px;
 ; border: 5px solid #F0F0F0
 ; box-shadow: 0 0 0 5px #3D3D3D
 ; overflow: hidden
+; min-width: 150px
 ; max-width: 150px !important
+; min-width: 150px
 ; max-height: 150px !important
 ; transition: 0.3s border-radius cubic-bezier(.55,0,0.1,1)
 }
@@ -2040,9 +2046,8 @@ margin-left:10px;
 ; padding: 1em
 }
 
-.cat-topicpages a {
-padding:0 2px;
-}
+.cat-topicpages a
+{ padding: 0.5em 0.5em 0 0.5em }
 
 .cat-buttons:last-of-type
 { border-bottom: 0.2em solid #D0D0D0
