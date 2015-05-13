@@ -262,7 +262,7 @@ blockquote dl,
 .queued,
 .c_username > a,
 .c_user > .usertitle,
-.topic .user_info > dd:first-of-type,
+.topic .user_info > dd:first-of-type
 { font-family: "Quicksand", sans-serif }
 
 code
@@ -308,14 +308,16 @@ ul.cat-topicpages, .c_head, .c_foot, .c_sort, .meta_box
 { font-size: 0.8em }
 
 td, textarea, #profile_menuwrap, button, .btn_fake, input[type="button"],
-.btn_text, #top, 
+.btn_text, #top
 { font-size: 1em }
 
 h2, h3
 { font-size: 1.1em }
 
-#logo,
 .cat-pages
+{ font-size: 1.3em }
+
+#logo
 { font-size: 1.5em }
 
 h1, #top_bar::before
