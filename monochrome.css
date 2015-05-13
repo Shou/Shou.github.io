@@ -112,8 +112,8 @@ html, body
 .c_cat-title
 { min-width: calc(100% - 8rem) !important }
 
-.t_lastpostdate
-{ width: initial !important }
+.c_cat-lastpost
+{ display: flex }
 
 .c_post, #topic_review .c_desc + td
 { max-width: 100% }
