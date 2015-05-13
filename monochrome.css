@@ -22,20 +22,18 @@
     - Address Book
     - Message Tracking
     - Report Panel
+    - Calendar (mobile)
  - Consolidate colour declarations
  - Mod options spacing broken.
      - Still.
  - How to display PM or RCP updates
  - big > big > big > et al added to @media for phones
     - Isn't this global? Why do I need to do this?
- - Use dppx instead in @media conditionals
-    - Is dppx truly better?
- - Use `rem' instead of em
  - Make background dark blue/royal blue.
- - pmtoast
+ - pmtoast (pm popup)
  - Evauluate possibly obsolete declerations, search /XXX REM
  - Fix topics section spacing
-        - Use flex-wrap: nowrap and wrap to control "last post by"s width
+    - Use flex-wrap: nowrap and wrap to control "last post by"s width
 
 */
 
@@ -55,10 +53,6 @@
 html, body
 { font-size: 24pt }
 
-/* XXX REM is this even needed anymore? */
-.drop_menu > li a img
-{ height: 40pt }
-
 }
 
 /* Vertical screens */
@@ -67,6 +61,9 @@ html, body
 
 .c_cat-title
 { min-width: calc(100% - 8rem) !important }
+
+.c_cat-views
+{ white-space: nowrap !important }
 
 .c_cat-lastpost
 { display: flex }
@@ -111,6 +108,9 @@ html, body
 
 .c_cat-title
 { min-width: calc(100% - 8rem) !important }
+
+.c_cat-views
+{ white-space: nowrap !important }
 
 .c_cat-lastpost
 { display: flex }
@@ -225,7 +225,8 @@ blockquote > dl
 { flex: 2
 }
 
-.warning
+.warning,
+.t_lastpostdate
 { order: 1 }
 
 .warn > a:last-of-type
@@ -238,31 +239,60 @@ blockquote > dl
 
 /* {{{ Fonts */
 
-.c_post, #error_box .generic small:before, html, body, thead th small,
-textarea, h3, #profile_menu
+html,
+body,
+h3,
+textarea,
+thead th small,
+#profile_menu
+#error_box .generic small:before,
+.c_post,
 { font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif
 }
 
-#logo, .c_post big, #top, #subhuman, h2, .category h2, .topic h2, #portal h2,
-#portal_foot h2, thead th, #copyright, blockquote dl, .notice, .error,
-.spoiler_toggle, th.c_cat-title, th.c_cat-starter, th.c_cat-replies,
-th.c_cat-views, th.c_cat-lastpost, .meta_menu a, .editby, .queued,
-.c_username > a, .c_user > .usertitle, .topic .user_info > dd:first-of-type
-{ font-family: "Quicksand", sans-serif
-}
+thead th,
+blockquote dl,
+#logo,
+#top,
+#subhuman, h2,
+#copyright,
+#portal h2,
+#portal_foot h2,
+.c_post big,
+.category h2,
+.topic h2,
+.notice,
+.error,
+.spoiler_toggle,
+.meta_menu a,
+.editby,
+.queued,
+.c_username > a,
+.c_user > .usertitle,
+.topic .user_info > dd:first-of-type
+th.c_cat-title,
+th.c_cat-starter,
+th.c_cat-replies,
+th.c_cat-views,
+th.c_cat-lastpost,
+{ font-family: "Quicksand", sans-serif }
 
 code
-{ font-family: "Droid Sans Mono", monospace
-}
+{ font-family: "Droid Sans Mono", monospace }
 
-.c_post-attachment > dd > a::before, .c_post a::after, .collapse::before,
-.uncollapse::before, .replied-marker::before, #error_box > tbody::before
-{ font-family: "FontAwesome"
-}
+.c_post-attachment > dd > a::before,
+.c_post a::after,
+.collapse::before,
+.uncollapse::before,
+.replied-marker::before,
+#error_box > tbody::before
+{ font-family: "FontAwesome" }
 
-.c_cat-views
-{ font-family: "FontAwesome", "Open Sans"
-}
+.c_cat-views,
+.c_cat-replies > a::before,
+.c_cat-views::before,
+.c_cat-starter::before
+{ font-family: "FontAwesome", "Open Sans" }
 
 th.c_cat-title, th.c_cat-starter, th.c_cat-replies, th.c_cat-views,
 th.c_cat-lastpost, thead > tr > th small
@@ -2133,7 +2163,7 @@ td.c_cat-mark + td.c_cat-mark
 ; padding: 0 1em
 }
 
-.c_cat-icon, .c_cat-replies
+.c_cat-icon
 { text-align: center
 ; min-width: 3em
 ; max-width: 3em
@@ -2142,14 +2172,17 @@ td.c_cat-mark + td.c_cat-mark
 .c_cat-title
 { font-size: 0 }
 
+.c_cat-title ~ td
+{ margin-top: 1em }
+
 .c_cat-mark + .c_cat-mark + .c_cat-title
-{ max-width: calc(40% - 7rem)
-; min-width: calc(40% - 7rem)
+{ max-width: calc(100% - 8rem)
+; min-width: calc(100% - 8rem)
 }
 
 .c_cat-mark:first-child + .c_cat-title
-{ max-width: calc(40% - 3rem)
-; min-width: calc(40% - 3rem)
+{ max-width: calc(100% - 4rem)
+; min-width: calc(100% - 4rem)
 }
 
 .c_cat-title > a
@@ -2165,24 +2198,51 @@ td.c_cat-mark + td.c_cat-mark
 
 .c_cat-title > ul
 { order: 2
+; padding-right: 1em
 }
 
 .c_cat-title > span, .c_cat-title > div, .c_cat-title > ul
 { font-size: 1rem
 }
+.c_cat-mark:first-child + .c_cat-title + .c_cat-starter
+{ min-width: calc(50% - 9em); max-width: calc(50% - 9em) }
 
-.c_cat-starter
-{ width: 15%
-}
+.c_cat-mark + .c_cat-mark + .c_cat-title + .c_cat-starter
+{ min-width: calc(50% - 12em); max-width: calc(50% - 12em) }
 
-.c_cat-title > a, .c_cat-title > .description
+.c_cat-starter::before
+{ content: "\f007\a0" }
+
+.c_cat-starter > a,
+.c_cat-replies > a,
+.c_cat-views,
+.c_cat-lastpost,
+.c_cat-lastpost > a
+{ color: #8D8D8D }
+
+.c_cat-replies
+{ min-width: 5em; max-width: 5em }
+
+.c_cat-replies > a::before
+{ content: "\f0e5\a0" }
+
+.c_cat-views
+{ min-width: 7em; max-width: 7em }
+
+.c_cat-views::before
+{ content: "\f06e\a0" }
+
+.c_cat-title > a, .c_cat-title > .description, .t_lastpostdate + a
 { overflow: hidden
 ; text-overflow: ellipsis
 ; white-space: nowrap
 }
 
+.c_cat-lastpost
+{ min-width: calc(50% - 7em); max-width: calc(50% - 7em) }
+
 .t_lastpostdate
-{ padding-right: 1em
+{ padding: 0 1em
 }
 
 .t_lastpostdate + a
@@ -2636,9 +2696,16 @@ clear:both;
 line-height:2;
 }
 
-.c_cat-starter,.c_cat-replies,.c_cat-views,td.c_poll-total,td.c_poll-vote,td.c_topicfoot,.warn,.ucp th, #c_notes,.calendar th {
-text-align:center;
-}
+#c_notes,
+.warn,
+.c_cat-views,
+.c_cat-replies,
+.ucp th,
+.calendar th
+td.c_poll-total,
+td.c_poll-vote,
+td.c_topicfoot,
+{ text-align:center }
 
 blockquote dl dd, #foot #foot_links {
 text-align:right;
@@ -2895,6 +2962,7 @@ padding:0;
 
 .replied-marker
 { order: 3
+; padding-right: 1em
 }
 
 .replied-marker::before
