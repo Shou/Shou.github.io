@@ -152,9 +152,11 @@ html, body
 #c_notes > form, #foot > tbody > tr, #acplogin, #acplogin table,
 #acplogin thead, #acplogin tbody, #acplogin tr, #acplogin th,
 #acplogin tr td:last-child, #acplogin #loginform, #realtop, #top, #top_menu,
-#top_info, .drop_menu > li, #submenu, .c_foot > span, #boardmeta, .c_cat-title,
+#top_info, .drop_menu > li, #submenu, .c_foot > span, #boardmeta,
 .c_postinfo, .c_footicons, #fast-reply > dd, #c_postbtn, [align="center"],
 .warn,
+.c_cat-title,
+.c_cat-mark,
 .c_cat-lastpost,
 .c_user > div:first-child,
 .c_user > a > div:first-child
@@ -189,7 +191,8 @@ blockquote > dl
 #c_notes > form, #top_info, .c_foot > span, #acplogin, .c_postinfo,
 #edit_profile > tbody > tr,
 .c_user > div:first-child,
-.c_user > a > div:first-child
+.c_user > a > div:first-child,
+.c_cat-mark
 { align-items: center }
 
 #realtop, #top
@@ -2129,11 +2132,6 @@ vertical-align:middle;
 ; margin-left: -3em
 }
 
-.c_mark img {
-display:block;
-margin:auto;
-}
-
 .c_last {
 line-height:1.4;
 min-width:300px;
@@ -2142,11 +2140,6 @@ width:30%;
 
 #stats_members
 { line-height: 1.2
-}
-
-.c_cat-mark
-{ display: flex
-; align-items: center
 }
 
 td.c_cat-mark + td.c_cat-mark
@@ -2159,6 +2152,7 @@ td.c_cat-mark + td.c_cat-mark
 ; min-width: 4em
 ; max-width: 4em
 ; padding: 0 1em
+; margin-bottom: -2em
 }
 
 .c_cat-icon
