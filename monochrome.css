@@ -53,23 +53,20 @@
 html, body
 { font-size: 24pt }
 
+.topic h2, #portal h2, #portal_foot h2, thead th
+{ font-size: 2em }
+
+.topic .user_info > dd:first-of-type
+{ font-size: 1em }
+
+.c_user > .usertitle
+{ font-size: 0.8em }
+
 }
 
 /* Vertical screens */
 @media (min-device-height: 1200px) and (max-width: 1200px)
 {
-
-.c_cat-title
-{ min-width: calc(100% - 8rem) !important }
-
-.c_cat-views
-{ white-space: nowrap !important }
-
-.c_cat-lastpost
-{ display: flex }
-
-.topic h2, #portal h2, #portal_foot h2, thead th
-{ font-size: 2em }
 
 }
 
@@ -105,15 +102,6 @@ html, body
 
 #wrap
 { margin: 0 0 44px !important }
-
-.c_cat-title
-{ min-width: calc(100% - 8rem) !important }
-
-.c_cat-views
-{ white-space: nowrap !important }
-
-.c_cat-lastpost
-{ display: flex }
 
 .c_post, #topic_review .c_desc + td
 { max-width: 100% }
@@ -166,7 +154,8 @@ html, body
 #acplogin tr td:last-child, #acplogin #loginform, #realtop, #top, #top_menu,
 #top_info, .drop_menu > li, #submenu, .c_foot > span, #boardmeta, .c_cat-title,
 .c_postinfo, .c_footicons, #fast-reply > dd, #c_postbtn, [align="center"],
-.warn
+.warn,
+.c_cat-lastpost
 { display: flex }
 
 .forums
@@ -339,7 +328,7 @@ h1, #top_bar::before
 }
 
 .row1 > .c_cat-views, .row2 > .c_cat-views
-{ white-space: pre-line
+{ white-space: nowrap
 }
 
 /* }}} */
@@ -1259,7 +1248,9 @@ td.c_user div:first-child img
 { padding: 0.5em }
 
 .warn > a:last-of-type
-{ width: 100% }
+{ width: 100%
+; text-align: center
+}
 
 .warning
 { color: crimson
@@ -2206,15 +2197,15 @@ td.c_cat-mark + td.c_cat-mark
 }
 
 .c_cat-mark:first-child + .c_cat-title + .c_cat-starter
-{ min-width: calc(50% - 9em)
-; max-width: calc(50% - 9em)
-; margin-left: 4em
+{ min-width: calc(50% - 8.5em)
+; max-width: calc(50% - 8.5em)
+; margin-left: 3.5em
 }
 
 .c_cat-mark + .c_cat-mark + .c_cat-title + .c_cat-starter
-{ min-width: calc(50% - 12em)
-; max-width: calc(50% - 12em)
-; margin-left: 7em
+{ min-width: calc(50% - 11.5em)
+; max-width: calc(50% - 11.5em)
+; margin-left: 6.5em
 }
 
 .c_cat-starter::before
@@ -2714,7 +2705,7 @@ line-height:2;
 td.c_poll-total,
 td.c_poll-vote,
 td.c_topicfoot,
-{ text-align:center }
+{ text-align: center }
 
 blockquote dl dd, #foot #foot_links {
 text-align:right;
