@@ -566,6 +566,9 @@ input[type="checkbox"]:checked
 { animation: 0.5s circle cubic-bezier(.55,0,0.1,1)
 }
 
+input[type="file"]
+{ max-width: 40vw }
+
 .submit_error
 { background: #000000
 ; border: 1px solid #333333
