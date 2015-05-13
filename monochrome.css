@@ -34,6 +34,8 @@
  - Make background dark blue/royal blue.
  - pmtoast
  - Evauluate possibly obsolete declerations, search /XXX REM
+ - Fix topics section spacing
+        - Use flex-wrap: nowrap and wrap to control "last post by"s width
 
 */
 
@@ -66,8 +68,8 @@ html, body
 .c_cat-title
 { min-width: calc(100% - 8rem) !important }
 
-.t_lastpostdate
-{ width: initial !important }
+.c_cat-lastpost
+{ display: flex }
 
 .topic h2, #portal h2, #portal_foot h2, thead th
 { font-size: 2em }
@@ -164,7 +166,7 @@ html, body
 #acplogin tr td:last-child, #acplogin #loginform, #realtop, #top, #top_menu,
 #top_info, .drop_menu > li, #submenu, .c_foot > span, #boardmeta, .c_cat-title,
 .c_postinfo, .c_footicons, #fast-reply > dd, #c_postbtn, [align="center"],
-.warn, .c_cat-lastpost
+.warn
 { display: flex }
 
 .forums
@@ -208,7 +210,7 @@ blockquote > dl
 { align-self: baseline }
 
 #realtop, #submenu, .c_foot > span, .c_cat-title, #fast-reply > dd, .warn,
-.c_cat-lastpost, #inlinetopic > .posts > tbody > tr
+#inlinetopic > .posts > tbody > tr
 { flex-wrap: wrap }
 
 #top
@@ -306,7 +308,7 @@ h1, #top_bar::before
 { font-size: 2em
 }
 
-.c_cat-views
+.row1 > .c_cat-views, .row2 > .c_cat-views
 { white-space: pre-line
 }
 
@@ -2159,7 +2161,7 @@ td.c_cat-mark + td.c_cat-mark
 { width: calc(100% - 3em) }
 
 .c_cat-title > ul + a
-{ width: calc(100% - 8em) }
+{ width: calc(100% - 5em) }
 
 .c_cat-title > ul
 { order: 2
@@ -2173,19 +2175,14 @@ td.c_cat-mark + td.c_cat-mark
 { width: 15%
 }
 
-.c_cat-title > a, .c_cat-title > .description, .c_cat-starter, .c_cat-lastpost
+.c_cat-title > a, .c_cat-title > .description
 { overflow: hidden
 ; text-overflow: ellipsis
 ; white-space: nowrap
 }
 
-.c_cat-lastpost
-{
-}
-
 .t_lastpostdate
 { padding-right: 1em
-; width: 100%
 }
 
 .t_lastpostdate + a
