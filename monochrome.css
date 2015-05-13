@@ -1195,7 +1195,7 @@ padding:4px 0 4px 20px;
 ; overflow: hidden
 ; min-width: 150px
 ; max-width: 150px !important
-; min-width: 150px
+; min-height: 150px
 ; max-height: 150px !important
 ; transition: 0.3s border-radius cubic-bezier(.55,0,0.1,1)
 }
@@ -2055,7 +2055,7 @@ margin-left:10px;
 }
 
 .cat-buttons, .topic-buttons
-{ padding: 2em
+{ padding: 2em 2em 0.5em 0
 ; text-align: right
 ; background-color: #F0F0F0
 }
@@ -2187,7 +2187,7 @@ td.c_cat-mark + td.c_cat-mark
 { width: calc(100% - 3em) }
 
 .c_cat-title > ul + a
-{ width: calc(100% - 5em) }
+{ width: calc(100% - 10em) }
 
 .c_cat-title > ul
 { order: 2
