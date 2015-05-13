@@ -321,6 +321,9 @@ h1, #top_bar::before
 { white-space: nowrap
 }
 
+.c_username
+{ word-wrap: break-word }
+
 /* }}} */
 
 /* {{{ Z index */
