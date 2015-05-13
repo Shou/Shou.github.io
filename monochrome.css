@@ -157,7 +157,7 @@ html, body
 .warn,
 .c_cat-lastpost,
 .c_user > div:first-child,
-.c_user > a > div:first-child,
+.c_user > a > div:first-child
 { display: flex }
 
 .forums
@@ -189,7 +189,7 @@ blockquote > dl
 #c_notes > form, #top_info, .c_foot > span, #acplogin, .c_postinfo,
 #edit_profile > tbody > tr,
 .c_user > div:first-child,
-.c_user > a > div:first-child,
+.c_user > a > div:first-child
 { align-items: center }
 
 #realtop, #top
@@ -239,7 +239,7 @@ textarea,
 thead th small,
 #profile_menu,
 #error_box .generic small:before,
-.c_post,
+.c_post
 { font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif
 }
 
@@ -267,7 +267,7 @@ th.c_cat-title,
 th.c_cat-starter,
 th.c_cat-replies,
 th.c_cat-views,
-th.c_cat-lastpost,
+th.c_cat-lastpost
 { font-family: "Quicksand", sans-serif }
 
 code
@@ -278,13 +278,13 @@ code
 .collapse::before,
 .uncollapse::before,
 .replied-marker::before,
-#error_box > tbody::before,
+#error_box > tbody::before
 { font-family: "FontAwesome" }
 
 .c_cat-views,
 .c_cat-replies > a::before,
 .c_cat-views::before,
-.c_cat-starter::before,
+.c_cat-starter::before
 { font-family: "FontAwesome", "Open Sans" }
 
 th.c_cat-title, th.c_cat-starter, th.c_cat-replies, th.c_cat-views,
@@ -393,7 +393,7 @@ big > big > big > big > big > big > big > big > big > big > big > big > big > bi
 ; color: #ECEFF1
 }
 
-[data-desc]:hover::after,
+[data-desc]:hover::after
 { content: attr(data-desc)
 }
 
@@ -2705,7 +2705,7 @@ line-height:2;
 .calendar th
 td.c_poll-total,
 td.c_poll-vote,
-td.c_topicfoot,
+td.c_topicfoot
 { text-align: center }
 
 blockquote dl dd, #foot #foot_links {
