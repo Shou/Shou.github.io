@@ -2204,14 +2204,23 @@ td.c_cat-mark + td.c_cat-mark
 .c_cat-title > span, .c_cat-title > div, .c_cat-title > ul
 { font-size: 1rem
 }
+
 .c_cat-mark:first-child + .c_cat-title + .c_cat-starter
-{ min-width: calc(50% - 9em); max-width: calc(50% - 9em) }
+{ min-width: calc(50% - 9em)
+; max-width: calc(50% - 9em)
+; margin-left: 4em
+}
 
 .c_cat-mark + .c_cat-mark + .c_cat-title + .c_cat-starter
-{ min-width: calc(50% - 12em); max-width: calc(50% - 12em) }
+{ min-width: calc(50% - 12em)
+; max-width: calc(50% - 12em)
+; margin-left: 7em
+}
 
 .c_cat-starter::before
-{ content: "\f007\a0" }
+{ content: "\f007\a0"
+; color: #8D8D8D
+}
 
 .c_cat-starter > a,
 .c_cat-replies > a,
