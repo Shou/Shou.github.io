@@ -2318,6 +2318,9 @@ margin:auto;
 ; display: none
 }
 
+dl
+{ margin: 0 }
+
 dl.user_info dt,dl.user_info dd {
 padding:.1em;
 }
