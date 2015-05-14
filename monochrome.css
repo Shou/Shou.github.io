@@ -163,29 +163,26 @@ html, body
 { display: flex }
 
 .forums
-{ display: flex !important
-}
+{ display: flex !important }
 
 #c_post, #edit_sig > tbody, #c_notes > form, #acplogin, #acplogin table,
 #acplogin thead, #acplogin tbody, #top_menu, .drop_menu > li
-{ flex-direction: column
-}
+{ flex-direction: column }
 
-.c_sig blockquote
-{ flex-direction: column-reverse
-}
+.c_sig blockquote,
+.profile > thead > tr
+{ flex-direction: column-reverse }
 
 .c_foot > span
-{ justify-content: flex-start
-}
+{ justify-content: flex-start }
 
 #foot > tbody > tr, #realtop, #top, .c_postinfo, .c_footicons, .c_cat-title,
 blockquote > dl
-{ justify-content: space-between
-}
+{ justify-content: space-between }
 
 #acplogin tr, #acplogin th, #submenu, .generic, #fast-reply > dd, #c_postbtn,
-[align="center"], #fast-reply, .warn
+[align="center"], #fast-reply, .warn,
+#profile_menu > li > ul
 { justify-content: center }
 
 #c_notes > form, #top_info, .c_foot > span, #acplogin, .c_postinfo,
@@ -206,7 +203,8 @@ blockquote > dl
 { align-self: baseline }
 
 #realtop, #submenu, .c_foot > span, .c_cat-title, #fast-reply > dd, .warn,
-#inlinetopic > .posts > tbody > tr
+#inlinetopic > .posts > tbody > tr,
+.profile:first-of-type > tbody > tr
 { flex-wrap: wrap }
 
 #top
@@ -323,9 +321,9 @@ h2, h3
 #logo
 { font-size: 1.5em }
 
-h1, #top_bar::before
-{ font-size: 2em
-}
+h1, #top_bar::before,
+.folder
+{ font-size: 2em }
 
 .row1 > .c_cat-views, .row2 > .c_cat-views
 { white-space: nowrap
@@ -678,8 +676,7 @@ input[type="button"]:hover, .c_foot a:hover
 }
 
 #profile_menuwrap ul, .cat-topicpages,blockquote dl, #fast-reply dd
-{ margin:0
-}
+{ margin: 0 }
 
 #nav li,ul.cat-pages li, .cat-topicpages li,.calendar li,
 #pm_folderlist li, #profile_menuwrap li, #ucp_gallery li
@@ -1282,11 +1279,10 @@ margin-bottom:1px;
 }
 
 #profile_menu
-{ text-shadow: none
-}
+{ text-shadow: none }
 
 #profile_menu a
-{ background-color: #455A64
+{
 }
 
 #profile_menu li li a {
@@ -1304,6 +1300,27 @@ border-top:0;
 { max-height: 100%
 ; transition: 0.3s max-height cubic-bezier(.55,0,0.1,1)
 }
+
+.profile .c_mark
+{ order: -1
+; width: 100%
+; margin: 0 0 2em 0
+}
+
+.profile .c_mark > div
+{ border: 0.3em solid #F0F0F0
+; box-shadow: 0 0 0 0.3em #3D3D3D
+; border-radius: 50%
+; overflow: hidden
+}
+
+.profile .c_mark > div > img
+{ margin-top: -0.3em
+; margin-left: -0.3em
+}
+
+.profile input[name="status"]
+{ max-width: calc(50vw - 9em)
 
 td.c_poll-choice label {
 font-weight:700;
@@ -1667,7 +1684,7 @@ td.c_view
 #emot_end:hover, #emot_end:focus
 { background-color: #2196F3 }
 
-.row1, .row2
+.row1, .row2, #who_posted > tbody > tr
 { background-color: #F0F0F0
 ; padding: 1em 0
 ; margin-bottom: 1em
@@ -1678,6 +1695,21 @@ td.c_view
 { white-space: nowrap
 ; overflow: hidden
 ; text-overflow: ellipsis
+}
+
+#who_posted > tbody > tr:first-child > th:nth-child(1),
+#who_posted > tbody > tr:first-child > th:nth-child(2),
+#who_posted > tbody > tr > td:nth-child(1),
+#who_posted > tbody > tr > td:nth-child(2)
+{ min-width: 40%; max-width: 40% }
+
+#who_posted > tbody > tr:first-child > th:nth-child(3),
+#who_posted > tbody > tr > td:nth-child(3)
+{ min-width: 20%; max-width: 20% }
+
+#who_posted > tbody > tr:last-child > td
+{ width: 100%
+; margin-top: 1em
 }
 
 #pm_inbox > tbody > tr[class] > td:nth-child(1)
@@ -2165,7 +2197,7 @@ td.c_cat-mark + td.c_cat-mark
 { font-size: 0 }
 
 .c_cat-title ~ td
-{ margin-top: 1rem }
+{ margin-top: 0.5rem }
 
 .c_cat-mark + .c_cat-mark + .c_cat-title
 { max-width: calc(100% - 8rem)
@@ -2181,6 +2213,9 @@ td.c_cat-mark + td.c_cat-mark
 { order: -1
 ; font-size: 1.2rem
 }
+
+a + .description
+{ width: 100% }
 
 .c_cat-title > a:first-child, .replied-marker + .description
 { width: calc(100% - 3em) }
@@ -2998,7 +3033,7 @@ img[src=""]
 { display: none
 }
 
-.pin .plain::before, .pin .plain-new::before
+.pin .folder::before
 { content: "\f08d"
 }
 
@@ -3019,8 +3054,7 @@ span.poll::before, .poll-new::before
 }
 
 .folder
-{ font-size: 2em
-}
+{ color: #8D8D8D }
 
 .fa
 { font-family: "FontAwesome"
@@ -3031,7 +3065,7 @@ span.poll::before, .poll-new::before
 ; -webkit-animation: glow 1s ease-in infinite alternate
 }
 
+/* BLOWN OUT LMAO */
 .right, .left
-{ float: none !important
-}
+{ float: none !important }
 
