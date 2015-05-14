@@ -1710,7 +1710,6 @@ td.c_view
 #who_posted > tbody > tr:last-child > td
 { min-width: 100%
 ; max-width: 100%
-; margin-top: 1em
 }
 
 #pm_inbox > tbody > tr[class] > td:nth-child(1)
