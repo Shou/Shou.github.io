@@ -1320,7 +1320,7 @@ border-top:0;
 }
 
 .profile input[name="status"]
-{ max-width: calc(50vw - 9em)
+{ max-width: calc(50vw - 9em) }
 
 td.c_poll-choice label {
 font-weight:700;
