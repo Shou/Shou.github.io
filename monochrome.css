@@ -1046,7 +1046,7 @@ width:20px;
 
 .forums
 { padding: 1em
-; background-color: #F0F0F0
+; background-color: pink
 ; border-bottom: 0.2em solid #D0D0D0
 }
 
@@ -1287,6 +1287,9 @@ margin-bottom:1px;
 #profile_menu > li > a
 { display: none }
 
+#profile_menu ul
+{ overflow: visible }
+
 #profile_menu li li a
 { border-top: 0 }
 
@@ -1296,8 +1299,18 @@ margin-bottom:1px;
 ; transition: all 0.3s
 }
 
+#profile_menu a:hover
+{ background-color: none
+; border-color: none
+}
+
 #profile_menu a::after
 { transition: all 0.3s
+}
+
+#profile_menu a, #profile_menu a::before, #profile_menu::after
+{ border-color: #0299AE
+; color: #0299AE
 }
 
 #profile_menu a::before, #profile_menu::after
@@ -1307,6 +1320,7 @@ margin-bottom:1px;
 ; z-index: 5
 ; border-radius: 0.3em
 ; box-sizing: content-box
+; transition: 0.3s all
 }
 
 #profile_menu a::before
@@ -2242,6 +2256,9 @@ td.c_cat-mark + td.c_cat-mark
 { max-width: calc(100% - 4rem)
 ; min-width: calc(100% - 4rem)
 }
+
+.c_cat-title:first-child
+{ max-width: 100% }
 
 .c_cat-title > a
 { order: -1
