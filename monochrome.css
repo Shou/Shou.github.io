@@ -1308,12 +1308,12 @@ margin-bottom:1px;
 { transition: all 0.3s
 }
 
-#profile_menu a:hover, #profile_menu a::before, #profile_menu::after
+#profile_menu a:hover, #profile_menu a::before, #profile_menu a::after
 { border-color: #0299AE
 ; color: #0299AE
 }
 
-#profile_menu a::before, #profile_menu::after
+#profile_menu a::before, #profile_menu a::after
 { content: ""
 ; border-style: solid
 ; position: absolute
