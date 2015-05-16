@@ -1300,15 +1300,15 @@ margin-bottom:1px;
 }
 
 #profile_menu a:hover
-{ background-color: none
-; border-color: none
+{ background-color: transparent
+; border-color: transparent
 }
 
 #profile_menu a::after
 { transition: all 0.3s
 }
 
-#profile_menu a, #profile_menu a::before, #profile_menu::after
+#profile_menu a:hover, #profile_menu a::before, #profile_menu::after
 { border-color: #0299AE
 ; color: #0299AE
 }
