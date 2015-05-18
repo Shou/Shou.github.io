@@ -357,10 +357,6 @@ a
 ; text-decoration: none
 }
 
-a:hover, .c_post:hover a, .c_post:focus a
-{ color: #03a9f4
-}
-
 .c_post a::after
 { content: "\A0\F08E"
 ; vertical-align: super
@@ -1299,7 +1295,7 @@ margin-bottom:1px;
 ; transition: all 0.3s
 }
 
-#profile_menu a:hover
+#profile_menu a:hover, #profile_menu a:focus
 { background-color: transparent
 ; border-color: transparent
 }
@@ -1308,7 +1304,8 @@ margin-bottom:1px;
 { transition: all 0.3s
 }
 
-#profile_menu a:hover, #profile_menu a::before, #profile_menu a::after
+#profile_menu a:hover, #profile_menu a:focus,
+#profile_menu a::before, #profile_menu a::after
 { border-color: #0299AE
 ; color: #0299AE
 }
@@ -1340,9 +1337,11 @@ margin-bottom:1px;
 ; transition-delay: 0.5s
 }
 
+#profile_menu a:focus::before,
 #profile_menu a:hover::before
 { width: 100% }
 
+#profile_menu a:focus::after,
 #profile_menu a:hover::after
 { height: 100% }
 
@@ -1366,6 +1365,9 @@ margin-bottom:1px;
 
 .profile input[name="status"]
 { max-width: calc(50vw - 9em) }
+
+.profile > tbody > tr
+{ margin-bottom: 1em }
 
 .profile ~ .profile > thead > tr > th
 { margin-top: 1em }
