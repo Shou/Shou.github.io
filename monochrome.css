@@ -291,6 +291,9 @@ thead > tr > th small
 .c_user > .usertitle
 { font-weight: 600 }
 
+#findposts .c_mark
+{ font-weight: 700 }
+
 #top_info > strong > a,
 #top_info > small > a::before,
 .t_lastpostdate,
@@ -324,7 +327,8 @@ h2, h3
 { font-size: 1.5em }
 
 h1, #top_bar::before,
-.folder
+.folder,
+#findposts .c_mark
 { font-size: 2em }
 
 .row1 > .c_cat-views, .row2 > .c_cat-views
@@ -1911,11 +1915,9 @@ font-size:85%;
 margin:0;
 }
 
-#findposts .c_mark {
-color:#AAAAAA;
-font-size:200%;
-font-weight:700;
-vertical-align:top;
+#findposts .c_mark
+{ color: #3D3D3D
+; vertical-align: top
 }
 
 #pmtoast {
