@@ -59,7 +59,7 @@ html, body
 .topic .user_info > dd:first-of-type
 { font-size: 1em }
 
-.c_user > .usertitle, .c_topicfoot > a
+.c_user > .usertitle
 { font-size: 0.8em }
 
 }
@@ -290,7 +290,8 @@ code
 .c_cat-replies > a::before,
 .c_cat-views::before,
 .c_cat-starter::before,
-.t_lastpostdate + a::before
+.t_lastpostdate + a::before,
+.c_topicfoot > a
 { font-family: "FontAwesome", "Open Sans" }
 
 thead > tr > th small
@@ -2802,15 +2803,35 @@ font-weight:700;
 
 .c_topicfoot
 { text-transform: uppercase
-; font-size: 1.5em
 ; display: flex
 ; flex-wrap: wrap
 ; justify-content: center
 ; width: 100%
+; margin-top: 1em
 }
 
 .c_topicfoot > a
 { padding: 0 0.5em
+; font-size: 0
+}
+
+.c_topicfoot > a[href$="/old/"]::before
+{ content: "\f04a" }
+
+.c_topicfoot > a[href$="/old/"] + a ::before
+{ content: "\f233" }
+
+.c_topicfoot > a[href$="/new/"]::before
+{ content: "\f04e" }
+
+.c_topicfoot > a[href$="/old/"]::before,
+.c_topicfoot > a[href$="/old/"] + a ::before,
+.c_topicfoot > a[href$="/new/"]::before
+{ padding: 0.5em 2em
+; margin: 0 1em
+; background-color: #3D3D3D
+; color: #F0F0F0
+; font-size: 1.5rem
 }
 
 .meta_box h3, #meta_welcome strong
