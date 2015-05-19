@@ -3190,7 +3190,7 @@ span.poll::before, .poll-new::before
 { content: "\f023"
 }
 
-.plain-new, .hot-new, .poll-new
+.plain, .hot, .poll, .locked
 { color: #8D8D8D }
 
 .glow
