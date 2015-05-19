@@ -56,7 +56,10 @@ html, body
 .topic h2, #portal h2, #portal_foot h2, thead th
 { font-size: 2em }
 
-.topic .user_info > dd:first-of-type
+.topic .user_info > dd:first-of-type,
+.c_topicfoot > a[href$="/old/"]::before,
+.c_topicfoot > a[href$="/old/"] + a ::before,
+.c_topicfoot > a[href$="/new/"]::before
 { font-size: 1em }
 
 .c_user > .usertitle
@@ -2807,26 +2810,26 @@ font-weight:700;
 ; flex-wrap: wrap
 ; justify-content: center
 ; width: 100%
-; margin-top: 1em
+; margin-top: 2rem
+; font-size: 0
 }
 
 .c_topicfoot > a
 { padding: 0 0.5em
-; font-size: 0
 }
 
-.c_topicfoot > a[href$="/old/"]::before
+.c_topicfoot > [href$="/old/"]::before
 { content: "\f04a" }
 
-.c_topicfoot > a[href$="/old/"] + a ::before
+.c_topicfoot > [href$="/old/"] + a ::before
 { content: "\f233" }
 
-.c_topicfoot > a[href$="/new/"]::before
+.c_topicfoot > [href$="/new/"]::before
 { content: "\f04e" }
 
-.c_topicfoot > a[href$="/old/"]::before,
-.c_topicfoot > a[href$="/old/"] + a ::before,
-.c_topicfoot > a[href$="/new/"]::before
+.c_topicfoot > [href$="/old/"]::before,
+.c_topicfoot > [href$="/old/"] + a ::before,
+.c_topicfoot > [href$="/new/"]::before
 { padding: 0.5em 2em
 ; margin: 0 1em
 ; background-color: #3D3D3D
