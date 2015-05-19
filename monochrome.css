@@ -1926,7 +1926,7 @@ margin:0;
 
 #search_results_topics + .forums > tbody > .row1,
 #search_results_topics + .forums > tbody > .row2
-{ padding: 0 1em }
+{ padding: 0 2em }
 
 #search_results_topics + .forums > tbody > tr:not([class]) > th,
 #search_results_topics + .forums > tbody > tr > .c_cat-title + .c_cat-title
@@ -1945,7 +1945,9 @@ margin:0;
 }
 
 #search_results_topics + .forums > tbody > tr > .c_cat-title:first-child > ul
-{ min-width: 8em; max-width: 8em }
+{ min-width: 8em; max-width: 8em
+; padding-top: 1em
+}
 
 #search_results_topics + .forums > tbody > tr > .c_cat-title:first-child > div
 { min-width: 100%; max-width: 100% }
@@ -2343,7 +2345,8 @@ a + .description
 .c_cat-replies > a,
 .c_cat-views,
 .c_cat-lastpost,
-.c_cat-lastpost > a
+.c_cat-lastpost > a,
+.replied-marker
 { color: #8D8D8D }
 
 .c_cat-replies
