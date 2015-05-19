@@ -3190,12 +3190,8 @@ span.poll::before, .poll-new::before
 { content: "\f023"
 }
 
-.folder
+.plain-new, .hot-new, .poll-new
 { color: #8D8D8D }
-
-.fa
-{ font-family: "FontAwesome"
-}
 
 .glow
 { animation: glow 1s ease-in infinite alternate
