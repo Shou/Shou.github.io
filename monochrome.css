@@ -56,10 +56,10 @@ html, body
 .topic h2, #portal h2, #portal_foot h2, thead th
 { font-size: 2em }
 
-.topic .user_info > dd:first-of-type, .c_topicfoot
+.topic .user_info > dd:first-of-type
 { font-size: 1em }
 
-.c_user > .usertitle
+.c_user > .usertitle, .c_topicfoot > a
 { font-size: 0.8em }
 
 }
