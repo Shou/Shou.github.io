@@ -298,7 +298,8 @@ thead > tr > th small
 #top_info > small > a::before,
 .t_lastpostdate,
 .t_lastpostdate + a,
-.warn > a
+.warn > a,
+.search_results_post > thead > tr > th > a
 { font-size: 1rem }
 
 #top_info,
@@ -1913,6 +1914,10 @@ font-size:125%;
 color:#AAAAAA;
 font-size:85%;
 margin:0;
+}
+
+.search_results_post > thead > tr > th > a
+{
 }
 
 #findposts .c_mark
