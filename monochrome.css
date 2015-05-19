@@ -2199,6 +2199,9 @@ margin-left:10px;
 ; background-color: #F0F0F0
 }
 
+script + .topic-buttons
+{ padding: 2em }
+
 .postbtn td {
 padding:5px;
 text-align:center;
