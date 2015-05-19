@@ -3105,20 +3105,14 @@ padding:0;
 { border-color: #B71C1C
 }
 
-.hot-new
-{ color: #B71C1C
+.hot-new,
+.plain-new,
+.poll-new
+{ color: #3D3D3D
 }
 
 .online
 { border-color: #8BC34A
-}
-
-.plain-new
-{ color: #8BC34A
-}
-
-.poll-new
-{ color: #03A9F4
 }
 
 .bunk-big-butt
