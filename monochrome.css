@@ -103,6 +103,12 @@ html, body
 #wrap
 { margin: 0 0 44px !important }
 
+#profile_menu > li > ul
+{ flex-wrap: wrap }
+
+#profile_menu > li > ul > li
+{ min-width: 33%; max-width: 33% }
+
 .c_post, #topic_review .c_desc + td
 { max-width: 100% }
 
