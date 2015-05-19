@@ -205,7 +205,9 @@ blockquote > dl,
 
 #realtop, #submenu, .c_foot > span, .c_cat-title, #fast-reply > dd, .warn,
 #inlinetopic > .posts > tbody > tr,
-.profile:nth-child(2) > tbody > tr:first-child
+.profile:nth-child(2) > tbody > tr:first-child,
+.search_results_topics + .forums > tbody > .row1,
+.search_results_topics + .forums > tbody > .row2
 { flex-wrap: wrap }
 
 #top
@@ -1921,6 +1923,25 @@ margin:0;
 
 .search_results_post > thead > tr > th > a
 { text-shadow: none }
+
+.search_results_topics + .forums > tbody > .row1,
+.search_results_topics + .forums > tbody > .row2
+{ margin: 0 1em }
+
+.search_results_topics + .forums > tbody > tr:not([class]) > th
+{ display: none }
+
+.search_results_topics + .forums > tbody > tr > .c_cat_title:first-child
+{ min-width: 100% }
+
+.search_results_topics + .forums > tbody > tr > .c_cat_title:first-child > a
+{ width: calc(100% - 8em) }
+
+.search_results_topics + .forums > tbody > tr > .c_cat_title:first-child > ul
+{ min-width: 8em; max-width: 8em }
+
+.search_results_topics + .forums > tbody > tr > .c_cat_title:first-child > div
+{ width: 100% }
 
 #findposts .c_mark
 { color: #3D3D3D
