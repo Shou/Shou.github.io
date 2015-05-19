@@ -2230,7 +2230,7 @@ text-align:center;
 
 #announcement_head ~ tr > .c_cat-title,
 #announcement_head ~ tr > .c_cat-starter
-{ padding: 0 1em }
+{ padding: 0 1rem }
 
 #inlinetopic > .posts > tbody > tr:first-child:not([class])
 { display: none
