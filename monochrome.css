@@ -1926,7 +1926,7 @@ margin:0;
 
 #search_results_topics + .forums > tbody > .row1,
 #search_results_topics + .forums > tbody > .row2
-{ margin: 0 1em }
+{ padding: 0 1em }
 
 #search_results_topics + .forums > tbody > tr:not([class]) > th
 { display: none }
@@ -1934,7 +1934,7 @@ margin:0;
 #search_results_topics + .forums > tbody > tr > .c_cat_title:first-child
 { min-width: 100% }
 
-#search_results_topics + .forums > tbody > tr > .c_cat_title:first-child > a
+#search_results_topics + .forums > tbody > tr > .c_cat-title:first-child > a
 { width: calc(100% - 8em) }
 
 #search_results_topics + .forums > tbody > tr > .c_cat_title:first-child > ul
