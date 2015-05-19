@@ -1045,9 +1045,9 @@ width:20px;
 { display: none !important
 }
 
-.forums
+.category > .forums
 { padding: 1em
-; background-color: pink
+; background-color: #F0F0F0
 ; border-bottom: 0.2em solid #D0D0D0
 }
 
@@ -1916,9 +1916,11 @@ font-size:85%;
 margin:0;
 }
 
+.search_results_post > thead > tr > th
+{ width: 100% }
+
 .search_results_post > thead > tr > th > a
-{
-}
+{ text-shadow: none }
 
 #findposts .c_mark
 { color: #3D3D3D
