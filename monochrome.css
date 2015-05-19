@@ -60,7 +60,7 @@ html, body
 .c_topicfoot > a[href$="/old/"]::before,
 .c_topicfoot > a[href$="/old/"] + a ::before,
 .c_topicfoot > a[href$="/new/"]::before
-{ font-size: 1em }
+{ font-size: 1rem }
 
 .c_user > .usertitle
 { font-size: 0.8em }
