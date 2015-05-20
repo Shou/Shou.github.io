@@ -1752,7 +1752,8 @@ td.c_view
 #emot_end:hover, #emot_end:focus
 { background-color: #2196F3 }
 
-.row1, .row2, #who_posted > tbody > tr
+.row1, .row2, #who_posted > tbody > tr,
+#forum_leaders_global > tbody > tr:nth-child(n+2)
 { background-color: #F0F0F0
 ; padding: 1em 0
 ; margin-bottom: 1em
@@ -1963,6 +1964,9 @@ margin:0;
 ; padding-top: 1em
 }
 
+#search_results_topics + .forums > tbody > tr > .c_cat-title:nth-child(2) > ul
+{ padding-top: 1em }
+
 #search_results_topics + .forums > tbody > tr > .c_cat-title:first-child > div
 { min-width: 100%; max-width: 100% }
 
@@ -1970,6 +1974,8 @@ margin:0;
 { color: #3D3D3D
 ; vertical-align: top
 }
+
+#forum_leaders_global > tbody
 
 #pmtoast {
 background:#000;
