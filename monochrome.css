@@ -1947,10 +1947,13 @@ margin:0;
 { min-width: 100%; max-width: 100% }
 
 #search_results_topics + .forums > tbody > tr > .c_cat-title:first-child ~ td,
-#search_results_topics + .forums > tbody > tr > .c_cat-title:first-child ~ .c_cat-lastpost > a
+#search_results_topics + .forums > tbody > tr > .c_cat-title:first-child ~ .c_cat-lastpost > a,
+#search_results_topics + .forums > tbody > tr > .c_cat-title:nth-child(2) ~ td,
+#search_results_topics + .forums > tbody > tr > .c_cat-title:nth-child(2) ~ .c_cat-lastpost > a
 { padding-bottom: 1em }
 
-#search_results_topics + .forums > tbody > tr > .c_cat-title:first-child > a
+#search_results_topics + .forums > tbody > tr > .c_cat-title:first-child > a,
+#search_results_topics + .forums > tbody > tr > .c_cat-title:nth-child(2) > a
 { min-width: calc(100% - 8em); max-width: calc(100% - 8em)
 ; padding-top: 1em
 }
