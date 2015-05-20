@@ -1413,71 +1413,71 @@ width:15%;
 ; padding: 2em 1em
 }
 
-.poll > tbody > tr:nth-last-of-type(2) > .c_poll-bar > div
-{ background-color: #C62828
+.poll > tbody > tr:nth-of-type(2) > .c_poll-bar > div
+{ background-color: #9C1153
 }
 
-.poll > tbody > tr:nth-last-of-type(3) > .c_poll-bar > div
+.poll > tbody > tr:nth-of-type(3) > .c_poll-bar > div
 { background-color: #AD1457
 }
 
-.poll > tbody > tr:nth-last-of-type(4) > .c_poll-bar > div
+.poll > tbody > tr:nth-of-type(4) > .c_poll-bar > div
+{ background-color: #C2185B
+}
+
+.poll > tbody > tr:nth-of-type(5) > .c_poll-bar > div
+{ background-color: #D81B60
+}
+
+.poll > tbody > tr:nth-of-type(6) > .c_poll-bar > div
+{ background-color: #E91E63
+}
+
+.poll > tbody > tr:nth-of-type(7) > .c_poll-bar > div
+{ background-color: #EC407A
+}
+
+.poll > tbody > tr:nth-of-type(8) > .c_poll-bar > div
+{ background-color: #CC449B
+}
+
+.poll > tbody > tr:nth-of-type(9) > .c_poll-bar > div
+{ background-color: #AB47BC
+}
+
+.poll > tbody > tr:nth-of-type(10) > .c_poll-bar > div
+{ background-color: #9C27B0
+}
+
+.poll > tbody > tr:nth-of-type(11) > .c_poll-bar > div
+{ background-color: #8E24AA
+}
+
+.poll > tbody > tr:nth-of-type(12) > .c_poll-bar > div
+{ background-color: #7B1FA2
+}
+
+.poll > tbody > tr:nth-of-type(13) > .c_poll-bar > div
 { background-color: #6A1B9A
 }
 
-.poll > tbody > tr:nth-last-of-type(5) > .c_poll-bar > div
+.poll > tbody > tr:nth-of-type(14) > .c_poll-bar > div
+{ background-color: #58219D
+}
+
+.poll > tbody > tr:nth-of-type(15) > .c_poll-bar > div
 { background-color: #4527A0
 }
 
-.poll > tbody > tr:nth-last-of-type(6) > .c_poll-bar > div
-{ background-color: #283593
+.poll > tbody > tr:nth-of-type(16) > .c_poll-bar > div
+{ background-color: #512DA8
 }
 
-.poll > tbody > tr:nth-last-of-type(7) > .c_poll-bar > div
-{ background-color: #1565C0
+.poll > tbody > tr:nth-of-type(17) > .c_poll-bar > div
+{ background-color: #5E35B1
 }
 
-.poll > tbody > tr:nth-last-of-type(8) > .c_poll-bar > div
-{ background-color: #0277BD
-}
-
-.poll > tbody > tr:nth-last-of-type(9) > .c_poll-bar > div
-{ background-color: #00838F
-}
-
-.poll > tbody > tr:nth-last-of-type(10) > .c_poll-bar > div
-{ background-color: #00695C
-}
-
-.poll > tbody > tr:nth-last-of-type(11) > .c_poll-bar > div
-{ background-color: #2E7D32
-}
-
-.poll > tbody > tr:nth-last-of-type(12) > .c_poll-bar > div
-{ background-color: #558B2F
-}
-
-.poll > tbody > tr:nth-last-of-type(13) > .c_poll-bar > div
-{ background-color: #9E9D24
-}
-
-.poll > tbody > tr:nth-last-of-type(14) > .c_poll-bar > div
-{ background-color: #F9A825
-}
-
-.poll > tbody > tr:nth-last-of-type(15) > .c_poll-bar > div
-{ background-color: #FF8F00
-}
-
-.poll > tbody > tr:nth-last-of-type(16) > .c_poll-bar > div
-{ background-color: #EF6C00
-}
-
-.poll > tbody > tr:nth-last-of-type(17) > .c_poll-bar > div
-{ background-color: #D84315
-}
-
-.poll > tbody > tr:nth-last-of-type(n+17) > .c_poll-bar > div
+.poll > tbody > tr:nth-of-type(n+17) > .c_poll-bar > div
 { background-color: #424242
 }
 
