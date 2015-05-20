@@ -1794,6 +1794,13 @@ td.c_view
 #pm_inbox > tbody > tr[class] > td:nth-child(4)
 { min-width: 25%; max-width: 25% }
 
+#forum_leaders_global > tbody > tr:first-child > th,
+#forum_leaders_global > tbody > tr:nth-child(n+2) > td
+{ min-width: 33%; max-width: 33% }
+
+#forum_leaders_global > tbody > tr:nth-child(n+2) > td
+{ padding: 0 1em }
+
 #quick_pm_compose > tbody > tr:first-child
 { display: flex
 ; flex-direction: column
@@ -1974,8 +1981,6 @@ margin:0;
 { color: #3D3D3D
 ; vertical-align: top
 }
-
-#forum_leaders_global > tbody
 
 #pmtoast {
 background:#000;
