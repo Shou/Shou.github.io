@@ -116,10 +116,10 @@ html, body
 { display: none }
 
 .c_cat-mark:first-child + .c_cat-title ~ .c_cat-lastpost
-{ min-width: calc(100% - 15em); max-width: calc(100% - 15em) }
+{ min-width: calc(100% - 15rem); max-width: calc(100% - 15rem) }
 
 .c_cat-mark + .c_cat-mark ~ .c_cat-lastpost
-{ min-width: calc(100% - 18em); max-width: calc(100% - 18em) }
+{ min-width: calc(100% - 18rem); max-width: calc(100% - 18eem) }
 
 .c_cat-mark:first-child + .c_cat-title ~ .c_cat-replies
 { padding-left: 3em
