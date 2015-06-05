@@ -122,10 +122,16 @@ html, body
 { min-width: calc(100% - 18em); max-width: calc(100% - 18em) }
 
 .c_cat-mark:first-child + .c_cat-title ~ .c_cat-replies
-{ padding-left: 3em }
+{ padding-left: 3em
+; min-width: 8em
+; max-width: 8em
+}
 
 .c_cat-mark + .c_cat-mark ~ .c_cat-replies
-{ padding-left: 6em }
+{ padding-left: 6em
+; min-width: 11em
+; max-width: 11em
+}
 
 .c_post, #topic_review .c_desc + td
 { max-width: 100% }
