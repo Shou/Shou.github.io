@@ -116,10 +116,16 @@ html, body
 { display: none }
 
 .c_cat-mark:first-child + .c_cat-title ~ .c_cat-lastpost
-{ min-width: calc(100% - 16em); max-width: calc(100% - 16em) }
+{ min-width: calc(100% - 15em); max-width: calc(100% - 15em) }
 
 .c_cat-mark + .c_cat-mark ~ .c_cat-lastpost
-{ min-width: calc(100% - 20em); max-width: calc(100% - 20em) }
+{ min-width: calc(100% - 18em); max-width: calc(100% - 18em) }
+
+.c_cat-mark:first-child + .c_cat-title ~ .c_cat-replies
+{ padding-left: 3em }
+
+.c_cat-mark + .c_cat-mark ~ .c_cat-replies
+{ padding-left: 6em }
 
 .c_post, #topic_review .c_desc + td
 { max-width: 100% }
