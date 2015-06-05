@@ -112,6 +112,15 @@ html, body
 #profile_menu > li > ul > li
 { min-width: 33%; max-width: 33% }
 
+.c_cat-starter
+{ display: none }
+
+.c_cat-mark:first-child + .c_cat-title ~ .c_cat-lastpost
+{ min-width: calc(100% - 16em); max-width: calc(100% - 16em) }
+
+.c_cat-mark + .c_cat-mark ~ .c_cat-lastpost
+{ min-width: calc(100% - 20em); max-width: calc(100% - 20em) }
+
 .c_post, #topic_review .c_desc + td
 { max-width: 100% }
 
