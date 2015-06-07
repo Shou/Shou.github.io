@@ -340,14 +340,24 @@ code
 .c_topicfoot > a
 { font-family: "FontAwesome", "Open Sans" }
 
-thead > tr > th small
+.c_forum div,
+.forums .forum .c_last
+{ font-weight: 300 }
+
+thead > tr > th small,
+.c_forum div a,
+.c_last-title,
+.c_last-title ~ strong
 { font-weight: 400 }
 
-.c_user > .usertitle
+.c_user > .usertitle,
+.forums th a,
+.forums th a strong
 { font-weight: 600 }
 
 #findposts .c_mark,
-.c_next > a
+.c_next > a,
+.forums th
 { font-weight: 700 }
 
 #top_info > strong > a,
@@ -369,12 +379,18 @@ thead > tr > th small
 ul.cat-topicpages, .c_head, .c_foot, .c_sort, .meta_box
 { font-size: 0.8em }
 
+.c_view-list
+{ font-size: 0.9em }
+
 td, textarea, #profile_menuwrap, button, .btn_fake, input[type="button"],
 .btn_text, #top
 { font-size: 1em }
 
 h2, h3
 { font-size: 1.1em }
+
+.c_forum strong a
+{ font-size: 1.25em }
 
 .c_next > a
 { font-size: 1.3em }
@@ -388,8 +404,19 @@ h1, #top_bar::before,
 #findposts .c_mark
 { font-size: 2em }
 
+.c_last-title
+{ line-height: 1.5 }
+
+.c_view-list
+{ line-height: 1.8 }
+
 .c_next > a
 { text-align: center }
+
+.forums th,
+.c_forum strong a
+{ text-transform: uppercase
+}
 
 .row1 > .c_cat-views, .row2 > .c_cat-views
 { white-space: nowrap
@@ -1112,14 +1139,6 @@ width:20px;
 { max-height: 99999px
 }
 
-.forums th
-{ font-weight: 400
-}
-
-.forums th a, .forums th a strong
-{ font-weight: 600
-}
-
 .forums .c_mark
 { display: none
 }
@@ -1140,33 +1159,10 @@ width:20px;
 { color: #3D3D3D
 }
 
-.c_forum strong a
-{ font-size: 1.25em
-; text-transform: uppercase
-}
-
-.c_forum div
-{ font-weight: 300
-}
-
-.c_forum div a
-{ font-weight: 400
-}
-
 .forums .forum .c_last
 { flex: 1
-; font-weight: 300
 ; display: flex
 ; flex-direction: column
-}
-
-.c_last-title
-{ line-height: 1.5
-; font-weight: 400
-}
-
-.c_last-title ~ strong
-{ font-weight: 400
 }
 
 .c_info
@@ -1694,10 +1690,7 @@ td.c_view
 }
 
 .c_view-list
-{ color: #8D8D8D
-; font-size: 0.9em
-; line-height: 1.8
-}
+{ color: #8D8D8D }
 
 #fast-reply
 { background-color: #F0F0F0
@@ -2247,12 +2240,13 @@ margin-left:10px;
 .cat-topicpages a
 { padding: 0.5em 0.5em 0 0.5em }
 
-.cat-buttons:last-of-type
+.cat-buttons
 { border-bottom: 0.2em solid #D0D0D0
 ; padding-bottom: 2em
 }
 
-.cat-buttons, .topic-buttons
+.cat-buttons,
+.topic-buttons
 { padding: 2em 2em 0.5em 0
 ; text-align: right
 ; background-color: #F0F0F0
