@@ -2200,7 +2200,9 @@ form[id^="poll"] + .exclusivebutton > #topic_viewer > thead
 { background-color: #F0F0F0
 }
 
-#main > table iframe, .exclusivebutton + table td > div
+#main > table iframe,
+.exclusivebutton + table td > div,
+#topic_viewer + table > tbody > tr:first-child > td > div[style]
 { margin: 1em auto
 ; max-width: 90vw
 ; overflow: hidden
