@@ -1215,15 +1215,17 @@ padding:4px 0 4px 20px;
 }
 
 #topic_viewer > tbody > tr
-{
-; background-color: #F0F0F0
-}
+{ background-color: #F0F0F0 }
 
 #topic_viewer th:first-child > span
 { display: block
 ; padding: 0.5em
 ; font-weight: 300
 }
+
+#topic_viewer > tbody > tr:last-child,
+#forum_footer
+{ border-bottom: 0.2em solid #D0D0D0 }
 
 .c_username
 { padding: 2px 0
