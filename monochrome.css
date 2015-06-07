@@ -1679,13 +1679,11 @@ code
 .c_footicons
 { width: 100% }
 
-.c_next
+.c_next > a
 { padding: 1em 8.9em
 ; background-color: #3D3D3D
+; color: #F0F0F0
 }
-
-.c_next > a
-{ color: #F0F0F0 }
 
 .c_view
 { color: #8D8D8D
