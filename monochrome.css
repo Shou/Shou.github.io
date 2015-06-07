@@ -2242,7 +2242,7 @@ margin-left:10px;
 }
 
 .cat-pages > li
-{ margin: 0.25em }
+{ margin: 0 0.25em }
 
 .cat-topicpages a
 { padding: 0.5em 0.5em 0 0.5em }
