@@ -202,7 +202,8 @@ html, body
 .c_user > a > div:first-child,
 #profile_menu > li > ul,
 .c_user > div:first-child,
-.c_user > a > div:first-child
+.c_user > a > div:first-child,
+.cat-pages
 { display: flex }
 
 .forums
@@ -375,7 +376,6 @@ td, textarea, #profile_menuwrap, button, .btn_fake, input[type="button"],
 h2, h3
 { font-size: 1.1em }
 
-.cat-pages,
 .c_next > a
 { font-size: 1.3em }
 
@@ -1048,12 +1048,6 @@ ul li.cat-pageshead
 ; cursor: default
 ; padding: 1em
 ; border-bottom: 0.3em solid #2D2D2D
-}
-
-.cat-pages input
-{ color: #d0d0d0
-; padding: 3px 5px
-; vertical-align: baseline
 }
 
 .c_head, .c_foot, .c_sort
@@ -2240,6 +2234,11 @@ margin-left:10px;
 .cat-topicpages a
 { cursor: pointer
 ; padding: 1em
+}
+
+.cat-pagesjump > form > input
+{ padding: 1em
+; margin-top: -1em
 }
 
 .cat-topicpages a
