@@ -1680,7 +1680,8 @@ code
 { width: 100% }
 
 .c_next > a
-{ padding: 1em 8.9em
+{ padding: 1rem 8.9rem
+; margin: 3rem 0 2rem 0
 ; background-color: #3D3D3D
 ; color: #F0F0F0
 }
