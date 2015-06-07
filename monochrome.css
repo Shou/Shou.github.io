@@ -1809,16 +1809,16 @@ code
 #active_list > tbody > tr > td
 { padding: 0 1em }
 
-#active_list > tbody > tr > td:nth-child(1),
-#active_list > tbody > tr > th:nth-child(1)
+#active_list > tbody > tr:first-child
+{ display: none }
+
+#active_list > tbody > tr > td:nth-child(1)
 { min-width: 35%; max-width: 35% }
 
-#active_list > tbody > tr > td:nth-child(2),
-#active_list > tbody > tr > th:nth-child(2)
+#active_list > tbody > tr > td:nth-child(2)
 { min-width: 40%; max-width: 40% }
 
-#active_list > tbody > tr > td:nth-child(3),
-#active_list > tbody > tr > th:nth-child(3)
+#active_list > tbody > tr > td:nth-child(3)
 { min-width: 25%; max-width: 25% }
 
 #pm_inbox > tbody > tr[class] > td:nth-child(1)
