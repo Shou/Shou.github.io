@@ -35,6 +35,12 @@
  - Fix topics section spacing
     - Use flex-wrap: nowrap and wrap to control "last post by"s width
 
+FIXME NOOF
+- No URL highlighting
+- ZB advertisement stretches page
+- Avatar not centered in circle
+- Post attachment in horizontal list
+
 */
 
 /* {{{ External fonts */
@@ -138,7 +144,7 @@ html, body
 
 .c_post img, #topic_review img, .c_post video, .c_post object, .c_post audio,
 .c_post iframe
-{ max-width: calc(100% - 1rem) }
+{ max-width: calc(100% - 1rem) !important }
 
 }
 
@@ -1249,7 +1255,7 @@ td.c_user div:first-child:hover
 }
 
 td.c_user div:first-child img
-{ margin: -15px 0 0 -15px
+{ margin: -15px
 }
 
 .user_info
@@ -2537,6 +2543,9 @@ margin-left:10px;
 ; border: 0.1em solid #666
 ; transition: 0.5s background-color,border cubic-bezier(.55,0,0.1,1)
 }
+
+.c_post:hover a, .c_post:focus a
+{ color: #2196F3 }
 
 .c_post:hover .c_post-attachment, .c_post:focus .c_post-attachment
 { background-color: #2196F3
