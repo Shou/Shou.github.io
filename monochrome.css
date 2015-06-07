@@ -69,7 +69,11 @@ html, body
 { font-size: 1rem }
 
 .c_user > .usertitle
-{ font-size: 0.8em }
+{ font-size: 0.8em !important }
+
+.c_username > a,
+.topic .user_info > dd:first-of-type
+{ font-size: 1rem !important }
 
 }
 
@@ -196,7 +200,9 @@ html, body
 .c_cat-lastpost,
 .c_user > div:first-child,
 .c_user > a > div:first-child,
-#profile_menu > li > ul
+#profile_menu > li > ul,
+.c_user > div:first-child,
+.c_user > a > div:first-child
 { display: flex }
 
 .forums
@@ -207,7 +213,8 @@ html, body
 { flex-direction: column }
 
 .c_sig blockquote,
-.profile > thead > tr
+.profile > thead > tr,
+.user_info
 { flex-direction: column-reverse }
 
 .c_foot > span
@@ -219,14 +226,21 @@ blockquote > dl,
 { justify-content: space-between }
 
 #acplogin tr, #acplogin th, #submenu, .generic, #fast-reply > dd, #c_postbtn,
-[align="center"], #fast-reply, .warn
+[align="center"], #fast-reply, .warn,
+.c_user > div:first-child,
+.c_user > a > div:first-child,
+#main > table:first-child > tbody > tr,
+#main > script:first-child + table > tbody > tr,
+#topic_viewer + table > tbody > tr
 { justify-content: center }
 
 #c_notes > form, #top_info, .c_foot > span, #acplogin, .c_postinfo,
 #edit_profile > tbody > tr,
 .c_user > div:first-child,
 .c_user > a > div:first-child,
-.c_cat-mark
+.c_cat-mark,
+.c_user > div:first-child,
+.c_user > a > div:first-child
 { align-items: center }
 
 #realtop, #top
@@ -331,7 +345,8 @@ thead > tr > th small
 .c_user > .usertitle
 { font-weight: 600 }
 
-#findposts .c_mark
+#findposts .c_mark,
+.c_next > a
 { font-weight: 700 }
 
 #top_info > strong > a,
@@ -360,7 +375,8 @@ td, textarea, #profile_menuwrap, button, .btn_fake, input[type="button"],
 h2, h3
 { font-size: 1.1em }
 
-.cat-pages
+.cat-pages,
+.c_next > a
 { font-size: 1.3em }
 
 #logo,
@@ -371,6 +387,9 @@ h1, #top_bar::before,
 .folder,
 #findposts .c_mark
 { font-size: 2em }
+
+.c_next > a
+{ text-align: center }
 
 .row1 > .c_cat-views, .row2 > .c_cat-views
 { white-space: nowrap
@@ -1255,13 +1274,7 @@ td.c_user div:first-child:hover
 }
 
 td.c_user div:first-child img
-{ margin: -15px
-}
-
-.user_info
-{ flex-direction: column
-; 
-}
+{ max-width: 140px !important; max-height: 140px !important }
 
 .topic .user_info
 { font-size: 0 }
@@ -1670,18 +1683,16 @@ code
 ; min-width: 192px
 }
 
-.c_footicons, .c_next
+.c_footicons
 { width: 100% }
 
 .c_next
-{ padding: 1em 0 }
-
-.c_next a {
-display:block;
-font-size:125%;
-font-weight:700;
-text-align:center;
+{ padding: 1em 8.9em
+; background-color: #3D3D3D
 }
+
+.c_next > a
+{ color: #F0F0F0 }
 
 td.c_view
 { color: #8D8D8D
@@ -2179,7 +2190,8 @@ vertical-align: bottom
 left:auto;
 }
 
-#main > table:first-child
+#main > table:first-child,
+#main > script:first-child + table
 { height: auto !important
 ; margin: 0 !important
 }
@@ -2875,6 +2887,7 @@ font-weight:700;
 
 .c_topicfoot > a
 { padding: 0 0.5em
+; height: 0.8rem
 }
 
 .c_topicfoot > [href$="/old/"]::before
