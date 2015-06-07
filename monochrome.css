@@ -2545,7 +2545,9 @@ margin-left:10px;
 }
 
 .c_post:hover a, .c_post:focus a
-{ color: #2196F3 }
+{ color: #2196F3
+; transition: 0.3s color cubic-bezier(.55,0,0.1,1)
+}
 
 .c_post:hover .c_post-attachment, .c_post:focus .c_post-attachment
 { background-color: #2196F3
