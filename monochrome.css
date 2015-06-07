@@ -1684,9 +1684,9 @@ code
 .c_next > a
 { color: #F0F0F0 }
 
-td.c_view
+.c_view
 { color: #8D8D8D
-; padding: 2em 1em
+; padding: 2em 1em 0.5em
 }
 
 .c_view-list
@@ -1805,6 +1805,18 @@ td.c_view
 { min-width: 100%
 ; max-width: 100%
 }
+
+#active_list > tbody > tr > td:nth-child(1),
+#active_list > tbody > tr > th:nth-child(1)
+{ min-width: 35%; max-width: 35% }
+
+#active_list > tbody > tr > td:nth-child(2),
+#active_list > tbody > tr > th:nth-child(2)
+{ min-width: 40%; max-width: 40% }
+
+#active_list > tbody > tr > td:nth-child(3),
+#active_list > tbody > tr > th:nth-child(3)
+{ min-width: 25%; max-width: 25% }
 
 #pm_inbox > tbody > tr[class] > td:nth-child(1)
 { min-width: 40%; max-width: 40% }
@@ -2259,7 +2271,7 @@ text-align:center;
 #announcement_list::before
 { content: "ANNOUNCEMENTS"
 ; transition: 0.5s all cubic-bezier(.55,0,0.1,1)
-; padding: 2em 1em 1em
+; padding: 1em
 ; font-weight: bold
 }
 
