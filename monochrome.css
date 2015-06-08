@@ -1413,9 +1413,7 @@ margin-bottom:1px;
 }
 
 .profile .c_mark > div > img
-{ margin-top: -0.3em
-; margin-left: -0.3em
-}
+{ margin: -0.3em }
 
 .profile input[name="status"]
 { max-width: calc(50vw - 9em) }
@@ -2482,12 +2480,6 @@ a + .description
 
 .c_sig, .c_nosig
 { width: 100% }
-
-.avatar {
-display:block;
-margin:auto;
-text-align:center;
-}
 
 .av_wrap {
 overflow:hidden;
