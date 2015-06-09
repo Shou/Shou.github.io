@@ -1250,6 +1250,7 @@ padding:4px 0 4px 20px;
 { font-size: 0.8em
 ; min-width: 192px
 ; max-width: 192px
+; padding: 0
 ; vertical-align: top
 ; word-wrap: break-word
 ; text-overflow: ellipsis
@@ -1290,7 +1291,7 @@ td.c_user div:first-child img
 { display: none }
 
 .c_user > .usertitle
-{ margin: 1em 0
+{ margin: 2em 0 1em
 ; padding: 0.5em
 ; overflow: hidden
 
