@@ -978,11 +978,11 @@ input[type="button"]:hover, .c_foot a:hover
 
 #wrap
 { background: #E0E0E0
-; margin: 0 auto 5rem
+; margin: 0 auto 4.35rem
 ; max-width: 1024px
-; box-shadow: 0 0 0 1rem #e0e0e0, 0 0 0 1.5rem #d0d0d0, 0 0 0 2rem #c0c0c0
-            , 0 0 0 3rem #909090, 0 0 0 3.5rem #808080, 0 0 0 4rem #707070
-            , 0 0 0 5rem #303030, 0 0 0 5.5rem #202020, 0 0 0 6rem #101010
+; box-shadow: 0 0 0 0.8rem #e0e0e0, 0 0 0 1.2rem #d0d0d0, 0 0 0 1.6rem #c0c0c0
+            , 0 0 0 2.4rem #909090, 0 0 0 2.8rem #808080, 0 0 0 3.2rem #707070
+            , 0 0 0 4rem #303030, 0 0 0 4.4rem #202020, 0 0 0 4.8rem #101010
 }
 
 #nav
@@ -2131,7 +2131,7 @@ padding:1px 10px;
 ; text-align: left
 ; border-top: 0.05em solid #202020
 ; font-weight: 600
-; max-width: 1112px
+; max-width: calc(1024px + 8.8rem)
 ; box-sizing: border-box
 }
 
