@@ -974,16 +974,15 @@ input[type="button"]:hover, .c_foot a:hover
 }
 
 #submenu > a
-{ padding: 1.5em 1em 1.5em
-}
+{ padding: 1.5em 1em 1.5em }
 
 #wrap
 { background: #E0E0E0
-; margin: 0 auto 44px
+; margin: 0 auto 5rem
 ; max-width: 1024px
-; box-shadow: 0 0 0 8px #e0e0e0, 0 0 0 12px #d0d0d0, 0 0 0 16px #c0c0c0
-            , 0 0 0 24px #909090, 0 0 0 28px #808080, 0 0 0 32px #707070
-            , 0 0 0 40px #303030, 0 0 0 44px #202020, 0 0 0 48px #101010
+; box-shadow: 0 0 0 1rem #e0e0e0, 0 0 0 1.5rem #d0d0d0, 0 0 0 2rem #c0c0c0
+            , 0 0 0 3rem #909090, 0 0 0 3.5rem #808080, 0 0 0 4rem #707070
+            , 0 0 0 5rem #303030, 0 0 0 4.5rem #202020, 0 0 0 5rem #101010
 }
 
 #nav
