@@ -2099,9 +2099,7 @@ padding:1px 10px;
 }
 
 #foot_datetime > a
-{ font-size: 1.5em
-; text-transform: lowercase
-}
+{ text-transform: lowercase }
 
 #foot_datetime > a::before
 { content: "\25D4"
@@ -2889,7 +2887,8 @@ font-weight:700;
 ; flex-wrap: wrap
 ; justify-content: center
 ; width: 100%
-; margin-top: 2rem
+; margin-top: 2.5rem
+; margin-bottom: -3rem
 ; font-size: 0
 }
 
