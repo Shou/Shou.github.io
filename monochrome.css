@@ -1232,8 +1232,8 @@ padding:4px 0 4px 20px;
 { border-bottom: 0.2em solid #D0D0D0 }
 
 .c_username
-{ padding: 2px 0
-; margin: 0 0 2em 0
+{ margin: 0 0 2em 0
+; padding: .5em 1em
 ; text-align: center
 ; min-width: 192px
 ; max-width: 192px
@@ -1593,9 +1593,8 @@ code
 ; background-color: #3d3d3d
 }
 
-.c_username, .c_postinfo
-{ padding: 1.5em 1em 1em
-}
+.c_postinfo
+{ padding: 1em }
 
 .c_postinfo
 { font-size: 0.8em
