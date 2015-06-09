@@ -1242,6 +1242,7 @@ padding:4px 0 4px 20px;
 .c_username > a
 { font-size: 1.33em
 ; font-weight: bold
+; color: #f0f0f0
 }
 
 .c_user
@@ -2919,9 +2920,8 @@ font-weight:700;
 { font-size: 120%
 }
 
-a.member, .calendar td a, .calendar a:hover, #faq dd a, #faq dd a:hover
-{ color: #4D4D4D
-}
+.calendar td a, .calendar a:hover, #faq dd a, #faq dd a:hover
+{ color: #4D4D4D }
 
 img,.meta_box button img,td.c_cat-mark input, .c_post-attachment img,.warn img,
 #ucp_gallery a img {
