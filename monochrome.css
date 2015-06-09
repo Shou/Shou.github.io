@@ -2468,11 +2468,13 @@ a + .description
 
 .t_lastpostdate
 { padding: 0 1em
-; flex: 2
+; flex-grow: 2
 }
 
 .t_lastpostdate + a
-{ padding-left: 0.5em }
+{ padding-left: 0.5em
+; flex-shrink: 2
+}
 
 .t_lastpostdate + a::before
 { content: "\f14b\a0" }
