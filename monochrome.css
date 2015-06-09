@@ -2468,7 +2468,7 @@ a + .description
 
 .t_lastpostdate
 { padding: 0 1em
-; min-width: 9em
+; flex: 2
 }
 
 .t_lastpostdate + a
