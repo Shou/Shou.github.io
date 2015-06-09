@@ -2480,6 +2480,7 @@ a + .description
 ; max-height: 999999px
 ; width: 100%
 ; overflow: hidden
+; margin-top: -2rem
 }
 
 .c_sig, .c_nosig
