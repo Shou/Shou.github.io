@@ -150,6 +150,9 @@ html, body
 .c_post iframe
 { max-width: calc(100% - 1rem) !important }
 
+.c_topicfoot
+{ justify-content: flex-start }
+
 }
 
 /* End of media rules }}} */
@@ -204,7 +207,8 @@ html, body
 .c_user > div:first-child,
 .c_user > a > div:first-child,
 .cat-pages,
-.profile .c_mark > div
+.profile .c_mark > div,
+.c_topicfoot
 { display: flex }
 
 .forums
@@ -234,7 +238,8 @@ blockquote > dl,
 #main > table:first-child > tbody > tr,
 #main > script:first-child + table > tbody > tr,
 #topic_viewer + table > tbody > tr,
-.profile .c_mark > div
+.profile .c_mark > div,
+.c_topicfoot
 { justify-content: center }
 
 #c_notes > form, #top_info, .c_foot > span, #acplogin,
@@ -2273,9 +2278,6 @@ margin-left:10px;
 .cat-buttons
 { border-bottom: 0.2em solid #D0D0D0 }
 
-.topic-buttons:last-of-type
-{ padding: 2em }
-
 .postbtn td {
 padding:5px;
 text-align:center;
@@ -2889,7 +2891,6 @@ font-weight:700;
 
 .c_topicfoot
 { text-transform: uppercase
-; display: flex
 ; width: 100%
 ; margin-top: 2.5rem
 ; margin-bottom: -3rem
