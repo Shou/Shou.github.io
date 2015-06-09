@@ -568,6 +568,7 @@ th[colspan]
 td
 { color: #3D3D3D
 ; padding: 0 0.5em
+; display: block
 }
 
 h2, th a, th a:hover
