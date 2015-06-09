@@ -1236,6 +1236,7 @@ padding:4px 0 4px 20px;
 ; text-align: center
 ; min-width: 192px
 ; max-width: 192px
+; background-color: #3D3D3D
 }
 
 .c_username > a
@@ -1691,7 +1692,7 @@ code
 
 .c_view
 { color: #8D8D8D
-; padding: 2em 1em 0.5em
+; padding: 1em
 }
 
 .c_view-list
@@ -2884,8 +2885,6 @@ font-weight:700;
 .c_topicfoot
 { text-transform: uppercase
 ; display: flex
-; flex-wrap: wrap
-; justify-content: center
 ; width: 100%
 ; margin-top: 2.5rem
 ; margin-bottom: -3rem
