@@ -237,7 +237,7 @@ blockquote > dl,
 .profile .c_mark > div
 { justify-content: center }
 
-#c_notes > form, #top_info, .c_foot > span, #acplogin, .c_postinfo,
+#c_notes > form, #top_info, .c_foot > span, #acplogin,
 #edit_profile > tbody > tr,
 .c_user > div:first-child,
 .c_user > a > div:first-child,
@@ -254,7 +254,7 @@ blockquote > dl,
 .c_cat-views, .c_cat-starter, .c_cat-title, .c_cat-lastpost, .replied-marker
 { align-self: center }
 
-#top_info
+#top_info, .c_postinfo
 { align-self: baseline }
 
 #realtop, #submenu, .c_foot > span, .c_cat-title, #fast-reply > dd, .warn,
