@@ -1120,10 +1120,8 @@ display:block;
 font-weight:400;
 }
 
-.pm_new > td {
-background:#000;
-font-weight:700;
-}
+.pm_new > td
+{ font-weight: 700 }
 
 .hidden .c_post {
 background:#000;
@@ -2048,54 +2046,73 @@ margin:0;
 ; vertical-align: top
 }
 
-#pmtoast {
-background:#000;
-border:2px solid #333;
-bottom:10px;
-color:#AAAAAA;
-display:none;
-font-size:90%;
-position:fixed;
-right:10px;
-text-align:right;
-text-decoration:none;
-width:200px;
-z-index:1;
+#pmtoast
+{ background-color: #f0f0f0
+; margin: 0 auto
+; position: fixed
+; width: 100%
+; max-width: calc(1024px + 8.8rem)
+; z-index: 1
+; bottom: 0
+; display: flex !important
+; flex-direction: column-reverse
 }
 
-#pmtoast:hover {
-border-color:#333;
+#pmtoast > a
+{ color: #3d3d3d
+; display: flex
 }
 
-#pmlink {
-background:url(http://z3.ifrm.com/static/1/toast.png) no-repeat 5px;
-color:#AAAAAA;
-display:block;
-padding:10px 10px 10px 55px;
-text-decoration:none;
+#pmlink
+{ flex-wrap: wrap
+; padding: 1rem 1rem 2rem 1rem
 }
 
-#pmlink big {
-color:#AAAAAA;
-display:block;
-font-weight:700;
-padding-bottom:5px;
+#pmlink > big
+{ font-family: "QuickSand"
+; font-size: 1.1rem
+; text-align: center
+; width: 100%
 }
 
-#pmlink strong {
-color:#AAAAAA;
+#pmlink > strong
+{ font-weight: 400
+; padding: 0 0.2rem
+; text-align: center
 }
 
-#pmclose {
-border-top:1px solid #000;
-color:#AAAAAA;
-display:block;
-font-size:80%;
-padding:1px 10px;
+#pmlink > strong:nth-of-type(1),
+#pmlink > strong:nth-of-type(3)
+{ order: 1
+; font-family: Quicksand
+; font-weight: 1.1rem
 }
 
-#pmclose:hover
-{ color: #AAAAAA
+#pmlink > strong:nth-of-type(1)::after
+{ content: "," }
+
+#pmlink > strong:nth-of-type(2)
+{ order: 0
+; font-size: 2rem
+; font-weight: 900
+; width: 100%
+}
+
+#pmlink > small,
+#pmlink > br
+{ display: none }
+
+#pmclose
+{ background-color: crimson
+; font-size: 0
+; justify-content: center
+}
+
+#pmclose::after
+{ content: "x"
+; color: #f0f0f0
+; font-size: 2rem
+; padding: 0.5rem
 }
 
 #foot tr
