@@ -275,12 +275,14 @@ blockquote > dl,
 }
 
 #top
-{ flex: 1
-}
+{ flex: 1 }
 
 .c_cat-title
-{ flex: 2
-}
+{ flex: 2 }
+
+.cat-pages > li,
+.cat-topicpages > li
+{ flex-grow: 1 }
 
 .warning,
 .t_lastpostdate
@@ -702,16 +704,16 @@ input[type="button"]:hover, .c_foot a:hover
 
 .notice
 { background-color: #1D1D1D
-; box-shadow: 0 0 0 4px #2d2d2d, 0 0 0 6px #3d3d3d, 0 0 0 8px #4d4d4d
-            , 0 0 0 12px #8d8d8d, 0 0 0 14px #9d9d9d, 0 0 0 16px #adadad
-            , 0 0 0 20px #dddddd, 0 0 0 22px #ededed, 0 0 0 24px transparent
+; box-shadow: 0 0 0 0.4rem #2d2d2d, 0 0 0 0.6rem #3d3d3d, 0 0 0 0.8rem #4d4d4d
+            , 0 0 0 1.2rem #8d8d8d, 0 0 0 1.4rem #9d9d9d, 0 0 0 1.6rem #adadad
+            , 0 0 0 2rem #dddddd, 0 0 0 2.2rem #ededed, 0 0 0 2.4rem transparent
 }
 
 .error
 { background-color: #1D0100
-; box-shadow: 0 0 0 4px #2C0200, 0 0 0 6px #3B0300, 0 0 0 8px #4A0400
-            , 0 0 0 12px #860800, 0 0 0 14px #950900, 0 0 0 16px #A40A00
-            , 0 0 0 20px #E42A25, 0 0 0 22px #F55652, 0 0 0 24px #FFBFBD
+; box-shadow: 0 0 0 0.4rem #2C0200, 0 0 0 0.6rem #3B0300, 0 0 0 0.8rem #4A0400
+            , 0 0 0 1.2rem #860800, 0 0 0 1.4rem #950900, 0 0 0 1.6rem #A40A00
+            , 0 0 0 2rem #E42A25, 0 0 0 2.2rem #F55652, 0 0 0 2.4rem #FFBFBD
 }
 
 .notice dt, .error dt
@@ -766,8 +768,7 @@ input[type="button"]:hover, .c_foot a:hover
 }
 
 .cat-pages
-{ list-style: none
-}
+{ list-style: none }
 
 #nav, .cat-topicpages, .calendar ul, .meta_menu ul,
 #pm_folderlist, #profile_menuwrap ul, #top ul
@@ -778,7 +779,7 @@ input[type="button"]:hover, .c_foot a:hover
 #profile_menuwrap ul, .cat-topicpages,blockquote dl, #fast-reply dd
 { margin: 0 }
 
-#nav li,ul.cat-pages li, .cat-topicpages li,.calendar li,
+#nav li, .calendar li,
 #pm_folderlist li, #ucp_gallery li
 { display: inline }
 
@@ -1067,11 +1068,10 @@ input[type="button"]:hover, .c_foot a:hover
 }
 
 ul li.cat-pageshead
-{ display: none
-}
+{ display: none }
 
 .cat-pages
-{ margin: 1em
+{ margin: 1em 10em 1em 1em
 ; padding: 1em 0.5em
 }
 
@@ -1079,6 +1079,8 @@ ul li.cat-pageshead
 { background-color: #F0F0F0
 ; border-bottom: 0.3em solid #D0D0D0
 ; color: #4D4D4D
+; display: block
+; text-align: center
 }
 
 .cat-pages a:hover,
@@ -1092,6 +1094,8 @@ ul li.cat-pageshead
 ; cursor: default
 ; padding: 1em
 ; border-bottom: 0.3em solid #2D2D2D
+; display: block
+; text-align: center
 }
 
 .c_head, .c_foot, .c_sort
@@ -2278,8 +2282,8 @@ margin-left:10px;
 .cat-buttons,
 .topic-buttons
 { padding: 2em 0
+; margin-bottom: -7rem
 ; text-align: right
-; background-color: #F0F0F0
 }
 
 .cat-buttons
@@ -3198,6 +3202,7 @@ padding:0;
 
 .bunk-big-butt
 { border-bottom: 3px solid #4D4D4D
+; background-color: #f0f0f0
 ; font-size: 1.6em
 ; padding: 0.1em 0.5em
 ; margin: 0 1em
