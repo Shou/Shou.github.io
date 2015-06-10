@@ -778,7 +778,7 @@ input[type="button"]:hover, .c_foot a:hover
 #profile_menuwrap ul, .cat-topicpages,blockquote dl, #fast-reply dd
 { margin: 0 }
 
-#nav li, .calendar li, .cat-topicpages li
+#nav li, .calendar li, .cat-topicpages li,
 #pm_folderlist li, #ucp_gallery li
 { display: inline }
 
