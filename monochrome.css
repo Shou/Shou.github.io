@@ -1309,7 +1309,7 @@ td.c_user div:first-child img
 { display: none }
 
 .c_user > .usertitle
-{ margin: 2em 0 1em
+{ margin: calc(1rem + 5px) 0 1em
 ; padding: 0.5em
 ; overflow: hidden
 
