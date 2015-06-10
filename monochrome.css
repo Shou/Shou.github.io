@@ -1067,9 +1067,13 @@ ul li.cat-pageshead
 { display: none }
 
 .cat-pages
-{ padding: 0
-; margin: -5rem 10rem 0 0
-}
+{ padding: 0 }
+
+.cat-buttons + .cat-pages
+{ margin: -5rem 10rem 0 0 }
+
+.cat-buttons
+{ margin: 0 10rem -5rem 0 }
 
 .cat-pages a, .cat-pagesjump i, .cat-topicpages a
 { background-color: #F0F0F0
