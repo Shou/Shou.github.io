@@ -1067,9 +1067,13 @@ ul li.cat-pageshead
 { display: none }
 
 .cat-pages
-{ margin: 2rem 10rem 2rem 0
-; padding: 0
-}
+{ padding: 0 }
+
+.cat-pages:first-of-type
+{ margin-top: -5rem }
+
+.cat-pages:last-of-type
+{ margin-bottom: -5rem }
 
 .cat-pages a, .cat-pagesjump i, .cat-topicpages a
 { background-color: #F0F0F0
@@ -2299,7 +2303,6 @@ margin-left:10px;
 .cat-buttons,
 .topic-buttons
 { padding: 2em 0
-; margin-bottom: -7rem
 ; text-align: right
 }
 
