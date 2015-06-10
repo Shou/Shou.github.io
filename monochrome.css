@@ -1071,8 +1071,7 @@ ul li.cat-pageshead
 { display: none }
 
 .cat-pages
-{ margin: 1em 10em 1em 1em
-; padding: 1em 0.5em
+{ margin: 2rem 10rem 2rem 0
 }
 
 .cat-pages a, .cat-pagesjump i, .cat-topicpages a
@@ -1084,7 +1083,8 @@ ul li.cat-pageshead
 }
 
 .cat-pages a:hover,
-.cat-topicpages a:hover
+.cat-topicpages a:hover,
+.cat-pagesjump i
 { border-color: #424242
 ; color: #2D2D2D
 }
