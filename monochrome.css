@@ -280,8 +280,7 @@ blockquote > dl,
 .c_cat-title
 { flex: 2 }
 
-.cat-pages > li,
-.cat-topicpages > li
+.cat-pages > li
 { flex-grow: 1 }
 
 .warning,
@@ -779,7 +778,7 @@ input[type="button"]:hover, .c_foot a:hover
 #profile_menuwrap ul, .cat-topicpages,blockquote dl, #fast-reply dd
 { margin: 0 }
 
-#nav li, .calendar li,
+#nav li, .calendar li, .cat-topicpages li
 #pm_folderlist li, #ucp_gallery li
 { display: inline }
 
@@ -1079,13 +1078,11 @@ ul li.cat-pageshead
 { background-color: #F0F0F0
 ; border-bottom: 0.3em solid #D0D0D0
 ; color: #4D4D4D
-; display: block
-; text-align: center
 }
 
 .cat-pages a:hover,
 .cat-topicpages a:hover,
-.cat-pagesjump i
+.cat-pagesjump i:hover
 { border-color: #424242
 ; color: #2D2D2D
 }
@@ -1095,7 +1092,12 @@ ul li.cat-pageshead
 ; cursor: default
 ; padding: 1em
 ; border-bottom: 0.3em solid #2D2D2D
-; display: block
+}
+
+.cat-pages a,
+.cat-pagesjump i,
+.cat-pages span
+{ display: block
 ; text-align: center
 }
 
