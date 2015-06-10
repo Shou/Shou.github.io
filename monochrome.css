@@ -2268,7 +2268,7 @@ margin-left:10px;
 .cat-pagesjump i,
 .cat-topicpages a
 { cursor: pointer
-; padding: 1em
+; padding: 1rem 0
 }
 
 .cat-pagesjump > form > input
