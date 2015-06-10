@@ -60,7 +60,7 @@ html, body
 { font-size: 24pt }
 
 .topic h2, #portal h2, #portal_foot h2, thead th
-{ font-size: 2em }
+{ font-size: 1.5em }
 
 .topic .user_info > dd:first-of-type,
 .c_topicfoot > a[href$="/old/"]::before,
@@ -92,7 +92,7 @@ html, body
 
 
 .topic h2, #portal h2, #portal_foot h2, thead th
-{ font-size: 2.5em }
+{ font-size: 2em }
 
 }
 
@@ -2244,7 +2244,7 @@ form[id^="poll"] + .exclusivebutton > #topic_viewer > thead
 #main > table iframe,
 .exclusivebutton + table td > div,
 #topic_viewer + table > tbody > tr:first-child > td > div[style]
-{ margin: 1em auto
+{ margin: 1em auto 0 auto
 ; max-width: 90vw
 ; overflow: hidden
 }
