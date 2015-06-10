@@ -1072,7 +1072,8 @@ ul li.cat-pageshead
 }
 
 .cat-buttons + .cat-pages,
-.topic-buttons + .cat-pages
+.topic-buttons + .cat-pages,
+.topic-buttons:last-of-type ~ .cat-pages
 { margin: -5rem 10rem 0 0 }
 
 .cat-pages a, .cat-pagesjump i, .cat-topicpages a
