@@ -67,7 +67,7 @@ var embeds =
         , s: "https://w.soundcloud.com/player/?url=$1"
         }
     , "audio":
-        { u: "(https?:\\/\\/\\S+?\\.(mp3|ogg))"
+        { u: "(https?:\\/\\/\\S+?\\.(mp3|ogg))$"
         , e: function(url) {
                 return speedcore("audio", { src: url
                                           , controls: true
