@@ -124,6 +124,8 @@ function high(e){
     // each link
     for (var j = 0; j < as.length; j++) {
         try {
+            if (as[j].href !== as[j].textContent) continue
+
             var ass = as[j]
               , ene = replacer(ass.href)
  
