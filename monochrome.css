@@ -200,6 +200,7 @@ html, body
 
 /* {{{ FLEX MY MUSCLES */
 
+#main,
 #edit_sig > tbody, #edit_sig > tbody > tr, #c_post, .c_sig blockquote, dl,
 #c_notes > form, #foot > tbody > tr, #acplogin, #acplogin table,
 #acplogin thead, #acplogin tbody, #acplogin tr, #acplogin th,
@@ -223,6 +224,7 @@ html, body
 .forums
 { display: flex !important }
 
+#main,
 #c_post, #edit_sig > tbody, #c_notes > form, #acplogin, #acplogin table,
 #acplogin thead, #acplogin tbody, #top_menu, .drop_menu > li
 { flex-direction: column }
