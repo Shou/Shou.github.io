@@ -609,10 +609,13 @@ h2, th a, th a:hover
 
 thead > tr > th
 { text-align: center
-/* ↓ Android Chrome is Literally Retarded: The Unwanted Scaling of Fonts */
-; max-height: 99999px
 ; word-wrap: break-word
 }
+
+/* ↓ Android Chrome is Literally Retarded: The Unwanted Scaling of Fonts */
+thead > tr > th,
+.c_view
+{ max-height: 99999px }
 
 thead > tr > th small
 { display: block
