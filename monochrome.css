@@ -1089,7 +1089,7 @@ ul li.cat-pageshead
 .cat-buttons + .cat-pages,
 .topic-buttons + .cat-pages,
 .topic-buttons:last-of-type ~ .cat-pages
-{ margin: -4.66rem 10rem 1rem 0 }
+{ margin: -4.63rem 10rem 1rem 0 }
 
 .cat-pages a, .cat-pagesjump i, .cat-topicpages a
 { background-color: #F0F0F0
@@ -2323,7 +2323,7 @@ margin-left:10px;
 }
 
 .cat-buttons:last-of-type
-{ padding: 1.35rem 0 }
+{ padding: 1.37rem 0 }
 
 .postbtn td {
 padding:5px;
