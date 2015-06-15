@@ -1074,7 +1074,7 @@ ul li.cat-pageshead
 .cat-buttons + .cat-pages,
 .topic-buttons + .cat-pages,
 .topic-buttons:last-of-type ~ .cat-pages
-{ margin: -5rem 10rem 0 0 }
+{ margin: -4.66rem 10rem 0 0 }
 
 .cat-pages a, .cat-pagesjump i, .cat-topicpages a
 { background-color: #F0F0F0
@@ -2066,6 +2066,7 @@ margin:0;
 #pmtoast > a
 { color: #3d3d3d
 ; display: flex
+; justify-content: center
 }
 
 #pmlink
@@ -3220,7 +3221,7 @@ padding:0;
 .bunk-big-butt
 { border-bottom: 0.3rem solid #4D4D4D
 ; background-color: #f0f0f0
-; font-size: 1.6rem
+; font-size: 1.55rem
 ; padding: 0.6rem 1rem
 ; color: #4D4D4D
 ; transition: 0.3s all cubic-bezier(.55,0,0.1,1)
