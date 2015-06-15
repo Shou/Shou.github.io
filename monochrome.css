@@ -103,7 +103,13 @@ html, body
 .c_post, #topic_review .c_desc + td
 { max-width: 750px }
 
-.c_post img, #topic_review img, .c_post video, .c_post object, .c_post audio,
+.c_post img,
+#c_post-preview img,
+#c_post-preview object,
+#topic_review img,
+.c_post video,
+.c_post object,
+.c_post audio,
 .c_post iframe
 { max-width: 700px }
 
@@ -146,7 +152,13 @@ html, body
 .c_post, #topic_review .c_desc + td
 { max-width: 100% }
 
-.c_post img, #topic_review img, .c_post video, .c_post object, .c_post audio,
+.c_post img,
+#c_post-preview img,
+#c_post-preview object,
+#topic_review img,
+.c_post video,
+.c_post object,
+.c_post audio,
 .c_post iframe
 { max-width: calc(100% - 1rem) !important }
 
@@ -1248,8 +1260,7 @@ padding:4px 0 4px 20px;
 }
 
 #topic_viewer > tbody > tr:last-child,
-#forum_footer,
-.exclusivebutton
+#forum_footer
 { border-bottom: 0.2em solid #D0D0D0 }
 
 .c_username
