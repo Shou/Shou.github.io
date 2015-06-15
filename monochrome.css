@@ -517,11 +517,11 @@ big > big > big > big > big > big > big > big > big > big > big > big > big > bi
 #top_info a[href$="/logout/"]:focus::after
 { display: block
 ; position: absolute
-; background-color: #03A9F4
+; background-color: #3d3d3d
 ; color: #F0F0F0
-; border: 0.1rem solid #ededed
+; border: 0.1rem solid #d0d0d0
 ; padding: 0.5rem 1rem
-; margin: -2rem 2rem
+; margin: 0.5rem 0 0 0
 ; font-size: 1rem
 }
 
@@ -1885,6 +1885,9 @@ code
 
 #forum_leaders_global > tbody > tr:nth-child(n+2) > td
 { padding: 0 1em }
+
+#pm_inbox > tbody > .row1:first-of-type
+{ margin-top: 1rem }
 
 #quick_pm_compose > tbody > tr:first-child
 { display: flex
