@@ -1086,7 +1086,7 @@ ul li.cat-pageshead
 .cat-buttons + .cat-pages,
 .topic-buttons + .cat-pages,
 .topic-buttons:last-of-type ~ .cat-pages
-{ margin: -4.66rem 10rem 0 0 }
+{ margin: -4.66rem 10rem 1rem 0 }
 
 .cat-pages a, .cat-pagesjump i, .cat-topicpages a
 { background-color: #F0F0F0
@@ -1105,7 +1105,7 @@ ul li.cat-pageshead
 { color: #2D2D2D
 ; cursor: default
 ; padding: 1em
-; border-bottom: 0.3em solid #2D2D2D
+; border-bottom: 0.3em solid #3D3D3D
 }
 
 .cat-pages a,
@@ -2315,7 +2315,7 @@ margin-left:10px;
 
 .cat-buttons,
 .topic-buttons
-{ padding: 2em 0
+{ padding: 1em 0
 ; text-align: right
 }
 
@@ -3236,6 +3236,9 @@ padding:0;
 ; padding: 0.6rem 1rem
 ; color: #4D4D4D
 ; transition: 0.3s all cubic-bezier(.55,0,0.1,1)
+; width: 9.75rem
+; display: inline-block
+; text-align: center
 }
 
 .bunk-big-butt:hover
