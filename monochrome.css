@@ -207,6 +207,7 @@ html, body
 #acplogin tr td:last-child, #acplogin #loginform, #realtop, #top, #top_menu,
 #top_info, .drop_menu > li, #submenu, .c_foot > span, #boardmeta,
 .c_postinfo, .c_footicons, #fast-reply > dd, #c_postbtn, [align="center"],
+.c_postfoot > td:first-of-type,
 .warn,
 .c_cat-title,
 .c_cat-mark,
@@ -226,7 +227,8 @@ html, body
 
 #main,
 #c_post, #edit_sig > tbody, #c_notes > form, #acplogin, #acplogin table,
-#acplogin thead, #acplogin tbody, #top_menu, .drop_menu > li
+#acplogin thead, #acplogin tbody, #top_menu, .drop_menu > li,
+.c_postfoot > td:first-of-type
 { flex-direction: column }
 
 .c_sig blockquote,
@@ -260,7 +262,8 @@ blockquote > dl,
 .c_cat-mark,
 .c_user > div:first-child,
 .c_user > a > div:first-child,
-.profile .c_mark > div
+.profile .c_mark > div,
+.c_postfoot > td:first-of-type
 { align-items: center }
 
 #realtop, #top
@@ -3219,6 +3222,7 @@ padding:0;
 ; margin: 0.3em 0.3em
 ; background-color: #f0f0f0
 ; transition: 0.3s all cubic-bezier(.55,0,0.1,1)
+; display: inline-block
 }
 
 .bunk-button:hover
