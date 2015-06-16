@@ -281,12 +281,11 @@ blockquote > dl,
 
 #realtop, #submenu, .c_foot > span, .c_cat-title, #fast-reply > dd, .warn,
 #inlinetopic > .posts > tbody > tr,
-.profile:nth-child(2) > tbody > tr:first-child,
+.profile:nth-of-type(2) > tbody > tr:first-child,
 #search_results_topics + .forums > tbody > .row1,
 #search_results_topics + .forums > tbody > .row2,
 #announcement_head ~ tr,
-.c_postfoot > td:first-of-type,
-.profile:first-of-type > tbody > tr:first-child
+.c_postfoot > td:first-of-type
 { flex-wrap: wrap }
 
 #top
