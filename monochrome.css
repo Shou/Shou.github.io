@@ -286,7 +286,7 @@ blockquote > dl,
 #search_results_topics + .forums > tbody > .row2,
 #announcement_head ~ tr,
 .c_postfoot > td:first-of-type,
-.profile > tbody > tr:first-child
+.profile:first-of-type > tbody > tr:first-child
 { flex-wrap: wrap }
 
 #top
@@ -1447,6 +1447,18 @@ margin-bottom:1px;
 #profile_menu a:focus::after,
 #profile_menu a:hover::after
 { height: 100% }
+
+.profile:nth-of-type(3) > tbody > tr:nth-child(2)
+{ border-bottom: 0.3rem solid #d0d0d0 }
+
+.profile:nth-of-type(3) > tbody > tr:nth-child(2) > th:first-child
+{ min-width: 192px; max-width: 192px }
+
+.profile:nth-of-type(3) > tbody > tr:nth-child(2) > th:last-child
+{ width: 100% }
+
+.profile:nth-of-type(3) > tbody > tr:nth-child(3) > .c_sig
+{ margin: 0 }
 
 .profile .c_mark
 { order: -1
