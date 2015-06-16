@@ -3216,7 +3216,7 @@ padding:0;
 .bunk-button
 { border-bottom: 0.2em solid #2d2d2d
 ; padding: 0.3em 0.5em 0.1em
-; margin: 0 0.3em
+; margin: 0.3em 0.3em
 ; background-color: #f0f0f0
 ; transition: 0.3s all cubic-bezier(.55,0,0.1,1)
 }
