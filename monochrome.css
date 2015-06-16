@@ -276,6 +276,9 @@ blockquote > dl,
 #top_info, .c_postinfo
 { align-self: baseline }
 
+.c_footicons
+{ align-self: flex-end }
+
 #realtop, #submenu, .c_foot > span, .c_cat-title, #fast-reply > dd, .warn,
 #inlinetopic > .posts > tbody > tr,
 .profile:nth-child(2) > tbody > tr:first-child,
