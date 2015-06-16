@@ -286,6 +286,7 @@ blockquote > dl,
 #search_results_topics + .forums > tbody > .row2,
 #announcement_head ~ tr,
 .c_postfoot > td:first-of-type
+.profile > tbody > tr:first-child
 { flex-wrap: wrap }
 
 #top
