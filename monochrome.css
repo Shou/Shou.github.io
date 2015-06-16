@@ -227,8 +227,7 @@ html, body
 
 #main,
 #c_post, #edit_sig > tbody, #c_notes > form, #acplogin, #acplogin table,
-#acplogin thead, #acplogin tbody, #top_menu, .drop_menu > li,
-.c_postfoot > td:first-of-type
+#acplogin thead, #acplogin tbody, #top_menu, .drop_menu > li
 { flex-direction: column }
 
 .c_sig blockquote,
@@ -252,7 +251,8 @@ blockquote > dl,
 #main > script:first-child + table > tbody > tr,
 #topic_viewer + table > tbody > tr,
 .profile .c_mark > div,
-.c_topicfoot
+.c_topicfoot,
+.c_postfoot > td:first-of-type
 { justify-content: center }
 
 #c_notes > form, #top_info, .c_foot > span, #acplogin,
@@ -281,7 +281,8 @@ blockquote > dl,
 .profile:nth-child(2) > tbody > tr:first-child,
 #search_results_topics + .forums > tbody > .row1,
 #search_results_topics + .forums > tbody > .row2,
-#announcement_head ~ tr
+#announcement_head ~ tr,
+.c_postfoot > td:first-of-type
 { flex-wrap: wrap }
 
 #top
