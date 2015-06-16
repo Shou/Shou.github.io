@@ -1449,7 +1449,7 @@ margin-bottom:1px;
 { height: 100% }
 
 .profile:nth-of-type(4) > tbody > tr:nth-child(2)
-{ border-bottom: 0.3rem solid #d0d0d0 }
+{ border-bottom: 0.2rem solid #d0d0d0 }
 
 .profile:nth-of-type(4) > tbody > tr:nth-child(2) > th:first-child
 { min-width: 192px; max-width: 192px }
