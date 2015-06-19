@@ -134,7 +134,6 @@ function high(e){
  
                 if (ene.tagName === "VIDEO") {
                     ene.addEventListener("loadeddata", function(e) {
-                        console.log(ene), console.log(this)
                         log("moz: " + this.mozHasAudio)
                         log("webkit: " + this.webkitAudioDecodedByteCount)
                         var hasAudio = this.mozHasAudio === undefined
@@ -162,6 +161,7 @@ function high(e){
                     })
                 }
  
+                log("Replacing link with object")
                 ass.parentNode.replaceChild(ene, ass)
             }
  
