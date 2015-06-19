@@ -130,17 +130,19 @@ function high(e){
               , ene = replacer(ass.href)
  
             if (ene) {
-                log("ene.tagName: " + ene.tagName)
+                log(j + " ene.tagName: " + ene.tagName)
  
                 if (ene.tagName === "VIDEO") {
                     ene.addEventListener("loadeddata", function(e) {
-                        log("moz: " + this.mozHasAudio)
-                        log("webkit: " + this.webkitAudioDecodedByteCount)
+                        log(j + " moz: " + this.mozHasAudio)
+                        log(j + " webkit: " + this.webkitAudioDecodedByteCount)
                         var hasAudio = this.mozHasAudio === undefined
                                      ? this.webkitAudioDecodedByteCount > 0
                                      : this.mozHasAudio
+                        log(j + " has audio? " + hasAudio)
  
                         if (! hasAudio) {
+                            log("Looping and muting to " + j)
                             this.loop = true
                             this.muted = true
  
@@ -153,6 +155,7 @@ function high(e){
                             })
  
                             this.play()
+                            log("Added looping and muting to " + j)
                         }
                     })
                 }
