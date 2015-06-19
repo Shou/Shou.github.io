@@ -132,6 +132,8 @@ function high(e){
             if (ene) {
                 log("ene.tagName: " + ene.tagName)
  
+                ass.parentNode.replaceChild(ene, ass)
+ 
                 if (ene.tagName === "VIDEO") {
                     ene.addEventListener("loadeddata", function(e) {
                         console.log(this)
@@ -161,8 +163,6 @@ function high(e){
                         }
                     })
                 }
- 
-                ass.parentNode.replaceChild(ene, ass)
             }
  
         } catch(e) {
