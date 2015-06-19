@@ -130,21 +130,23 @@ function high(e){
               , ene = replacer(ass.href)
  
             if (ene) {
-                log(j + " ene.tagName: " + ene.tagName)
+                log("ene.tagName: " + ene.tagName)
  
                 if (ene.tagName === "VIDEO") {
                     ene.addEventListener("loadeddata", function(e) {
-                        log(j + " moz: " + this.mozHasAudio)
-                        log(j + " webkit: " + this.webkitAudioDecodedByteCount)
+                        log(ass), log(this)
+                        log("moz: " + this.mozHasAudio)
+                        log("webkit: " + this.webkitAudioDecodedByteCount)
                         var hasAudio = this.mozHasAudio === undefined
                                      ? this.webkitAudioDecodedByteCount > 0
                                      : this.mozHasAudio
-                        log(j + " has audio? " + hasAudio)
+                        log("has audio? " + hasAudio)
  
                         if (! hasAudio) {
-                            log("Looping and muting to " + j)
+                            log("Looping and muting")
                             this.loop = true
                             this.muted = true
+                            this.controls = false
  
                             this.style.cursor = "pointer"
                             this.dataset.desc = "Toggle play"
