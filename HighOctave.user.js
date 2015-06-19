@@ -134,7 +134,7 @@ function high(e){
  
                 if (ene.tagName === "VIDEO") {
                     ene.addEventListener("loadeddata", function(e) {
-                        log(ass), log(this)
+                        console.log(this)
                         log("moz: " + this.mozHasAudio)
                         log("webkit: " + this.webkitAudioDecodedByteCount)
                         var hasAudio = this.mozHasAudio === undefined
