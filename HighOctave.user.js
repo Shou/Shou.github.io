@@ -132,11 +132,9 @@ function high(e){
             if (ene) {
                 log("ene.tagName: " + ene.tagName)
  
-                ass.parentNode.replaceChild(ene, ass)
- 
                 if (ene.tagName === "VIDEO") {
                     ene.addEventListener("loadeddata", function(e) {
-                        console.log(this)
+                        console.log(ene), console.log(this)
                         log("moz: " + this.mozHasAudio)
                         log("webkit: " + this.webkitAudioDecodedByteCount)
                         var hasAudio = this.mozHasAudio === undefined
@@ -159,10 +157,12 @@ function high(e){
                             })
  
                             this.play()
-                            log("Added looping and muting to " + j)
+                            log("Added looping and muting")
                         }
                     })
                 }
+ 
+                ass.parentNode.replaceChild(ene, ass)
             }
  
         } catch(e) {
