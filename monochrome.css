@@ -26,12 +26,7 @@
  - Consolidate colour declarations
  - Mod options spacing broken.
      - Still.
- - How to display PM or RCP updates
- - big > big > big > et al added to @media for phones
-    - Isn't this global? Why do I need to do this?
- - Make background dark blue/royal blue.
  - pmtoast (pm popup)
- - Evauluate possibly obsolete declerations, search /XXX REM
  - Fix topics section spacing
     - Use flex-wrap: nowrap and wrap to control "last post by"s width
 
@@ -487,15 +482,15 @@ a
 
 /* }}} */
 
-/* {{{ Background colors */
+/* {{{ Colors */
 
+::selection, option:checked
+{ background-color: #37474F
+; color: #ECEFF1
+}
 
-
-/* }}} */
-
-/* {{{ Odd/even */
-
-/* Jesus Christ */
+th,
+/* JESUS CHRISTUS */
 blockquote blockquote, blockquote blockquote blockquote blockquote,
 blockquote blockquote blockquote blockquote blockquote blockquote,
 blockquote blockquote blockquote blockquote blockquote blockquote blockquote blockquote,
@@ -503,16 +498,45 @@ blockquote blockquote blockquote blockquote blockquote blockquote blockquote blo
 { background-color: #F0F0F0
 }
 
+[data-desc]:hover::after,
+#top_info a[href$="/multi_login/"]:hover::after,
+#top_info a[href$="/multi_login/"]:focus::after,
+#top_info a[href$="/logout/"]:hover::after,
+#top_info a[href$="/logout/"]:focus::after,
+.category h2
+{ background-color: #3D3D3D }
+
+#logo
+{ background-color: #2196F3 }
+
+#logo > a,
+[data-desc]:hover::after,
+#top_info a[href$="/multi_login/"]:hover::after,
+#top_info a[href$="/multi_login/"]:focus::after,
+#top_info a[href$="/logout/"]:hover::after,
+#top_info a[href$="/logout/"]:focus::after,
+.category h2 > a, .category h2
+{ color: #F0F0F0 }
+
+th, h2, th a, th a:hover
+{ color: #4D4D4D }
+
+td,
+.topic h2, #portal h2, #portal_foot h2, thead th
+{ color: #3D3D3D }
+
+.topic h2, #portal h2, #portal_foot h2, thead th
+{ text-shadow: -0.04em 0.04em 0 #D0D0D0 }
+
+/* }}} */
+
+/* {{{ Many nested */
+
 big > big > big > big > big > big > big > big > big > big > big > big > big > big > big
 { font-size: 154.6pt
 }
 
 /* }}} */
-
-::selection, option:checked
-{ background-color: #37474F
-; color: #ECEFF1
-}
 
 [data-desc]:hover::after
 { content: attr(data-desc)
@@ -525,8 +549,6 @@ big > big > big > big > big > big > big > big > big > big > big > big > big > bi
 #top_info a[href$="/logout/"]:focus::after
 { display: block
 ; position: absolute
-; background-color: #3d3d3d
-; color: #F0F0F0
 ; border: 0.1rem solid #d0d0d0
 ; padding: 0.5rem 1rem
 ; margin: 0.5rem 0 0 0
@@ -538,23 +560,13 @@ big > big > big > big > big > big > big > big > big > big > big > big > big > bi
 
 #logo
 { text-align: left
-; background-color: #2196F3
 ; letter-spacing: 0.1em
 ; float: left
 ; padding: 0.5em 1em
 }
 
-#logo > a
-{ color: #F0F0F0
-}
-
 hr
-{ background-color: #AAA
-; border: 0
-; clear: both
-; color: #FFF
-; height: 0px
-}
+{ display: none }
 
 table, thead, tbody
 { display: flex
@@ -579,9 +591,7 @@ thead
 }
 
 th
-{ background-color: #F0F0F0
-; color: #4D4D4D
-; padding: 1em 1em
+{ padding: 1em 1em
 ; text-align: left
 ; display: block
 }
@@ -592,29 +602,16 @@ th[colspan]
 }
 
 td
-{ color: #3D3D3D
-; padding: 0 0.5em
+{ padding: 0 0.5em
 ; display: block
 }
 
-h2, th a, th a:hover
-{ color: #4D4D4D
-}
-
 .topic h2, #portal h2, #portal_foot h2, thead th
-{ font-weight: normal
-; text-shadow: -0.04em 0.04em 0 #D0D0D0
-; color: #3D3D3D
-}
+{ font-weight: normal }
 
 .category h2
 { padding: 0 1em 0 0
-; background-color: #3D3D3D
 ; font-weight: 300
-}
-
-.category h2 > a, .category h2
-{ color: #F0F0F0
 }
 
 thead > tr > th
@@ -1348,6 +1345,9 @@ td.c_user div:first-child img
 ; white-space: nowrap
 ; font-size: 1.2em
 }
+
+.usertitle > br
+{ display: none }
 
 .warn
 { width: 100% }
