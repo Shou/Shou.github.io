@@ -976,7 +976,7 @@ function toggleFloatingQR() {
 
 // floatQR :: IO ()
 function floatQR() {
-    return
+    return 1
 
     var q = quickReply().parentNode.parentNode
 
