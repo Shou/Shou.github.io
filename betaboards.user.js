@@ -976,6 +976,8 @@ function toggleFloatingQR() {
 
 // floatQR :: IO ()
 function floatQR() {
+    return
+
     var q = quickReply().parentNode.parentNode
 
     if (localStorage["beta-floating"]) {
