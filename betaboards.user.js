@@ -1457,7 +1457,7 @@ function quotePyramid(s) {
 // toggleQuote :: IO ()
 function toggleQuote() {
     var e = this.nextElementSibling
-    e.style.display = e.style.display === "none" ? "block" : "none"
+    e.style.display = e.style.display !== "block" ? "block" : "none"
 }
 
 // }}}
