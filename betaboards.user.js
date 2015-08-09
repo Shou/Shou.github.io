@@ -1439,6 +1439,7 @@ function quotePyramid(s) {
     if (! readify('beta-quotes', false)) {
 
         var qhs = ".c_post > blockquote > div > blockquote > div { display: none } "
+                + ".c_post > blockquote > div > blockquote > dl { cursor: pointer } "
 
         s.textContent += qhs
 
@@ -1451,7 +1452,7 @@ function quotePyramid(s) {
 // toggleQuote :: IO ()
 function toggleQuote() {
     var e = this.nextElementSibling
-    e.style.display = e.style.display === "none" ? "block" : "none
+    e.style.display = e.style.display === "none" ? "block" : "none"
 }
 
 // }}}
