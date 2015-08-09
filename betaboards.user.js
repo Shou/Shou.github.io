@@ -1727,7 +1727,7 @@ function optionsUI(){
                 "td", { className: "c_desc", textContent: "Beep URL" }, [],
                 "td", {}, [
                     "input", { type: "text"
-                             , value: def( "http://a.pomf.se/nhmrwe.ogg"
+                             , value: def( ""
                                          , localStorage["beta-beep-url"]
                                          )
                              , onchange: textify("beta-beep-url")
@@ -1809,7 +1809,7 @@ function ignoreUI(){
 
 // beepAudio
 function beepAudio() {
-    var url = def("http://a.pomf.se/nhmrwe.ogg", localStorage["beta-beep-url"])
+    var url = def("", localStorage["beta-beep-url"])
       , aud = document.createElement("audio")
 
     aud.src = url
