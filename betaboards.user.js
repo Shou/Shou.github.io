@@ -25,6 +25,7 @@
 //      - If no ellipsis exists, create it and add the current page number after.
 //      - Edit page number after ellipsis to match current page.
 //      - If there are pages after the ellipsis' neighbor, remove them.
+// - Change default beep sound; now empty.
 
 // FIXME
 // - Attached files are quoted
@@ -1437,11 +1438,21 @@ function octave(){
 function quotePyramid(s) {
     if (! readify('beta-quotes', false)) {
 
-        var qhs = ".c_post > blockquote blockquote div { display: none } "
+        var qhs = ".c_post > blockquote > div > blockquote > div { display: none } "
                 + ".c_post > blockquote blockquote:hover div { display: block }"
 
         s.textContent += qhs
+
+        var qdls = document.querySelectorAll(".c_post > blockquote > div > blockquote > dl")
+        for (var i = 0, l = qdls.length; i < l; i++)
+            qdls[i].addEventListener("click", toggleQuote)
     }
+}
+
+// toggleQuote :: IO ()
+function toggleQuote() {
+    var e = this.nextElementSibling
+    e.style.display = e.style.display === "none" ? "block" : "none
 }
 
 // }}}
