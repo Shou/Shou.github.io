@@ -1439,7 +1439,6 @@ function quotePyramid(s) {
     if (! readify('beta-quotes', false)) {
 
         var qhs = ".c_post > blockquote > div > blockquote > div { display: none } "
-                + ".c_post > blockquote blockquote:hover div { display: block }"
 
         s.textContent += qhs
 
