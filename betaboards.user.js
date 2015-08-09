@@ -669,6 +669,11 @@ function addPosts(html) {
             // Add quick quote event
             if (i === 3) addQuoteEvent(es[i])
         }
+
+        verb(e)
+        var qdls = e.parentNode.querySelectorAll(".c_post > blockquote > div > blockquote > dl")
+        for (var i = 0, l = qdls.length; i < l; i++)
+            qdls[i].addEventListener("click", toggleQuote)
     })
 
     if (newps.length > 0 && readify("beta-beep", false))
