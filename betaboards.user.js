@@ -2,7 +2,7 @@
 // ==UserScript==
 // @name            BetaBoards
 // @description     It's just like IRC now
-// @version         0.7.1.1
+// @version         0.7.1.2
 // @include         http*://*.zetaboards.com/*
 // @author          Shou
 // @copyright       2014, Shou
@@ -754,15 +754,16 @@ function updatePost(ne, oe) {
                  && cne[i].tagName === coe[i].tagName) {
             verb("updatePost: Element")
 
+            // XXX Deprecation imminent
             if (cne[i].tagName === "OBJECT") {
-                if (cne[i].data !== coe[i].data
-                && cne[i].data !== coe[i].dataset.ytData) {
+                if (cne[i].data !== coe[i].data) {
                     coe[i].data = cne[i].data
 
                     changed = true
+                }
 
-                } else if ( cne[i].width !== coe[i].width
-                         || cne[i].height !== coe[i].height) {
+                if ( cne[i].width !== coe[i].width
+                || cne[i].height !== coe[i].height ) {
                     coe[i].width = cne[i].width
                     coe[i].height = cne[i].height
 
@@ -814,6 +815,30 @@ function updatePost(ne, oe) {
                     changed = true
 
                 }
+            }
+
+        } else if ( cne[i].nodeType === 1
+                 && coe[i].nodeType === 1
+                 && cne[i].tagName === "OBJECT"
+                 && coe[i].tagName === "IFRAME" ) {
+            verb("updatePost: YouTube")
+
+            if (cne[i].data !== coe[i].dataset.ytData) {
+                var vid = last(cne[i].data.split('/'))
+
+                coe[i].src = "https://youtube.com/embed/" + vid
+                coe[i].dataset.ytData = cne[i].data
+
+                changed = true
+
+            }
+
+            if ((cne[i].width + "px") !== coe[i].style.width
+            || (cne[i].height + "px") !== coe[i].style.height ) {
+                coe[i].style.width = cne[i].width + "px"
+                coe[i].style.height = cne[i].height + "px"
+
+                changed = true
             }
 
         } else {
