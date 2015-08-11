@@ -1485,6 +1485,7 @@ function html5ify(e) {
     console.log("w x h")
     iyt.style.width = trace(e.width)
     iyt.style.height = trace(e.height)
+    console.log(iyt.style)
 }
 
 // }}}
