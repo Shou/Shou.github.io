@@ -1479,7 +1479,7 @@ function html5ify(e) {
     var iyt = document.createElement("iframe")
     iyt.style.width = e.width
     iyt.style.height = e.height
-    console.log(iyt.style)
+    console.log("iyt style: " + iyt.style)
 
     iyt.src = "https://youtube.com/embed/" + vid
 
