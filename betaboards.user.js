@@ -1482,8 +1482,9 @@ function html5ify(e) {
 
     e.parentNode.replaceChild(iyt, e)
 
-    iyt.style.width = e.width
-    iyt.style.height = e.height
+    console.log("w x h")
+    iyt.style.width = trace(e.width)
+    iyt.style.height = trace(e.height)
 }
 
 // }}}
