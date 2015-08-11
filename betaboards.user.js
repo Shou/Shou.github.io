@@ -1485,8 +1485,8 @@ function html5ify(e) {
     e.parentNode.replaceChild(iyt, e)
 
     console.log("w x h")
-    iyt.style.width = trace(e.width)
-    iyt.style.height = trace(e.height)
+    iyt.style.width = trace(e.width + "px")
+    iyt.style.height = trace(e.height + "px")
     console.log(iyt)
 }
 
