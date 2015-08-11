@@ -1487,6 +1487,7 @@ function html5ify(e) {
     console.log("w x h")
     iyt.style.width = trace(e.width + "px")
     iyt.style.height = trace(e.height + "px")
+    iyt.style.display = "flex"
     console.log(iyt)
 }
 
