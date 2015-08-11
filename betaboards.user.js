@@ -1888,6 +1888,8 @@ function main() {
 
         quotePyramid(s)
 
+        html5Youtube(document)
+
         ignore()
 
         beepAudio()
