@@ -141,7 +141,7 @@ var defaults =
 
 // {{{ Debug
 
-var verbose = false
+var verbose = true
 var debug = true
 
 // debug :: a -> IO ()
@@ -1482,13 +1482,10 @@ function html5ify(e) {
     iyt.src = "https://youtube.com/embed/" + vid
     iyt.dataset.ytData = e.data
 
-    e.parentNode.replaceChild(iyt, e)
-
-    console.log("w x h")
     iyt.style.width = trace(e.width + "px")
     iyt.style.height = trace(e.height + "px")
-    iyt.style.display = "flex"
-    console.log(iyt)
+
+    e.parentNode.replaceChild(iyt, e)
 }
 
 // }}}
