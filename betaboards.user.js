@@ -755,7 +755,8 @@ function updatePost(ne, oe) {
             verb("updatePost: Element")
 
             if (cne[i].tagName === "OBJECT") {
-                if (cne[i].data !== coe[i].data) {
+                if (cne[i].data !== coe[i].data
+                && cne[i].data !== coe[i].dataset.ytData) {
                     coe[i].data = cne[i].data
 
                     changed = true
@@ -1479,6 +1480,7 @@ function html5ify(e) {
     var iyt = document.createElement("iframe")
 
     iyt.src = "https://youtube.com/embed/" + vid
+    iyt.dataset.ytData = e.data
 
     e.parentNode.replaceChild(iyt, e)
 
