@@ -1485,7 +1485,7 @@ function html5ify(e) {
     console.log("w x h")
     iyt.style.width = trace(e.width)
     iyt.style.height = trace(e.height)
-    iyt.style = "display: flex"
+    console.log(iyt)
 }
 
 // }}}
