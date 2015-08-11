@@ -674,6 +674,8 @@ function addPosts(html) {
         var qdls = e.parentNode.querySelectorAll(".c_post > blockquote > div > blockquote > dl")
         for (var i = 0, l = qdls.length; i < l; i++)
             qdls[i].addEventListener("click", toggleQuote)
+
+        html5Youtube(e.parentNode)
     })
 
     if (newps.length > 0 && readify("beta-beep", false))
@@ -1454,10 +1456,33 @@ function quotePyramid(s) {
     }
 }
 
-// toggleQuote :: IO ()
-function toggleQuote() {
+// toggleQuote :: Event -> IO ()
+function toggleQuote(e) {
     var e = this.nextElementSibling
     e.style.display = e.style.display !== "block" ? "block" : "none"
+}
+
+// }}}
+
+// {{{ HTML5 YouTube
+
+// html5Youtube :: IO ()
+function html5Youtube(context) {
+    var ytos = context.querySelectorAll("object[data^='http://www.youtube.com']")
+    for (var i = 0, l = ytos.length; i < l; i++) html5ify(ytos[i])
+}
+
+// html5ify :: Elem -> IO ()
+function html5ify(e) {
+    var vid = last(e.data.split('/'))
+
+    var iyt = document.createElement("iframe")
+    iyt.style.width = e.width
+    iyt.style.height = e.height
+
+    iyt.src = "http://youtube.com/embed/" + vid
+
+    e.parentNode.replaceChild(iyt, e)
 }
 
 // }}}
