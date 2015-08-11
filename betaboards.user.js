@@ -1468,7 +1468,7 @@ function toggleQuote(e) {
 
 // html5Youtube :: IO ()
 function html5Youtube(context) {
-    var ytos = context.querySelectorAll("object[data^='http://www.youtube.com']")
+    var ytos = context.querySelectorAll("object[data*='//www.youtube.com']")
     for (var i = 0, l = ytos.length; i < l; i++) html5ify(ytos[i])
 }
 
@@ -1480,7 +1480,7 @@ function html5ify(e) {
     iyt.style.width = e.width
     iyt.style.height = e.height
 
-    iyt.src = "http://youtube.com/embed/" + vid
+    iyt.src = "https://youtube.com/embed/" + vid
 
     e.parentNode.replaceChild(iyt, e)
 }
