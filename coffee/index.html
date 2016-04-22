@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<head>
+
+<title>Coffee bean history</title>
+
+<style>
+
+body
+{ background-color: #efe8e8
+; font-family: "Open Sans", sans-serif
+; white-space: normal
+}
+
+section
+{ display: block
+; background-color: #282020
+; color: #f0f0f8
+; padding: 1rem
+; margin: 1rem
+}
+
+header
+{ font-size: 2em
+; font-weight: 900
+; text-transform: uppercase
+}
+
+header::before
+{ content: "☕ "
+}
+
+summary, summary p
+{ display: inline-block
+}
+
+summary p, summary:not(.notes)
+{ padding: 0.5rem 1rem
+; margin: 0.20rem 0.10rem
+}
+
+summary.notes
+{ display: block
+}
+
+summary.notes p
+{ background-color: skyblue
+; color: #fff8f8
+}
+
+summary.country
+{ background-color: lightgreen
+; color: #fff8ff
+}
+
+summary.country::before
+{ content: "🗺 "
+}
+
+summary.producer
+{ background-color: plum
+; color: #f8f8ff
+}
+
+summary.producer::before
+{ content: "🗻 "
+}
+
+summary.date
+{ background-color: lightPink
+; color: #f8f8ff
+}
+
+summary.date::before
+{ content: "♨ "
+}
+
+summary.variety
+{ background-color: tan
+; color: #f8f8ff
+}
+
+summary.variety::before
+{ content: "🏉 "
+}
+
+summary.process
+{ background-color: #ffff44
+; color: #40404f
+}
+
+summary.process::before
+{ content: "🌊 "
+}
+
+summary.shop
+{ background-color: #404048
+}
+
+summary.shop::before
+{ content: "🏠 "
+}
+
+.good
+{ background-color: #88ddbb }
+
+.bad
+{ background-color: #ddbb88 }
+
+.okay
+{ background-color: #88bbdd }
+
+.weird
+{ background-color: #dd88bb }
+
+</style>
+
+</head>
+
+<body>
+
+  <section class=okay>
+    <header>Ngara Nyarusiza</header>
+    <summary class=notes>
+      <p>Blackberry
+      </p>
+      <p>Honey
+      </p>
+    </summary>
+    <summary class=shop>Pact
+    </summary>
+    <summary class=country>Rwanda
+    </summary>
+    <summary class=date>April 6 2016
+    </summary>
+  </section>
+
+  <section class=good>
+    <header>Small producers of Huila
+    </header>
+    <summary class=notes>
+      <p>Tropical fruits
+      </p>
+    </summary>
+    <summary class=shop>Pact
+    </summary>
+    <summary class=country>Colombia
+    </summary>
+    <summary class=date>April 13 2016
+    </summary>
+  </section>
+
+  <section class=weird>
+    <header>Daterra Inga
+    </header>
+    <summary class=notes>
+      <p>Sweet caramel body
+      </p>
+      <p>Orange acidity
+      </p>
+      <p>Deep fudge-like sweetness
+      </p>
+      <p>Hazelnut
+      </p>
+      <p>Toffee
+      </p>
+    </summary>
+    <summary class=shop>Caravan
+    </summary>
+    <summary class=country>Brazil
+    </summary>
+    <summary class=producer>Daterra Estate
+    </summary>
+    <summary class=date>April 7 2016
+    </summary>
+    <summary class=variety>Icatu
+    </summary>
+    <summary class=process>Tree dried natural
+    </summary>
+  </section>
+
+</body>
+
