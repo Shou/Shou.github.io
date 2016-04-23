@@ -10,6 +10,12 @@ body
 { background-color: #efe8e8
 ; font-family: "Open Sans", sans-serif
 ; white-space: normal
+; display: flex
+; flex-direction: column-reverse
+}
+
+section, summary, summary p
+{ border-radius: 0.1rem
 }
 
 section
@@ -24,6 +30,7 @@ header
 { font-size: 2em
 ; font-weight: 900
 ; text-transform: uppercase
+; margin-bottom: 1rem
 }
 
 header::before
@@ -49,7 +56,7 @@ summary.notes p
 }
 
 summary.country
-{ background-color: lightgreen
+{ background-color: #90dd90
 ; color: #fff8ff
 }
 
@@ -85,8 +92,8 @@ summary.variety::before
 }
 
 summary.process
-{ background-color: #ffff44
-; color: #40404f
+{ background-color: #eecc66
+; color: #fff
 }
 
 summary.process::before
