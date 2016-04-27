@@ -4,6 +4,8 @@
 
 <title>Coffee bean history</title>
 
+<!-- {{{ Style -->
+
 <style>
 
 body
@@ -34,7 +36,24 @@ header
 }
 
 header::before
-{ content: "☕ "
+{ content: "☕"
+; padding: 0 0.5rem
+}
+
+.weird > header::before
+{ content: "🗑"
+}
+
+.good > header::before
+{ content: "★"
+}
+
+.love > header::before
+{ content: "❤"
+}
+
+.bad > header::before
+{ content: "⛔"
 }
 
 summary, summary p
@@ -44,6 +63,10 @@ summary, summary p
 summary p, summary:not(.notes)
 { padding: 0.5rem 1rem
 ; margin: 0.20rem 0.10rem
+}
+
+summary::before
+{ padding: 0 0.5rem 0 0
 }
 
 summary.notes
@@ -61,7 +84,7 @@ summary.country
 }
 
 summary.country::before
-{ content: "🗺 "
+{ content: "🗺"
 }
 
 summary.producer
@@ -70,7 +93,11 @@ summary.producer
 }
 
 summary.producer::before
-{ content: "🗻 "
+{ content: "🏭"
+}
+
+summary.altitude::before
+{ content: "🗻"
 }
 
 summary.date
@@ -79,16 +106,16 @@ summary.date
 }
 
 summary.date::before
-{ content: "♨ "
+{ content: "♨"
 }
 
-summary.variety
+summary.varietal
 { background-color: tan
 ; color: #f8f8ff
 }
 
-summary.variety::before
-{ content: "🏉 "
+summary.varietal::before
+{ content: "🏉"
 }
 
 summary.process
@@ -97,7 +124,7 @@ summary.process
 }
 
 summary.process::before
-{ content: "🌊 "
+{ content: "🌊"
 }
 
 summary.shop
@@ -105,7 +132,7 @@ summary.shop
 }
 
 summary.shop::before
-{ content: "🏠 "
+{ content: "🏠"
 }
 
 .good
@@ -122,10 +149,13 @@ summary.shop::before
 
 </style>
 
+<!-- }}} -->
+
 </head>
 
 <body>
 
+<!-- {{{ Ngara Nyarusiza -->
   <section class=okay>
     <header>Ngara Nyarusiza</header>
     <summary class=notes>
@@ -133,30 +163,60 @@ summary.shop::before
       </p>
       <p>Honey
       </p>
+      <p>Honey sweetness
+      </p>
+      <p>Complex/elegant acidity
+      </p>
+      <p>Coating mouthfeel
+      </p>
     </summary>
     <summary class=shop>Pact
     </summary>
-    <summary class=country>Rwanda
+    <summary class=country>Nyamagabe District, Rwanda
+    </summary>
+    <summary class=producer>Nyarusiza Cooperative
     </summary>
     <summary class=date>April 6 2016
     </summary>
+    <summary class=varietal>Bourbon
+    </summary>
+    <summary class=process>Washed
+    </summary>
   </section>
+<!-- }}} -->
 
+<!-- {{{ Small producers of Huila -->
   <section class=good>
     <header>Small producers of Huila
     </header>
     <summary class=notes>
-      <p>Tropical fruits
+      <p>Orange, Peach, and Pineapple
+      </p>
+      <p>Fructose sweetness
+      </p>
+      <p>Orange acidity
+      </p>
+      <p>Coating mouthfeel
       </p>
     </summary>
     <summary class=shop>Pact
     </summary>
     <summary class=country>Colombia
     </summary>
+    <summary class=producer>Los Mangos - El Libano
+    </summary>
+    <summary class=altitude>1600m
+    </summary>
     <summary class=date>April 13 2016
     </summary>
+    <summary class=varietal>Colombia, Caturra, and Castillo
+    </summary>
+    <summary class=process>Fully Washed
+    </summary>
   </section>
+<!-- }}} -->
 
+<!-- {{{ Daterra Inga -->
   <section class=weird>
     <header>Daterra Inga
     </header>
@@ -180,11 +240,43 @@ summary.shop::before
     </summary>
     <summary class=date>April 7 2016
     </summary>
-    <summary class=variety>Icatu
+    <summary class=varietal>Icatu
     </summary>
     <summary class=process>Tree dried natural
     </summary>
   </section>
+<!-- }}} -->
+
+<!-- {{{ La Tienda -->
+  <section class=good>
+    <header>La Tienda
+    </header>
+    <summary class=notes>
+      <p>Caramel
+      </p>
+      <p>Oat biscuit
+      </p>
+      <p>Caramel sweetness
+      </p>
+      <p>Lactic acidity
+      </p>
+      <p>Buttery mouthfeel
+      </p>
+    </summary>
+    <summary class=shop>Pact
+    </summary>
+    <summary class=country>Cauca, Colombia
+    </summary>
+    <summary class=producer>Durley Arnoldo Ramos
+    </summary>
+    <summary class=date>
+    </summary>
+    <summary class=varietal>Colombia
+    </summary>
+    <summary class=process>Washed
+    </summary>
+  </section>
+<!-- }}} -->
 
 </body>
 
