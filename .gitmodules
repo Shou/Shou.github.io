@@ -1,0 +1,3 @@
+[submodule "coffee-timer"]
+	path = coffee-timer
+	url = https://github.com/Shou/coffee-timer.git
