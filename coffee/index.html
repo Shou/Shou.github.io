@@ -16,12 +16,13 @@ body
 ; flex-direction: column-reverse
 }
 
-section, summary, summary p
+section, summary
 { border-radius: 0.1rem
 }
 
 section
-{ display: block
+{ display: flex
+; flex-wrap: wrap
 ; background-color: #282020
 ; color: #f0f0f8
 ; padding: 1rem
@@ -33,6 +34,7 @@ header
 ; font-weight: 900
 ; text-transform: uppercase
 ; margin-bottom: 1rem
+; width: 100%
 }
 
 header::before
@@ -41,6 +43,10 @@ header::before
 }
 
 .weird > header::before
+{ content: "☢"
+}
+
+.bad > header::before
 { content: "🗑"
 }
 
@@ -56,26 +62,50 @@ header::before
 { content: "⛔"
 }
 
-summary, summary p
-{ display: inline-block
-}
-
-summary p, summary:not(.notes)
+summary
 { padding: 0.5rem 1rem
 ; margin: 0.20rem 0.10rem
+; flex: 1 0 auto
 }
 
 summary::before
 { padding: 0 0.5rem 0 0
 }
 
-summary.notes
-{ display: block
+summary.note
+{ background-color: #eecc66
+; color: #fff8f8
 }
 
-summary.notes p
+summary.note::before
+{ content: "🎵"
+}
+
+summary.sweetness
 { background-color: skyblue
 ; color: #fff8f8
+}
+
+summary.sweetness::before
+{ content: "🍬"
+}
+
+summary.acidity
+{ background-color: skyblue
+; color: #fff8f8
+}
+
+summary.acidity::before
+{ content: "🌢"
+}
+
+summary.mouthfeel
+{ background-color: skyblue
+; color: #fff8f8
+}
+
+summary.mouthfeel::before
+{ content: "👅"
 }
 
 summary.country
@@ -106,6 +136,15 @@ summary.date
 }
 
 summary.date::before
+{ content: "🗓"
+}
+
+summary.roast
+{ background-color: lightPink
+; color: #f8f8ff
+}
+
+summary.roast::before
 { content: "♨"
 }
 
@@ -119,7 +158,7 @@ summary.varietal::before
 }
 
 summary.process
-{ background-color: #eecc66
+{ background-color: skyblue
 ; color: #fff
 }
 
@@ -158,17 +197,15 @@ summary.shop::before
 <!-- {{{ Ngara Nyarusiza -->
   <section class=okay>
     <header>Ngara Nyarusiza</header>
-    <summary class=notes>
-      <p>Blackberry
-      </p>
-      <p>Honey
-      </p>
-      <p>Honey sweetness
-      </p>
-      <p>Complex/elegant acidity
-      </p>
-      <p>Coating mouthfeel
-      </p>
+    <summary class=note>Blackberry
+    </summary>
+    <summary class=note>Honey
+    </summary>
+    <summary class=sweetness>Honey
+    </summary>
+    <summary class=acidity>Complex/elegant
+    </summary>
+    <summary class=mouthfeel>Coating
     </summary>
     <summary class=shop>Pact
     </summary>
@@ -189,15 +226,17 @@ summary.shop::before
   <section class=good>
     <header>Small producers of Huila
     </header>
-    <summary class=notes>
-      <p>Orange, Peach, and Pineapple
-      </p>
-      <p>Fructose sweetness
-      </p>
-      <p>Orange acidity
-      </p>
-      <p>Coating mouthfeel
-      </p>
+    <summary class=note>Orange
+    </summary>
+    <summary class=note>Peach
+    </summary>
+    <summary class=note>Pineapple
+    </summary>
+    <summary class=sweetness>Fructose
+    </summary>
+    <summary class=acidity>Orange
+    </summary>
+    <summary class=mouthfeel>Coating
     </summary>
     <summary class=shop>Pact
     </summary>
@@ -209,7 +248,11 @@ summary.shop::before
     </summary>
     <summary class=date>April 13 2016
     </summary>
-    <summary class=varietal>Colombia, Caturra, and Castillo
+    <summary class=varietal>Colombia
+    </summary>
+    <summary class=varietal>Caturra
+    </summary>
+    <summary class=varietal>Castillo
     </summary>
     <summary class=process>Fully Washed
     </summary>
@@ -220,17 +263,15 @@ summary.shop::before
   <section class=weird>
     <header>Daterra Inga
     </header>
-    <summary class=notes>
-      <p>Sweet caramel body
-      </p>
-      <p>Orange acidity
-      </p>
-      <p>Deep fudge-like sweetness
-      </p>
-      <p>Hazelnut
-      </p>
-      <p>Toffee
-      </p>
+    <summary class=note>Hazelnut
+    </summary>
+    <summary class=note>Toffee
+    </summary>
+    <summary class=note>Sweet caramel body
+    </summary>
+    <summary class=acidity>Orange
+    </summary>
+    <summary class=sweetness>Deep fudge-like
     </summary>
     <summary class=shop>Caravan
     </summary>
@@ -251,17 +292,16 @@ summary.shop::before
   <section class=good>
     <header>La Tienda
     </header>
-    <summary class=notes>
-      <p>Caramel
-      </p>
-      <p>Oat biscuit
-      </p>
-      <p>Caramel sweetness
-      </p>
-      <p>Lactic acidity
-      </p>
-      <p>Buttery mouthfeel
-      </p>
+    <summary class=note>Caramel
+    </summary>
+    <summary class=note>Oat biscuit
+    </summary>
+    <summary class=sweetness>Caramel
+    </summary>
+    <summary class=acidity>Lactic
+    </summary>
+    <summary class=mouthfeel>Buttery
+    </summary>
     </summary>
     <summary class=shop>Pact
     </summary>
@@ -269,11 +309,81 @@ summary.shop::before
     </summary>
     <summary class=producer>Durley Arnoldo Ramos
     </summary>
-    <summary class=date>
+    <summary class=date>April 22 2016
     </summary>
     <summary class=varietal>Colombia
     </summary>
     <summary class=process>Washed
+    </summary>
+  </section>
+<!-- }}} -->
+
+<!-- {{{ Bella Carmona -->
+  <section class=good>
+    <header>Bella Carmona
+    </header>
+    <summary class=note>Orange
+    </summary>
+    <summary class=sweetness>Refined sugar
+    </summary>
+    <summary class=acidity>Orange
+    </summary>
+    <summary class=mouthfeel>Syrup
+    </summary>
+    <summary class=shop>Pact
+    </summary>
+    <summary class=country>Guatemala
+    </summary>
+    <summary class=producer>Small producers of Antigua
+    </summary>
+    <summary class=date>April 29 2016
+    </summary>
+    <summary class=varietal>Caturra
+    </summary>
+    <summary class=varietal>Bourbon
+    </summary>
+    <summary class=varietal>Villa Sarachi
+    </summary>
+    <summary class=varietal>Typica
+    </summary>
+    <summary class=varietal>Catuai
+    </summary>
+    <summary class=roast>Medium
+    </summary>
+    <summary class=process>Washed
+    </summary>
+  </section>
+<!-- }}} -->
+
+<!-- {{{ Bella Carmona -->
+  <section class=okay>
+    <header>Planalto
+    </header>
+    <summary class=note>Malt
+    </summary>
+    <summary class=note>Milk chocolate
+    </summary>
+    <summary class=sweetness>Refined sugar
+    </summary>
+    <summary class=acidity>Lactic
+    </summary>
+    <summary class=mouthfeel>Round
+    </summary>
+    <summary class=shop>Pact
+    </summary>
+    <summary class=country>Minas Gerais, Brazil
+    </summary>
+    <summary class=producer>Mariza Aparecida Franco Mantovanini
+    </summary>
+    <summary class=producer>Sergio de Campos Mantovanini
+    </summary>
+    <summary class=date>May 2016
+    </summary>
+    <summary class=varietal>Yellow Catuai
+    </summary>
+    <summary class=roast>Medium-dark
+    </summary>
+    <summary class=process>Pulped natural
     </summary>
   </section>
 <!-- }}} -->
