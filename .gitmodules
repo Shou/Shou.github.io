@@ -3,4 +3,4 @@
 	url = https://github.com/Shou/coffee-timer.git
 [submodule "Phosphor"]
 	path = Phosphor
-	url = git@github.com:Shou/Phosphor.git
+	url = https://github.com/Shou/Phosphor.git
