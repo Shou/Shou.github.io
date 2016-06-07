@@ -1259,9 +1259,11 @@ function replacer(x){
 // high :: Elem -> IO ()
 function high(e){
     var as = e.getElementsByTagName("a")
+    log(as)
 
     // each link
     for (var j = 0; j < as.length; j++) {
+        log(j)
         try {
             var ass = as[j]
               , ene = replacer(ass.href)
@@ -1626,7 +1628,7 @@ function main() {
         choice()
 
     } else if (isForum()) {
-        smartPinned()
+        //smartPinned()
     }
 }
 
