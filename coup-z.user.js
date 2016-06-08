@@ -1262,8 +1262,7 @@ function high(e) {
 
     if (as.length > 0) log(as)
     // each link
-    for (var j = 0, l = as.length; j < l; j++) {
-        log ("J : " + j)
+    for (var j = 0; j < as.length; j++) {
         try {
             var ass = as[j]
               , ene = replacer(ass.href)
@@ -1308,6 +1307,9 @@ function high(e) {
 
                 log("Replacing child")
                 ass.parentNode.replaceChild(ene, ass)
+
+                // Element removed, index subtracted
+                j--
 
             } else log("NO ENE")
 
