@@ -1259,11 +1259,10 @@ function replacer(x){
 // high :: Elem -> IO ()
 function high(e){
     var as = e.getElementsByTagName("a")
-    log(as)
 
     // each link
     for (var j = 0; j < as.length; j++) {
-        log(j)
+        log(as[j])
         try {
             var ass = as[j]
               , ene = replacer(ass.href)
@@ -1306,10 +1305,13 @@ function high(e){
                     })
                 }
 
+                log("Replacing child")
                 ass.parentNode.replaceChild(ene, ass)
-            }
+
+            } else log("NO ENE")
 
         } catch(e) {
+            log("WHAT THE -blam!-")
             log(e.toString())
         }
     }
