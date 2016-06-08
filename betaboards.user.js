@@ -1411,17 +1411,17 @@ function high(e){
                     ene.addEventListener("loadeddata", function(e) {
                         log("moz: " + this.mozHasAudio)
                         log("webkit: " + this.webkitAudioDecodedByteCount)
-                        var hasAudio = this.mozHasAudio === undefined
-                                     ? this.webkitAudioDecodedByteCount > 0
-                                     : this.mozHasAudio
+                        var hasAudio = Boolean(this.webkitAudioDecodedByteCount)
+                                    || this.mozHasAudio
 
                         if (! hasAudio) {
                             this.loop = true
                             this.muted = true
-                            if (localStorage["coup-z-webm"])
-                                this.play()
+                            if (localStorage["coup-z-webm"]) {
+                                this.autoplay = false
+                                this.controls = true
 
-                            else this.controls = true
+                            } else this.play()
 
                             this.style.cursor = "pointer"
                             this.title = "Toggle play"
