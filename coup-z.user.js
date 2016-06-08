@@ -1260,7 +1260,6 @@ function replacer(x){
 function high(e) {
     var as = e.getElementsByTagName("a")
 
-    if (as.length > 0) log(as)
     // each link
     for (var j = 0; j < as.length; j++) {
         try {
@@ -1305,16 +1304,14 @@ function high(e) {
                     })
                 }
 
-                log("Replacing child")
                 ass.parentNode.replaceChild(ene, ass)
 
                 // Element removed, index subtracted
                 j--
 
-            } else log("NO ENE")
+            }
 
         } catch(e) {
-            log("WHAT THE -blam!-")
             log(e.toString())
         }
     }
@@ -1322,15 +1319,11 @@ function high(e) {
 
 // octave :: IO ()
 function octave() {
-    log("High octave sexual moaning")
+    log("High octave")
     var xs = document.getElementsByClassName("c_post")
 
     // Each post
-    for (var i = 0, l = xs.length; i < l; i++) {
-        (function (ii) {
-            high(xs[ii])
-        })(i)
-    }
+    for (var i = 0, l = xs.length; i < l; i++) high(xs[i])
 }
 
 // }}}
