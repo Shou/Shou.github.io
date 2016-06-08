@@ -1257,13 +1257,13 @@ function replacer(x){
 }
 
 // high :: Elem -> IO ()
-function high(e){
+function high(e) {
     var as = e.getElementsByTagName("a")
 
-    log(as.length)
+    if (as.length > 0) log(as)
     // each link
-    for (var j = 0; j < as.length; j++) {
-        log(as[j])
+    for (var j = 0, l = as.length; j < l; j++) {
+        log ("J : " + j)
         try {
             var ass = as[j]
               , ene = replacer(ass.href)
@@ -1319,12 +1319,12 @@ function high(e){
 }
 
 // octave :: IO ()
-function octave(){
+function octave() {
     log("High octave sexual moaning")
     var xs = document.getElementsByClassName("c_post")
 
     // Each post
-    for (var i = 0; i < xs.length; i++) {
+    for (var i = 0, l = xs.length; i < l; i++) {
         (function (ii) {
             high(xs[ii])
         })(i)
@@ -1601,9 +1601,6 @@ function main() {
 
     } else if (isThread() && off) {
         var sty = document.createElement("style")
-        // Hide signatures
-        //sty.textContent =
-            //"tr[id^=\"post-\"] + tr + tr > td.c_sig { display: none !important }"
         document.body.appendChild(sty)
 
         var posts = getPosts()
