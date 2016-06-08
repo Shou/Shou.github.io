@@ -1419,7 +1419,7 @@ function high(e){
                             this.loop = true
                             this.muted = true
                             if (localStorage["coup-z-webm"])
-                                this.autoplay = true
+                                this.play()
 
                             else this.controls = true
 
