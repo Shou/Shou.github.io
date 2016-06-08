@@ -1267,24 +1267,21 @@ function high(e) {
               , ene = replacer(ass.href)
 
             if (ene) {
-                log("ene.tagName: " + ene.tagName)
-                log("ene.hasAudio: " + ene.mozHasAudio)
-
                 if (ene.tagName === "VIDEO") {
                     ene.addEventListener("loadeddata", function(e) {
                         log("moz: " + this.mozHasAudio)
                         log("webkit: " + this.webkitAudioDecodedByteCount)
-                        var hasAudio = this.mozHasAudio === undefined
-                                     ? this.webkitAudioDecodedByteCount > 0
-                                     : this.mozHasAudio
+                        var hasAudio = Boolean(this.webkitAudioDecodedByteCount)
+                                    || this.mozHasAudio
 
                         if (! hasAudio) {
                             this.loop = true
                             this.muted = true
                             if (localStorage["coup-z-webm"])
                                 this.autoplay = true
+                                this.controls = true
 
-                            else this.controls = true
+                            } else this.play()
 
                             this.style.cursor = "pointer"
                             this.title = "Toggle play"
