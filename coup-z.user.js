@@ -162,12 +162,13 @@ var embeds =
     , "giphy":
         { u: "https?:\/\/gfycat.com\/([^?]+)"
         , e: function(url) {
-                return speedcore("iframe", { src: url
+                return speedcore("video", { src: url
                                            , className: "gfy-embed"
                                            , frameborder: "no"
+                                           , allowfullscreen: true
                                            }, [])
             }
-        , s: "https://gfycat.com/ifr/$1"
+        , s: "https://zippy.gfycat.com/$1.webm"
         }
     }
 
