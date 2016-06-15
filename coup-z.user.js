@@ -159,6 +159,16 @@ var embeds =
              }
         , s: "https://vine.co/v/$1/embed/simple"
         }
+    , "giphy":
+        { u: "https?:\/\/gfycat.com\/([^?]+)"
+        , e: function(url) {
+                return speedcore("iframe", { src: url
+                                           , className: "gfy-embed"
+                                           , frameborder: "no"
+                                           }, [])
+            }
+        , s: "https://gfycat.com/ifr/$1"
+        }
     }
 
 // }}}
