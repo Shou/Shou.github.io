@@ -1286,29 +1286,14 @@ function high(e) {
                         var hasAudio = Boolean(this.webkitAudioDecodedByteCount)
                                     || this.mozHasAudio
 
+                        this.controls = true
+
                         if (! hasAudio) {
                             this.loop = true
                             this.muted = true
                             if (localStorage["coup-z-webm"]) {
-                                this.autoplay = true
-                                this.controls = true
 
                             } else this.play()
-
-                            this.style.cursor = "pointer"
-                            this.title = "Toggle play"
-
-                            this.addEventListener("click", function(e) {
-                                if (this.controls) {
-                                    log("Controls")
-                                    this.controls = false
-
-                                } else {
-                                    log("No controls")
-                                    if (this.paused) this.play()
-                                    else this.pause()
-                                }
-                            })
                         }
                     })
                 }
