@@ -1,6 +1,3 @@
 [submodule "coffee-timer"]
 	path = coffee-timer
 	url = https://github.com/Shou/coffee-timer.git
-[submodule "Phosphor"]
-	path = Phosphor
-	url = https://github.com/Shou/Phosphor.git
