@@ -4,3 +4,6 @@
 [submodule "Phosphor"]
 	path = Phosphor
 	url = https://github.com/Shou/Phosphor.git
+[submodule "blog"]
+    path = blog
+    url = https://github.com/Shou/blog.git
